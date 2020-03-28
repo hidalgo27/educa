@@ -1,0 +1,44 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+//@import url('https://fonts.googleapis.com/css?family=Comic+Neue&display=swap');
+
+// Variables
+//@import 'variables';
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+@import '~vuetify/dist/vuetify.css';
+//@import '~vuetify/src/styles/styles.sass';
+
+
+@import '~@mdi/font/css/materialdesignicons.min.css';
+
+body{
+    font-family: "Roboto", sans-serif !important;
+}
+
+.v-card--reveal {
+    align-items: center;
+    bottom: 0;
+    justify-content: center;
+    //opacity: .5;
+    position: absolute;
+    width: 100%;
+}
+.position-relative{
+    position: relative !important;
+}
+.position-absolute{
+    position: absolute !important;
+    z-index: 1;
+    width: 100%;
+}
+.hover-box:hover{
+  color: white !important;
+}
+.hover-box-content{
+    border-radius: 5px;
+}
+.hover-box-content-left{
+    border-radius: 5px 0 0 5px;
+}
