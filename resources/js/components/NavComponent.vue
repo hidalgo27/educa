@@ -49,7 +49,7 @@
                     text
                     small
                 >
-                    hola1
+                    Cursos
                 </v-btn>
                 <v-btn
 
@@ -58,7 +58,25 @@
                     text
                     small
                 >
-                    hola
+                    Universidades
+                </v-btn>
+                <v-btn
+
+                    class="hidden-sm-and-down font-weight-bold"
+                    flat
+                    text
+                    small
+                >
+                    Planes
+                </v-btn>
+                <v-btn
+
+                    class="hidden-sm-and-down font-weight-bold"
+                    flat
+                    text
+                    small
+                >
+                    Sobre nosotros
                 </v-btn>
                 <v-divider
                     vertical

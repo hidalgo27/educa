@@ -3,15 +3,15 @@
 @section('content')
 <div class="container">
     <div class="row justify-center">
-        <div class="col-md-8">
+        <div class="col-8">
             <div class="v-card">
-                <div class="card-header">{{ __('Login') }}</div>
+                <div class="v-card__title">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="v-card__text">
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
-                        <div class="form-group row">
+                        <div class="row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 
                             <div class="col-md-6">

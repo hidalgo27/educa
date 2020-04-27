@@ -17,16 +17,19 @@
                     <parallax-component></parallax-component>
 
                     <div class="container">
+
+
                         <div class="row justify-center">
                             <div class="col-6 text--secondary title text-center">
-                                Capacitamos a tu empresa en transformación digital y las tecnologías más competitivas del mercado.
+                                Prepárate con nuestros cursos en linea, con todo los temas estructurados de su universidad.
                             </div>
                         </div>
                         <div class="row">
                             <div class="col text-center">
-                                <h2>¿En qué quieres especializarte?</h2>
+                                <h2>Inicia tu camino ...</h2>
                             </div>
                         </div>
+
                         <div class="row">
                             <div class="col">
                                 <v-text-field
@@ -37,100 +40,303 @@
                                     solo
                                     color="purple darken-2"
                                     placeholder="Buscar entre los más 200 cursos"
-{{--                                    label="Solo"--}}
+                                    {{--                                    label="Solo"--}}
                                 />
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-4">
-                                <v-hover v-slot:default="{ hover }">
-                                    <div class="position-relative grey lighten-4 hover-box-content">
-                                        <v-expand-x-transition>
-                                            <div
-                                                v-if="hover"
-                                                class="d-flex hover-box-content transition-fast-out-linear-in orange darken-2 v-card--reveal display-3 white--text"
-                                                style="height: 100%;"
+
+
+                                    <v-row>
+                                        <v-col
+                                            cols="12"
+                                            sm="6"
+                                        >
+                                            <v-hover
+                                                v-slot:default="{ hover }"
+                                                open-delay="60"
                                             >
-                                                {{--                                                    $14.99--}}
-                                            </div>
-                                        </v-expand-x-transition>
-                                        <div class="position-relative hover-box">
+                                                <v-card
+                                                    :elevation="hover ? 6 : 1"
+                                                    class="px-3"
+                                                >
+                                                    <div class="row justify-center">
+                                                        <div class="col-6">
+                                                            <v-img src="{{asset('images/logos/logo-unsaac.png')}}" aspect-ratio="1.7" contain></v-img>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <v-hover v-slot:default="{ hover }">
+                                                                <div class="position-relative grey lighten-4 hover-box-content">
+                                                                    <v-expand-x-transition>
+                                                                        <div
+                                                                            v-if="hover"
+                                                                            class="d-flex hover-box-content transition-fast-out-linear-in orange darken-2 v-card--reveal display-3 white--text"
+                                                                            style="height: 100%;"
+                                                                        >
+                                                                            {{--                                                    $14.99--}}
+                                                                        </div>
+                                                                    </v-expand-x-transition>
+                                                                    <div class="position-relative hover-box">
 
-                                            <div class="row no-gutters align-center">
-                                                <div class="col-3 orange hover-box-content-left darken-2 pa-3 border-left">
-{{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                    <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.7"></v-img>
-                                                </div>
-                                                <div class="col px-6">
-                                                    <h4 class="font-weight-bold">Grupo A</h4>
-                                                    <p class="ma-0">22 cursos</p>
-                                                </div>
-                                            </div>
+                                                                        <div class="row no-gutters align-center">
+                                                                            <div class="col-3 orange hover-box-content-left darken-2 pa-3 border-left">
+                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.2"></v-img>
+                                                                            </div>
+                                                                            <div class="col px-6">
+                                                                                <h4 class="font-weight-bold">Grupo A</h4>
+                                                                                <p class="ma-0">22 cursos</p>
+                                                                            </div>
+                                                                        </div>
 
-                                        </div>
-                                    </div>
-                                </v-hover>
-                            </div>
-                            <div class="col-4">
-                                <v-hover v-slot:default="{ hover }">
-                                    <div class="position-relative grey lighten-4 hover-box-content">
-                                        <v-expand-x-transition>
-                                            <div
-                                                v-if="hover"
-                                                class="d-flex hover-box-content transition-fast-out-linear-in light-blue accent-2 v-card--reveal display-3 white--text"
-                                                style="height: 100%;"
+                                                                    </div>
+                                                                </div>
+                                                            </v-hover>
+                                                        </div>
+
+                                                        <div class="col-6">
+                                                            <v-hover v-slot:default="{ hover }">
+                                                                <div class="position-relative grey lighten-4 hover-box-content">
+                                                                    <v-expand-x-transition>
+                                                                        <div
+                                                                            v-if="hover"
+                                                                            class="d-flex hover-box-content transition-fast-out-linear-in light-blue accent-2 v-card--reveal display-3 white--text"
+                                                                            style="height: 100%;"
+                                                                        >
+                                                                            {{--                                                    $14.99--}}
+                                                                        </div>
+                                                                    </v-expand-x-transition>
+                                                                    <div class="position-relative hover-box">
+
+                                                                        <div class="row no-gutters align-center">
+                                                                            <div class="col-3 light-blue accent-2 hover-box-content-left pa-3 border-left">
+                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.2"></v-img>
+                                                                            </div>
+                                                                            <div class="col px-6">
+                                                                                <h4 class="font-weight-bold">Grupo B</h4>
+                                                                                <p class="ma-0">12 cursos</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </v-hover>
+                                                        </div>
+
+                                                        <div class="col-6">
+                                                            <v-hover v-slot:default="{ hover }">
+                                                                <div class="position-relative grey lighten-4 hover-box-content">
+                                                                    <v-expand-x-transition>
+                                                                        <div
+                                                                            v-if="hover"
+                                                                            class="d-flex hover-box-content transition-fast-out-linear-in pink v-card--reveal display-3 white--text"
+                                                                            style="height: 100%;"
+                                                                        >
+                                                                            {{--                                                    $14.99--}}
+                                                                        </div>
+                                                                    </v-expand-x-transition>
+                                                                    <div class="position-relative hover-box">
+
+                                                                        <div class="row no-gutters align-center">
+                                                                            <div class="col-3 pink hover-box-content-left pa-3 border-left">
+                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.2"></v-img>
+                                                                            </div>
+                                                                            <div class="col px-6">
+                                                                                <h4 class="font-weight-bold">Grupo C</h4>
+                                                                                <p class="ma-0">10 cursos</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </v-hover>
+                                                        </div>
+
+                                                        <div class="col-6">
+                                                            <v-hover v-slot:default="{ hover }">
+                                                                <div class="position-relative grey lighten-4 hover-box-content">
+                                                                    <v-expand-x-transition>
+                                                                        <div
+                                                                            v-if="hover"
+                                                                            class="d-flex hover-box-content transition-fast-out-linear-in purple v-card--reveal display-3 white--text"
+                                                                            style="height: 100%;"
+                                                                        >
+                                                                            {{--                                                    $14.99--}}
+                                                                        </div>
+                                                                    </v-expand-x-transition>
+                                                                    <div class="position-relative hover-box">
+
+                                                                        <div class="row no-gutters align-center">
+                                                                            <div class="col-3 purple hover-box-content-left pa-3 border-left">
+                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.2"></v-img>
+                                                                            </div>
+                                                                            <div class="col px-6">
+                                                                                <h4 class="font-weight-bold">Grupo D</h4>
+                                                                                <p class="ma-0">15 cursos</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </v-hover>
+                                                        </div>
+                                                    </div>
+                                                </v-card>
+                                            </v-hover>
+                                        </v-col>
+
+                                        <v-col
+                                            cols="12"
+                                            sm="6"
+                                        >
+                                            <v-hover
+                                                v-slot:default="{ hover }"
+                                                close-delay="60"
                                             >
-                                                {{--                                                    $14.99--}}
-                                            </div>
-                                        </v-expand-x-transition>
-                                        <div class="position-relative hover-box">
+                                                <v-card
+                                                    :elevation="hover ? 6 : 1"
+                                                    class="px-3"
 
-                                            <div class="row no-gutters align-center">
-                                                <div class="col-3 light-blue accent-2 hover-box-content-left pa-3 border-left">
-                                                    {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                    <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.7"></v-img>
-                                                </div>
-                                                <div class="col px-6">
-                                                    <h4 class="font-weight-bold">Grupo A</h4>
-                                                    <p class="ma-0">22 cursos</p>
-                                                </div>
-                                            </div>
+                                                >
+                                                    <div class="row justify-center">
+                                                        <div class="col-6">
+                                                            <v-img src="{{asset('images/logos/logo-andina.png')}}" aspect-ratio="1.7" contain></v-img>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <v-hover v-slot:default="{ hover }">
+                                                                <div class="position-relative grey lighten-4 hover-box-content">
+                                                                    <v-expand-x-transition>
+                                                                        <div
+                                                                            v-if="hover"
+                                                                            class="d-flex hover-box-content transition-fast-out-linear-in orange darken-2 v-card--reveal display-3 white--text"
+                                                                            style="height: 100%;"
+                                                                        >
+                                                                            {{--                                                    $14.99--}}
+                                                                        </div>
+                                                                    </v-expand-x-transition>
+                                                                    <div class="position-relative hover-box">
 
-                                        </div>
-                                    </div>
-                                </v-hover>
-                            </div>
-                            <div class="col-4">
-                                <v-hover v-slot:default="{ hover }">
-                                    <div class="position-relative grey lighten-4 hover-box-content">
-                                        <v-expand-x-transition>
-                                            <div
-                                                v-if="hover"
-                                                class="d-flex hover-box-content transition-fast-out-linear-in green accent-4 v-card--reveal display-3 white--text"
-                                                style="height: 100%;"
-                                            >
-                                                {{--                                                    $14.99--}}
-                                            </div>
-                                        </v-expand-x-transition>
-                                        <div class="position-relative hover-box">
+                                                                        <div class="row no-gutters align-center">
+                                                                            <div class="col-3 orange hover-box-content-left darken-2 pa-3 border-left">
+                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.2"></v-img>
+                                                                            </div>
+                                                                            <div class="col px-6">
+                                                                                <h4 class="font-weight-bold">Grupo A</h4>
+                                                                                <p class="ma-0">22 cursos</p>
+                                                                            </div>
+                                                                        </div>
 
-                                            <div class="row no-gutters align-center">
-                                                <div class="col-3 green accent-4 hover-box-content-left pa-3 border-left">
-                                                    {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                    <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.7"></v-img>
-                                                </div>
-                                                <div class="col px-6">
-                                                    <h4 class="font-weight-bold">Grupo A</h4>
-                                                    <p class="ma-0">22 cursos</p>
-                                                </div>
-                                            </div>
+                                                                    </div>
+                                                                </div>
+                                                            </v-hover>
+                                                        </div>
 
-                                        </div>
-                                    </div>
-                                </v-hover>
-                            </div>
-                        </div>
+                                                        <div class="col-6">
+                                                            <v-hover v-slot:default="{ hover }">
+                                                                <div class="position-relative grey lighten-4 hover-box-content">
+                                                                    <v-expand-x-transition>
+                                                                        <div
+                                                                            v-if="hover"
+                                                                            class="d-flex hover-box-content transition-fast-out-linear-in light-blue accent-2 v-card--reveal display-3 white--text"
+                                                                            style="height: 100%;"
+                                                                        >
+                                                                            {{--                                                    $14.99--}}
+                                                                        </div>
+                                                                    </v-expand-x-transition>
+                                                                    <div class="position-relative hover-box">
+
+                                                                        <div class="row no-gutters align-center">
+                                                                            <div class="col-3 light-blue accent-2 hover-box-content-left pa-3 border-left">
+                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.2"></v-img>
+                                                                            </div>
+                                                                            <div class="col px-6">
+                                                                                <h4 class="font-weight-bold">Grupo B</h4>
+                                                                                <p class="ma-0">12 cursos</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </v-hover>
+                                                        </div>
+
+                                                        <div class="col-6">
+                                                            <v-hover v-slot:default="{ hover }">
+                                                                <div class="position-relative grey lighten-4 hover-box-content">
+                                                                    <v-expand-x-transition>
+                                                                        <div
+                                                                            v-if="hover"
+                                                                            class="d-flex hover-box-content transition-fast-out-linear-in pink v-card--reveal display-3 white--text"
+                                                                            style="height: 100%;"
+                                                                        >
+                                                                            {{--                                                    $14.99--}}
+                                                                        </div>
+                                                                    </v-expand-x-transition>
+                                                                    <div class="position-relative hover-box">
+
+                                                                        <div class="row no-gutters align-center">
+                                                                            <div class="col-3 pink hover-box-content-left pa-3 border-left">
+                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.2"></v-img>
+                                                                            </div>
+                                                                            <div class="col px-6">
+                                                                                <h4 class="font-weight-bold">Grupo C</h4>
+                                                                                <p class="ma-0">10 cursos</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </v-hover>
+                                                        </div>
+
+                                                        <div class="col-6">
+                                                            <v-hover v-slot:default="{ hover }">
+                                                                <div class="position-relative grey lighten-4 hover-box-content">
+                                                                    <v-expand-x-transition>
+                                                                        <div
+                                                                            v-if="hover"
+                                                                            class="d-flex hover-box-content transition-fast-out-linear-in purple v-card--reveal display-3 white--text"
+                                                                            style="height: 100%;"
+                                                                        >
+                                                                            {{--                                                    $14.99--}}
+                                                                        </div>
+                                                                    </v-expand-x-transition>
+                                                                    <div class="position-relative hover-box">
+
+                                                                        <div class="row no-gutters align-center">
+                                                                            <div class="col-3 purple hover-box-content-left pa-3 border-left">
+                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                <v-img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" contain aspect-ratio="1.2"></v-img>
+                                                                            </div>
+                                                                            <div class="col px-6">
+                                                                                <h4 class="font-weight-bold">Grupo D</h4>
+                                                                                <p class="ma-0">15 cursos</p>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+                                                            </v-hover>
+                                                        </div>
+                                                    </div>
+                                                </v-card>
+                                            </v-hover>
+                                        </v-col>
+                                    </v-row>
+
+
+
+
                     </div>
                     <section class="grey lighten-4">
                         <v-container>
@@ -145,46 +351,96 @@
                                     <v-list subheader>
 {{--                                        <v-subheader>Recent chat</v-subheader>--}}
 
-                                        <v-list-item
-                                            v-for="item in items"
-                                            :key="item.title"
-                                            @click=""
-                                        >
+                                        <v-list-item>
                                             <v-list-item-avatar>
-                                                <v-img :src="item.avatar"></v-img>
+                                                <v-img src="{{asset('images/logos/logo-unsaac.png')}}"></v-img>
                                             </v-list-item-avatar>
 
                                             <v-list-item-content>
-                                                <v-list-item-title v-text="item.title"></v-list-item-title>
+                                                <v-list-item-title>Algebra</v-list-item-title>
                                             </v-list-item-content>
 
                                             <v-list-item-icon>
-                                                <v-icon :color="item.active ? 'deep-purple accent-4' : 'grey'">mdi-chevron-right</v-icon>
+                                                <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
                                             </v-list-item-icon>
                                         </v-list-item>
+
+                                        <v-list-item>
+                                            <v-list-item-avatar>
+                                                <v-img src="{{asset('images/logos/logo-unsaac.png')}}"></v-img>
+                                            </v-list-item-avatar>
+
+                                            <v-list-item-content>
+                                                <v-list-item-title>Razonamiento matemático</v-list-item-title>
+                                            </v-list-item-content>
+
+                                            <v-list-item-icon>
+                                                <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
+                                            </v-list-item-icon>
+                                        </v-list-item>
+
+                                        <v-list-item>
+                                            <v-list-item-avatar>
+                                                <v-img src="{{asset('images/logos/logo-unsaac.png')}}"></v-img>
+                                            </v-list-item-avatar>
+
+                                            <v-list-item-content>
+                                                <v-list-item-title>Razonamiento Verbal</v-list-item-title>
+                                            </v-list-item-content>
+
+                                            <v-list-item-icon>
+                                                <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
+                                            </v-list-item-icon>
+                                        </v-list-item>
+
                                     </v-list>
                                 </v-col>
                                 <v-col>
                                     <v-list subheader>
                                         {{--                                        <v-subheader>Recent chat</v-subheader>--}}
 
-                                        <v-list-item
-                                            v-for="item in items"
-                                            :key="item.title"
-                                            @click=""
-                                        >
+                                        <v-list-item>
                                             <v-list-item-avatar>
-                                                <v-img :src="item.avatar"></v-img>
+                                                <v-img src="{{asset('images/logos/logo-andina.png')}}"></v-img>
                                             </v-list-item-avatar>
 
                                             <v-list-item-content>
-                                                <v-list-item-title v-text="item.title"></v-list-item-title>
+                                                <v-list-item-title>Historia</v-list-item-title>
                                             </v-list-item-content>
 
                                             <v-list-item-icon>
-                                                <v-icon :color="item.active ? 'deep-purple accent-4' : 'grey'">mdi-chevron-right</v-icon>
+                                                <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
                                             </v-list-item-icon>
                                         </v-list-item>
+
+                                        <v-list-item>
+                                            <v-list-item-avatar>
+                                                <v-img src="{{asset('images/logos/logo-andina.png')}}"></v-img>
+                                            </v-list-item-avatar>
+
+                                            <v-list-item-content>
+                                                <v-list-item-title>Biología</v-list-item-title>
+                                            </v-list-item-content>
+
+                                            <v-list-item-icon>
+                                                <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
+                                            </v-list-item-icon>
+                                        </v-list-item>
+
+                                        <v-list-item>
+                                            <v-list-item-avatar>
+                                                <v-img src="{{asset('images/logos/logo-andina.png')}}"></v-img>
+                                            </v-list-item-avatar>
+
+                                            <v-list-item-content>
+                                                <v-list-item-title>Química</v-list-item-title>
+                                            </v-list-item-content>
+
+                                            <v-list-item-icon>
+                                                <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
+                                            </v-list-item-icon>
+                                        </v-list-item>
+
                                     </v-list>
                                 </v-col>
                             </v-row>
@@ -206,7 +462,7 @@
                                         colored-border
                                         icon="mdi-twitter"
                                     >
-                                        <h5>Cusco de Aritmetica</h5>
+                                        <h5>Física</h5>
                                         <p class="ma-0">Lanzamiento: 25 de junio de 2020</p>
                                     </v-alert>
                                 </v-col>
@@ -220,7 +476,7 @@
                                         colored-border
                                         icon="mdi-twitter"
                                     >
-                                        <h5>Cusco de Aritmetica</h5>
+                                        <h5>Geometría</h5>
                                         <p class="ma-0 text--secondary">Lanzamiento: 25 de junio de 2020</p>
                                     </v-alert>
                                 </v-col>
@@ -234,7 +490,7 @@
                                         colored-border
                                         icon="mdi-twitter"
                                     >
-                                        <h5>Cusco de Aritmetica</h5>
+                                        <h5>Geografía</h5>
                                         <p class="ma-0">Lanzamiento: 25 de junio de 2020</p>
                                     </v-alert>
                                 </v-col>
@@ -263,7 +519,7 @@
                                                         tile
                                                         max-width="400"
                                                     >
-                                                            <v-card-title class="cyan white--text font-weight-bold"><span class="mx-auto">Xoddo Expert</span></v-card-title>
+                                                            <v-card-title class="cyan white--text font-weight-bold"><span class="mx-auto">Edulab Expert</span></v-card-title>
 
 
 {{--                                                        <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>--}}
@@ -281,7 +537,7 @@
                                                         tile
                                                         max-width="400"
                                                     >
-                                                        <v-card-title class="grey darken-2 white--text font-weight-bold"><span class="mx-auto">Xoddo Expert</span></v-card-title>
+                                                        <v-card-title class="grey darken-2 white--text font-weight-bold"><span class="mx-auto">Edulab Basic</span></v-card-title>
 
 
                                                         {{--                                                        <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>--}}
@@ -328,9 +584,9 @@
                                         color="green"
                                         class="text-center"
                                     >
-                                        <div class="font-weight-bold black--text">¿Necesitas capacitación para tu empresa? Tenemos planes especiales. Conócelos en</div>
+                                        <div class="font-weight-bold black--text">¿Necesitas clases de reforzamiento privado? Tenemos planes especiales. Conócelos en</div>
                                         <v-btn text small color="blue" class="font-weight-bold">
-                                            xoddo.com/privado
+                                            edulab.com/privado
                                         </v-btn>
                                     </v-alert>
                                 </v-col>
@@ -342,7 +598,7 @@
                         <v-container>
                             <v-row>
                                 <v-col class="text-center">
-                                    <h3 class="headline font-weight-bold">Cursos exclusivos de Xoddo</h3>
+                                    <h3 class="headline font-weight-bold">Cursos exclusivos de Edulab</h3>
                                 </v-col>
                             </v-row>
                             <v-row>
@@ -356,7 +612,7 @@
                                         prominent
 
                                     >
-                                        Historia y Literatura
+                                        Oratoria
                                     </v-alert>
                                 </v-col>
                                 <v-col>
@@ -369,7 +625,7 @@
                                         prominent
 
                                     >
-                                        Historia y Literatura
+                                        Técnicas de memorización
                                     </v-alert>
                                 </v-col>
                                 <v-col>
@@ -382,7 +638,7 @@
                                         prominent
 
                                     >
-                                        Historia y Literatura
+                                        Mente Brillante
                                     </v-alert>
                                 </v-col>
                                 <v-col>
@@ -395,7 +651,7 @@
                                         prominent
 
                                     >
-                                        Historia y Literatura
+                                        Liderazgo
                                     </v-alert>
                                 </v-col>
                             </v-row>
@@ -415,7 +671,7 @@
                             <v-col cols="8">
                                 <v-row>
                                     <v-col>
-                                        <h3 class="headline text-center font-weight-bold">Xoddo Funciona</h3>
+                                        <h3 class="headline text-center font-weight-bold">Edulab Funciona</h3>
                                     </v-col>
                                 </v-row>
                                 <v-row align="center">
@@ -432,8 +688,8 @@
                                         <v-img src="https://static.platzi.com/static/images/home-v4/platform_certificate.png" aspect-ratio="1.7" contain></v-img>
                                     </v-col>
                                     <v-col>
-                                        <h3>Examen de Certificación</h3>
-                                        <p>Un diploma de certificación por curso y carrera. Tendrás proyectos reales para tu portafolio.</p>
+                                        <h3>Examen de admisión y reforzamiento</h3>
+                                        <p>Se realizaran simulacros de exámenes de admisión virtual y exámenes de reforzamiento por cada tema que se realice.</p>
                                     </v-col>
                                 </v-row>
                                 <v-row align="center">
@@ -561,7 +817,7 @@
                             </v-row>
                             <div class="row justify-center my-5">
                                 <div class="col-8 text--secondary title font-weight-medium text-center">
-                                    Xoddo es la estrategia de formación de miles de personas para conseguir ingresar a la universidad o reforzar tus conociemintos
+                                    Edulab es la estrategia de formación de miles de personas para conseguir ingresar a la universidad o reforzar tus conociemintos
                                 </div>
                             </div>
                         </v-container>
@@ -574,7 +830,7 @@
                     height="100"
                 >
                     <div class="title font-weight-light grey--text text--lighten-1 text-center">
-                        &copy; 2020 — Xoddo, LLC — Made with 💜 by Lobo
+                        &copy; 2020 — Edulab, LLC — Made with 💜 by Lobo
                     </div>
                 </v-footer>
 

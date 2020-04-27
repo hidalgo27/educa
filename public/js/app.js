@@ -242,6 +242,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     source: String
@@ -966,7 +984,7 @@ var render = function() {
                   staticClass: "hidden-sm-and-down font-weight-bold",
                   attrs: { flat: "", text: "", small: "" }
                 },
-                [_vm._v("\n                    hola1\n                ")]
+                [_vm._v("\n                    Cursos\n                ")]
               ),
               _vm._v(" "),
               _c(
@@ -975,7 +993,33 @@ var render = function() {
                   staticClass: "hidden-sm-and-down font-weight-bold",
                   attrs: { flat: "", text: "", small: "" }
                 },
-                [_vm._v("\n                    hola\n                ")]
+                [
+                  _vm._v(
+                    "\n                    Universidades\n                "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  staticClass: "hidden-sm-and-down font-weight-bold",
+                  attrs: { flat: "", text: "", small: "" }
+                },
+                [_vm._v("\n                    Planes\n                ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  staticClass: "hidden-sm-and-down font-weight-bold",
+                  attrs: { flat: "", text: "", small: "" }
+                },
+                [
+                  _vm._v(
+                    "\n                    Sobre nosotros\n                "
+                  )
+                ]
               ),
               _vm._v(" "),
               _c("v-divider", { staticClass: "mx-5", attrs: { vertical: "" } }),
@@ -13860,7 +13904,7 @@ var baseMixins = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_8__["default"])(_V
       this.callUpdate();
     },
     invertedScroll: function invertedScroll(val) {
-      this.isActive = !val;
+      this.isActive = !val || this.currentScroll !== 0;
     }
   },
   created: function created() {
@@ -15869,6 +15913,7 @@ var __assign = undefined && undefined.__assign || function () {
       var around = this.parsedValue;
       var component = null;
       var maxDays = this.maxDays;
+      var weekdays = this.parsedWeekdays;
       var start = around;
       var end = around;
 
@@ -15889,6 +15934,7 @@ var __assign = undefined && undefined.__assign || function () {
         case 'day':
           component = _VCalendarDaily__WEBPACK_IMPORTED_MODULE_4__["default"];
           maxDays = 1;
+          weekdays = [start.weekday];
           break;
 
         case '4day':
@@ -15896,6 +15942,7 @@ var __assign = undefined && undefined.__assign || function () {
           end = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_2__["relativeDays"])(Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_2__["copyTimestamp"])(end), _util_timestamp__WEBPACK_IMPORTED_MODULE_2__["nextDay"], 4);
           Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_2__["updateFormatted"])(end);
           maxDays = 4;
+          weekdays = [start.weekday, (start.weekday + 1) % 7, (start.weekday + 2) % 7, (start.weekday + 3) % 7];
           break;
 
         case 'custom-weekly':
@@ -15918,8 +15965,12 @@ var __assign = undefined && undefined.__assign || function () {
         component: component,
         start: start,
         end: end,
-        maxDays: maxDays
+        maxDays: maxDays,
+        weekdays: weekdays
       };
+    },
+    eventWeekdays: function eventWeekdays() {
+      return this.renderProps.weekdays;
     }
   },
   watch: {
@@ -15974,9 +16025,7 @@ var __assign = undefined && undefined.__assign || function () {
             break;
 
           case 'day':
-            var index = moved.weekday;
-            var days = forward ? this.weekdaySkips[index] : this.weekdaySkipsReverse[index];
-            Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_2__["relativeDays"])(moved, mover, days);
+            Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_2__["relativeDays"])(moved, mover, 1);
             break;
 
           case '4day':
@@ -16044,7 +16093,8 @@ var __assign = undefined && undefined.__assign || function () {
         start = _a.start,
         end = _a.end,
         maxDays = _a.maxDays,
-        component = _a.component;
+        component = _a.component,
+        weekdays = _a.weekdays;
     return h(component, {
       staticClass: 'v-calendar',
       class: {
@@ -16053,7 +16103,8 @@ var __assign = undefined && undefined.__assign || function () {
       props: __assign({}, this.$props, {
         start: start.date,
         end: end.date,
-        maxDays: maxDays
+        maxDays: maxDays,
+        weekdays: weekdays
       }),
       directives: [{
         modifiers: {
@@ -16249,7 +16300,7 @@ var __spread = undefined && undefined.__spread || function () {
     genHeadDayLabel: function genHeadDayLabel(day) {
       return this.$createElement('div', {
         staticClass: 'v-calendar-daily_head-day-label'
-      }, [this.genHeadDayButton(day)]);
+      }, Object(_util_helpers__WEBPACK_IMPORTED_MODULE_4__["getSlot"])(this, 'day-label-header', day) || [this.genHeadDayButton(day)]);
     },
     genHeadDayButton: function genHeadDayButton(day) {
       var color = day.present ? this.color : 'transparent';
@@ -16965,6 +17016,9 @@ var MINUTES_IN_DAY = 1440;
     },
     eventModeFunction: function eventModeFunction() {
       return typeof this.eventOverlapMode === 'function' ? this.eventOverlapMode : _modes__WEBPACK_IMPORTED_MODULE_5__["CalendarEventOverlapModes"][this.eventOverlapMode];
+    },
+    eventWeekdays: function eventWeekdays() {
+      return this.parsedWeekdays;
     }
   },
   methods: {
@@ -17207,14 +17261,14 @@ var MINUTES_IN_DAY = 1440;
     },
     getEventsForDay: function getEventsForDay(day) {
       var identifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_6__["getDayIdentifier"])(day);
-      var firstWeekday = this.parsedWeekdays[0];
+      var firstWeekday = this.eventWeekdays[0];
       return this.parsedEvents.filter(function (event) {
         return Object(_util_events__WEBPACK_IMPORTED_MODULE_7__["isEventStart"])(event, day, identifier, firstWeekday);
       });
     },
     getEventsForDayAll: function getEventsForDayAll(day) {
       var identifier = Object(_util_timestamp__WEBPACK_IMPORTED_MODULE_6__["getDayIdentifier"])(day);
-      var firstWeekday = this.parsedWeekdays[0];
+      var firstWeekday = this.eventWeekdays[0];
       return this.parsedEvents.filter(function (event) {
         return event.allDay && Object(_util_events__WEBPACK_IMPORTED_MODULE_7__["isEventStart"])(event, day, identifier, firstWeekday);
       });
@@ -17229,10 +17283,10 @@ var MINUTES_IN_DAY = 1440;
       var _this = this;
 
       if (this.noEvents) {
-        return this.$scopedSlots;
+        return __assign({}, this.$scopedSlots);
       }
 
-      var mode = this.eventModeFunction(this.parsedEvents, this.parsedWeekdays[0], this.parsedEventOverlapThreshold);
+      var mode = this.eventModeFunction(this.parsedEvents, this.eventWeekdays[0], this.parsedEventOverlapThreshold);
 
       var getSlotChildren = function getSlotChildren(day, getter, mapper, timed) {
         var events = getter(day);
@@ -18399,7 +18453,7 @@ function parseEvent(input, index, startProperty, endProperty) {
   };
 }
 function isEventOn(event, dayIdentifier) {
-  return dayIdentifier >= event.startIdentifier && dayIdentifier <= event.endIdentifier;
+  return dayIdentifier >= event.startIdentifier && dayIdentifier <= event.endIdentifier && dayIdentifier * _timestamp__WEBPACK_IMPORTED_MODULE_0__["OFFSET_TIME"] !== event.endTimestampIdentifier;
 }
 function isEventStart(event, day, dayIdentifier, firstWeekday) {
   return dayIdentifier === event.startIdentifier || firstWeekday === day.weekday && isEventOn(event, dayIdentifier);
@@ -18657,7 +18711,7 @@ function validateWeekdays(input) {
 /*!****************************************************!*\
   !*** ./src/components/VCalendar/util/timestamp.ts ***!
   \****************************************************/
-/*! exports provided: PARSE_REGEX, PARSE_TIME, DAYS_IN_MONTH, DAYS_IN_MONTH_LEAP, DAYS_IN_MONTH_MIN, DAYS_IN_MONTH_MAX, MONTH_MAX, MONTH_MIN, DAY_MIN, DAYS_IN_WEEK, MINUTES_IN_HOUR, HOURS_IN_DAY, FIRST_HOUR, getStartOfWeek, getEndOfWeek, getStartOfMonth, getEndOfMonth, parseTime, validateTimestamp, parseTimestamp, parseDate, getDayIdentifier, getTimeIdentifier, getTimestampIdentifier, updateRelative, updateMinutes, updateWeekday, updateFormatted, getWeekday, isLeapYear, daysInMonth, copyTimestamp, padNumber, getDate, getTime, nextMinutes, nextDay, prevDay, relativeDays, diffMinutes, findWeekday, getWeekdaySkips, createDayList, createIntervalList, createNativeLocaleFormatter */
+/*! exports provided: PARSE_REGEX, PARSE_TIME, DAYS_IN_MONTH, DAYS_IN_MONTH_LEAP, DAYS_IN_MONTH_MIN, DAYS_IN_MONTH_MAX, MONTH_MAX, MONTH_MIN, DAY_MIN, DAYS_IN_WEEK, MINUTES_IN_HOUR, HOURS_IN_DAY, FIRST_HOUR, OFFSET_YEAR, OFFSET_MONTH, OFFSET_HOUR, OFFSET_TIME, getStartOfWeek, getEndOfWeek, getStartOfMonth, getEndOfMonth, parseTime, validateTimestamp, parseTimestamp, parseDate, getDayIdentifier, getTimeIdentifier, getTimestampIdentifier, updateRelative, updateMinutes, updateWeekday, updateFormatted, getWeekday, daysInMonth, copyTimestamp, padNumber, getDate, getTime, nextMinutes, nextDay, prevDay, relativeDays, diffMinutes, findWeekday, getWeekdaySkips, createDayList, createIntervalList, createNativeLocaleFormatter */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18675,6 +18729,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MINUTES_IN_HOUR", function() { return MINUTES_IN_HOUR; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HOURS_IN_DAY", function() { return HOURS_IN_DAY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FIRST_HOUR", function() { return FIRST_HOUR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OFFSET_YEAR", function() { return OFFSET_YEAR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OFFSET_MONTH", function() { return OFFSET_MONTH; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OFFSET_HOUR", function() { return OFFSET_HOUR; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "OFFSET_TIME", function() { return OFFSET_TIME; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStartOfWeek", function() { return getStartOfWeek; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getEndOfWeek", function() { return getEndOfWeek; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getStartOfMonth", function() { return getStartOfMonth; });
@@ -18691,7 +18749,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateWeekday", function() { return updateWeekday; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateFormatted", function() { return updateFormatted; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getWeekday", function() { return getWeekday; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isLeapYear", function() { return isLeapYear; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "daysInMonth", function() { return daysInMonth; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "copyTimestamp", function() { return copyTimestamp; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "padNumber", function() { return padNumber; });
@@ -18707,7 +18764,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createDayList", function() { return createDayList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createIntervalList", function() { return createIntervalList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createNativeLocaleFormatter", function() { return createNativeLocaleFormatter; });
+/* harmony import */ var _util_dateTimeUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../util/dateTimeUtils */ "./src/util/dateTimeUtils.ts");
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
 
 var PARSE_REGEX = /^(\d{4})-(\d{1,2})(-(\d{1,2}))?([^\d]+(\d{1,2}))?(:(\d{1,2}))?(:(\d{1,2}))?$/;
 var PARSE_TIME = /(\d\d?)(:(\d\d?)|)(:(\d\d?)|)/;
@@ -18722,6 +18781,10 @@ var DAYS_IN_WEEK = 7;
 var MINUTES_IN_HOUR = 60;
 var HOURS_IN_DAY = 24;
 var FIRST_HOUR = 0;
+var OFFSET_YEAR = 10000;
+var OFFSET_MONTH = 100;
+var OFFSET_HOUR = 100;
+var OFFSET_TIME = 10000;
 function getStartOfWeek(timestamp, weekdays, today) {
   var start = copyTimestamp(timestamp);
   findWeekday(start, weekdays[0], prevDay);
@@ -18844,13 +18907,13 @@ function parseDate(date) {
   });
 }
 function getDayIdentifier(timestamp) {
-  return timestamp.year * 10000 + timestamp.month * 100 + timestamp.day;
+  return timestamp.year * OFFSET_YEAR + timestamp.month * OFFSET_MONTH + timestamp.day;
 }
 function getTimeIdentifier(timestamp) {
-  return timestamp.hour * 100 + timestamp.minute;
+  return timestamp.hour * OFFSET_HOUR + timestamp.minute;
 }
 function getTimestampIdentifier(timestamp) {
-  return getDayIdentifier(timestamp) * 10000 + getTimeIdentifier(timestamp);
+  return getDayIdentifier(timestamp) * OFFSET_TIME + getTimeIdentifier(timestamp);
 }
 function updateRelative(timestamp, now, time) {
   if (time === void 0) {
@@ -18907,11 +18970,8 @@ function getWeekday(timestamp) {
 
   return timestamp.weekday;
 }
-function isLeapYear(year) {
-  return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
-}
 function daysInMonth(year, month) {
-  return isLeapYear(year) ? DAYS_IN_MONTH_LEAP[month] : DAYS_IN_MONTH[month];
+  return Object(_util_dateTimeUtils__WEBPACK_IMPORTED_MODULE_0__["isLeapYear"])(year) ? DAYS_IN_MONTH_LEAP[month] : DAYS_IN_MONTH[month];
 }
 function copyTimestamp(timestamp) {
   var date = timestamp.date,
@@ -21850,6 +21910,41 @@ var __assign = undefined && undefined.__assign || function () {
   };
 
   return __assign.apply(this, arguments);
+};
+
+var __read = undefined && undefined.__read || function (o, n) {
+  var m = typeof Symbol === "function" && o[Symbol.iterator];
+  if (!m) return o;
+  var i = m.call(o),
+      r,
+      ar = [],
+      e;
+
+  try {
+    while ((n === void 0 || n-- > 0) && !(r = i.next()).done) {
+      ar.push(r.value);
+    }
+  } catch (error) {
+    e = {
+      error: error
+    };
+  } finally {
+    try {
+      if (r && !r.done && (m = i["return"])) m.call(i);
+    } finally {
+      if (e) throw e.error;
+    }
+  }
+
+  return ar;
+};
+
+var __spread = undefined && undefined.__spread || function () {
+  for (var ar = [], i = 0; i < arguments.length; i++) {
+    ar = ar.concat(__read(arguments[i]));
+  }
+
+  return ar;
 }; // Helpers
 
 
@@ -22206,8 +22301,14 @@ var __assign = undefined && undefined.__assign || function () {
       });
     },
     sortItems: function sortItems(items) {
-      var sortBy = this.internalOptions.groupBy.concat(this.internalOptions.sortBy);
-      var sortDesc = this.internalOptions.groupDesc.concat(this.internalOptions.sortDesc);
+      var sortBy = this.internalOptions.sortBy;
+      var sortDesc = this.internalOptions.sortDesc;
+
+      if (this.internalOptions.groupBy.length) {
+        sortBy = __spread(this.internalOptions.groupBy, sortBy);
+        sortDesc = __spread(this.internalOptions.groupDesc, sortDesc);
+      }
+
       return this.customSort(items, sortBy, sortDesc, this.locale);
     },
     groupItems: function groupItems(items) {
@@ -23521,19 +23622,18 @@ function searchTableItems(items, search, headersWithCustomFilters, headersWithou
     genGroupedRows: function genGroupedRows(groupedItems, props) {
       var _this = this;
 
-      var groups = Object.keys(groupedItems || {});
-      return groups.map(function (group) {
-        if (!_this.openCache.hasOwnProperty(group)) _this.$set(_this.openCache, group, true);
+      return groupedItems.map(function (group) {
+        if (!_this.openCache.hasOwnProperty(group.name)) _this.$set(_this.openCache, group.name, true);
 
         if (_this.$scopedSlots.group) {
           return _this.$scopedSlots.group({
-            group: group,
+            group: group.name,
             options: props.options,
-            items: groupedItems[group],
+            items: group.items,
             headers: _this.computedHeaders
           });
         } else {
-          return _this.genDefaultGroupedRow(group, groupedItems[group], props);
+          return _this.genDefaultGroupedRow(group.name, group.items, props);
         }
       });
     },
@@ -23605,7 +23705,9 @@ function searchTableItems(items, search, headersWithCustomFilters, headersWithou
           group: group,
           groupBy: props.options.groupBy,
           items: items,
-          headers: this.computedHeaders
+          headers: this.computedHeaders,
+          isOpen: isOpen,
+          toggle: toggleFn
         })]));
       }
 
@@ -23981,79 +24083,105 @@ var __spread = undefined && undefined.__spread || function () {
 
       return this.$createElement('span', {
         on: {
-          click: function click() {
-            return _this.$emit('group', header.value);
+          click: function click(e) {
+            e.stopPropagation();
+
+            _this.$emit('group', header.value);
           }
         }
       }, ['group']);
     },
-    // eslint-disable-next-line max-statements
+    getAria: function getAria(beingSorted, isDesc) {
+      var _this = this;
+
+      var $t = function $t(key) {
+        return _this.$vuetify.lang.t("$vuetify.dataTable.ariaLabel." + key);
+      };
+
+      var ariaSort = 'none';
+      var ariaLabel = [$t('sortNone'), $t('activateAscending')];
+
+      if (!beingSorted) {
+        return {
+          ariaSort: ariaSort,
+          ariaLabel: ariaLabel.join(' ')
+        };
+      }
+
+      if (isDesc) {
+        ariaSort = 'descending';
+        ariaLabel = [$t('sortDescending'), $t(this.options.mustSort ? 'activateAscending' : 'activateNone')];
+      } else {
+        ariaSort = 'ascending';
+        ariaLabel = [$t('sortAscending'), $t('activateDescending')];
+      }
+
+      return {
+        ariaSort: ariaSort,
+        ariaLabel: ariaLabel.join(' ')
+      };
+    },
     genHeader: function genHeader(header) {
       var _this = this;
 
-      var listeners = {};
+      var data = {
+        attrs: {
+          role: 'columnheader',
+          scope: 'col',
+          'aria-label': header.text || ''
+        },
+        style: {
+          width: Object(_util_helpers__WEBPACK_IMPORTED_MODULE_2__["convertToUnit"])(header.width),
+          minWidth: Object(_util_helpers__WEBPACK_IMPORTED_MODULE_2__["convertToUnit"])(header.width)
+        },
+        class: __spread(["text-" + (header.align || 'start')], Object(_util_helpers__WEBPACK_IMPORTED_MODULE_2__["wrapInArray"])(header.class), [header.divider && 'v-data-table__divider']),
+        on: {}
+      };
       var children = [];
-      var attrs = {
-        role: 'columnheader',
-        scope: 'col',
-        'aria-label': header.text || '',
-        'aria-sort': 'none'
-      };
-      var styles = {
-        width: Object(_util_helpers__WEBPACK_IMPORTED_MODULE_2__["convertToUnit"])(header.width),
-        minWidth: Object(_util_helpers__WEBPACK_IMPORTED_MODULE_2__["convertToUnit"])(header.width)
-      };
-
-      var classes = __spread(["text-" + (header.align || 'start')], Object(_util_helpers__WEBPACK_IMPORTED_MODULE_2__["wrapInArray"])(header.class), [header.divider && 'v-data-table__divider']);
 
       if (header.value === 'data-table-select' && !this.singleSelect) {
-        children.push(this.genSelectAll());
-      } else {
-        children.push(this.$scopedSlots[header.value] ? this.$scopedSlots[header.value]({
-          header: header
-        }) : this.$createElement('span', [header.text]));
+        return this.$createElement('th', data, [this.genSelectAll()]);
+      }
 
-        if (!this.disableSort && (header.sortable || !header.hasOwnProperty('sortable'))) {
-          listeners['click'] = function () {
-            return _this.$emit('sort', header.value);
-          };
+      children.push(this.$scopedSlots[header.value] ? this.$scopedSlots[header.value]({
+        header: header
+      }) : this.$createElement('span', [header.text]));
 
-          var sortIndex = this.options.sortBy.findIndex(function (k) {
-            return k === header.value;
-          });
-          var beingSorted = sortIndex >= 0;
-          var isDesc = this.options.sortDesc[sortIndex];
-          classes.push('sortable');
+      if (!this.disableSort && (header.sortable || !header.hasOwnProperty('sortable'))) {
+        data.on['click'] = function () {
+          return _this.$emit('sort', header.value);
+        };
 
-          if (beingSorted) {
-            classes.push('active');
-            classes.push(isDesc ? 'desc' : 'asc');
-            attrs['aria-sort'] = isDesc ? 'descending' : 'ascending';
-            attrs['aria-label'] += isDesc ? this.$vuetify.lang.t('$vuetify.dataTable.ariaLabel.sortDescending') : this.$vuetify.lang.t('$vuetify.dataTable.ariaLabel.sortAscending');
-          } else {
-            attrs['aria-label'] += this.$vuetify.lang.t('$vuetify.dataTable.ariaLabel.sortNone');
-          }
+        var sortIndex = this.options.sortBy.findIndex(function (k) {
+          return k === header.value;
+        });
+        var beingSorted = sortIndex >= 0;
+        var isDesc = this.options.sortDesc[sortIndex];
+        data.class.push('sortable');
 
-          if (header.align === 'end') children.unshift(this.genSortIcon());else children.push(this.genSortIcon());
+        var _a = this.getAria(beingSorted, isDesc),
+            ariaLabel = _a.ariaLabel,
+            ariaSort = _a.ariaSort;
 
-          if (this.options.multiSort && beingSorted) {
-            children.push(this.$createElement('span', {
-              class: 'v-data-table-header__sort-badge'
-            }, [String(sortIndex + 1)]));
-          }
+        data.attrs['aria-label'] += "" + (header.text ? ': ' : '') + ariaLabel;
+        data.attrs['aria-sort'] = ariaSort;
+
+        if (beingSorted) {
+          data.class.push('active');
+          data.class.push(isDesc ? 'desc' : 'asc');
         }
 
-        if (this.showGroupBy) {
-          children.push(this.genGroupByToggle(header));
+        if (header.align === 'end') children.unshift(this.genSortIcon());else children.push(this.genSortIcon());
+
+        if (this.options.multiSort && beingSorted) {
+          children.push(this.$createElement('span', {
+            class: 'v-data-table-header__sort-badge'
+          }, [String(sortIndex + 1)]));
         }
       }
 
-      return this.$createElement('th', {
-        attrs: attrs,
-        class: classes,
-        style: styles,
-        on: listeners
-      }, children);
+      if (this.showGroupBy) children.push(this.genGroupByToggle(header));
+      return this.$createElement('th', data, children);
     }
   },
   render: function render() {
@@ -24897,6 +25025,10 @@ function sanitizeDateString(dateString, type) {
     },
     // Function formatting the tableDate in the day/month table header
     headerDateFormat: Function,
+    localeFirstDayOfYear: {
+      type: [String, Number],
+      default: 0
+    },
     max: String,
     min: String,
     // Function formatting month in the months table
@@ -25118,7 +25250,7 @@ function sanitizeDateString(dateString, type) {
   methods: {
     emitInput: function emitInput(newInput) {
       if (this.range && this.value) {
-        if (this.value.length === 2) {
+        if (this.value.length !== 1) {
           this.$emit('input', [newInput]);
         } else {
           var output_1 = __spread(this.value, [newInput]);
@@ -25253,6 +25385,7 @@ function sanitizeDateString(dateString, type) {
           format: this.dayFormat,
           light: this.light,
           locale: this.locale,
+          localeFirstDayOfYear: this.localeFirstDayOfYear,
           min: this.min,
           max: this.max,
           range: this.range,
@@ -25370,16 +25503,18 @@ function sanitizeDateString(dateString, type) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mixins_date_picker_table__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./mixins/date-picker-table */ "./src/components/VDatePicker/mixins/date-picker-table.ts");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "./src/components/VDatePicker/util/index.ts");
-/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/helpers */ "./src/util/helpers.ts");
-/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/mixins */ "./src/util/mixins.ts");
+/* harmony import */ var _util_dateTimeUtils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/dateTimeUtils */ "./src/util/dateTimeUtils.ts");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./util */ "./src/components/VDatePicker/util/index.ts");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/helpers */ "./src/util/helpers.ts");
+/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../util/mixins */ "./src/util/mixins.ts");
 // Mixins
  // Utils
 
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_util_mixins__WEBPACK_IMPORTED_MODULE_3__["default"])(_mixins_date_picker_table__WEBPACK_IMPORTED_MODULE_0__["default"]
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_util_mixins__WEBPACK_IMPORTED_MODULE_4__["default"])(_mixins_date_picker_table__WEBPACK_IMPORTED_MODULE_0__["default"]
 /* @vue/component */
 ).extend({
   name: 'v-date-picker-date-table',
@@ -25388,12 +25523,16 @@ __webpack_require__.r(__webpack_exports__);
       type: [String, Number],
       default: 0
     },
+    localeFirstDayOfYear: {
+      type: [String, Number],
+      default: 0
+    },
     showWeek: Boolean,
     weekdayFormat: Function
   },
   computed: {
     formatter: function formatter() {
-      return this.format || Object(_util__WEBPACK_IMPORTED_MODULE_1__["createNativeLocaleFormatter"])(this.currentLocale, {
+      return this.format || Object(_util__WEBPACK_IMPORTED_MODULE_2__["createNativeLocaleFormatter"])(this.currentLocale, {
         day: 'numeric',
         timeZone: 'UTC'
       }, {
@@ -25402,7 +25541,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     weekdayFormatter: function weekdayFormatter() {
-      return this.weekdayFormat || Object(_util__WEBPACK_IMPORTED_MODULE_1__["createNativeLocaleFormatter"])(this.currentLocale, {
+      return this.weekdayFormat || Object(_util__WEBPACK_IMPORTED_MODULE_2__["createNativeLocaleFormatter"])(this.currentLocale, {
         weekday: 'narrow',
         timeZone: 'UTC'
       });
@@ -25411,17 +25550,17 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       var first = parseInt(this.firstDayOfWeek, 10);
-      return this.weekdayFormatter ? Object(_util_helpers__WEBPACK_IMPORTED_MODULE_2__["createRange"])(7).map(function (i) {
+      return this.weekdayFormatter ? Object(_util_helpers__WEBPACK_IMPORTED_MODULE_3__["createRange"])(7).map(function (i) {
         return _this.weekdayFormatter("2017-01-" + (first + i + 15));
       }) // 2017-01-15 is Sunday
-      : Object(_util_helpers__WEBPACK_IMPORTED_MODULE_2__["createRange"])(7).map(function (i) {
+      : Object(_util_helpers__WEBPACK_IMPORTED_MODULE_3__["createRange"])(7).map(function (i) {
         return ['S', 'M', 'T', 'W', 'T', 'F', 'S'][(i + first) % 7];
       });
     }
   },
   methods: {
     calculateTableDate: function calculateTableDate(delta) {
-      return Object(_util__WEBPACK_IMPORTED_MODULE_1__["monthChange"])(this.tableDate, Math.sign(delta || 1));
+      return Object(_util__WEBPACK_IMPORTED_MODULE_2__["monthChange"])(this.tableDate, Math.sign(delta || 1));
     },
     genTHead: function genTHead() {
       var _this = this;
@@ -25429,25 +25568,21 @@ __webpack_require__.r(__webpack_exports__);
       var days = this.weekDays.map(function (day) {
         return _this.$createElement('th', day);
       });
-      this.showWeek && days.unshift(this.$createElement('th'));
+
+      if (this.showWeek) {
+        days.unshift(this.$createElement('th'));
+      }
+
       return this.$createElement('thead', this.genTR(days));
     },
     // Returns number of the days from the firstDayOfWeek to the first day of the current month
     weekDaysBeforeFirstDayOfTheMonth: function weekDaysBeforeFirstDayOfTheMonth() {
-      var firstDayOfTheMonth = new Date(this.displayedYear + "-" + Object(_util__WEBPACK_IMPORTED_MODULE_1__["pad"])(this.displayedMonth + 1) + "-01T00:00:00+00:00");
+      var firstDayOfTheMonth = new Date(this.displayedYear + "-" + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pad"])(this.displayedMonth + 1) + "-01T00:00:00+00:00");
       var weekDay = firstDayOfTheMonth.getUTCDay();
       return (weekDay - parseInt(this.firstDayOfWeek) + 7) % 7;
     },
-    getWeekNumber: function getWeekNumber() {
-      var dayOfYear = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334][this.displayedMonth];
-
-      if (this.displayedMonth > 1 && (this.displayedYear % 4 === 0 && this.displayedYear % 100 !== 0 || this.displayedYear % 400 === 0)) {
-        dayOfYear++;
-      }
-
-      var offset = (this.displayedYear + (this.displayedYear - 1 >> 2) - Math.floor((this.displayedYear - 1) / 100) + Math.floor((this.displayedYear - 1) / 400) - Number(this.firstDayOfWeek)) % 7; // https://en.wikipedia.org/wiki/Zeller%27s_congruence
-
-      return Math.floor((dayOfYear + offset) / 7) + 1;
+    getWeekNumber: function getWeekNumber(dayInMonth) {
+      return Object(_util_dateTimeUtils__WEBPACK_IMPORTED_MODULE_1__["weekNumber"])(this.displayedYear, this.displayedMonth, dayInMonth, parseInt(this.firstDayOfWeek), parseInt(this.localeFirstDayOfYear));
     },
     genWeekNumber: function genWeekNumber(weekNumber) {
       return this.$createElement('td', [this.$createElement('small', {
@@ -25459,21 +25594,26 @@ __webpack_require__.r(__webpack_exports__);
       var daysInMonth = new Date(this.displayedYear, this.displayedMonth + 1, 0).getDate();
       var rows = [];
       var day = this.weekDaysBeforeFirstDayOfTheMonth();
-      var weekNumber = this.getWeekNumber();
-      this.showWeek && rows.push(this.genWeekNumber(weekNumber++));
+
+      if (this.showWeek) {
+        rows.push(this.genWeekNumber(this.getWeekNumber(1)));
+      }
 
       while (day--) {
         rows.push(this.$createElement('td'));
       }
 
       for (day = 1; day <= daysInMonth; day++) {
-        var date = this.displayedYear + "-" + Object(_util__WEBPACK_IMPORTED_MODULE_1__["pad"])(this.displayedMonth + 1) + "-" + Object(_util__WEBPACK_IMPORTED_MODULE_1__["pad"])(day);
+        var date = this.displayedYear + "-" + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pad"])(this.displayedMonth + 1) + "-" + Object(_util__WEBPACK_IMPORTED_MODULE_2__["pad"])(day);
         rows.push(this.$createElement('td', [this.genButton(date, true, 'date', this.formatter)]));
 
         if (rows.length % (this.showWeek ? 8 : 7) === 0) {
           children.push(this.genTR(rows));
           rows = [];
-          day < daysInMonth && this.showWeek && rows.push(this.genWeekNumber(weekNumber++));
+
+          if (this.showWeek && day < daysInMonth) {
+            rows.push(this.genWeekNumber(this.getWeekNumber(day + 7)));
+          }
         }
       }
 
@@ -29102,7 +29242,8 @@ var VIcon = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_7__["default"])(_mixins
       if (size) {
         data.style = {
           fontSize: size,
-          height: size
+          height: size,
+          width: size
         };
       }
 
@@ -29201,6 +29342,7 @@ __webpack_require__.r(__webpack_exports__);
  // Utils
 
 
+var hasIntersect = typeof window !== 'undefined' && 'IntersectionObserver' in window;
 /* @vue/component */
 
 /* harmony default export */ __webpack_exports__["default"] = (_VResponsive__WEBPACK_IMPORTED_MODULE_2__["default"].extend({
@@ -29253,9 +29395,6 @@ __webpack_require__.r(__webpack_exports__);
   computed: {
     computedAspectRatio: function computedAspectRatio() {
       return Number(this.normalisedSrc.aspect || this.calculatedAspectRatio);
-    },
-    hasIntersect: function hasIntersect() {
-      return typeof window !== 'undefined' && 'IntersectionObserver' in window;
     },
     normalisedSrc: function normalisedSrc() {
       return typeof this.src === 'string' ? {
@@ -29315,7 +29454,7 @@ __webpack_require__.r(__webpack_exports__);
       // If the current browser supports the intersection
       // observer api, the image is not observable, and
       // the eager prop isn't being used, do not load
-      if (this.hasIntersect && !isIntersecting && !this.eager) return;
+      if (hasIntersect && !isIntersecting && !this.eager) return;
 
       if (this.normalisedSrc.lazySrc) {
         var lazyImg = new Image();
@@ -29418,14 +29557,19 @@ __webpack_require__.r(__webpack_exports__);
     node.data.staticClass += ' v-image'; // Only load intersect directive if it
     // will work in the current browser.
 
-    node.data.directives = this.hasIntersect ? [{
-      name: 'intersect',
-      options: this.options,
-      modifiers: {
-        once: true
-      },
-      value: this.init
-    }] : [];
+    if (hasIntersect) {
+      node.data.directives = [{
+        name: 'intersect',
+        modifiers: {
+          once: true
+        },
+        value: {
+          handler: this.init,
+          options: this.options
+        }
+      }];
+    }
+
     node.data.attrs = {
       role: this.alt ? 'img' : undefined,
       'aria-label': this.alt
@@ -32618,9 +32762,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _VPagination_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_VPagination_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _VIcon__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../VIcon */ "./src/components/VIcon/index.ts");
 /* harmony import */ var _directives_resize__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../directives/resize */ "./src/directives/resize/index.ts");
-/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../util/mixins */ "./src/util/mixins.ts");
-/* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixins/colorable */ "./src/mixins/colorable/index.ts");
+/* harmony import */ var _mixins_colorable__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../mixins/colorable */ "./src/mixins/colorable/index.ts");
+/* harmony import */ var _mixins_intersectable__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../mixins/intersectable */ "./src/mixins/intersectable/index.ts");
 /* harmony import */ var _mixins_themeable__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../mixins/themeable */ "./src/mixins/themeable/index.ts");
+/* harmony import */ var _util_mixins__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../util/mixins */ "./src/util/mixins.ts");
 var __assign = undefined && undefined.__assign || function () {
   __assign = Object.assign || function (t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
@@ -32679,10 +32824,14 @@ var __spread = undefined && undefined.__spread || function () {
 
 
 
+ // Utilities
+
 
 /* @vue/component */
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_util_mixins__WEBPACK_IMPORTED_MODULE_3__["default"])(_mixins_colorable__WEBPACK_IMPORTED_MODULE_4__["default"], _mixins_themeable__WEBPACK_IMPORTED_MODULE_5__["default"]).extend({
+/* harmony default export */ __webpack_exports__["default"] = (Object(_util_mixins__WEBPACK_IMPORTED_MODULE_6__["default"])(_mixins_colorable__WEBPACK_IMPORTED_MODULE_3__["default"], Object(_mixins_intersectable__WEBPACK_IMPORTED_MODULE_4__["default"])({
+  onVisible: ['init']
+}), _mixins_themeable__WEBPACK_IMPORTED_MODULE_5__["default"]).extend({
   name: 'v-pagination',
   directives: {
     Resize: _directives_resize__WEBPACK_IMPORTED_MODULE_2__["default"]
@@ -35154,7 +35303,8 @@ var baseMixins = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_13__["default"])(_
 
       return this.$createElement(_VMenu__WEBPACK_IMPORTED_MODULE_3__["default"], {
         attrs: {
-          role: undefined
+          role: undefined,
+          offsetY: true
         },
         props: props,
         on: {
@@ -35275,7 +35425,11 @@ var baseMixins = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_13__["default"])(_
       var item = this.allItems[index];
 
       if (index !== -1) {
+        this.lastItem = Math.max(this.lastItem, index + 5);
         this.setValue(this.returnObject ? item : this.getValue(item));
+        this.$nextTick(function () {
+          return _this.$refs.menu.getTiles();
+        });
         setTimeout(function () {
           return _this.setMenuIndex(index);
         });
@@ -35284,6 +35438,7 @@ var baseMixins = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_13__["default"])(_
     onKeyDown: function onKeyDown(e) {
       var _this = this;
 
+      if (this.readonly) return;
       var keyCode = e.keyCode;
       var menu = this.$refs.menu; // If enter, space, open menu
 
@@ -36321,10 +36476,10 @@ var BaseSlideGroup = Object(_util_mixins__WEBPACK_IMPORTED_MODULE_6__["default"]
     this.setWidths();
   },
   methods: {
+    // Always generate next for scrollable hint
     genNext: function genNext() {
       var _this = this;
 
-      if (!this.hasAffixes) return null;
       var slot = this.$scopedSlots.next ? this.$scopedSlots.next({}) : this.$slots.next || this.__cachedNext;
       return this.$createElement('div', {
         staticClass: 'v-slide-group__next',
@@ -37578,7 +37733,7 @@ var __assign = undefined && undefined.__assign || function () {
         return _this.$createElement('stop', {
           attrs: {
             offset: index / len,
-            'stop-color': color || _this.color || 'currentColor'
+            'stop-color': color || 'currentColor'
           }
         });
       });
@@ -37598,7 +37753,7 @@ var __assign = undefined && undefined.__assign || function () {
           fontSize: '8',
           textAnchor: 'middle',
           dominantBaseline: 'mathematical',
-          fill: this.color || 'currentColor'
+          fill: 'currentColor'
         }
       }, children);
     },
@@ -40058,7 +40213,8 @@ var dirtyTypes = ['color', 'file', 'time', 'date', 'datetime-local', 'week', 'mo
           blur: this.onBlur,
           input: this.onInput,
           focus: this.onFocus,
-          keydown: this.onKeyDown
+          keydown: this.onKeyDown,
+          compositionend: this.onCompositionEnd
         }),
         ref: 'input'
       });
@@ -40094,6 +40250,11 @@ var dirtyTypes = ['color', 'file', 'time', 'date', 'datetime-local', 'week', 'mo
       if (this.isFocused || this.disabled || !this.$refs.input) return;
       this.$refs.input.focus();
     },
+    onCompositionEnd: function onCompositionEnd(e) {
+      var target = e.target;
+      this.internalValue = target.value;
+      this.badInput = target.validity && target.validity.badInput;
+    },
     onFocus: function onFocus(e) {
       if (!this.$refs.input) return;
 
@@ -40107,12 +40268,15 @@ var dirtyTypes = ['color', 'file', 'time', 'date', 'datetime-local', 'week', 'mo
       }
     },
     onInput: function onInput(e) {
-      var target = e.target;
-      this.internalValue = target.value;
-      this.badInput = target.validity && target.validity.badInput;
+      if (!e.isComposing) {
+        this.onCompositionEnd(e);
+      }
     },
     onKeyDown: function onKeyDown(e) {
-      if (e.keyCode === _util_helpers__WEBPACK_IMPORTED_MODULE_8__["keyCodes"].enter) this.$emit('change', this.internalValue);
+      if (!e.isComposing && e.keyCode === _util_helpers__WEBPACK_IMPORTED_MODULE_8__["keyCodes"].enter) {
+        this.$emit('change', this.internalValue);
+      }
+
       this.$emit('keydown', e);
     },
     onMouseDown: function onMouseDown(e) {
@@ -44376,12 +44540,16 @@ __webpack_require__.r(__webpack_exports__);
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function inserted(el, binding) {
-  var modifiers = binding.modifiers ||
-  /* istanbul ignore next */
-  {};
+  var modifiers = binding.modifiers || {};
   var value = binding.value;
-  var isObject = _typeof(value) === 'object';
-  var callback = isObject ? value.handler : value;
+
+  var _a = _typeof(value) === 'object' ? value : {
+    handler: value,
+    options: {}
+  },
+      handler = _a.handler,
+      options = _a.options;
+
   var observer = new IntersectionObserver(function (entries, observer) {
     if (entries === void 0) {
       entries = [];
@@ -44393,18 +44561,18 @@ function inserted(el, binding) {
     // If is not quiet or has already been
     // initted, invoke the user callback
 
-    if (callback && (!modifiers.quiet || el._observe.init)) {
+    if (handler && (!modifiers.quiet || el._observe.init)) {
       var isIntersecting = Boolean(entries.find(function (entry) {
         return entry.isIntersecting;
       }));
-      callback(entries, observer, isIntersecting);
+      handler(entries, observer, isIntersecting);
     } // If has already been initted and
     // has the once modifier, unbind
 
 
     if (el._observe.init && modifiers.once) unbind(el); // Otherwise, mark the observer as initted
     else el._observe.init = true;
-  }, value.options || {});
+  }, options);
   el._observe = {
     init: false,
     observer: observer
@@ -44579,6 +44747,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _VRipple_sass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VRipple.sass */ "./src/directives/ripple/VRipple.sass");
 /* harmony import */ var _VRipple_sass__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_VRipple_sass__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _util_console__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../util/console */ "./src/util/console.ts");
+/* harmony import */ var _util_helpers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../util/helpers */ "./src/util/helpers.ts");
 var __read = undefined && undefined.__read || function (o, n) {
   var m = typeof Symbol === "function" && o[Symbol.iterator];
   if (!m) return o;
@@ -44615,6 +44784,8 @@ var __spread = undefined && undefined.__spread || function () {
 }; // Styles
 
 
+ // Utilities
+
 
 
 
@@ -44631,15 +44802,25 @@ function isTouchEvent(e) {
   return e.constructor.name === 'TouchEvent';
 }
 
+function isKeyboardEvent(e) {
+  return e.constructor.name === 'KeyboardEvent';
+}
+
 var calculate = function calculate(e, el, value) {
   if (value === void 0) {
     value = {};
   }
 
-  var offset = el.getBoundingClientRect();
-  var target = isTouchEvent(e) ? e.touches[e.touches.length - 1] : e;
-  var localX = target.clientX - offset.left;
-  var localY = target.clientY - offset.top;
+  var localX = 0;
+  var localY = 0;
+
+  if (!isKeyboardEvent(e)) {
+    var offset = el.getBoundingClientRect();
+    var target = isTouchEvent(e) ? e.touches[e.touches.length - 1] : e;
+    localX = target.clientX - offset.left;
+    localY = target.clientY - offset.top;
+  }
+
   var radius = 0;
   var scale = 0.3;
 
@@ -44763,7 +44944,7 @@ function rippleShow(e) {
     if (element._ripple.isTouch) return;
   }
 
-  value.center = element._ripple.centered;
+  value.center = element._ripple.centered || isKeyboardEvent(e);
 
   if (element._ripple.class) {
     value.class = element._ripple.class;
@@ -44781,6 +44962,20 @@ function rippleHide(e) {
     }
   });
   ripples.hide(element);
+}
+
+var keyboardRipple = false;
+
+function keyboardRippleShow(e) {
+  if (!keyboardRipple && (e.keyCode === _util_helpers__WEBPACK_IMPORTED_MODULE_2__["keyCodes"].enter || e.keyCode === _util_helpers__WEBPACK_IMPORTED_MODULE_2__["keyCodes"].space)) {
+    keyboardRipple = true;
+    rippleShow(e);
+  }
+}
+
+function keyboardRippleHide(e) {
+  keyboardRipple = false;
+  rippleHide(e);
 }
 
 function updateRipple(el, binding, wasEnabled) {
@@ -44816,7 +45011,9 @@ function updateRipple(el, binding, wasEnabled) {
     el.addEventListener('touchcancel', rippleHide);
     el.addEventListener('mousedown', rippleShow);
     el.addEventListener('mouseup', rippleHide);
-    el.addEventListener('mouseleave', rippleHide); // Anchor tags can be dragged, causes other hides to fail - #1537
+    el.addEventListener('mouseleave', rippleHide);
+    el.addEventListener('keydown', keyboardRippleShow);
+    el.addEventListener('keyup', keyboardRippleHide); // Anchor tags can be dragged, causes other hides to fail - #1537
 
     el.addEventListener('dragstart', rippleHide, {
       passive: true
@@ -44833,6 +45030,8 @@ function removeListeners(el) {
   el.removeEventListener('touchcancel', rippleHide);
   el.removeEventListener('mouseup', rippleHide);
   el.removeEventListener('mouseleave', rippleHide);
+  el.removeEventListener('keydown', keyboardRippleShow);
+  el.removeEventListener('keyup', keyboardRippleHide);
   el.removeEventListener('dragstart', rippleHide);
 }
 
@@ -45104,7 +45303,7 @@ function () {
 
   Vuetify.install = _install__WEBPACK_IMPORTED_MODULE_0__["install"];
   Vuetify.installed = false;
-  Vuetify.version = "2.2.18";
+  Vuetify.version = "2.2.25";
   return Vuetify;
 }();
 
@@ -45250,9 +45449,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Rye per bladsy:',
     ariaLabel: {
-      sortDescending: ': Sorted descending. Activate to remove sorting.',
-      sortAscending: ': Sorted ascending. Activate to sort descending.',
-      sortNone: ': Not sorted. Activate to sort ascending.'
+      sortDescending: 'Sorted descending.',
+      sortAscending: 'Sorted ascending..',
+      sortNone: 'Not sorted.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'Sort by'
   },
@@ -45310,9 +45512,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'الصفوف لكل صفحة:',
     ariaLabel: {
-      sortDescending: ': مفروز تنازلي. تنشيط لإزالة الفرز.',
-      sortAscending: ': مفروز تصاعدي. تنشيط للفرز التنازلي.',
-      sortNone: ': غير مفروزة. تفعيل لفرز تصاعدي.'
+      sortDescending: 'مفروز تنازلي. تنشيط لإزالة الفرز.',
+      sortAscending: 'مفروز تصاعدي. تنشيط للفرز التنازلي.',
+      sortNone: 'غير مفروزة. تفعيل لفرز تصاعدي.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'مفروزة حسب'
   },
@@ -45370,9 +45575,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Files per pàgina:',
     ariaLabel: {
-      sortDescending: ': Ordre descendent. Premi per treure la ordenació.',
-      sortAscending: ': Ordre ascendent. Premi per ordenar descendent.',
-      sortNone: ': Sense ordenar. Premi per ordenar ascendent.'
+      sortDescending: 'Ordre descendent. Premi per treure la ordenació.',
+      sortAscending: 'Ordre ascendent. Premi per ordenar descendent.',
+      sortNone: 'Sense ordenar. Premi per ordenar ascendent.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'Ordenat per'
   },
@@ -45430,9 +45638,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Řádků na stránku:',
     ariaLabel: {
-      sortDescending: ': Řazeno sestupně. Aktivováním vypnete řazení.',
-      sortAscending: ': Řazeno vzestupně. Aktivováním se bude řadit sestupně.',
-      sortNone: ': Neseřazeno. Aktivováním se bude řadit vzestupně.'
+      sortDescending: 'Řazeno sestupně.',
+      sortAscending: 'Řazeno vzestupně.',
+      sortNone: 'Neseřazeno.',
+      activateNone: 'Aktivováním vypnete řazení.',
+      activateDescending: 'Aktivováním se bude řadit sestupně.',
+      activateAscending: 'Aktivováním se bude řadit vzestupně.'
     },
     sortBy: 'Řadit dle'
   },
@@ -45490,9 +45701,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Zeilen pro Seite:',
     ariaLabel: {
-      sortDescending: ': Absteigend sortiert. Aktivieren um Sortierung zu entfernen.',
-      sortAscending: ': Aufsteigend sortiert. Aktivieren um absteigend zu sortieren.',
-      sortNone: ': Nicht sortiert. Aktivieren um aufsteigend zu sortieren.'
+      sortDescending: 'Absteigend sortiert.',
+      sortAscending: 'Aufsteigend sortiert.',
+      sortNone: 'Nicht sortiert.',
+      activateNone: 'Aktivieren um Sortierung zu entfernen.',
+      activateDescending: 'Aktivieren um absteigend zu sortieren.',
+      activateAscending: 'Aktivieren um aufsteigend zu sortieren.'
     },
     sortBy: 'Sortiere nach'
   },
@@ -45550,9 +45764,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Γραμμές ανά σελίδα:',
     ariaLabel: {
-      sortDescending: ': Sorted descending. Activate to remove sorting.',
-      sortAscending: ': Sorted ascending. Activate to sort descending.',
-      sortNone: ': Not sorted. Activate to sort ascending.'
+      sortDescending: 'Sorted descending.',
+      sortAscending: 'Sorted ascending.',
+      sortNone: 'Not sorted.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'Sort by'
   },
@@ -45610,9 +45827,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Rows per page:',
     ariaLabel: {
-      sortDescending: ': Sorted descending. Activate to remove sorting.',
-      sortAscending: ': Sorted ascending. Activate to sort descending.',
-      sortNone: ': Not sorted. Activate to sort ascending.'
+      sortDescending: 'Sorted descending.',
+      sortAscending: 'Sorted ascending.',
+      sortNone: 'Not sorted.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'Sort by'
   },
@@ -45670,9 +45890,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Filas por página:',
     ariaLabel: {
-      sortDescending: ': Orden descendente. Pulse para quitar orden.',
-      sortAscending: ': Orden ascendente. Pulse para ordenar descendente.',
-      sortNone: ': Sin ordenar. Pulse para ordenar ascendente.'
+      sortDescending: 'Orden descendente.',
+      sortAscending: 'Orden ascendente.',
+      sortNone: 'Sin ordenar.',
+      activateNone: 'Pulse para quitar orden.',
+      activateDescending: 'Pulse para ordenar descendente.',
+      activateAscending: 'Pulse para ordenar ascendente.'
     },
     sortBy: 'Ordenado por'
   },
@@ -45730,9 +45953,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Ridu leheküljel:',
     ariaLabel: {
-      sortDescending: ': Kahanevalt sorteeritud. Vajuta uuesti sorteerimise eemaldamiseks.',
-      sortAscending: ': Kasvavalt sorteeritud. Vajuta uuesti, et sorteerida kahanevalt.',
-      sortNone: ': Ei ole sorteeritud. Vajuta kasvavalt sorteerimiseks.'
+      sortDescending: 'Kahanevalt sorteeritud.',
+      sortAscending: 'Kasvavalt sorteeritud.',
+      sortNone: 'Ei ole sorteeritud.',
+      activateNone: 'Vajuta uuesti sorteerimise eemaldamiseks.',
+      activateDescending: 'Vajuta uuesti, et sorteerida kahanevalt.',
+      activateAscending: 'Vajuta kasvavalt sorteerimiseks.'
     },
     sortBy: 'Sorteerimise alus'
   },
@@ -45790,9 +46016,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'ردیف در صفحه:',
     ariaLabel: {
-      sortDescending: ': نزولی مرتب شده است. فعال‌سازی برای حذف مرتب‌سازی.',
-      sortAscending: ': صعودی مرتب شده است. فعال‌سازی برای مرتب‌سازی نزولی.',
-      sortNone: ': مرتب نشده است. فعال‌سازی برای مرتب‌سازی صعودی.'
+      sortDescending: 'نزولی مرتب شده است. فعال‌سازی برای حذف مرتب‌سازی.',
+      sortAscending: 'صعودی مرتب شده است. فعال‌سازی برای مرتب‌سازی نزولی.',
+      sortNone: 'مرتب نشده است. فعال‌سازی برای مرتب‌سازی صعودی.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'مرتب‌سازی براساس'
   },
@@ -45850,9 +46079,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Lignes par page:',
     ariaLabel: {
-      sortDescending: ': Tri décroissant. Activer pour supprimer le tri.',
-      sortAscending: ': Tri croissant. Activer pour trier par ordre décroissant.',
-      sortNone: ': Non trié. Activer pour trier par ordre croissant.'
+      sortDescending: 'Tri décroissant.',
+      sortAscending: 'Tri croissant.',
+      sortNone: 'Non trié.',
+      activateNone: 'Activer pour supprimer le tri.',
+      activateDescending: 'Activer pour trier par ordre décroissant.',
+      activateAscending: 'Activer pour trier par ordre croissant.'
     },
     sortBy: 'Trier par'
   },
@@ -45910,9 +46142,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'שורות לעמוד:',
     ariaLabel: {
-      sortDescending: ': ממוין לפי סדר עולה. לחץ להספקת המיון.',
-      sortAscending: ': ממוין לפי סדר יורד. לחץ למיון לפי סדר עולה.',
-      sortNone: ': לא ממוין. לחץ למיון לפי סדר עולה.'
+      sortDescending: 'ממוין לפי סדר עולה. לחץ להספקת המיון.',
+      sortAscending: 'ממוין לפי סדר יורד. לחץ למיון לפי סדר עולה.',
+      sortNone: 'לא ממוין. לחץ למיון לפי סדר עולה.',
+      activateNone: 'הפעל להסרת המיון.',
+      activateDescending: 'הפעל למיון יורד.',
+      activateAscending: 'הפעל למיון עולה.'
     },
     sortBy: 'סדר לפי'
   },
@@ -45970,9 +46205,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Redaka po stranici:',
     ariaLabel: {
-      sortDescending: ': Sortirano silazno. Odaberite za uklanjanje sortiranja.',
-      sortAscending: ': Sortirano uzlazno. Odaberite za silazno sortiranje.',
-      sortNone: ': Nije sortirano. Odaberite za uzlazno sortiranje.'
+      sortDescending: 'Sortirano silazno.',
+      sortAscending: 'Sortirano uzlazno.',
+      sortNone: 'Nije sortirano.',
+      activateNone: 'Odaberite za uklanjanje sortiranja.',
+      activateDescending: 'Odaberite za silazno sortiranje.',
+      activateAscending: 'Odaberite za uzlazno sortiranje.'
     },
     sortBy: 'Sortirajte po'
   },
@@ -46030,9 +46268,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Elem oldalanként:',
     ariaLabel: {
-      sortDescending: ': Sorted descending. Activate to remove sorting.',
-      sortAscending: ': Sorted ascending. Activate to sort descending.',
-      sortNone: ': Not sorted. Activate to sort ascending.'
+      sortDescending: 'Sorted descending. Activate to remove sorting.',
+      sortAscending: 'Sorted ascending. Activate to sort descending.',
+      sortNone: 'Not sorted. Activate to sort ascending.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'Sort by'
   },
@@ -46090,9 +46331,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Baris per halaman:',
     ariaLabel: {
-      sortDescending: ': Diurutkan kebawah. Aktifkan untuk menghapus penyortiran.',
-      sortAscending: ': Diurutkan keatas. Aktifkan untuk mengurutkan kebawah.',
-      sortNone: ': Tidak diurutkan. Aktifkan untuk mengurutkan keatas.'
+      sortDescending: 'Diurutkan kebawah.',
+      sortAscending: 'Diurutkan keatas.',
+      sortNone: 'Tidak diurutkan.',
+      activateNone: 'Aktifkan untuk menghapus penyortiran.',
+      activateDescending: 'Aktifkan untuk mengurutkan kebawah.',
+      activateAscending: 'Aktifkan untuk mengurutkan keatas.'
     },
     sortBy: 'Urutkan berdasar'
   },
@@ -46298,9 +46542,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Righe per pagina:',
     ariaLabel: {
-      sortDescending: ': Ordinati in ordine decrescente. Attiva per rimuovere l\'ordinamento.',
-      sortAscending: ': Ordinati in ordine crescente. Attiva per ordinare in ordine decrescente.',
-      sortNone: ': Non ordinato. Attiva per ordinare in ordine crescente.'
+      sortDescending: 'Ordinati in ordine decrescente.',
+      sortAscending: 'Ordinati in ordine crescente.',
+      sortNone: 'Non ordinato.',
+      activateNone: 'Attiva per rimuovere l\'ordinamento.',
+      activateDescending: 'Attiva per ordinare in ordine decrescente.',
+      activateAscending: 'Attiva per ordinare in ordine crescente.'
     },
     sortBy: 'Ordina per'
   },
@@ -46358,9 +46605,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: '1ページあたりの行数：',
     ariaLabel: {
-      sortDescending: ': 降順の並び替え。ソートを削除するには有効にしてください。',
-      sortAscending: ': 昇順の並び替え。降順の並び替えのためには有効にしてください。.',
-      sortNone: ': ソートされていません。昇順のソートのためには有効にしてください。'
+      sortDescending: '降順の並び替え。',
+      sortAscending: '昇順の並び替え。',
+      sortNone: 'ソートされていません。',
+      activateNone: 'ソートを削除するには有効にしてください。',
+      activateDescending: '降順の並び替えのためには有効にしてください。',
+      activateAscending: '昇順のソートのためには有効にしてください。'
     },
     sortBy: 'ソート方式'
   },
@@ -46418,9 +46668,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: '페이지 당 행 수:',
     ariaLabel: {
-      sortDescending: ': 내림차순 정렬. 정렬을 취소하려면 활성화하세요.',
-      sortAscending: ': 오름차순 정렬. 내림차순 정렬을 위해 활성화하세요.',
-      sortNone: ': 정렬하지 않음. 오름차순 정렬을 위해 활성화하세요.'
+      sortDescending: '내림차순 정렬.',
+      sortAscending: '오름차순 정렬.',
+      sortNone: '정렬하지 않음.',
+      activateNone: '정렬을 취소하려면 활성화하세요.',
+      activateDescending: '내림차순 정렬을 위해 활성화하세요.',
+      activateAscending: '오름차순 정렬을 위해 활성화하세요.'
     },
     sortBy: 'Sort by'
   },
@@ -46478,9 +46731,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Eilutės per puslapį:',
     ariaLabel: {
-      sortDescending: ': Išrikiuota mažėjimo tvarka. Suaktyvinkite, jei norite rikiavimą pašalinti.',
-      sortAscending: ': Išrikiuota didėjimo tvarka. Suaktyvinkite, jei norite rikiuoti mažėjimo tvarka.',
-      sortNone: ': Nerikiuota. Suaktyvinkite, jei norite rikiuoti didėjimo tvarka.'
+      sortDescending: 'Išrikiuota mažėjimo tvarka.',
+      sortAscending: 'Išrikiuota didėjimo tvarka.',
+      sortNone: 'Nerikiuota.',
+      activateNone: 'Suaktyvinkite, jei norite rikiavimą pašalinti.',
+      activateDescending: 'Suaktyvinkite, jei norite rikiuoti mažėjimo tvarka.',
+      activateAscending: 'Suaktyvinkite, jei norite rikiuoti didėjimo tvarka.'
     },
     sortBy: 'Sort by'
   },
@@ -46538,9 +46794,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Rādīt lapā:',
     ariaLabel: {
-      sortDescending: ': Sakārtots dilstošā secībā. Aktivizēt, lai noņemtu kārtošanu.',
-      sortAscending: ': Sakārtots augošā secībā. Aktivizēt, lai sakārtotu dilstošā secībā.',
-      sortNone: ': Nav sakārtots. Aktivizēt, lai sakārtotu augošā secībā.'
+      sortDescending: 'Sakārtots dilstošā secībā.',
+      sortAscending: 'Sakārtots augošā secībā.',
+      sortNone: 'Nav sakārtots.',
+      activateNone: 'Aktivizēt, lai noņemtu kārtošanu.',
+      activateDescending: 'Aktivizēt, lai sakārtotu dilstošā secībā.',
+      activateAscending: 'Aktivizēt, lai sakārtotu augošā secībā.'
     },
     sortBy: 'Sort by'
   },
@@ -46598,9 +46857,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Rijen per pagina:',
     ariaLabel: {
-      sortDescending: ': Aflopend gesorteerd. Activeer om de sortering te verwijderen.',
-      sortAscending: ': Oplopend gesorteerd. Activeer om aflopend te sorteren.',
-      sortNone: ': Niet gesorterrd. Activeer om oplopend te sorteren.'
+      sortDescending: 'Aflopend gesorteerd.',
+      sortAscending: 'Oplopend gesorteerd.',
+      sortNone: 'Niet gesorterrd.',
+      activateNone: 'Activeer om de sortering te verwijderen.',
+      activateDescending: 'Activeer om aflopend te sorteren.',
+      activateAscending: 'Activeer om oplopend te sorteren.'
     },
     sortBy: 'Sorteer volgens'
   },
@@ -46658,9 +46920,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Rader per side:',
     ariaLabel: {
-      sortDescending: ': Sortert synkende. Aktiver for å fjerne sortering.',
-      sortAscending: ': Sortert stigende. Aktiver for å sortere synkende.',
-      sortNone: ': Ikke sortert. Aktiver for å sortere stigende.'
+      sortDescending: 'Sortert synkende.',
+      sortAscending: 'Sortert stigende.',
+      sortNone: 'Ikke sortert.',
+      activateNone: 'Aktiver for å fjerne sortering.',
+      activateDescending: 'Aktiver for å sortere synkende.',
+      activateAscending: 'Aktiver for å sortere stigende.'
     },
     sortBy: 'Sorter etter'
   },
@@ -46718,9 +46983,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Wierszy na stronie:',
     ariaLabel: {
-      sortDescending: ': Sortowanie malejąco. Kliknij aby zmienić.',
-      sortAscending: ': Sortowanie rosnąco. Kliknij aby zmienić.',
-      sortNone: ': Bez sortowania. Kliknij aby posortować rosnąco.'
+      sortDescending: 'Sortowanie malejąco. Kliknij aby zmienić.',
+      sortAscending: 'Sortowanie rosnąco. Kliknij aby zmienić.',
+      sortNone: 'Bez sortowania. Kliknij aby posortować rosnąco.',
+      activateNone: 'Kliknij aby usunąć sortowanie.',
+      activateDescending: 'Kliknij aby posortować malejąco.',
+      activateAscending: 'Kliknij aby posortować rosnąco.'
     },
     sortBy: 'Sortuj według'
   },
@@ -46778,9 +47046,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Linhas por página:',
     ariaLabel: {
-      sortDescending: ': Ordenado decrescente. Ative para remover a ordenação.',
-      sortAscending: ': Ordenado crescente. Ative para ordenar decrescente.',
-      sortNone: ': Não ordenado. Ative para ordenar crescente.'
+      sortDescending: 'Ordenado decrescente.',
+      sortAscending: 'Ordenado crescente.',
+      sortNone: 'Não ordenado.',
+      activateNone: 'Ative para remover a ordenação.',
+      activateDescending: 'Ative para ordenar decrescente.',
+      activateAscending: 'Ative para ordenar crescente.'
     },
     sortBy: 'Ordenar por'
   },
@@ -46838,9 +47109,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Rânduri pe pagină:',
     ariaLabel: {
-      sortDescending: ': Sorted descending. Activate to remove sorting.',
-      sortAscending: ': Sorted ascending. Activate to sort descending.',
-      sortNone: ': Not sorted. Activate to sort ascending.'
+      sortDescending: 'Sorted descending.',
+      sortAscending: 'Sorted ascending.',
+      sortNone: 'Not sorted.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'Sort by'
   },
@@ -46898,9 +47172,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Строк на странице:',
     ariaLabel: {
-      sortDescending: ': Упорядочено по убыванию. Активируйте, чтобы убрать сортировку.',
-      sortAscending: ': Упорядочено по возрастанию. Активируйте для упорядочивания убыванию.',
-      sortNone: ': Не упорядочено. Активируйте для упорядочивания по возрастанию.'
+      sortDescending: 'Упорядочено по убыванию.',
+      sortAscending: 'Упорядочено по возрастанию.',
+      sortNone: 'Не упорядочено.',
+      activateNone: 'Активируйте, чтобы убрать сортировку.',
+      activateDescending: 'Активируйте для упорядочивания убыванию.',
+      activateAscending: 'Активируйте для упорядочивания по возрастанию.'
     },
     sortBy: 'Сортировать по'
   },
@@ -46958,9 +47235,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Vrstic na stran:',
     ariaLabel: {
-      sortDescending: ': Razvrščeno padajoče. Aktivirajte za odstranitev razvrščanja.',
-      sortAscending: ': Razvrščeno naraščajoče. Aktivirajte za padajoče razvrščanje.',
-      sortNone: ': Ni razvrščeno. Aktivirajte za naraščajoče razvrščanje.'
+      sortDescending: 'Razvrščeno padajoče.',
+      sortAscending: 'Razvrščeno naraščajoče.',
+      sortNone: 'Ni razvrščeno.',
+      activateNone: 'Aktivirajte za odstranitev razvrščanja.',
+      activateDescending: 'Aktivirajte za padajoče razvrščanje.',
+      activateAscending: 'Aktivirajte za naraščajoče razvrščanje.'
     },
     sortBy: 'Razvrsti po'
   },
@@ -47018,9 +47298,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Редова по страници:',
     ariaLabel: {
-      sortDescending: ': Sorted descending. Activate to remove sorting.',
-      sortAscending: ': Sorted ascending. Activate to sort descending.',
-      sortNone: ': Not sorted. Activate to sort ascending.'
+      sortDescending: 'Sorted descending.',
+      sortAscending: 'Sorted ascending.',
+      sortNone: 'Not sorted.',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'Sort by'
   },
@@ -47078,9 +47361,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Rader per sida:',
     ariaLabel: {
-      sortDescending: ': Sorterat fallande. Aktivera för att ta bort sortering.',
-      sortAscending: ': Sorterat stigande. Aktivera för sortering fallande.',
-      sortNone: ': Osorterat. Aktivera för sortering stigande.'
+      sortDescending: 'Sorterat fallande.',
+      sortAscending: 'Sorterat stigande.',
+      sortNone: 'Osorterat.',
+      activateNone: 'Aktivera för att ta bort sortering.',
+      activateDescending: 'Aktivera för sortering fallande.',
+      activateAscending: 'Aktivera för sortering stigande.'
     },
     sortBy: 'Sortera efter'
   },
@@ -47138,9 +47424,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'แถวต่อหน้า:',
     ariaLabel: {
-      sortDescending: ': เรียงลำดับจากมากไปน้อย กดเพื่อปิดการเรียงลำดับ',
-      sortAscending: ': เรียงจากน้อยไปมาก กดเพื่อเรียงลำดับจากมากไปน้อย',
-      sortNone: ': ไม่ได้จัดเรียง กดเพื่อเรียงลำดับจากน้อยไปมาก'
+      sortDescending: 'เรียงลำดับจากมากไปน้อย กดเพื่อปิดการเรียงลำดับ',
+      sortAscending: 'เรียงจากน้อยไปมาก กดเพื่อเรียงลำดับจากมากไปน้อย',
+      sortNone: 'ไม่ได้จัดเรียง กดเพื่อเรียงลำดับจากน้อยไปมาก',
+      activateNone: 'Activate to remove sorting.',
+      activateDescending: 'Activate to sort descending.',
+      activateAscending: 'Activate to sort ascending.'
     },
     sortBy: 'จัดเรียงตาม'
   },
@@ -47198,9 +47487,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Sayfa başına satır:',
     ariaLabel: {
-      sortDescending: ': Z den A ya sıralı. Sıralamayı kaldırmak için etkinleştir.',
-      sortAscending: ': A dan Z ye sıralı. Z den A ya sıralamak için etkinleştir.',
-      sortNone: ': Sıralı değil. A dan Z ye sıralamak için etkinleştir.'
+      sortDescending: 'Z den A ya sıralı.',
+      sortAscending: 'A dan Z ye sıralı.',
+      sortNone: 'Sıralı değil. ',
+      activateNone: 'Sıralamayı kaldırmak için etkinleştir.',
+      activateDescending: 'Z den A ya sıralamak için etkinleştir.',
+      activateAscending: 'A dan Z ye sıralamak için etkinleştir.'
     },
     sortBy: 'Sırala'
   },
@@ -47258,9 +47550,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: 'Рядків на сторінці:',
     ariaLabel: {
-      sortDescending: ': Відсортовано за спаданням. Активувати, щоб видалити сортування.',
-      sortAscending: ': Відсортовано за зростанням. Активувати, щоб відсортувати за спаданням.',
-      sortNone: ': Не відсортовано. Активувати, щоб відсортувати за зростанням.'
+      sortDescending: 'Відсортовано за спаданням.',
+      sortAscending: 'Відсортовано за зростанням.',
+      sortNone: 'Не відсортовано.',
+      activateNone: 'Активувати, щоб видалити сортування.',
+      activateDescending: 'Активувати, щоб відсортувати за спаданням.',
+      activateAscending: 'Активувати, щоб відсортувати за зростанням.'
     },
     sortBy: 'Відсортувати за'
   },
@@ -47318,9 +47613,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: '每页数目：',
     ariaLabel: {
-      sortDescending: '：降序排列。点击以移除排序。',
-      sortAscending: '：升序排列。点击以降序排列。',
-      sortNone: '：未排序。点击以升序排列。'
+      sortDescending: '：降序排列。',
+      sortAscending: '：升序排列。',
+      sortNone: '：未排序。',
+      activateNone: '点击以移除排序。',
+      activateDescending: '点击以降序排列。',
+      activateAscending: '点击以升序排列。'
     },
     sortBy: '排序方式'
   },
@@ -47378,9 +47676,12 @@ __webpack_require__.r(__webpack_exports__);
   dataTable: {
     itemsPerPageText: '每頁列數：',
     ariaLabel: {
-      sortDescending: '：降序排列。點擊以移除排序方式。',
-      sortAscending: '：升序排列。點擊以降序排列。',
-      sortNone: '無排序方式。點擊以升序排列。'
+      sortDescending: '：降序排列。',
+      sortAscending: '：升序排列。',
+      sortNone: '無排序方式。點擊以升序排列。',
+      activateNone: '點擊以移除排序方式。',
+      activateDescending: '點擊以降序排列。',
+      activateAscending: '點擊以移除排序方式。'
     },
     sortBy: '排序方式'
   },
@@ -49134,9 +49435,12 @@ __webpack_require__.r(__webpack_exports__);
         } else if (_this.$el) {
           _this.overlay.zIndex = Object(_util_helpers__WEBPACK_IMPORTED_MODULE_1__["getZIndex"])(_this.$el);
         }
-
-        _this.overlay.value = true;
       });
+
+      if (this.overlay) {
+        this.overlay.value = true;
+      }
+
       return true;
     },
 
@@ -53548,6 +53852,82 @@ function generateComponentTrace(vm) {
 
 /***/ }),
 
+/***/ "./src/util/dateTimeUtils.ts":
+/*!***********************************!*\
+  !*** ./src/util/dateTimeUtils.ts ***!
+  \***********************************/
+/*! exports provided: weekNumber, isLeapYear */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "weekNumber", function() { return weekNumber; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "isLeapYear", function() { return isLeapYear; });
+function createUTCDate(year, month, day) {
+  if (month === void 0) {
+    month = 0;
+  }
+
+  if (day === void 0) {
+    day = 1;
+  }
+
+  var date;
+
+  if (year < 100 && year >= 0) {
+    date = new Date(Date.UTC(year, month, day));
+
+    if (isFinite(date.getUTCFullYear())) {
+      date.setUTCFullYear(year);
+    }
+  } else {
+    date = new Date(Date.UTC(year, month, day));
+  }
+
+  return date;
+}
+
+function firstWeekOffset(year, firstDayOfWeek, firstDayOfYear) {
+  var firstWeekDayInFirstWeek = 7 + firstDayOfWeek - firstDayOfYear;
+  var firstWeekDayOfYear = (7 + createUTCDate(year, 0, firstWeekDayInFirstWeek).getUTCDay() - firstDayOfWeek) % 7;
+  return -firstWeekDayOfYear + firstWeekDayInFirstWeek - 1;
+}
+
+function dayOfYear(year, month, day, firstDayOfWeek) {
+  var dayOfYear = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334][month];
+
+  if (month > 1 && isLeapYear(year)) {
+    dayOfYear++;
+  }
+
+  return dayOfYear + day;
+}
+
+function weeksInYear(year, firstDayOfWeek, firstDayOfYear) {
+  var weekOffset = firstWeekOffset(year, firstDayOfWeek, firstDayOfYear);
+  var weekOffsetNext = firstWeekOffset(year + 1, firstDayOfWeek, firstDayOfYear);
+  var daysInYear = isLeapYear(year) ? 366 : 365;
+  return (daysInYear - weekOffset + weekOffsetNext) / 7;
+}
+
+function weekNumber(year, month, day, firstDayOfWeek, localeFirstDayOfYear) {
+  var weekOffset = firstWeekOffset(year, firstDayOfWeek, localeFirstDayOfYear);
+  var week = Math.ceil((dayOfYear(year, month, day, firstDayOfWeek) - weekOffset) / 7);
+
+  if (week < 1) {
+    return week + weeksInYear(year - 1, firstDayOfWeek, localeFirstDayOfYear);
+  } else if (week > weeksInYear(year, firstDayOfWeek, localeFirstDayOfYear)) {
+    return week - weeksInYear(year, firstDayOfWeek, localeFirstDayOfYear);
+  } else {
+    return week;
+  }
+}
+function isLeapYear(year) {
+  return year % 4 === 0 && year % 100 !== 0 || year % 400 === 0;
+}
+
+/***/ }),
+
 /***/ "./src/util/dedupeModelListeners.ts":
 /*!******************************************!*\
   !*** ./src/util/dedupeModelListeners.ts ***!
@@ -53916,11 +54296,25 @@ function upperFirst(str) {
 }
 function groupItems(items, groupBy, groupDesc) {
   var key = groupBy[0];
-  return items.reduce(function (acc, item) {
+  var groups = [];
+  var current = null;
+
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
     var val = getObjectValueByPath(item, key);
-    (acc[val] = acc[val] || []).push(item);
-    return acc;
-  }, {});
+
+    if (current !== val) {
+      current = val;
+      groups.push({
+        name: val,
+        items: []
+      });
+    }
+
+    groups[groups.length - 1].items.push(item);
+  }
+
+  return groups;
 }
 function wrapInArray(v) {
   return v != null ? Array.isArray(v) ? v : [v] : [];

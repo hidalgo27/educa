@@ -2,7 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b02f587-9773-49d8-9659-e9bdb5e6b0f5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/educa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/educa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +59,6 @@
       <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
       <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
-      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
       <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
       <path value="$PROJECT_DIR$/vendor/sebastian/type" />
       <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
@@ -95,7 +107,6 @@
       <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
       <path value="$PROJECT_DIR$/vendor/psr/http-message" />
       <path value="$PROJECT_DIR$/vendor/psr/container" />
-      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
       <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
       <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
@@ -122,6 +133,8 @@
       <path value="$PROJECT_DIR$/vendor/facade/ignition" />
       <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ZY7VL99NOOtX8GqdGe9MHr2awC" />
@@ -133,6 +146,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -164,7 +178,10 @@
       <workItem from="1585247060884" duration="1676000" />
       <workItem from="1585250703354" duration="4798000" />
       <workItem from="1585312629387" duration="19070000" />
-      <workItem from="1585403088129" duration="2108000" />
+      <workItem from="1585403088129" duration="3326000" />
+      <workItem from="1585576437132" duration="101000" />
+      <workItem from="1585576574743" duration="1301000" />
+      <workItem from="1588000667274" duration="11660000" />
     </task>
     <servers />
   </component>
@@ -172,23 +189,28 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="408" y="172" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585576521160">
+      <screen x="0" y="23" width="1440" height="813" />
+    </state>
+    <state x="408" y="172" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.813@0.23.1440.813" timestamp="1585576521160" />
     <state x="294" y="209" key="EditFileWatcherDialog" timestamp="1585261893107">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="294" y="209" key="EditFileWatcherDialog/0.23.1440.813@0.23.1440.813" timestamp="1585261893107" />
-    <state x="380" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1585403146378">
+    <state x="380" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1585576643183">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
-    <state x="380" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.813@0.23.1440.813" timestamp="1585403146378" />
+    <state x="380" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.813@0.23.1440.813" timestamp="1585576643183" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1585348834847">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state width="600" height="440" key="javadoc.popup/0.23.1440.813/1440.23.1366.745@0.23.1440.813" timestamp="1585156799728" />
     <state width="600" height="440" key="javadoc.popup/0.23.1440.813@0.23.1440.813" timestamp="1585348834847" />
-    <state x="385" y="160" width="670" height="676" key="search.everywhere.popup" timestamp="1585404047445">
-      <screen x="0" y="23" width="1440" height="813" />
+    <state x="385" y="171" width="670" height="730" key="search.everywhere.popup" timestamp="1588012743856">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="160" width="670" height="676" key="search.everywhere.popup/0.23.1440.813/1440.23.1366.745@0.23.1440.813" timestamp="1585156580837" />
     <state x="385" y="160" width="670" height="676" key="search.everywhere.popup/0.23.1440.813@0.23.1440.813" timestamp="1585404047445" />
+    <state x="385" y="171" width="670" height="730" key="search.everywhere.popup/0.23.1440.877/1440.23.1366.745@0.23.1440.877" timestamp="1588012743856" />
   </component>
 </project>
