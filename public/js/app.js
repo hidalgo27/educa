@@ -260,6 +260,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: {
     source: String
@@ -283,6 +284,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -954,23 +956,9 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _c(
-            "v-toolbar-title",
-            [
-              _c("v-img", {
-                staticClass: "mr-5",
-                attrs: {
-                  src:
-                    "https://static.platzi.com/mf-landings/image/isotipoPlatzi-442ccc1186a9806e18c9889cc301ffe1.png",
-                  contain: "",
-                  height: "48",
-                  width: "48",
-                  "max-width": "48"
-                }
-              })
-            ],
-            1
-          ),
+          _c("v-toolbar-title", [
+            _c("span", { staticClass: "font-weight-bold " }, [_vm._v("EduLab")])
+          ]),
           _vm._v(" "),
           _c(
             "v-layout",
@@ -1076,32 +1064,23 @@ var render = function() {
     [
       _c(
         "v-parallax",
-        {
-          attrs: {
-            dark: "",
-            src: "https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-          }
-        },
+        { attrs: { dark: "", src: "images/cover-edu3.jpg", height: "650" } },
         [
           _c(
             "v-row",
-            { attrs: { align: "center", justify: "start" } },
+            { attrs: { align: "center", justify: "end" } },
             [
               _c(
                 "v-col",
                 {
                   staticClass: "text-center",
-                  attrs: { md: "7", "offset-md": "1" }
+                  attrs: { md: "5", "offset-md": "1" }
                 },
                 [
                   _c("h1", { staticClass: "display-1 font-weight-bold mb-4" }, [
                     _vm._v(
-                      "La escuela online de formación profesional en tecnología"
+                      "La academia online de educación para tu ingreso a la universidad"
                     )
-                  ]),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "subheading" }, [
-                    _vm._v("Build your application today!")
                   ])
                 ]
               )

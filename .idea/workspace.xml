@@ -2,21 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b02f587-9773-49d8-9659-e9bdb5e6b0f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/composerJson.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/educa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/educa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -181,7 +170,8 @@
       <workItem from="1585403088129" duration="3326000" />
       <workItem from="1585576437132" duration="101000" />
       <workItem from="1585576574743" duration="1301000" />
-      <workItem from="1588000667274" duration="11660000" />
+      <workItem from="1588000667274" duration="11767000" />
+      <workItem from="1588087628127" duration="794000" />
     </task>
     <servers />
   </component>
@@ -197,10 +187,11 @@
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="294" y="209" key="EditFileWatcherDialog/0.23.1440.813@0.23.1440.813" timestamp="1585261893107" />
-    <state x="380" y="281" key="com.intellij.ide.util.TipDialog" timestamp="1585576643183">
-      <screen x="0" y="23" width="1440" height="813" />
+    <state x="380" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1588087740482">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="380" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.813@0.23.1440.813" timestamp="1585576643183" />
+    <state x="380" y="301" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1588087740482" />
     <state width="600" height="440" key="javadoc.popup" timestamp="1585348834847">
       <screen x="0" y="23" width="1440" height="813" />
     </state>

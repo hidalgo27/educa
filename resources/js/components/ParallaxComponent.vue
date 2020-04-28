@@ -2,15 +2,16 @@
     <div>
         <v-parallax
             dark
-            src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
+            :src="'images/cover-edu3.jpg'"
+            height="650"
         >
             <v-row
                 align="center"
-                justify="start"
+                justify="end"
             >
-                <v-col class="text-center" md="7" offset-md="1">
-                    <h1 class="display-1 font-weight-bold mb-4">La escuela online de formación profesional en tecnología</h1>
-                    <h4 class="subheading">Build your application today!</h4>
+                <v-col class="text-center" md="5" offset-md="1">
+                    <h1 class="display-1 font-weight-bold mb-4">La academia online de educación para tu ingreso a la universidad</h1>
+<!--                    <h4 class="subheading">Build your application today!</h4>-->
                 </v-col>
             </v-row>
         </v-parallax>

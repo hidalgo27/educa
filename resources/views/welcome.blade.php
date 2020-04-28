@@ -660,7 +660,7 @@
                     </section>
                     <v-parallax
                         dark
-                        src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+                        src="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
                         height="600"
                     >
                         <v-container>

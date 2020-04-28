@@ -31,14 +31,15 @@
         >
             <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="hidden-md-and-up"/>
             <v-toolbar-title>
-                <v-img
-                    src="https://static.platzi.com/mf-landings/image/isotipoPlatzi-442ccc1186a9806e18c9889cc301ffe1.png"
-                    class="mr-5"
-                    contain
-                    height="48"
-                    width="48"
-                    max-width="48"
-                />
+                <span class="font-weight-bold ">EduLab</span>
+<!--                <v-img-->
+<!--                    src="https://static.platzi.com/mf-landings/image/isotipoPlatzi-442ccc1186a9806e18c9889cc301ffe1.png"-->
+<!--                    class="mr-5"-->
+<!--                    contain-->
+<!--                    height="48"-->
+<!--                    width="48"-->
+<!--                    max-width="48"-->
+<!--                />-->
             </v-toolbar-title>
             <v-layout class="align-center">
                 <v-spacer />
