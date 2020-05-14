@@ -261,10 +261,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: {
-    source: String
-  },
+  props: ['logo'],
   data: function data() {
     return {
       drawer: false,
@@ -305,9 +314,2792 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ParallaxComponent"
 });
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/ClasesComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/ClasesComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      cursos: [{
+        curso: 'Algebra',
+        logo: 'images/iconos/cursos/circle/algebra.png',
+        id: '3'
+      }],
+      rating: 4.5
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/CursosComponent.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/CursosComponent.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      items: [{
+        text: 'Dashboard',
+        disabled: false,
+        href: 'breadcrumbs_dashboard'
+      }, {
+        text: 'Link 1',
+        disabled: false,
+        href: 'breadcrumbs_link_1'
+      }, {
+        text: 'Link 2',
+        disabled: true,
+        href: 'breadcrumbs_link_2'
+      }],
+      grupo: {
+        grupo: 'Grupo A',
+        id: '1'
+      },
+      grupos: [{
+        grupo: 'Grupo A',
+        id: '1'
+      }, {
+        grupo: 'Grupo B',
+        id: '2'
+      }, {
+        grupo: 'Grupo C',
+        id: '3'
+      }, {
+        grupo: 'Grupo D',
+        id: '4'
+      }],
+      modalidad: {
+        modalidad: 'Ordinario',
+        id: '1'
+      },
+      modalidades: [{
+        modalidad: 'Ordinario',
+        id: '1'
+      }, {
+        modalidad: 'Dirimencia',
+        id: '2'
+      }, {
+        modalidad: 'Primera Opción',
+        id: '3'
+      }],
+      cursos: [{
+        curso: 'Algebra',
+        logo: 'images/iconos/cursos/circle/algebra.png',
+        id: '3'
+      }, {
+        curso: 'Biologia',
+        logo: 'images/iconos/cursos/circle/biologia.png',
+        id: '3'
+      }, {
+        curso: 'Comunicación',
+        logo: 'images/iconos/cursos/circle/comunicacion.png',
+        id: '3'
+      }, {
+        curso: 'Economia',
+        logo: 'images/iconos/cursos/circle/economia.png',
+        id: '3'
+      }, {
+        curso: 'Filosofia',
+        logo: 'images/iconos/cursos/circle/filosofia.png',
+        id: '3'
+      }, {
+        curso: 'Fisica',
+        logo: 'images/iconos/cursos/circle/fisica.png',
+        id: '1'
+      }, {
+        curso: 'Geografia',
+        logo: 'images/iconos/cursos/circle/geografia.png',
+        id: '1'
+      }, {
+        curso: 'Geometria',
+        logo: 'images/iconos/cursos/circle/geometria.png',
+        id: '1'
+      }, {
+        curso: 'Historia',
+        logo: 'images/iconos/cursos/circle/historia.png',
+        id: '1'
+      }, {
+        curso: 'Quimica',
+        logo: 'images/iconos/cursos/circle/quimica.png',
+        id: '1'
+      }, {
+        curso: 'rm',
+        logo: 'images/iconos/cursos/circle/rm.png',
+        id: '1'
+      }, {
+        curso: 'rv',
+        logo: 'images/iconos/cursos/circle/rv.png',
+        id: '1'
+      }],
+      power: 78
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideoComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/VideoComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      descripcion: null,
+      tabs: null
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideolistComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/VideolistComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      descripcion: null,
+      tabs: null
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoComponent.vue?vue&type=script&lang=js&":
+/*!*********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/VideoComponent.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      descripcion: null,
+      tabs: null
+    };
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoListComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/VideoListComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      descripcion: null,
+      tabs: null,
+      content: null,
+      offsetTop: 0
+    };
+  },
+  methods: {
+    onScroll: function onScroll(e) {
+      this.offsetTop = e.target.scrollTop;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css&":
+/*!***********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \***********************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.landing-banner__footer {\n    width: 0;\n    height: 0;\n    border-left: 1440px solid #fff;\n    border-bottom: 100px solid transparent;\n    transform: scale(-1, -1);\n    position: relative;\n    top: -100px;\n}\n.parallax-box-h{\n    height: 650px;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*.v-breadcrumbs__item{*/\n/*    color: white !important;*/\n/*}*/\n.v-breadcrumbs__item--disabled{\n    color: white !important;\n}\n.box-select-group{\n    height: 48px !important;\n}\n\n/*.v-timeline-item__divider{*/\n/*    top: 10px;*/\n/*}*/\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n/*.v-breadcrumbs__item{*/\n/*    color: white !important;*/\n/*}*/\n.v-breadcrumbs__item--disabled{\n    color: white !important;\n}\n.box-select-group{\n    height: 48px !important;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.v-tabs-slider-wrapper{\n    z-index: 0 !important;\n}\n.green-cover{\n    background: rgba(0,0,0,0.73);\n    position: absolute;\n    color: #fff;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    z-index: 20;\n    height: 100vh;\n    width: 100%;\n}\n.green-cover-text{\n    text-align: center;\n    height: 100vh;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.v-tabs-slider-wrapper{\n    z-index: 0 !important;\n}\n.green-cover{\n    background: rgba(0,0,0,0.73);\n    position: absolute;\n    color: #fff;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    z-index: 20;\n    height: 100vh;\n    width: 100%;\n}\n.video{\n    height: 52vh;\n}\n.video iframe{\n    height: 52vh;\n    width: 100%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.v-tabs-slider-wrapper{\n    z-index: 0 !important;\n}\n.green-cover{\n    background: rgba(0,0,0,0.73);\n    position: absolute;\n    color: #fff;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    left: 0;\n    z-index: 20;\n    height: 100vh;\n    width: 100%;\n}\n.video{\n    height: 52vh;\n}\n.video iframe{\n    height: 52vh;\n    width: 100%;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.v-tabs-slider-wrapper{\n    z-index: 0 !important;\n}\n.video-lock-box{\n    position: absolute;\n    top: 20%;\n    left: 30%;\n    z-index: 20;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/lib/css-base.js":
+/*!*************************************************!*\
+  !*** ./node_modules/css-loader/lib/css-base.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
+
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
+
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
+	}
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
+}
+
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
+
+	return '/*# ' + data + ' */';
+}
+
 
 /***/ }),
 
@@ -704,6 +3496,725 @@ process.umask = function() { return 0; };
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./ParallaxComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ClasesComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./CursosComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideolistComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoListComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/addStyles.js":
+/*!****************************************************!*\
+  !*** ./node_modules/style-loader/lib/addStyles.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+
+var stylesInDom = {};
+
+var	memoize = function (fn) {
+	var memo;
+
+	return function () {
+		if (typeof memo === "undefined") memo = fn.apply(this, arguments);
+		return memo;
+	};
+};
+
+var isOldIE = memoize(function () {
+	// Test for IE <= 9 as proposed by Browserhacks
+	// @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
+	// Tests for existence of standard globals is to allow style-loader
+	// to operate correctly into non-standard environments
+	// @see https://github.com/webpack-contrib/style-loader/issues/177
+	return window && document && document.all && !window.atob;
+});
+
+var getTarget = function (target, parent) {
+  if (parent){
+    return parent.querySelector(target);
+  }
+  return document.querySelector(target);
+};
+
+var getElement = (function (fn) {
+	var memo = {};
+
+	return function(target, parent) {
+                // If passing function in options, then use it for resolve "head" element.
+                // Useful for Shadow Root style i.e
+                // {
+                //   insertInto: function () { return document.querySelector("#foo").shadowRoot }
+                // }
+                if (typeof target === 'function') {
+                        return target();
+                }
+                if (typeof memo[target] === "undefined") {
+			var styleTarget = getTarget.call(this, target, parent);
+			// Special case to return head of iframe instead of iframe itself
+			if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+				try {
+					// This will throw an exception if access to iframe is blocked
+					// due to cross-origin restrictions
+					styleTarget = styleTarget.contentDocument.head;
+				} catch(e) {
+					styleTarget = null;
+				}
+			}
+			memo[target] = styleTarget;
+		}
+		return memo[target]
+	};
+})();
+
+var singleton = null;
+var	singletonCounter = 0;
+var	stylesInsertedAtTop = [];
+
+var	fixUrls = __webpack_require__(/*! ./urls */ "./node_modules/style-loader/lib/urls.js");
+
+module.exports = function(list, options) {
+	if (typeof DEBUG !== "undefined" && DEBUG) {
+		if (typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
+	}
+
+	options = options || {};
+
+	options.attrs = typeof options.attrs === "object" ? options.attrs : {};
+
+	// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
+	// tags it will allow on a page
+	if (!options.singleton && typeof options.singleton !== "boolean") options.singleton = isOldIE();
+
+	// By default, add <style> tags to the <head> element
+        if (!options.insertInto) options.insertInto = "head";
+
+	// By default, add <style> tags to the bottom of the target
+	if (!options.insertAt) options.insertAt = "bottom";
+
+	var styles = listToStyles(list, options);
+
+	addStylesToDom(styles, options);
+
+	return function update (newList) {
+		var mayRemove = [];
+
+		for (var i = 0; i < styles.length; i++) {
+			var item = styles[i];
+			var domStyle = stylesInDom[item.id];
+
+			domStyle.refs--;
+			mayRemove.push(domStyle);
+		}
+
+		if(newList) {
+			var newStyles = listToStyles(newList, options);
+			addStylesToDom(newStyles, options);
+		}
+
+		for (var i = 0; i < mayRemove.length; i++) {
+			var domStyle = mayRemove[i];
+
+			if(domStyle.refs === 0) {
+				for (var j = 0; j < domStyle.parts.length; j++) domStyle.parts[j]();
+
+				delete stylesInDom[domStyle.id];
+			}
+		}
+	};
+};
+
+function addStylesToDom (styles, options) {
+	for (var i = 0; i < styles.length; i++) {
+		var item = styles[i];
+		var domStyle = stylesInDom[item.id];
+
+		if(domStyle) {
+			domStyle.refs++;
+
+			for(var j = 0; j < domStyle.parts.length; j++) {
+				domStyle.parts[j](item.parts[j]);
+			}
+
+			for(; j < item.parts.length; j++) {
+				domStyle.parts.push(addStyle(item.parts[j], options));
+			}
+		} else {
+			var parts = [];
+
+			for(var j = 0; j < item.parts.length; j++) {
+				parts.push(addStyle(item.parts[j], options));
+			}
+
+			stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
+		}
+	}
+}
+
+function listToStyles (list, options) {
+	var styles = [];
+	var newStyles = {};
+
+	for (var i = 0; i < list.length; i++) {
+		var item = list[i];
+		var id = options.base ? item[0] + options.base : item[0];
+		var css = item[1];
+		var media = item[2];
+		var sourceMap = item[3];
+		var part = {css: css, media: media, sourceMap: sourceMap};
+
+		if(!newStyles[id]) styles.push(newStyles[id] = {id: id, parts: [part]});
+		else newStyles[id].parts.push(part);
+	}
+
+	return styles;
+}
+
+function insertStyleElement (options, style) {
+	var target = getElement(options.insertInto)
+
+	if (!target) {
+		throw new Error("Couldn't find a style target. This probably means that the value for the 'insertInto' parameter is invalid.");
+	}
+
+	var lastStyleElementInsertedAtTop = stylesInsertedAtTop[stylesInsertedAtTop.length - 1];
+
+	if (options.insertAt === "top") {
+		if (!lastStyleElementInsertedAtTop) {
+			target.insertBefore(style, target.firstChild);
+		} else if (lastStyleElementInsertedAtTop.nextSibling) {
+			target.insertBefore(style, lastStyleElementInsertedAtTop.nextSibling);
+		} else {
+			target.appendChild(style);
+		}
+		stylesInsertedAtTop.push(style);
+	} else if (options.insertAt === "bottom") {
+		target.appendChild(style);
+	} else if (typeof options.insertAt === "object" && options.insertAt.before) {
+		var nextSibling = getElement(options.insertAt.before, target);
+		target.insertBefore(style, nextSibling);
+	} else {
+		throw new Error("[Style Loader]\n\n Invalid value for parameter 'insertAt' ('options.insertAt') found.\n Must be 'top', 'bottom', or Object.\n (https://github.com/webpack-contrib/style-loader#insertat)\n");
+	}
+}
+
+function removeStyleElement (style) {
+	if (style.parentNode === null) return false;
+	style.parentNode.removeChild(style);
+
+	var idx = stylesInsertedAtTop.indexOf(style);
+	if(idx >= 0) {
+		stylesInsertedAtTop.splice(idx, 1);
+	}
+}
+
+function createStyleElement (options) {
+	var style = document.createElement("style");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+
+	if(options.attrs.nonce === undefined) {
+		var nonce = getNonce();
+		if (nonce) {
+			options.attrs.nonce = nonce;
+		}
+	}
+
+	addAttrs(style, options.attrs);
+	insertStyleElement(options, style);
+
+	return style;
+}
+
+function createLinkElement (options) {
+	var link = document.createElement("link");
+
+	if(options.attrs.type === undefined) {
+		options.attrs.type = "text/css";
+	}
+	options.attrs.rel = "stylesheet";
+
+	addAttrs(link, options.attrs);
+	insertStyleElement(options, link);
+
+	return link;
+}
+
+function addAttrs (el, attrs) {
+	Object.keys(attrs).forEach(function (key) {
+		el.setAttribute(key, attrs[key]);
+	});
+}
+
+function getNonce() {
+	if (false) {}
+
+	return __webpack_require__.nc;
+}
+
+function addStyle (obj, options) {
+	var style, update, remove, result;
+
+	// If a transform function was defined, run it on the css
+	if (options.transform && obj.css) {
+	    result = typeof options.transform === 'function'
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
+
+	    if (result) {
+	    	// If transform returns a value, use that instead of the original css.
+	    	// This allows running runtime transformations on the css.
+	    	obj.css = result;
+	    } else {
+	    	// If the transform function returns a falsy value, don't add this css.
+	    	// This allows conditional loading of css
+	    	return function() {
+	    		// noop
+	    	};
+	    }
+	}
+
+	if (options.singleton) {
+		var styleIndex = singletonCounter++;
+
+		style = singleton || (singleton = createStyleElement(options));
+
+		update = applyToSingletonTag.bind(null, style, styleIndex, false);
+		remove = applyToSingletonTag.bind(null, style, styleIndex, true);
+
+	} else if (
+		obj.sourceMap &&
+		typeof URL === "function" &&
+		typeof URL.createObjectURL === "function" &&
+		typeof URL.revokeObjectURL === "function" &&
+		typeof Blob === "function" &&
+		typeof btoa === "function"
+	) {
+		style = createLinkElement(options);
+		update = updateLink.bind(null, style, options);
+		remove = function () {
+			removeStyleElement(style);
+
+			if(style.href) URL.revokeObjectURL(style.href);
+		};
+	} else {
+		style = createStyleElement(options);
+		update = applyToTag.bind(null, style);
+		remove = function () {
+			removeStyleElement(style);
+		};
+	}
+
+	update(obj);
+
+	return function updateStyle (newObj) {
+		if (newObj) {
+			if (
+				newObj.css === obj.css &&
+				newObj.media === obj.media &&
+				newObj.sourceMap === obj.sourceMap
+			) {
+				return;
+			}
+
+			update(obj = newObj);
+		} else {
+			remove();
+		}
+	};
+}
+
+var replaceText = (function () {
+	var textStore = [];
+
+	return function (index, replacement) {
+		textStore[index] = replacement;
+
+		return textStore.filter(Boolean).join('\n');
+	};
+})();
+
+function applyToSingletonTag (style, index, remove, obj) {
+	var css = remove ? "" : obj.css;
+
+	if (style.styleSheet) {
+		style.styleSheet.cssText = replaceText(index, css);
+	} else {
+		var cssNode = document.createTextNode(css);
+		var childNodes = style.childNodes;
+
+		if (childNodes[index]) style.removeChild(childNodes[index]);
+
+		if (childNodes.length) {
+			style.insertBefore(cssNode, childNodes[index]);
+		} else {
+			style.appendChild(cssNode);
+		}
+	}
+}
+
+function applyToTag (style, obj) {
+	var css = obj.css;
+	var media = obj.media;
+
+	if(media) {
+		style.setAttribute("media", media)
+	}
+
+	if(style.styleSheet) {
+		style.styleSheet.cssText = css;
+	} else {
+		while(style.firstChild) {
+			style.removeChild(style.firstChild);
+		}
+
+		style.appendChild(document.createTextNode(css));
+	}
+}
+
+function updateLink (link, options, obj) {
+	var css = obj.css;
+	var sourceMap = obj.sourceMap;
+
+	/*
+		If convertToAbsoluteUrls isn't defined, but sourcemaps are enabled
+		and there is no publicPath defined then lets turn convertToAbsoluteUrls
+		on by default.  Otherwise default to the convertToAbsoluteUrls option
+		directly
+	*/
+	var autoFixUrls = options.convertToAbsoluteUrls === undefined && sourceMap;
+
+	if (options.convertToAbsoluteUrls || autoFixUrls) {
+		css = fixUrls(css);
+	}
+
+	if (sourceMap) {
+		// http://stackoverflow.com/a/26603875
+		css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
+	}
+
+	var blob = new Blob([css], { type: "text/css" });
+
+	var oldSrc = link.href;
+
+	link.href = URL.createObjectURL(blob);
+
+	if(oldSrc) URL.revokeObjectURL(oldSrc);
+}
+
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/lib/urls.js":
+/*!***********************************************!*\
+  !*** ./node_modules/style-loader/lib/urls.js ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+/**
+ * When source maps are enabled, `style-loader` uses a link element with a data-uri to
+ * embed the css on the page. This breaks all relative urls because now they are relative to a
+ * bundle instead of the current page.
+ *
+ * One solution is to only use full urls, but that may be impossible.
+ *
+ * Instead, this function "fixes" the relative urls to be absolute according to the current page location.
+ *
+ * A rudimentary test suite is located at `test/fixUrls.js` and can be run via the `npm test` command.
+ *
+ */
+
+module.exports = function (css) {
+  // get current location
+  var location = typeof window !== "undefined" && window.location;
+
+  if (!location) {
+    throw new Error("fixUrls requires window.location");
+  }
+
+	// blank or null?
+	if (!css || typeof css !== "string") {
+	  return css;
+  }
+
+  var baseUrl = location.protocol + "//" + location.host;
+  var currentDir = baseUrl + location.pathname.replace(/\/[^\/]*$/, "/");
+
+	// convert each url(...)
+	/*
+	This regular expression is just a way to recursively match brackets within
+	a string.
+
+	 /url\s*\(  = Match on the word "url" with any whitespace after it and then a parens
+	   (  = Start a capturing group
+	     (?:  = Start a non-capturing group
+	         [^)(]  = Match anything that isn't a parentheses
+	         |  = OR
+	         \(  = Match a start parentheses
+	             (?:  = Start another non-capturing groups
+	                 [^)(]+  = Match anything that isn't a parentheses
+	                 |  = OR
+	                 \(  = Match a start parentheses
+	                     [^)(]*  = Match anything that isn't a parentheses
+	                 \)  = Match a end parentheses
+	             )  = End Group
+              *\) = Match anything and then a close parens
+          )  = Close non-capturing group
+          *  = Match anything
+       )  = Close capturing group
+	 \)  = Match a close parens
+
+	 /gi  = Get all matches, not the first.  Be case insensitive.
+	 */
+	var fixedCss = css.replace(/url\s*\(((?:[^)(]|\((?:[^)(]+|\([^)(]*\))*\))*)\)/gi, function(fullMatch, origUrl) {
+		// strip quotes (if they exist)
+		var unquotedOrigUrl = origUrl
+			.trim()
+			.replace(/^"(.*)"$/, function(o, $1){ return $1; })
+			.replace(/^'(.*)'$/, function(o, $1){ return $1; });
+
+		// already a full url? no change
+		if (/^(#|data:|http:\/\/|https:\/\/|file:\/\/\/|\s*$)/i.test(unquotedOrigUrl)) {
+		  return fullMatch;
+		}
+
+		// convert the url to a full url
+		var newUrl;
+
+		if (unquotedOrigUrl.indexOf("//") === 0) {
+		  	//TODO: should we add protocol?
+			newUrl = unquotedOrigUrl;
+		} else if (unquotedOrigUrl.indexOf("/") === 0) {
+			// path should be relative to the base url
+			newUrl = baseUrl + unquotedOrigUrl; // already starts with '/'
+		} else {
+			// path should be relative to current directory
+			newUrl = currentDir + unquotedOrigUrl.replace(/^\.\//, ""); // Strip leading './'
+		}
+
+		// send back the fixed url(...)
+		return "url(" + JSON.stringify(newUrl) + ")";
+	});
+
+	// send back the fixed css
+	return fixedCss;
+};
+
+
+/***/ }),
+
 /***/ "./node_modules/timers-browserify/main.js":
 /*!************************************************!*\
   !*** ./node_modules/timers-browserify/main.js ***!
@@ -944,7 +4455,15 @@ var render = function() {
       _vm._v(" "),
       _c(
         "v-app-bar",
-        { attrs: { app: "", color: "indigo", dark: "" } },
+        {
+          attrs: {
+            app: "",
+            color: "grey darken-3",
+            dark: "",
+            "hide-on-scroll": "",
+            elevation: "0.5"
+          }
+        },
         [
           _c("v-app-bar-nav-icon", {
             staticClass: "hidden-md-and-up",
@@ -956,8 +4475,17 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _c("v-toolbar-title", [
-            _c("span", { staticClass: "font-weight-bold " }, [_vm._v("EduLab")])
+          _c("v-toolbar-title", { staticClass: "pl-0" }, [
+            _c(
+              "a",
+              { attrs: { href: "/" } },
+              [
+                _c("v-img", {
+                  attrs: { src: _vm.logo, contain: "", width: "110px" }
+                })
+              ],
+              1
+            )
           ]),
           _vm._v(" "),
           _c(
@@ -969,8 +4497,9 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  staticClass: "hidden-sm-and-down font-weight-bold",
-                  attrs: { flat: "", text: "", small: "" }
+                  staticClass:
+                    "hidden-sm-and-down font-weight-medium text-capitalize",
+                  attrs: { text: "" }
                 },
                 [_vm._v("\n                    Cursos\n                ")]
               ),
@@ -978,8 +4507,9 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  staticClass: "hidden-sm-and-down font-weight-bold",
-                  attrs: { flat: "", text: "", small: "" }
+                  staticClass:
+                    "hidden-sm-and-down font-weight-medium text-capitalize",
+                  attrs: { text: "" }
                 },
                 [
                   _vm._v(
@@ -991,8 +4521,9 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  staticClass: "hidden-sm-and-down font-weight-bold",
-                  attrs: { flat: "", text: "", small: "" }
+                  staticClass:
+                    "hidden-sm-and-down font-weight-medium text-capitalize",
+                  attrs: { text: "" }
                 },
                 [_vm._v("\n                    Planes\n                ")]
               ),
@@ -1000,36 +4531,47 @@ var render = function() {
               _c(
                 "v-btn",
                 {
-                  staticClass: "hidden-sm-and-down font-weight-bold",
-                  attrs: { flat: "", text: "", small: "" }
+                  staticClass:
+                    "hidden-sm-and-down font-weight-medium text-capitalize",
+                  attrs: { text: "" }
                 },
-                [
-                  _vm._v(
-                    "\n                    Sobre nosotros\n                "
-                  )
-                ]
+                [_vm._v("\n                    Nosotros\n                ")]
               ),
               _vm._v(" "),
               _c("v-divider", { staticClass: "mx-5", attrs: { vertical: "" } }),
               _vm._v(" "),
-              _c("v-btn", { attrs: { color: "teal", small: "" } }, [
-                _vm._v("\n                    Iniciar sesión\n                ")
-              ])
+              _c(
+                "v-btn",
+                {
+                  staticClass: "mr-4 grey--text text--darken-3",
+                  attrs: { color: "lime accent-4" }
+                },
+                [
+                  _c("span", { staticClass: "text-capitalize" }, [
+                    _vm._v("Prueba gratis")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-btn",
+                {
+                  attrs: {
+                    color: "lime accent-4",
+                    outlined: "",
+                    dark: "",
+                    href: "/login"
+                  }
+                },
+                [
+                  _c("span", { staticClass: "text-capitalize" }, [
+                    _vm._v("Iniciar sesión")
+                  ])
+                ]
+              )
             ],
             1
-          ),
-          _vm._v(" "),
-          _c("v-text-field", {
-            staticClass: "ml-5",
-            staticStyle: { "max-width": "300px" },
-            attrs: {
-              "append-icon": "mdi-magnify",
-              flat: "",
-              dense: "",
-              "hide-details": "",
-              "solo-inverted": ""
-            }
-          })
+          )
         ],
         1
       )
@@ -1061,28 +4603,6583 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    { staticClass: "parallax-box-h" },
     [
       _c(
         "v-parallax",
-        { attrs: { dark: "", src: "images/cover-edu3.jpg", height: "650" } },
+        {
+          attrs: {
+            dark: "",
+            src: "https://fondosmil.com/fondo/27527.jpg",
+            height: "650"
+          }
+        },
         [
           _c(
             "v-row",
-            { attrs: { align: "center", justify: "end" } },
+            { attrs: { align: "center", justify: "center" } },
             [
               _c(
                 "v-col",
-                {
-                  staticClass: "text-center",
-                  attrs: { md: "5", "offset-md": "1" }
-                },
+                { staticClass: "text-center", attrs: { md: "8" } },
                 [
-                  _c("h1", { staticClass: "display-1 font-weight-bold mb-4" }, [
-                    _vm._v(
-                      "La academia online de educación para tu ingreso a la universidad"
+                  _c(
+                    "h1",
+                    { staticClass: "display-2 font-weight-medium mb-4" },
+                    [
+                      _vm._v(
+                        "La academia online de educación para tu ingreso a la universidad"
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "p",
+                    { staticClass: "title grey--text text--lighten-1 my-10" },
+                    [
+                      _vm._v(
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda corporis cumque, iusto odit quasi qui rem repellendus! Animi asperiores atque ducimus, eligendi enim fugiat non optio sed ut voluptas?"
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      staticClass:
+                        "mb-5 font-weight-bold mr-5 grey--text text--darken-3",
+                      attrs: { color: "lime accent-4", large: "", dark: "" }
+                    },
+                    [_vm._v("Comienza Ahora")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-btn",
+                    {
+                      staticClass: "mb-5 font-weight-bold",
+                      attrs: {
+                        color: "lime accent-4",
+                        large: "",
+                        outlined: "",
+                        dark: ""
+                      }
+                    },
+                    [_vm._v("Toma tu primera clase")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "landing-banner__footer" })
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/ClasesComponent.vue?vue&type=template&id=1ac1f5df&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/ClasesComponent.vue?vue&type=template&id=1ac1f5df& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("section", [
+    _c(
+      "section",
+      { staticClass: "grey lighten-4" },
+      [
+        _c(
+          "v-container",
+          [
+            _c(
+              "v-row",
+              [
+                _c(
+                  "v-col",
+                  { staticClass: "text-center", attrs: { md: "1" } },
+                  [
+                    _c(
+                      "v-avatar",
+                      { attrs: { width: "100%", height: "74px" } },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src:
+                              "../../images/iconos/cursos/circle/algebra.png",
+                            alt: "John"
+                          }
+                        })
+                      ]
                     )
-                  ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "v-col",
+                  {
+                    staticClass: "grey--text text--darken-2",
+                    attrs: { md: "11" }
+                  },
+                  [
+                    _c(
+                      "h1",
+                      { staticClass: "display-1 font-weight-medium mb-2" },
+                      [_vm._v("Algebra")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "v-row",
+                      { attrs: { align: "end" } },
+                      [
+                        _c(
+                          "v-col",
+                          { attrs: { md: "auto" } },
+                          [
+                            _c("v-rating", {
+                              attrs: {
+                                color: "yellow darken-3",
+                                "background-color": "grey darken-1",
+                                "empty-icon": "$ratingFull",
+                                readonly: "",
+                                dense: ""
+                              },
+                              model: {
+                                value: _vm.rating,
+                                callback: function($$v) {
+                                  _vm.rating = $$v
+                                },
+                                expression: "rating"
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-col", [
+                          _c("a", { attrs: { href: "" } }, [
+                            _vm._v("Leer más opiniones (2768)")
+                          ])
+                        ])
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "mt-4 subtitle-1" }, [
+                      _vm._v(
+                        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus dolor fugiat suscipit! Adipisci amet atque, consequatur enim illo iusto magni minus nulla, odio pariatur quia quis temporibus, vitae? Commodi!"
+                      )
+                    ])
+                  ],
+                  1
+                )
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ],
+      1
+    ),
+    _vm._v(" "),
+    _c(
+      "section",
+      {},
+      [
+        _c(
+          "v-container",
+          [
+            _c(
+              "v-row",
+              [
+                _c("v-col", [
+                  _c(
+                    "h3",
+                    {
+                      staticClass:
+                        "title mb-4 font-weight-bold grey--text text--darken-2"
+                    },
+                    [_vm._v("Con este curso podrás:")]
+                  )
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "v-row",
+              [
+                _c(
+                  "v-col",
+                  [
+                    _c(
+                      "v-row",
+                      { attrs: { align: "center" } },
+                      [
+                        _c(
+                          "v-col",
+                          { attrs: { md: "3" } },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src:
+                                  "https://static.platzi.com/media/achievements/Presencia_online.png",
+                                "aspect-ratio": "1.",
+                                contain: ""
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-col", [
+                          _vm._v(
+                            "\n                                Fortalecer tus conocimientos\n                            "
+                          )
+                        ])
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "v-col",
+                  [
+                    _c(
+                      "v-row",
+                      { attrs: { align: "center" } },
+                      [
+                        _c(
+                          "v-col",
+                          { attrs: { md: "3" } },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src:
+                                  "https://static.platzi.com/media/achievements/Presencia_online.png",
+                                "aspect-ratio": "1.",
+                                contain: ""
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-col", [
+                          _vm._v(
+                            "\n                                Resolver problemas avanzados\n                            "
+                          )
+                        ])
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "v-col",
+                  [
+                    _c(
+                      "v-row",
+                      { attrs: { align: "center" } },
+                      [
+                        _c(
+                          "v-col",
+                          { attrs: { md: "3" } },
+                          [
+                            _c("v-img", {
+                              attrs: {
+                                src:
+                                  "https://static.platzi.com/media/achievements/Presencia_online.png",
+                                "aspect-ratio": "1.",
+                                contain: ""
+                              }
+                            })
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c("v-col", [
+                          _vm._v(
+                            "\n                                Dar examenes personalizados\n                            "
+                          )
+                        ])
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                )
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "v-row",
+              { staticClass: "mt-4" },
+              [
+                _c("v-col", [
+                  _c(
+                    "h3",
+                    {
+                      staticClass:
+                        "title mb-4 font-weight-bold grey--text text--darken-2"
+                    },
+                    [_vm._v("Temario del Curso")]
+                  )
+                ])
+              ],
+              1
+            ),
+            _vm._v(" "),
+            _c(
+              "v-row",
+              [
+                _c(
+                  "v-col",
+                  { attrs: { md: "4" } },
+                  [
+                    _c(
+                      "v-timeline",
+                      { attrs: { "align-top": "", dense: "" } },
+                      [
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: { large: "" },
+                            scopedSlots: _vm._u([
+                              {
+                                key: "icon",
+                                fn: function() {
+                                  return [
+                                    _c("v-avatar", [
+                                      _c("img", {
+                                        attrs: {
+                                          src:
+                                            "../../images/iconos/web/circle/basico.png"
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                },
+                                proxy: true
+                              }
+                            ])
+                          },
+                          [
+                            _vm._v(" "),
+                            _c(
+                              "v-row",
+                              {},
+                              [
+                                _c("v-col", [
+                                  _c("strong", [_vm._v("Clases Base")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "d-block caption" },
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        {
+                                          attrs: {
+                                            color: "green accent-4",
+                                            small: ""
+                                          }
+                                        },
+                                        [_vm._v("mdi-signal-cellular-1")]
+                                      ),
+                                      _vm._v(" Básico")
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "green accent-4",
+                              icon: "mdi-play",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "font-weight-bold light-blue--text pt-1",
+                                attrs: { href: "../curso/algebra/video" }
+                              },
+                              [_vm._v("Exponentes")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "grey darken-4",
+                              icon: "mdi-lock",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold text--secondary pt-1"
+                              },
+                              [_vm._v("Ecuaciones")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "grey darken-4",
+                              icon: "mdi-lock",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold text--secondary pt-1"
+                              },
+                              [_vm._v("Teoria de exponentes")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: { large: "" },
+                            scopedSlots: _vm._u([
+                              {
+                                key: "icon",
+                                fn: function() {
+                                  return [
+                                    _c("v-avatar", [
+                                      _c("img", {
+                                        attrs: {
+                                          src:
+                                            "../../images/iconos/web/circle/intermedio.png"
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                },
+                                proxy: true
+                              }
+                            ])
+                          },
+                          [
+                            _vm._v(" "),
+                            _c(
+                              "v-row",
+                              {},
+                              [
+                                _c("v-col", [
+                                  _c("strong", [_vm._v("Clases Intermedia")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "d-block caption" },
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        {
+                                          attrs: {
+                                            color: "cyan accent-4",
+                                            small: ""
+                                          }
+                                        },
+                                        [_vm._v("mdi-signal-cellular-2")]
+                                      ),
+                                      _vm._v(" Intermedio")
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "grey darken-4",
+                              icon: "mdi-lock",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold text--secondary pt-1"
+                              },
+                              [_vm._v("Exponentes")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "grey darken-4",
+                              icon: "mdi-lock",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold text--secondary pt-1"
+                              },
+                              [_vm._v("Ecuaciones")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "grey darken-4",
+                              icon: "mdi-lock",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold text--secondary pt-1"
+                              },
+                              [_vm._v("Teoria de exponentes")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: { large: "" },
+                            scopedSlots: _vm._u([
+                              {
+                                key: "icon",
+                                fn: function() {
+                                  return [
+                                    _c("v-avatar", [
+                                      _c("img", {
+                                        attrs: {
+                                          src:
+                                            "../../images/iconos/web/circle/avanzado.png"
+                                        }
+                                      })
+                                    ])
+                                  ]
+                                },
+                                proxy: true
+                              }
+                            ])
+                          },
+                          [
+                            _vm._v(" "),
+                            _c(
+                              "v-row",
+                              {},
+                              [
+                                _c("v-col", [
+                                  _c("strong", [_vm._v("Clases Avanzada")]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "d-block caption" },
+                                    [
+                                      _c(
+                                        "v-icon",
+                                        {
+                                          attrs: { color: "amber", small: "" }
+                                        },
+                                        [_vm._v("mdi-signal-cellular-3")]
+                                      ),
+                                      _vm._v(" Avanzado")
+                                    ],
+                                    1
+                                  )
+                                ])
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "amber",
+                              icon: "mdi-play",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "a",
+                              {
+                                staticClass:
+                                  "font-weight-bold light-blue--text pt-1",
+                                attrs: { href: "../curso/algebra/video" }
+                              },
+                              [_vm._v("Exponentes")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "grey darken-4",
+                              icon: "mdi-lock",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold text--secondary pt-1"
+                              },
+                              [_vm._v("Ecuaciones")]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-timeline-item",
+                          {
+                            attrs: {
+                              color: "grey darken-4",
+                              icon: "mdi-lock",
+                              small: ""
+                            }
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "font-weight-bold text--secondary pt-1"
+                              },
+                              [_vm._v("Teoria de exponentes")]
+                            )
+                          ]
+                        )
+                      ],
+                      1
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("v-col", { attrs: { md: "8" } }, [
+                  _c(
+                    "h3",
+                    {
+                      staticClass:
+                        "title mb-4 font-weight-bold grey--text text--darken-2"
+                    },
+                    [_vm._v("Objetivo del Curso")]
+                  ),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium error, mollitia? Ab adipisci animi, commodi corporis cumque deserunt distinctio fugit inventore laboriosam magnam necessitatibus neque omnis, perspiciatis sapiente tempora ut!"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci aliquid, animi consequatur corporis cupiditate dolor esse est expedita id in, laboriosam laudantium, nulla odit quo repellat saepe sapiente sit soluta."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    {
+                      staticClass:
+                        "subtitle-1 mb-4 font-weight-bold grey--text text--darken-2"
+                    },
+                    [_vm._v("Sobre el contenido")]
+                  ),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cupiditate dolorem ducimus eaque earum eveniet explicabo incidunt ipsam iste minus nihil nisi odio officiis, optio quia quidem repellat. Nisi, repudiandae?"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "h3",
+                    {
+                      staticClass:
+                        "subtitle-1 mb-4 font-weight-bold grey--text text--darken-2"
+                    },
+                    [_vm._v("Pruebalo gratis")]
+                  ),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "Con la prueba gratis podras accesder a videos seleccionados gratuitamente."
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "mt-10 d-block" },
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass: "mr-4",
+                          attrs: {
+                            color: "green accent-4",
+                            dark: "",
+                            large: "",
+                            href: "../student/algebra/video/list"
+                          }
+                        },
+                        [
+                          _c("span", { staticClass: "text-capitalize" }, [
+                            _vm._v("Ver curso ahora")
+                          ])
+                        ]
+                      )
+                    ],
+                    1
+                  )
+                ])
+              ],
+              1
+            )
+          ],
+          1
+        )
+      ],
+      1
+    )
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/CursosComponent.vue?vue&type=template&id=3c8664de&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/CursosComponent.vue?vue&type=template&id=3c8664de& ***!
+  \***********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    [
+      _c(
+        "v-parallax",
+        { attrs: { dark: "", src: "images/bottom_bg4.jpg", height: "250" } },
+        [
+          _c(
+            "v-row",
+            { attrs: { align: "center" } },
+            [
+              _c(
+                "v-col",
+                { attrs: { md: "2" } },
+                [
+                  _c("v-img", {
+                    attrs: {
+                      src: "images/logos/logo-unsaac.png",
+                      "aspect-ratio": "1.7",
+                      contain: ""
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("v-col", { attrs: { md: "4" } }, [
+                _c("h1", { staticClass: "display-1 font-weight-bold mb-4" }, [
+                  _vm._v("Grupo A")
+                ]),
+                _vm._v(" "),
+                _c("h4", { staticClass: "subheading" }, [_vm._v("12 cursos")])
+              ]),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { md: "3" } },
+                [
+                  _c("v-select", {
+                    staticClass: "box-select-group",
+                    attrs: {
+                      items: _vm.modalidades,
+                      "item-text": "modalidad",
+                      "item-value": "id",
+                      label: "Select",
+                      solo: ""
+                    },
+                    model: {
+                      value: _vm.modalidad,
+                      callback: function($$v) {
+                        _vm.modalidad = $$v
+                      },
+                      expression: "modalidad"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { md: "3" } },
+                [
+                  _c("v-select", {
+                    staticClass: "box-select-group",
+                    attrs: {
+                      items: _vm.grupos,
+                      "item-text": "grupo",
+                      "item-value": "id",
+                      label: "Select",
+                      solo: ""
+                    },
+                    model: {
+                      value: _vm.grupo,
+                      callback: function($$v) {
+                        _vm.grupo = $$v
+                      },
+                      expression: "grupo"
+                    }
+                  })
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "grey lighten-4" },
+        [
+          _c(
+            "v-container",
+            [
+              _c(
+                "v-row",
+                _vm._l(_vm.cursos, function(cursolist) {
+                  return _c(
+                    "v-col",
+                    { key: cursolist, attrs: { md: "4" } },
+                    [
+                      _c("v-hover", {
+                        attrs: { "open-delay": "50" },
+                        scopedSlots: _vm._u(
+                          [
+                            {
+                              key: "default",
+                              fn: function(ref) {
+                                var hover = ref.hover
+                                return [
+                                  _c(
+                                    "v-card",
+                                    {
+                                      staticClass: "mx-auto",
+                                      attrs: {
+                                        "max-width": "400",
+                                        elevation: hover ? 8 : 2
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card-text",
+                                        { staticClass: "text--primary" },
+                                        [
+                                          _c(
+                                            "a",
+                                            {
+                                              attrs: { href: "curso/algebra" }
+                                            },
+                                            [
+                                              _c(
+                                                "v-row",
+                                                { attrs: { align: "center" } },
+                                                [
+                                                  _c(
+                                                    "v-col",
+                                                    { attrs: { md: "auto" } },
+                                                    [
+                                                      _c("v-avatar", [
+                                                        _c("img", {
+                                                          attrs: {
+                                                            src: cursolist.logo,
+                                                            alt: "John"
+                                                          }
+                                                        })
+                                                      ])
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-col",
+                                                    { attrs: { md: "auto" } },
+                                                    [
+                                                      _c(
+                                                        "span",
+                                                        {
+                                                          staticClass:
+                                                            "text--disabled small font-weight-bold"
+                                                        },
+                                                        [_vm._v("Curso")]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "h3",
+                                                        {
+                                                          staticClass:
+                                                            "black--text"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            _vm._s(
+                                                              cursolist.curso
+                                                            )
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "span",
+                                                        {
+                                                          staticClass:
+                                                            "text--secondary caption font-weight-bold"
+                                                        },
+                                                        [_vm._v("22 videos")]
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ]
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ]
+                              }
+                            }
+                          ],
+                          null,
+                          true
+                        )
+                      })
+                    ],
+                    1
+                  )
+                }),
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideoComponent.vue?vue&type=template&id=75602367&":
+/*!**********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/VideoComponent.vue?vue&type=template&id=75602367& ***!
+  \**********************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    [
+      _c(
+        "v-navigation-drawer",
+        {
+          attrs: {
+            permanent: "",
+            "expand-on-hover": "",
+            absolute: "",
+            dense: ""
+          }
+        },
+        [
+          _c(
+            "v-list",
+            [
+              _c(
+                "v-list-item",
+                { staticClass: "px-2" },
+                [
+                  _c(
+                    "v-list-item-avatar",
+                    [
+                      _c("v-img", {
+                        attrs: {
+                          src: "../../images/iconos/cursos/circle/algebra.png"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Algebra")])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-divider"),
+          _vm._v(" "),
+          _c(
+            "v-list",
+            { attrs: { nav: "", dense: "" } },
+            [
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "green accent-4", size: "25" } },
+                        [
+                          _c(
+                            "v-icon",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("mdi-check")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Exponentes")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "grey accent-4", size: "25" } },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("2")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Ecuaciones")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "grey accent-4", size: "25" } },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("3")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Inecuaciones")])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "pl-12" },
+        [
+          _c(
+            "v-container",
+            { staticClass: "pa-0", attrs: { fluid: "" } },
+            [
+              _c(
+                "v-row",
+                { attrs: { "no-gutters": "" } },
+                [
+                  _c("v-col", { attrs: { md: "7" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "pl-2" },
+                      [
+                        _c(
+                          "v-card",
+                          {
+                            attrs: {
+                              flat: "",
+                              dark: "",
+                              tile: "",
+                              color: "grey darken-3"
+                            }
+                          },
+                          [
+                            _c(
+                              "v-card-text",
+                              { staticClass: "py-12" },
+                              [
+                                _c(
+                                  "v-row",
+                                  {
+                                    staticClass: "my-12 py-12",
+                                    attrs: {
+                                      justify: "center",
+                                      align: "center"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-col",
+                                      {
+                                        staticClass: "position-relative",
+                                        attrs: { md: "8" }
+                                      },
+                                      [
+                                        _c(
+                                          "p",
+                                          { staticClass: "mb-0" },
+                                          [
+                                            _c("v-icon", [_vm._v("mdi-clock")]),
+                                            _vm._v(" debes iniciar sesión")
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "span",
+                                          {
+                                            staticClass:
+                                              "d-block title font-weight-medium"
+                                          },
+                                          [
+                                            _vm._v(
+                                              "Para disfrutar esta clase sin costo alguno debes iniciar sesión antes"
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-btn",
+                                          {
+                                            staticClass: "mt-4",
+                                            attrs: {
+                                              color: "green accent-4",
+                                              dark: "",
+                                              href: "/curso/algebra/video"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass: "text-capitalize"
+                                              },
+                                              [_vm._v("Comenzar plan ahora")]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-btn",
+                                          {
+                                            staticClass: "mt-4",
+                                            attrs: {
+                                              color: "green accent-4",
+                                              dark: "",
+                                              outlined: "",
+                                              href: "/student/algebra/video"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "span",
+                                              {
+                                                staticClass: "text-capitalize"
+                                              },
+                                              [_vm._v("Iniciar Sesión")]
+                                            )
+                                          ]
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-row",
+                                          {
+                                            staticClass: "position-absolute",
+                                            attrs: { align: "center" }
+                                          },
+                                          [
+                                            _c(
+                                              "v-col",
+                                              { staticClass: "text-center" },
+                                              [
+                                                _c(
+                                                  "v-icon",
+                                                  {
+                                                    staticClass:
+                                                      "display-4 black--text"
+                                                  },
+                                                  [_vm._v("mdi-play")]
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-row",
+                          [
+                            _c(
+                              "v-col",
+                              [
+                                _c(
+                                  "v-tabs",
+                                  {
+                                    attrs: { color: "pink" },
+                                    model: {
+                                      value: _vm.descripcion,
+                                      callback: function($$v) {
+                                        _vm.descripcion = $$v
+                                      },
+                                      expression: "descripcion"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-tab",
+                                      { attrs: { href: "#details" } },
+                                      [
+                                        _vm._v(
+                                          "\n                                    Ordinario\n                                "
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "v-col",
+                              { staticClass: "text-right" },
+                              [
+                                _c(
+                                  "v-btn",
+                                  {
+                                    staticClass: "text-right mr-4",
+                                    attrs: { color: "light-blue", dark: "" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                Ecuaciones\n                                "
+                                    ),
+                                    _c("v-icon", [_vm._v("mdi-skip-next")])
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-row",
+                          [
+                            _c(
+                              "v-col",
+                              [
+                                _c(
+                                  "v-tabs-items",
+                                  {
+                                    model: {
+                                      value: _vm.descripcion,
+                                      callback: function($$v) {
+                                        _vm.descripcion = $$v
+                                      },
+                                      expression: "descripcion"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-tab-item",
+                                      { attrs: { value: "details" } },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "px-4" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass:
+                                                  "grey--text text--darken-2"
+                                              },
+                                              [_vm._v("Teoria de exponentes")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("v-divider", {
+                                              staticClass: "mt-2 mb-4"
+                                            }),
+                                            _vm._v(" "),
+                                            _c("p", [
+                                              _vm._v(
+                                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur debitis ex expedita, hic illum inventore labore mollitia pariatur, quisquam quo quos rem sapiente sequi sint tenetur unde voluptates voluptatum?"
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-row",
+                                              { attrs: { align: "center" } },
+                                              [
+                                                _c(
+                                                  "v-col",
+                                                  { attrs: { md: "6" } },
+                                                  [
+                                                    _c(
+                                                      "v-row",
+                                                      [
+                                                        _c(
+                                                          "v-col",
+                                                          {
+                                                            attrs: { md: "2" }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-avatar",
+                                                              {
+                                                                attrs: {
+                                                                  size: "36px"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("img", {
+                                                                  attrs: {
+                                                                    alt:
+                                                                      "Avatar",
+                                                                    src:
+                                                                      "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                                                                  }
+                                                                }),
+                                                                _vm._v(" "),
+                                                                _c("v-icon", {
+                                                                  attrs: {
+                                                                    color: ""
+                                                                  }
+                                                                })
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-col",
+                                                          {
+                                                            attrs: { md: "10" }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "span",
+                                                              {
+                                                                staticClass:
+                                                                  "font-weight-bold"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "Fernando Langschwager"
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "a",
+                                                              {
+                                                                attrs: {
+                                                                  href: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "@josuechandiasto"
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    {
+                      staticClass: "grey lighten-4 position-relative",
+                      attrs: { md: "5" }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        {
+                          staticClass: "my-3",
+                          attrs: { "no-gutters": "", align: "center" }
+                        },
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { md: "12" } },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "ml-2 px-5",
+                                  attrs: { size: "36px" }
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      alt: "Avatar",
+                                      src:
+                                        "../../images/iconos/cursos/circle/algebra.png"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-icon", { attrs: { color: "" } })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "font-weight-bold light-blue--text",
+                                  attrs: { href: "" }
+                                },
+                                [_vm._v("Algebra")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tabs",
+                        {
+                          attrs: { grow: "", color: "light-blue" },
+                          model: {
+                            value: _vm.tabs,
+                            callback: function($$v) {
+                              _vm.tabs = $$v
+                            },
+                            expression: "tabs"
+                          }
+                        },
+                        [
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#aportes" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "8"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                            Aportessd\n                        "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#preguntas" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "8"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                            Preguntas\n                        "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#archivos" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "10",
+                                    "offset-x": "1"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                            Archivos y enlaces\n                        "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tabs-items",
+                        {
+                          staticClass: "py-4 grey lighten-4",
+                          model: {
+                            value: _vm.tabs,
+                            callback: function($$v) {
+                              _vm.tabs = $$v
+                            },
+                            expression: "tabs"
+                          }
+                        },
+                        [
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "aportes" } },
+                            [
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                            '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                            '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "preguntas" } },
+                            [
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                            '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                            '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "archivos" } },
+                            [
+                              _c(
+                                "v-list",
+                                [
+                                  _c(
+                                    "v-list-item-group",
+                                    { attrs: { color: "primary" } },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c(
+                                                "v-badge",
+                                                {
+                                                  attrs: {
+                                                    bottom: "",
+                                                    icon: "mdi-download",
+                                                    "offset-y": "15"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v(
+                                                      "mdi-file-document-outline"
+                                                    )
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Material del cusco")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-download")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item",
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                { attrs: { color: "blue" } },
+                                                [_vm._v("mdi-link")]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Material del cusco")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [_vm._v("mdi-link")])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "green-cover" },
+                        [
+                          _c(
+                            "v-container",
+                            [
+                              _c(
+                                "v-row",
+                                {
+                                  staticClass: "green-cover-text",
+                                  attrs: { align: "center" }
+                                },
+                                [
+                                  _c("v-col", [
+                                    _c("p", [
+                                      _vm._v(
+                                        "Green Group no son sólo videos. Aquí podrás ver todos los aportes, archivos y preguntas de tus compañeros"
+                                      )
+                                    ])
+                                  ])
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideolistComponent.vue?vue&type=template&id=1a2f5a89&":
+/*!**************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/page/VideolistComponent.vue?vue&type=template&id=1a2f5a89& ***!
+  \**************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    [
+      _c(
+        "v-navigation-drawer",
+        {
+          attrs: {
+            permanent: "",
+            "expand-on-hover": "",
+            absolute: "",
+            dense: ""
+          }
+        },
+        [
+          _c(
+            "v-list",
+            [
+              _c(
+                "v-list-item",
+                { staticClass: "px-2" },
+                [
+                  _c(
+                    "v-list-item-avatar",
+                    [
+                      _c("v-img", {
+                        attrs: {
+                          src:
+                            "../../../images/iconos/cursos/circle/algebra.png"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Algebra")])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-divider"),
+          _vm._v(" "),
+          _c(
+            "v-list",
+            { attrs: { nav: "", dense: "" } },
+            [
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "green accent-4", size: "25" } },
+                        [
+                          _c(
+                            "v-icon",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("mdi-check")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Exponentes")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "grey accent-4", size: "25" } },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("2")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Ecuaciones")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "grey accent-4", size: "25" } },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("3")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Inecuaciones")])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "pl-12" },
+        [
+          _c(
+            "v-container",
+            { staticClass: "pa-0", attrs: { fluid: "" } },
+            [
+              _c(
+                "v-row",
+                { attrs: { "no-gutters": "" } },
+                [
+                  _c("v-col", { attrs: { md: "7" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "pl-2" },
+                      [
+                        _c("div", { staticClass: "video position-relative" }, [
+                          _c("iframe", {
+                            attrs: {
+                              src:
+                                "https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1",
+                              frameborder: "0",
+                              allow: "autoplay; fullscreen"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "v-row",
+                          [
+                            _c(
+                              "v-col",
+                              [
+                                _c(
+                                  "v-tabs",
+                                  {
+                                    attrs: { color: "pink" },
+                                    model: {
+                                      value: _vm.descripcion,
+                                      callback: function($$v) {
+                                        _vm.descripcion = $$v
+                                      },
+                                      expression: "descripcion"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-tab",
+                                      { attrs: { href: "#details" } },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Ordinario\n                                    "
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "v-col",
+                              { staticClass: "text-right" },
+                              [
+                                _c(
+                                  "v-btn",
+                                  {
+                                    staticClass: "text-right mr-4",
+                                    attrs: { color: "light-blue", dark: "" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    Ecuaciones\n                                    "
+                                    ),
+                                    _c("v-icon", [_vm._v("mdi-skip-next")])
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-row",
+                          [
+                            _c(
+                              "v-col",
+                              [
+                                _c(
+                                  "v-tabs-items",
+                                  {
+                                    model: {
+                                      value: _vm.descripcion,
+                                      callback: function($$v) {
+                                        _vm.descripcion = $$v
+                                      },
+                                      expression: "descripcion"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-tab-item",
+                                      { attrs: { value: "details" } },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "px-4" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass:
+                                                  "grey--text text--darken-2"
+                                              },
+                                              [_vm._v("Teoria de exponentes")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("v-divider", {
+                                              staticClass: "mt-2 mb-4"
+                                            }),
+                                            _vm._v(" "),
+                                            _c("p", [
+                                              _vm._v(
+                                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur debitis ex expedita, hic illum inventore labore mollitia pariatur, quisquam quo quos rem sapiente sequi sint tenetur unde voluptates voluptatum?"
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-row",
+                                              { attrs: { align: "center" } },
+                                              [
+                                                _c(
+                                                  "v-col",
+                                                  { attrs: { md: "6" } },
+                                                  [
+                                                    _c(
+                                                      "v-row",
+                                                      [
+                                                        _c(
+                                                          "v-col",
+                                                          {
+                                                            attrs: { md: "2" }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-avatar",
+                                                              {
+                                                                attrs: {
+                                                                  size: "36px"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("img", {
+                                                                  attrs: {
+                                                                    alt:
+                                                                      "Avatar",
+                                                                    src:
+                                                                      "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                                                                  }
+                                                                }),
+                                                                _vm._v(" "),
+                                                                _c("v-icon", {
+                                                                  attrs: {
+                                                                    color: ""
+                                                                  }
+                                                                })
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-col",
+                                                          {
+                                                            attrs: { md: "10" }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "span",
+                                                              {
+                                                                staticClass:
+                                                                  "font-weight-bold"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "Fernando Langschwager"
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "a",
+                                                              {
+                                                                attrs: {
+                                                                  href: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "@josuechandiasto"
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    {
+                      staticClass: "grey lighten-4 position-relative",
+                      attrs: { md: "5" }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        {
+                          staticClass: "my-3",
+                          attrs: { "no-gutters": "", align: "center" }
+                        },
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { md: "12" } },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "ml-2 px-5",
+                                  attrs: { size: "36px" }
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      alt: "Avatar",
+                                      src:
+                                        "../../../images/iconos/cursos/circle/algebra.png"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-icon", { attrs: { color: "" } })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "font-weight-bold light-blue--text",
+                                  attrs: { href: "" }
+                                },
+                                [_vm._v("Algebra")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tabs",
+                        {
+                          attrs: { grow: "", color: "light-blue" },
+                          model: {
+                            value: _vm.tabs,
+                            callback: function($$v) {
+                              _vm.tabs = $$v
+                            },
+                            expression: "tabs"
+                          }
+                        },
+                        [
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#aportes" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "8"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                Aportessd\n                            "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#preguntas" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "8"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                Preguntas\n                            "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#archivos" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "10",
+                                    "offset-x": "1"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                Archivos y enlaces\n                            "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tabs-items",
+                        {
+                          staticClass: "py-4 grey lighten-4",
+                          model: {
+                            value: _vm.tabs,
+                            callback: function($$v) {
+                              _vm.tabs = $$v
+                            },
+                            expression: "tabs"
+                          }
+                        },
+                        [
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "aportes" } },
+                            [
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "preguntas" } },
+                            [
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "archivos" } },
+                            [
+                              _c(
+                                "v-list",
+                                [
+                                  _c(
+                                    "v-list-item-group",
+                                    { attrs: { color: "primary" } },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c(
+                                                "v-badge",
+                                                {
+                                                  attrs: {
+                                                    bottom: "",
+                                                    icon: "mdi-download",
+                                                    "offset-y": "15"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v(
+                                                      "mdi-file-document-outline"
+                                                    )
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Material del cusco")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-download")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item",
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                { attrs: { color: "blue" } },
+                                                [_vm._v("mdi-link")]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Material del cusco")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [_vm._v("mdi-link")])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoComponent.vue?vue&type=template&id=836a9b7e&":
+/*!*************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/VideoComponent.vue?vue&type=template&id=836a9b7e& ***!
+  \*************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    [
+      _c(
+        "v-navigation-drawer",
+        {
+          attrs: {
+            permanent: "",
+            "expand-on-hover": "",
+            absolute: "",
+            dense: ""
+          }
+        },
+        [
+          _c(
+            "v-list",
+            [
+              _c(
+                "v-list-item",
+                { staticClass: "px-2" },
+                [
+                  _c(
+                    "v-list-item-avatar",
+                    [
+                      _c("v-img", {
+                        attrs: {
+                          src:
+                            "../../../images/iconos/cursos/circle/algebra.png"
+                        }
+                      })
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Algebra")])
+                ],
+                1
+              )
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c("v-divider"),
+          _vm._v(" "),
+          _c(
+            "v-list",
+            { attrs: { nav: "", dense: "" } },
+            [
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "green accent-4", size: "25" } },
+                        [
+                          _c(
+                            "v-icon",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("mdi-check")]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Exponentes")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "grey accent-4", size: "25" } },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("2")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Ecuaciones")])
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-list-item",
+                { attrs: { link: "" } },
+                [
+                  _c(
+                    "v-list-item-icon",
+                    [
+                      _c(
+                        "v-avatar",
+                        { attrs: { color: "grey accent-4", size: "25" } },
+                        [
+                          _c(
+                            "span",
+                            {
+                              staticClass:
+                                "caption font-weight-bold white--text "
+                            },
+                            [_vm._v("3")]
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-list-item-title", [_vm._v("Inecuaciones")])
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "pl-12" },
+        [
+          _c(
+            "v-container",
+            { staticClass: "pa-0", attrs: { fluid: "" } },
+            [
+              _c(
+                "v-row",
+                { attrs: { "no-gutters": "" } },
+                [
+                  _c("v-col", { attrs: { md: "7" } }, [
+                    _c(
+                      "div",
+                      { staticClass: "pl-2" },
+                      [
+                        _c("div", { staticClass: "video position-relative" }, [
+                          _c("iframe", {
+                            attrs: {
+                              src:
+                                "https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1",
+                              frameborder: "0",
+                              allow: "autoplay; fullscreen"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "v-row",
+                          [
+                            _c(
+                              "v-col",
+                              [
+                                _c(
+                                  "v-tabs",
+                                  {
+                                    attrs: { color: "pink" },
+                                    model: {
+                                      value: _vm.descripcion,
+                                      callback: function($$v) {
+                                        _vm.descripcion = $$v
+                                      },
+                                      expression: "descripcion"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-tab",
+                                      { attrs: { href: "#details" } },
+                                      [
+                                        _vm._v(
+                                          "\n                                        Ordinario\n                                    "
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "v-col",
+                              { staticClass: "text-right" },
+                              [
+                                _c(
+                                  "v-btn",
+                                  {
+                                    staticClass: "text-right mr-4",
+                                    attrs: { color: "light-blue", dark: "" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n                                    Ecuaciones\n                                    "
+                                    ),
+                                    _c("v-icon", [_vm._v("mdi-skip-next")])
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "v-row",
+                          [
+                            _c(
+                              "v-col",
+                              [
+                                _c(
+                                  "v-tabs-items",
+                                  {
+                                    model: {
+                                      value: _vm.descripcion,
+                                      callback: function($$v) {
+                                        _vm.descripcion = $$v
+                                      },
+                                      expression: "descripcion"
+                                    }
+                                  },
+                                  [
+                                    _c(
+                                      "v-tab-item",
+                                      { attrs: { value: "details" } },
+                                      [
+                                        _c(
+                                          "div",
+                                          { staticClass: "px-4" },
+                                          [
+                                            _c(
+                                              "h3",
+                                              {
+                                                staticClass:
+                                                  "grey--text text--darken-2"
+                                              },
+                                              [_vm._v("Teoria de exponentes")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("v-divider", {
+                                              staticClass: "mt-2 mb-4"
+                                            }),
+                                            _vm._v(" "),
+                                            _c("p", [
+                                              _vm._v(
+                                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur debitis ex expedita, hic illum inventore labore mollitia pariatur, quisquam quo quos rem sapiente sequi sint tenetur unde voluptates voluptatum?"
+                                              )
+                                            ]),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-row",
+                                              { attrs: { align: "center" } },
+                                              [
+                                                _c(
+                                                  "v-col",
+                                                  { attrs: { md: "6" } },
+                                                  [
+                                                    _c(
+                                                      "v-row",
+                                                      [
+                                                        _c(
+                                                          "v-col",
+                                                          {
+                                                            attrs: { md: "2" }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-avatar",
+                                                              {
+                                                                attrs: {
+                                                                  size: "36px"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("img", {
+                                                                  attrs: {
+                                                                    alt:
+                                                                      "Avatar",
+                                                                    src:
+                                                                      "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                                                                  }
+                                                                }),
+                                                                _vm._v(" "),
+                                                                _c("v-icon", {
+                                                                  attrs: {
+                                                                    color: ""
+                                                                  }
+                                                                })
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-col",
+                                                          {
+                                                            attrs: { md: "10" }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "span",
+                                                              {
+                                                                staticClass:
+                                                                  "font-weight-bold"
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "Fernando Langschwager"
+                                                                )
+                                                              ]
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "a",
+                                                              {
+                                                                attrs: {
+                                                                  href: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _vm._v(
+                                                                  "@josuechandiasto"
+                                                                )
+                                                              ]
+                                                            )
+                                                          ]
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "v-col",
+                    {
+                      staticClass: "grey lighten-4 position-relative",
+                      attrs: { md: "5" }
+                    },
+                    [
+                      _c(
+                        "v-row",
+                        {
+                          staticClass: "my-3",
+                          attrs: { "no-gutters": "", align: "center" }
+                        },
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { md: "12" } },
+                            [
+                              _c(
+                                "v-avatar",
+                                {
+                                  staticClass: "ml-2 px-5",
+                                  attrs: { size: "36px" }
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      alt: "Avatar",
+                                      src:
+                                        "../../../images/iconos/cursos/circle/algebra.png"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("v-icon", { attrs: { color: "" } })
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "a",
+                                {
+                                  staticClass:
+                                    "font-weight-bold light-blue--text",
+                                  attrs: {
+                                    href: "../../../student/algebra/video/list"
+                                  }
+                                },
+                                [_vm._v("Algebra")]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tabs",
+                        {
+                          attrs: { grow: "", color: "light-blue" },
+                          model: {
+                            value: _vm.tabs,
+                            callback: function($$v) {
+                              _vm.tabs = $$v
+                            },
+                            expression: "tabs"
+                          }
+                        },
+                        [
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#aportes" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "8"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                Aportessd\n                            "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#preguntas" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "8"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                Preguntas\n                            "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab",
+                            {
+                              staticClass: "text-capitalize font-weight-medium",
+                              attrs: { href: "#archivos" }
+                            },
+                            [
+                              _c(
+                                "v-badge",
+                                {
+                                  attrs: {
+                                    color: "grey",
+                                    content: "6",
+                                    "offset-y": "10",
+                                    "offset-x": "1"
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                Archivos y enlaces\n                            "
+                                  )
+                                ]
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tabs-items",
+                        {
+                          staticClass: "py-4 grey lighten-4",
+                          model: {
+                            value: _vm.tabs,
+                            callback: function($$v) {
+                              _vm.tabs = $$v
+                            },
+                            expression: "tabs"
+                          }
+                        },
+                        [
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "aportes" } },
+                            [
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "preguntas" } },
+                            [
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-card",
+                                {
+                                  staticClass: "mx-3 mb-3",
+                                  attrs: { flat: "" }
+                                },
+                                [
+                                  _c(
+                                    "v-card-title",
+                                    { staticClass: "py-0" },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        { staticClass: "grow pa-0" },
+                                        [
+                                          _c(
+                                            "v-list-item-avatar",
+                                            {
+                                              attrs: { color: "grey darken-3" }
+                                            },
+                                            [
+                                              _c("v-img", {
+                                                staticClass: "elevation-6",
+                                                attrs: {
+                                                  src:
+                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                }
+                                              })
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Evan You")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("v-card-text", {}, [
+                                    _vm._v(
+                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          attrs: {
+                                            icon: "",
+                                            color: "light-blue"
+                                          }
+                                        },
+                                        [_c("v-icon", [_vm._v("mdi-reply")])],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-heart")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-badge",
+                                        {
+                                          attrs: {
+                                            color: "grey",
+                                            content: "6",
+                                            "offset-x": "10",
+                                            "offset-y": "15"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            { attrs: { icon: "" } },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-share-variant")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tab-item",
+                            { attrs: { value: "archivos" } },
+                            [
+                              _c(
+                                "v-list",
+                                [
+                                  _c(
+                                    "v-list-item-group",
+                                    { attrs: { color: "primary" } },
+                                    [
+                                      _c(
+                                        "v-list-item",
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c(
+                                                "v-badge",
+                                                {
+                                                  attrs: {
+                                                    bottom: "",
+                                                    icon: "mdi-download",
+                                                    "offset-y": "15"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v(
+                                                      "mdi-file-document-outline"
+                                                    )
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Material del cusco")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-download")
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item",
+                                        [
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                { attrs: { color: "blue" } },
+                                                [_vm._v("mdi-link")]
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-content",
+                                            [
+                                              _c("v-list-item-title", [
+                                                _vm._v("Material del cusco")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item-icon",
+                                            [
+                                              _c("v-icon", [_vm._v("mdi-link")])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoListComponent.vue?vue&type=template&id=b431a77a&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/VideoListComponent.vue?vue&type=template&id=b431a77a& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    { staticClass: "grey lighten-4" },
+    [
+      _c(
+        "v-container",
+        [
+          _c(
+            "v-row",
+            [
+              _c(
+                "v-col",
+                { staticClass: "overflow-y-auto", attrs: { md: "7" } },
+                [
+                  _c(
+                    "div",
+                    { staticClass: "h-100" },
+                    [
+                      _c(
+                        "v-card",
+                        { attrs: { flat: "", tile: "" } },
+                        [
+                          _c(
+                            "v-card-text",
+                            [
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    { attrs: { md: "auto" } },
+                                    [
+                                      _c("v-avatar", [
+                                        _c("img", {
+                                          attrs: {
+                                            src:
+                                              "../../../images/iconos/cursos/circle/algebra.png",
+                                            alt: "John"
+                                          }
+                                        })
+                                      ])
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    [
+                                      _c(
+                                        "h1",
+                                        {
+                                          staticClass: "small font-weight-bold"
+                                        },
+                                        [_vm._v("Algebra")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-divider", { staticClass: "my-3" }),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-row",
+                                        {
+                                          attrs: {
+                                            align: "center",
+                                            "no-gutters": ""
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-col",
+                                            { attrs: { md: "auto" } },
+                                            [
+                                              _c(
+                                                "span",
+                                                {
+                                                  staticClass:
+                                                    "text--secondary caption font-weight-bold mr-5"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                                Docente:\n                                            "
+                                                  )
+                                                ]
+                                              )
+                                            ]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-col",
+                                            [
+                                              _c(
+                                                "v-list-item",
+                                                { staticClass: "grow pa-0" },
+                                                [
+                                                  _c(
+                                                    "v-list-item-avatar",
+                                                    {
+                                                      attrs: {
+                                                        color:
+                                                          "grey darken-3 my-0"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-img", {
+                                                        staticClass:
+                                                          "elevation-6",
+                                                        attrs: {
+                                                          src:
+                                                            "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-list-item-content",
+                                                    { staticClass: "pa-0" },
+                                                    [
+                                                      _c("v-list-item-title", [
+                                                        _vm._v("Evan You")
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            [
+                              _c(
+                                "v-card",
+                                { attrs: { flat: "", tile: "" } },
+                                [
+                                  _c(
+                                    "v-tabs",
+                                    {
+                                      attrs: { color: "light-blue" },
+                                      model: {
+                                        value: _vm.content,
+                                        callback: function($$v) {
+                                          _vm.content = $$v
+                                        },
+                                        expression: "content"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-tab",
+                                        {
+                                          staticClass:
+                                            "text-capitalize font-weight-medium",
+                                          attrs: { href: "#contenido" }
+                                        },
+                                        [
+                                          _vm._v(
+                                            "\n                                            Contenido del curso\n                                        "
+                                          )
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-tab",
+                                        {
+                                          staticClass:
+                                            "text-capitalize font-weight-medium",
+                                          attrs: { href: "#vivo" }
+                                        },
+                                        [
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "red",
+                                                content: "live",
+                                                "offset-y": "8"
+                                              }
+                                            },
+                                            [
+                                              _vm._v(
+                                                "\n                                                Videos de clases en vivo\n                                            "
+                                              )
+                                            ]
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-text",
+                                    [
+                                      _c(
+                                        "v-tabs-items",
+                                        {
+                                          model: {
+                                            value: _vm.content,
+                                            callback: function($$v) {
+                                              _vm.content = $$v
+                                            },
+                                            expression: "content"
+                                          }
+                                        },
+                                        [
+                                          _c(
+                                            "v-tab-item",
+                                            { attrs: { value: "contenido" } },
+                                            [
+                                              _c(
+                                                "v-row",
+                                                {
+                                                  staticClass: "py-4",
+                                                  attrs: { align: "center" }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-col",
+                                                    [
+                                                      _c("h4", [
+                                                        _vm._v(
+                                                          "Progreso del curso: 0/23 contenidos(0%)"
+                                                        )
+                                                      ]),
+                                                      _vm._v(" "),
+                                                      _c("v-progress-linear", {
+                                                        attrs: {
+                                                          color:
+                                                            "deep-purple accent-4"
+                                                        },
+                                                        model: {
+                                                          value:
+                                                            _vm.valueDeterminate,
+                                                          callback: function(
+                                                            $$v
+                                                          ) {
+                                                            _vm.valueDeterminate = $$v
+                                                          },
+                                                          expression:
+                                                            "valueDeterminate"
+                                                        }
+                                                      })
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-col",
+                                                    [
+                                                      _c(
+                                                        "v-btn",
+                                                        {
+                                                          staticClass: "ma-2",
+                                                          attrs: {
+                                                            tile: "",
+                                                            outlined: "",
+                                                            color: "light-blue"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-icon",
+                                                            {
+                                                              attrs: {
+                                                                left: ""
+                                                              }
+                                                            },
+                                                            [_vm._v("mdi-lock")]
+                                                          ),
+                                                          _vm._v(
+                                                            " Iniciar plan\n                                                        "
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h3",
+                                                {
+                                                  staticClass:
+                                                    "title grey--text text--darken-3 mt-5 mb-3 font-weight-bold"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Teoria de exponenetes"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-card",
+                                                {
+                                                  staticClass: "mb-3",
+                                                  attrs: {
+                                                    tile: "",
+                                                    outlined: "",
+                                                    href:
+                                                      "/student/algebra/video/"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-row",
+                                                    {
+                                                      attrs: {
+                                                        "no-gutters": "",
+                                                        align: "center"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-col",
+                                                        {
+                                                          staticClass:
+                                                            "position-relative",
+                                                          attrs: { md: "3" }
+                                                        },
+                                                        [
+                                                          _c("v-img", {
+                                                            attrs: {
+                                                              src:
+                                                                "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                              "aspect-ratio":
+                                                                "1.8"
+                                                            }
+                                                          })
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-col",
+                                                        { staticClass: "px-3" },
+                                                        [
+                                                          _c(
+                                                            "h3",
+                                                            {
+                                                              staticClass:
+                                                                "small font-weight-bold mb-2"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Potencia de potencia"
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    small: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-clock"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(
+                                                                " 07:00 min"
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "d-block green--text"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    color:
+                                                                      "green",
+                                                                    small: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-lock"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(
+                                                                " Contenido no disponible"
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-card",
+                                                {
+                                                  staticClass: "mb-3",
+                                                  attrs: {
+                                                    tile: "",
+                                                    outlined: ""
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-row",
+                                                    {
+                                                      attrs: {
+                                                        "no-gutters": "",
+                                                        align: "center"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-col",
+                                                        {
+                                                          staticClass:
+                                                            "position-relative",
+                                                          attrs: { md: "3" }
+                                                        },
+                                                        [
+                                                          _c("v-img", {
+                                                            attrs: {
+                                                              src:
+                                                                "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                              "aspect-ratio":
+                                                                "1.8"
+                                                            }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-avatar",
+                                                            {
+                                                              staticClass:
+                                                                "video-lock-box",
+                                                              attrs: {
+                                                                color:
+                                                                  "grey darken-3"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    dark: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-lock"
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-col",
+                                                        { staticClass: "px-3" },
+                                                        [
+                                                          _c(
+                                                            "h3",
+                                                            {
+                                                              staticClass:
+                                                                "small font-weight-bold mb-2"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Potencia de potencia"
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    small: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-clock"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(
+                                                                " 07:00 min"
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "d-block green--text"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    color:
+                                                                      "green",
+                                                                    small: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-lock"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(
+                                                                " Contenido no disponible"
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "h3",
+                                                {
+                                                  staticClass:
+                                                    "title grey--text text--darken-3 mt-5 mb-3 font-weight-bold"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "Teoria de exponenetes"
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-card",
+                                                {
+                                                  staticClass: "mb-3",
+                                                  attrs: {
+                                                    tile: "",
+                                                    outlined: ""
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-row",
+                                                    {
+                                                      attrs: {
+                                                        "no-gutters": "",
+                                                        align: "center"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-col",
+                                                        {
+                                                          staticClass:
+                                                            "position-relative",
+                                                          attrs: { md: "3" }
+                                                        },
+                                                        [
+                                                          _c("v-img", {
+                                                            attrs: {
+                                                              src:
+                                                                "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                              "aspect-ratio":
+                                                                "1.8"
+                                                            }
+                                                          })
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-col",
+                                                        { staticClass: "px-3" },
+                                                        [
+                                                          _c(
+                                                            "h3",
+                                                            {
+                                                              staticClass:
+                                                                "small font-weight-bold mb-2"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Potencia de potencia"
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    small: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-clock"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(
+                                                                " 07:00 min"
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "d-block green--text"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    color:
+                                                                      "green",
+                                                                    small: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-lock"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(
+                                                                " Contenido no disponible"
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-card",
+                                                {
+                                                  staticClass: "mb-3",
+                                                  attrs: {
+                                                    tile: "",
+                                                    outlined: ""
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-row",
+                                                    {
+                                                      attrs: {
+                                                        "no-gutters": "",
+                                                        align: "center"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-col",
+                                                        {
+                                                          staticClass:
+                                                            "position-relative",
+                                                          attrs: { md: "3" }
+                                                        },
+                                                        [
+                                                          _c("v-img", {
+                                                            attrs: {
+                                                              src:
+                                                                "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                              "aspect-ratio":
+                                                                "1.8"
+                                                            }
+                                                          }),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-avatar",
+                                                            {
+                                                              staticClass:
+                                                                "video-lock-box",
+                                                              attrs: {
+                                                                color:
+                                                                  "grey darken-3"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    dark: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-lock"
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-col",
+                                                        { staticClass: "px-3" },
+                                                        [
+                                                          _c(
+                                                            "h3",
+                                                            {
+                                                              staticClass:
+                                                                "small font-weight-bold mb-2"
+                                                            },
+                                                            [
+                                                              _vm._v(
+                                                                "Potencia de potencia"
+                                                              )
+                                                            ]
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    small: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-clock"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(
+                                                                " 07:00 min"
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "span",
+                                                            {
+                                                              staticClass:
+                                                                "d-block green--text"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    color:
+                                                                      "green",
+                                                                    small: ""
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-lock"
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(
+                                                                " Contenido no disponible"
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c("v-tab-item", {
+                                            attrs: { value: "vivo" }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-tab-item",
+                                            { attrs: { value: "archivos" } },
+                                            [
+                                              _c(
+                                                "v-list",
+                                                [
+                                                  _c(
+                                                    "v-list-item-group",
+                                                    {
+                                                      attrs: {
+                                                        color: "primary"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-list-item",
+                                                        [
+                                                          _c(
+                                                            "v-list-item-icon",
+                                                            [
+                                                              _c(
+                                                                "v-badge",
+                                                                {
+                                                                  attrs: {
+                                                                    bottom: "",
+                                                                    icon:
+                                                                      "mdi-download",
+                                                                    "offset-y":
+                                                                      "15"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c("v-icon", [
+                                                                    _vm._v(
+                                                                      "mdi-file-document-outline"
+                                                                    )
+                                                                  ])
+                                                                ],
+                                                                1
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-list-item-content",
+                                                            [
+                                                              _c(
+                                                                "v-list-item-title",
+                                                                [
+                                                                  _vm._v(
+                                                                    "Material del cusco"
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-list-item-icon",
+                                                            [
+                                                              _c("v-icon", [
+                                                                _vm._v(
+                                                                  "mdi-download"
+                                                                )
+                                                              ])
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-list-item",
+                                                        [
+                                                          _c(
+                                                            "v-list-item-icon",
+                                                            [
+                                                              _c(
+                                                                "v-icon",
+                                                                {
+                                                                  attrs: {
+                                                                    color:
+                                                                      "blue"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    "mdi-link"
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-list-item-content",
+                                                            [
+                                                              _c(
+                                                                "v-list-item-title",
+                                                                [
+                                                                  _vm._v(
+                                                                    "Material del cusco"
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-list-item-icon",
+                                                            [
+                                                              _c("v-icon", [
+                                                                _vm._v(
+                                                                  "mdi-link"
+                                                                )
+                                                              ])
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
                 ]
+              ),
+              _vm._v(" "),
+              _c(
+                "v-col",
+                { attrs: { md: "5" } },
+                [
+                  _c(
+                    "v-tabs",
+                    {
+                      attrs: { grow: "", color: "light-blue" },
+                      model: {
+                        value: _vm.tabs,
+                        callback: function($$v) {
+                          _vm.tabs = $$v
+                        },
+                        expression: "tabs"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-tab",
+                        {
+                          staticClass: "text-capitalize font-weight-medium",
+                          attrs: { href: "#aportes" }
+                        },
+                        [
+                          _c(
+                            "v-badge",
+                            {
+                              attrs: {
+                                color: "grey",
+                                content: "6",
+                                "offset-y": "8"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                        Aportessd\n                                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tab",
+                        {
+                          staticClass: "text-capitalize font-weight-medium",
+                          attrs: { href: "#preguntas" }
+                        },
+                        [
+                          _c(
+                            "v-badge",
+                            {
+                              attrs: {
+                                color: "grey",
+                                content: "6",
+                                "offset-y": "8"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                        Preguntas\n                                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tab",
+                        {
+                          staticClass: "text-capitalize font-weight-medium",
+                          attrs: { href: "#archivos" }
+                        },
+                        [
+                          _c(
+                            "v-badge",
+                            {
+                              attrs: {
+                                color: "grey",
+                                content: "6",
+                                "offset-y": "10",
+                                "offset-x": "1"
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                        Archivos y enlaces\n                                    "
+                              )
+                            ]
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-tabs-items",
+                    {
+                      staticClass: "py-4 grey lighten-4",
+                      model: {
+                        value: _vm.tabs,
+                        callback: function($$v) {
+                          _vm.tabs = $$v
+                        },
+                        expression: "tabs"
+                      }
+                    },
+                    [
+                      _c(
+                        "v-tab-item",
+                        { attrs: { value: "aportes" } },
+                        [
+                          _c(
+                            "v-card",
+                            { staticClass: "mb-3", attrs: { flat: "" } },
+                            [
+                              _c(
+                                "v-card-title",
+                                { staticClass: "py-0" },
+                                [
+                                  _c(
+                                    "v-list-item",
+                                    { staticClass: "grow pa-0" },
+                                    [
+                                      _c(
+                                        "v-list-item-avatar",
+                                        { attrs: { color: "grey darken-3" } },
+                                        [
+                                          _c("v-img", {
+                                            staticClass: "elevation-6",
+                                            attrs: {
+                                              src:
+                                                "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item-content",
+                                        [
+                                          _c("v-list-item-title", [
+                                            _vm._v("Evan You")
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-card-text", {}, [
+                                _vm._v(
+                                  '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "v-card-actions",
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { icon: "", color: "light-blue" }
+                                    },
+                                    [_c("v-icon", [_vm._v("mdi-reply")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-x": "10",
+                                        "offset-y": "15"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        { attrs: { icon: "" } },
+                                        [_c("v-icon", [_vm._v("mdi-heart")])],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-x": "10",
+                                        "offset-y": "15"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        { attrs: { icon: "" } },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v("mdi-share-variant")
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-card",
+                            { staticClass: "mb-3", attrs: { flat: "" } },
+                            [
+                              _c(
+                                "v-card-title",
+                                { staticClass: "py-0" },
+                                [
+                                  _c(
+                                    "v-list-item",
+                                    { staticClass: "grow pa-0" },
+                                    [
+                                      _c(
+                                        "v-list-item-avatar",
+                                        { attrs: { color: "grey darken-3" } },
+                                        [
+                                          _c("v-img", {
+                                            staticClass: "elevation-6",
+                                            attrs: {
+                                              src:
+                                                "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item-content",
+                                        [
+                                          _c("v-list-item-title", [
+                                            _vm._v("Evan You")
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-card-text", {}, [
+                                _vm._v(
+                                  '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "v-card-actions",
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { icon: "", color: "light-blue" }
+                                    },
+                                    [_c("v-icon", [_vm._v("mdi-reply")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-x": "10",
+                                        "offset-y": "15"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        { attrs: { icon: "" } },
+                                        [_c("v-icon", [_vm._v("mdi-heart")])],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-x": "10",
+                                        "offset-y": "15"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        { attrs: { icon: "" } },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v("mdi-share-variant")
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tab-item",
+                        { attrs: { value: "preguntas" } },
+                        [
+                          _c(
+                            "v-card",
+                            { staticClass: "mx-3 mb-3", attrs: { flat: "" } },
+                            [
+                              _c(
+                                "v-card-title",
+                                { staticClass: "py-0" },
+                                [
+                                  _c(
+                                    "v-list-item",
+                                    { staticClass: "grow pa-0" },
+                                    [
+                                      _c(
+                                        "v-list-item-avatar",
+                                        { attrs: { color: "grey darken-3" } },
+                                        [
+                                          _c("v-img", {
+                                            staticClass: "elevation-6",
+                                            attrs: {
+                                              src:
+                                                "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item-content",
+                                        [
+                                          _c("v-list-item-title", [
+                                            _vm._v("Evan You")
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-card-text", {}, [
+                                _vm._v(
+                                  '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "v-card-actions",
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { icon: "", color: "light-blue" }
+                                    },
+                                    [_c("v-icon", [_vm._v("mdi-reply")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-x": "10",
+                                        "offset-y": "15"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        { attrs: { icon: "" } },
+                                        [_c("v-icon", [_vm._v("mdi-heart")])],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-x": "10",
+                                        "offset-y": "15"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        { attrs: { icon: "" } },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v("mdi-share-variant")
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-card",
+                            { staticClass: "mx-3 mb-3", attrs: { flat: "" } },
+                            [
+                              _c(
+                                "v-card-title",
+                                { staticClass: "py-0" },
+                                [
+                                  _c(
+                                    "v-list-item",
+                                    { staticClass: "grow pa-0" },
+                                    [
+                                      _c(
+                                        "v-list-item-avatar",
+                                        { attrs: { color: "grey darken-3" } },
+                                        [
+                                          _c("v-img", {
+                                            staticClass: "elevation-6",
+                                            attrs: {
+                                              src:
+                                                "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                            }
+                                          })
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item-content",
+                                        [
+                                          _c("v-list-item-title", [
+                                            _vm._v("Evan You")
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("v-card-text", {}, [
+                                _vm._v(
+                                  '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "v-card-actions",
+                                [
+                                  _c(
+                                    "v-btn",
+                                    {
+                                      attrs: { icon: "", color: "light-blue" }
+                                    },
+                                    [_c("v-icon", [_vm._v("mdi-reply")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-x": "10",
+                                        "offset-y": "15"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        { attrs: { icon: "" } },
+                                        [_c("v-icon", [_vm._v("mdi-heart")])],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-x": "10",
+                                        "offset-y": "15"
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        { attrs: { icon: "" } },
+                                        [
+                                          _c("v-icon", [
+                                            _vm._v("mdi-share-variant")
+                                          ])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-tab-item",
+                        { attrs: { value: "archivos" } },
+                        [
+                          _c(
+                            "v-list",
+                            [
+                              _c(
+                                "v-list-item-group",
+                                { attrs: { color: "primary" } },
+                                [
+                                  _c(
+                                    "v-list-item",
+                                    [
+                                      _c(
+                                        "v-list-item-icon",
+                                        [
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                bottom: "",
+                                                icon: "mdi-download",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v(
+                                                  "mdi-file-document-outline"
+                                                )
+                                              ])
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item-content",
+                                        [
+                                          _c("v-list-item-title", [
+                                            _vm._v("Material del cusco")
+                                          ])
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item-icon",
+                                        [
+                                          _c("v-icon", [_vm._v("mdi-download")])
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-list-item",
+                                    [
+                                      _c(
+                                        "v-list-item-icon",
+                                        [
+                                          _c(
+                                            "v-icon",
+                                            { attrs: { color: "blue" } },
+                                            [_vm._v("mdi-link")]
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item-content",
+                                        [
+                                          _c("v-list-item-title", [
+                                            _vm._v("Material del cusco")
+                                          ])
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-list-item-icon",
+                                        [_c("v-icon", [_vm._v("mdi-link")])],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
               )
             ],
             1
@@ -54914,6 +65011,13 @@ Vue.use(vuetify__WEBPACK_IMPORTED_MODULE_0___default.a);
 Vue.component('home-component', __webpack_require__(/*! ./components/HomeComponent */ "./resources/js/components/HomeComponent.vue")["default"]);
 Vue.component('nav-component', __webpack_require__(/*! ./components/NavComponent.vue */ "./resources/js/components/NavComponent.vue")["default"]);
 Vue.component('parallax-component', __webpack_require__(/*! ./components/ParallaxComponent.vue */ "./resources/js/components/ParallaxComponent.vue")["default"]);
+Vue.component('clases-component', __webpack_require__(/*! ./components/page/ClasesComponent */ "./resources/js/components/page/ClasesComponent.vue")["default"]);
+Vue.component('cursos-component', __webpack_require__(/*! ./components/page/CursosComponent */ "./resources/js/components/page/CursosComponent.vue")["default"]);
+Vue.component('video-component', __webpack_require__(/*! ./components/page/VideoComponent */ "./resources/js/components/page/VideoComponent.vue")["default"]);
+Vue.component('videolist-component', __webpack_require__(/*! ./components/page/VideolistComponent */ "./resources/js/components/page/VideolistComponent.vue")["default"]); //student
+
+Vue.component('student-video-component', __webpack_require__(/*! ./components/student/VideoComponent */ "./resources/js/components/student/VideoComponent.vue")["default"]);
+Vue.component('video-list-component', __webpack_require__(/*! ./components/student/VideoListComponent */ "./resources/js/components/student/VideoListComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -54926,25 +65030,24 @@ var app = new Vue({
   el: '#app',
   data: function data() {
     return {
-      items: [{
-        active: true,
-        title: 'Jason Oner',
-        avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg'
+      items1: [{
+        text: 'Dashboard',
+        disabled: false,
+        href: 'breadcrumbs_dashboard'
       }, {
-        active: true,
-        title: 'Ranee Carlson',
-        avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg'
+        text: 'Link 1',
+        disabled: false,
+        href: 'breadcrumbs_link_1'
       }, {
-        title: 'Cindy Baker',
-        avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg'
-      }, {
-        title: 'Ali Connors',
-        avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg'
+        text: 'Link 2',
+        disabled: true,
+        href: 'breadcrumbs_link_2'
       }],
       items2: [{
         title: 'Travis Howard',
         avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg'
-      }]
+      }],
+      tabs: null
     };
   }
 });
@@ -55100,7 +65203,9 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ParallaxComponent_vue_vue_type_template_id_22e9996a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ParallaxComponent.vue?vue&type=template&id=22e9996a& */ "./resources/js/components/ParallaxComponent.vue?vue&type=template&id=22e9996a&");
 /* harmony import */ var _ParallaxComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ParallaxComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/ParallaxComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _ParallaxComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ParallaxComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
 
 
 
@@ -55108,7 +65213,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _ParallaxComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _ParallaxComponent_vue_vue_type_template_id_22e9996a___WEBPACK_IMPORTED_MODULE_0__["render"],
   _ParallaxComponent_vue_vue_type_template_id_22e9996a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
@@ -55140,6 +65245,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \****************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParallaxComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--6-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--6-2!../../../node_modules/vue-loader/lib??vue-loader-options!./ParallaxComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ParallaxComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParallaxComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParallaxComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParallaxComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParallaxComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ParallaxComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
 /***/ "./resources/js/components/ParallaxComponent.vue?vue&type=template&id=22e9996a&":
 /*!**************************************************************************************!*\
   !*** ./resources/js/components/ParallaxComponent.vue?vue&type=template&id=22e9996a& ***!
@@ -55153,6 +65274,528 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ParallaxComponent_vue_vue_type_template_id_22e9996a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ParallaxComponent_vue_vue_type_template_id_22e9996a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/page/ClasesComponent.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/page/ClasesComponent.vue ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _ClasesComponent_vue_vue_type_template_id_1ac1f5df___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ClasesComponent.vue?vue&type=template&id=1ac1f5df& */ "./resources/js/components/page/ClasesComponent.vue?vue&type=template&id=1ac1f5df&");
+/* harmony import */ var _ClasesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ClasesComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/page/ClasesComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _ClasesComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ClasesComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _ClasesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ClasesComponent_vue_vue_type_template_id_1ac1f5df___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ClasesComponent_vue_vue_type_template_id_1ac1f5df___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/page/ClasesComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/page/ClasesComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/page/ClasesComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./ClasesComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/ClasesComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./ClasesComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/ClasesComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/page/ClasesComponent.vue?vue&type=template&id=1ac1f5df&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/page/ClasesComponent.vue?vue&type=template&id=1ac1f5df& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_template_id_1ac1f5df___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./ClasesComponent.vue?vue&type=template&id=1ac1f5df& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/ClasesComponent.vue?vue&type=template&id=1ac1f5df&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_template_id_1ac1f5df___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ClasesComponent_vue_vue_type_template_id_1ac1f5df___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/page/CursosComponent.vue":
+/*!**********************************************************!*\
+  !*** ./resources/js/components/page/CursosComponent.vue ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _CursosComponent_vue_vue_type_template_id_3c8664de___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CursosComponent.vue?vue&type=template&id=3c8664de& */ "./resources/js/components/page/CursosComponent.vue?vue&type=template&id=3c8664de&");
+/* harmony import */ var _CursosComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CursosComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/page/CursosComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _CursosComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CursosComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _CursosComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _CursosComponent_vue_vue_type_template_id_3c8664de___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _CursosComponent_vue_vue_type_template_id_3c8664de___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/page/CursosComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/page/CursosComponent.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************!*\
+  !*** ./resources/js/components/page/CursosComponent.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./CursosComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/CursosComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./CursosComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/CursosComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/page/CursosComponent.vue?vue&type=template&id=3c8664de&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/page/CursosComponent.vue?vue&type=template&id=3c8664de& ***!
+  \*****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_template_id_3c8664de___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./CursosComponent.vue?vue&type=template&id=3c8664de& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/CursosComponent.vue?vue&type=template&id=3c8664de&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_template_id_3c8664de___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CursosComponent_vue_vue_type_template_id_3c8664de___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/page/VideoComponent.vue":
+/*!*********************************************************!*\
+  !*** ./resources/js/components/page/VideoComponent.vue ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _VideoComponent_vue_vue_type_template_id_75602367___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VideoComponent.vue?vue&type=template&id=75602367& */ "./resources/js/components/page/VideoComponent.vue?vue&type=template&id=75602367&");
+/* harmony import */ var _VideoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VideoComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/page/VideoComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./VideoComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _VideoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VideoComponent_vue_vue_type_template_id_75602367___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VideoComponent_vue_vue_type_template_id_75602367___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/page/VideoComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/page/VideoComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/page/VideoComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideoComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css&":
+/*!******************************************************************************************!*\
+  !*** ./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \******************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideoComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/page/VideoComponent.vue?vue&type=template&id=75602367&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/page/VideoComponent.vue?vue&type=template&id=75602367& ***!
+  \****************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_template_id_75602367___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoComponent.vue?vue&type=template&id=75602367& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideoComponent.vue?vue&type=template&id=75602367&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_template_id_75602367___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_template_id_75602367___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/page/VideolistComponent.vue":
+/*!*************************************************************!*\
+  !*** ./resources/js/components/page/VideolistComponent.vue ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _VideolistComponent_vue_vue_type_template_id_1a2f5a89___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VideolistComponent.vue?vue&type=template&id=1a2f5a89& */ "./resources/js/components/page/VideolistComponent.vue?vue&type=template&id=1a2f5a89&");
+/* harmony import */ var _VideolistComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VideolistComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/page/VideolistComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _VideolistComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./VideolistComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _VideolistComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VideolistComponent_vue_vue_type_template_id_1a2f5a89___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VideolistComponent_vue_vue_type_template_id_1a2f5a89___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/page/VideolistComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/page/VideolistComponent.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************!*\
+  !*** ./resources/js/components/page/VideolistComponent.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideolistComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideolistComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \**********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideolistComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideolistComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/page/VideolistComponent.vue?vue&type=template&id=1a2f5a89&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/components/page/VideolistComponent.vue?vue&type=template&id=1a2f5a89& ***!
+  \********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_template_id_1a2f5a89___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideolistComponent.vue?vue&type=template&id=1a2f5a89& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/page/VideolistComponent.vue?vue&type=template&id=1a2f5a89&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_template_id_1a2f5a89___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideolistComponent_vue_vue_type_template_id_1a2f5a89___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/student/VideoComponent.vue":
+/*!************************************************************!*\
+  !*** ./resources/js/components/student/VideoComponent.vue ***!
+  \************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _VideoComponent_vue_vue_type_template_id_836a9b7e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VideoComponent.vue?vue&type=template&id=836a9b7e& */ "./resources/js/components/student/VideoComponent.vue?vue&type=template&id=836a9b7e&");
+/* harmony import */ var _VideoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VideoComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/student/VideoComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./VideoComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _VideoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VideoComponent_vue_vue_type_template_id_836a9b7e___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VideoComponent_vue_vue_type_template_id_836a9b7e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/student/VideoComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/student/VideoComponent.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/components/student/VideoComponent.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*********************************************************************************************!*\
+  !*** ./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*********************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/student/VideoComponent.vue?vue&type=template&id=836a9b7e&":
+/*!*******************************************************************************************!*\
+  !*** ./resources/js/components/student/VideoComponent.vue?vue&type=template&id=836a9b7e& ***!
+  \*******************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_template_id_836a9b7e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoComponent.vue?vue&type=template&id=836a9b7e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoComponent.vue?vue&type=template&id=836a9b7e&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_template_id_836a9b7e___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoComponent_vue_vue_type_template_id_836a9b7e___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/student/VideoListComponent.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/student/VideoListComponent.vue ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _VideoListComponent_vue_vue_type_template_id_b431a77a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./VideoListComponent.vue?vue&type=template&id=b431a77a& */ "./resources/js/components/student/VideoListComponent.vue?vue&type=template&id=b431a77a&");
+/* harmony import */ var _VideoListComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./VideoListComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/student/VideoListComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _VideoListComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./VideoListComponent.vue?vue&type=style&index=0&lang=css& */ "./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _VideoListComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _VideoListComponent_vue_vue_type_template_id_b431a77a___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _VideoListComponent_vue_vue_type_template_id_b431a77a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/student/VideoListComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/student/VideoListComponent.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/student/VideoListComponent.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoListComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoListComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css&":
+/*!*************************************************************************************************!*\
+  !*** ./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css& ***!
+  \*************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoListComponent.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoListComponent.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+
+/***/ }),
+
+/***/ "./resources/js/components/student/VideoListComponent.vue?vue&type=template&id=b431a77a&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/student/VideoListComponent.vue?vue&type=template&id=b431a77a& ***!
+  \***********************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_template_id_b431a77a___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./VideoListComponent.vue?vue&type=template&id=b431a77a& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/VideoListComponent.vue?vue&type=template&id=b431a77a&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_template_id_b431a77a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_template_id_b431a77a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

@@ -28,6 +28,15 @@ Vue.component('home-component', require('./components/HomeComponent').default);
 Vue.component('nav-component', require('./components/NavComponent.vue').default);
 Vue.component('parallax-component', require('./components/ParallaxComponent.vue').default);
 
+Vue.component('clases-component', require('./components/page/ClasesComponent').default);
+Vue.component('cursos-component', require('./components/page/CursosComponent').default);
+Vue.component('video-component', require('./components/page/VideoComponent').default);
+Vue.component('videolist-component', require('./components/page/VideolistComponent').default);
+
+//student
+Vue.component('student-video-component', require('./components/student/VideoComponent').default);
+Vue.component('video-list-component', require('./components/student/VideoListComponent').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -39,14 +48,27 @@ const app = new Vue({
     vuetify: new Vuetify(),
     el: '#app',
     data: () => ({
-        items: [
-            { active: true, title: 'Jason Oner', avatar: 'https://cdn.vuetifyjs.com/images/lists/1.jpg' },
-            { active: true, title: 'Ranee Carlson', avatar: 'https://cdn.vuetifyjs.com/images/lists/2.jpg' },
-            { title: 'Cindy Baker', avatar: 'https://cdn.vuetifyjs.com/images/lists/3.jpg' },
-            { title: 'Ali Connors', avatar: 'https://cdn.vuetifyjs.com/images/lists/4.jpg' },
+        items1: [
+            {
+                text: 'Dashboard',
+                disabled: false,
+                href: 'breadcrumbs_dashboard',
+            },
+            {
+                text: 'Link 1',
+                disabled: false,
+                href: 'breadcrumbs_link_1',
+            },
+            {
+                text: 'Link 2',
+                disabled: true,
+                href: 'breadcrumbs_link_2',
+            },
         ],
         items2: [
             { title: 'Travis Howard', avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg' },
         ],
+        tabs: null,
+
     }),
 });

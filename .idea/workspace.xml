@@ -2,10 +2,99 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b02f587-9773-49d8-9659-e9bdb5e6b0f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/andina.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bottom_bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bottom_bg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bottom_bg3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/bottom_bg4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/c2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cover-edu.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cover-edu.psd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cover1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cover2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/cover5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/algebra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/biologia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/comunicacion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/economia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/filosofia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/fisica.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/geografia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/geometria.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/historia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/quimica.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/rm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/circle/rv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/algebra.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/biologia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/comunicacion.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/economia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/filosofia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/fisica.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/geografia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/geometria.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/historia.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/quimica.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/rm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/cursos/simple/rv.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/avanzado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/basico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/comunidad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/examenes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/grupoa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/grupob.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/grupoc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/grupod.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/intermedio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/circle/metas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/Thumbs.db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/avanzado.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/basico.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/comunidad.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/examenes.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/grupoa.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/grupob.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/grupoc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/grupod.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/intermedio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/iconos/web/simple/metas.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logos/logo-green-edu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/logos/logo-green.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/p1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/unsaac.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/page/ClasesComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/page/CursosComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/page/VideoComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/page/VideolistComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/student/VideoComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/student/VideoListComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/page/app.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/page/clases.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/page/cursos.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/page/home.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/page/video.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/page/videoList.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/student/video.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/student/videoList.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +103,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -127,13 +214,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1ZY7VL99NOOtX8GqdGe9MHr2awC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -145,6 +234,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -171,37 +261,68 @@
       <workItem from="1585576437132" duration="101000" />
       <workItem from="1585576574743" duration="1301000" />
       <workItem from="1588000667274" duration="11767000" />
-      <workItem from="1588087628127" duration="794000" />
+      <workItem from="1588087628127" duration="1535000" />
+      <workItem from="1588095681251" duration="126000" />
+      <workItem from="1588170359260" duration="12206000" />
+      <workItem from="1588342848847" duration="162000" />
+      <workItem from="1588343067086" duration="1072000" />
+      <workItem from="1588354411152" duration="98000" />
+      <workItem from="1588354540001" duration="1745000" />
+      <workItem from="1588435372047" duration="6263000" />
+      <workItem from="1588518403735" duration="10607000" />
+      <workItem from="1588688155280" duration="15811000" />
+      <workItem from="1588772966400" duration="15009000" />
+      <workItem from="1588862665005" duration="129000" />
+      <workItem from="1589049040131" duration="4722000" />
+      <workItem from="1589203509400" duration="6005000" />
+      <workItem from="1589221340011" duration="493000" />
+      <workItem from="1589234707869" duration="7155000" />
+      <workItem from="1589290926968" duration="14921000" />
+      <workItem from="1589374384380" duration="10657000" />
+      <workItem from="1589415100947" duration="2828000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="408" y="172" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585576521160">
-      <screen x="0" y="23" width="1440" height="813" />
+    <state x="408" y="184" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1588342937189">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="408" y="172" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.813@0.23.1440.813" timestamp="1585576521160" />
+    <state x="408" y="184" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877@0.23.1440.877" timestamp="1588342937189" />
     <state x="294" y="209" key="EditFileWatcherDialog" timestamp="1585261893107">
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="294" y="209" key="EditFileWatcherDialog/0.23.1440.813@0.23.1440.813" timestamp="1585261893107" />
-    <state x="380" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1588087740482">
+    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1589241667455">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.23.1366.745@0.23.1440.877" timestamp="1589241667455" />
+    <state x="-349" y="79" width="1024" height="723" key="SettingsEditor" timestamp="1588355301948">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="-349" y="79" width="1024" height="723" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1588355301948" />
+    <state x="380" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1588342849987">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="380" y="281" key="com.intellij.ide.util.TipDialog/0.23.1440.813@0.23.1440.813" timestamp="1585576643183" />
-    <state x="380" y="301" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1588087740482" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1585348834847">
-      <screen x="0" y="23" width="1440" height="813" />
+    <state x="380" y="301" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1588342849987" />
+    <state width="600" height="475" key="javadoc.popup" timestamp="1588781390953">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state width="600" height="440" key="javadoc.popup/0.23.1440.813/1440.23.1366.745@0.23.1440.813" timestamp="1585156799728" />
     <state width="600" height="440" key="javadoc.popup/0.23.1440.813@0.23.1440.813" timestamp="1585348834847" />
-    <state x="385" y="171" width="670" height="730" key="search.everywhere.popup" timestamp="1588012743856">
+    <state width="600" height="475" key="javadoc.popup/0.23.1440.877/1440.23.1366.745@0.23.1440.877" timestamp="1588781390953" />
+    <state x="385" y="171" width="670" height="730" key="search.everywhere.popup" timestamp="1589409726224">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="160" width="670" height="676" key="search.everywhere.popup/0.23.1440.813/1440.23.1366.745@0.23.1440.813" timestamp="1585156580837" />
     <state x="385" y="160" width="670" height="676" key="search.everywhere.popup/0.23.1440.813@0.23.1440.813" timestamp="1585404047445" />
-    <state x="385" y="171" width="670" height="730" key="search.everywhere.popup/0.23.1440.877/1440.23.1366.745@0.23.1440.877" timestamp="1588012743856" />
+    <state x="385" y="171" width="670" height="730" key="search.everywhere.popup/0.23.1440.877/1440.23.1366.745@0.23.1440.877" timestamp="1589409726224" />
   </component>
 </project>
