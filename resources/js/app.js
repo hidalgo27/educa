@@ -13,6 +13,9 @@ window.Vue = require('vue');
 import Vuetify from 'vuetify';
 Vue.use(Vuetify);
 
+import Vuelidate from 'vuelidate'
+Vue.use(Vuelidate)
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -36,6 +39,8 @@ Vue.component('videolist-component', require('./components/page/VideolistCompone
 //student
 Vue.component('student-video-component', require('./components/student/VideoComponent').default);
 Vue.component('video-list-component', require('./components/student/VideoListComponent').default);
+Vue.component('profile-component', require('./components/student/ProfileComponent').default);
+Vue.component('suscripcion-component', require('./components/student/SuscripcionComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -69,6 +74,7 @@ const app = new Vue({
             { title: 'Travis Howard', avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg' },
         ],
         tabs: null,
+        overlay: false,
 
     }),
 });

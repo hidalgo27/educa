@@ -40,7 +40,11 @@ Route::get('/curso/algebra/video', [
 
 //Auth
 Auth::routes();
-Route::get('/home', 'Student\HomepageController@index')->name('home');
+Route::get('/student/home', 'Student\HomepageController@index')->name('home');
+
+Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
+Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
+
 
 Route::get('/student/algebra/video', [
     'uses' => 'Student\HomepageController@video',
@@ -50,4 +54,26 @@ Route::get('/student/algebra/video', [
 Route::get('/student/algebra/video/list', [
     'uses' => 'Student\HomepageController@videolist',
     'as' => 'video_list_student_path',
+]);
+
+
+Route::get('/student/profile', [
+    'uses' => 'Student\HomepageController@profile',
+    'as' => 'profile_student_path',
+]);
+
+
+Route::get('/student/suscripcion', [
+    'uses' => 'Student\HomepageController@suscripcion',
+    'as' => 'suscripcion_student_path',
+]);
+
+Route::get('/clases-vivo/temario', [
+    'uses' => 'Student\HomepageController@temario',
+    'as' => 'temario_student_path',
+]);
+
+Route::get('/clases-vivo/temario/curso', [
+    'uses' => 'Student\HomepageController@temario_curso',
+    'as' => 'temario_curso_student_path',
 ]);

@@ -44,7 +44,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col">
-                            <v-btn class="w-100" color="primary" large>
+                            <v-btn class="w-100" color="primary" large href="/login/facebook">
                                 <v-icon left>mdi-facebook</v-icon><span class="text-capitalize">Iniciar</span><span class="text-lowercase">sesión con facebook</span>
                             </v-btn>
                         </div>

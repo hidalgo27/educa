@@ -1,5 +1,5 @@
 <template>
-    <div class="parallax-box-h">
+    <div class="parallax-box-h position-relative">
         <v-parallax
             dark
             src="https://fondosmil.com/fondo/27527.jpg"
@@ -17,9 +17,8 @@
 <!--                    <h4 class="subheading">Build your application today!</h4>-->
                 </v-col>
             </v-row>
+            <div class="landing-banner__footer"></div>
         </v-parallax>
-
-        <div class="landing-banner__footer"></div>
     </div>
 </template>
 
@@ -37,10 +36,13 @@
         border-bottom: 100px solid transparent;
         transform: scale(-1, -1);
         position: relative;
-        top: -100px;
+        /*top: -100px;*/
     }
     .parallax-box-h{
         height: 650px;
     }
 
+    .v-parallax__content{
+        padding: 0 !important;
+    }
 </style>

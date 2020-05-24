@@ -11,8 +11,13 @@
 <body>
 <div id="app">
     <v-app>
+        @guest
+            <nav-component :auth="0" :logo="'{{asset('images/logos/logo-green-edu.png')}}'"></nav-component>
+        @else
+            <nav-component :auth="{{Auth::user()}}" :csrf="'{{ @csrf_token() }}'" :logo="'{{asset('images/logos/logo-green-edu.png')}}'"></nav-component>
+        @endguest
 
-        <nav-component :logo="'{{asset('images/logos/logo-green-edu.png')}}'"></nav-component>
+
 
         @yield('content')
 
@@ -29,5 +34,6 @@
     </v-app>
 </div>
 <script src="{{ mix('js/app.js') }}"></script>
+
 </body>
 </html>

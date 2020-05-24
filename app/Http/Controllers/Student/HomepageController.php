@@ -15,7 +15,7 @@ class HomepageController extends Controller
     {
         $request->user()->authorizeRoles(['user', 'admin']);
 
-        return view('home');
+        return view('student.home');
     }
 
     public function video(){
@@ -24,6 +24,22 @@ class HomepageController extends Controller
 
     public function videolist(){
         return view('student.videoList');
+    }
+
+    public function profile(){
+        return view('student.profile');
+    }
+
+    public function suscripcion(){
+        return view('student.suscripcion');
+    }
+
+    public function temario(){
+        return view('student.clasesVivo');
+    }
+
+    public function temario_curso(){
+        return view('student.temario');
     }
 
 }
