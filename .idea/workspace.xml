@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b02f587-9773-49d8-9659-e9bdb5e6b0f5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/educa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/educa.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +14,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -130,13 +128,14 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="ignore.virus.scanning.warn.message" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -145,6 +144,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Console Font" />
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -172,11 +172,24 @@
       <workItem from="1585576574743" duration="1301000" />
       <workItem from="1588000667274" duration="11767000" />
       <workItem from="1588087628127" duration="794000" />
+      <workItem from="1590336510839" duration="83000" />
+      <workItem from="1590336613086" duration="163000" />
+      <workItem from="1590336790474" duration="22000" />
+      <workItem from="1590336824286" duration="94000" />
+      <workItem from="1590336948904" duration="60000" />
+      <workItem from="1590337020235" duration="276000" />
+      <workItem from="1590337401241" duration="194000" />
+      <workItem from="1590348387400" duration="313000" />
+      <workItem from="1590348716447" duration="27000" />
+      <workItem from="1590348757269" duration="90000" />
+      <workItem from="1590348865399" duration="236000" />
+      <workItem from="1590349116327" duration="1031000" />
+      <workItem from="1590350290879" duration="794000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="408" y="172" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1585576521160">
@@ -187,6 +200,14 @@
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="294" y="209" key="EditFileWatcherDialog/0.23.1440.813@0.23.1440.813" timestamp="1585261893107" />
+    <state x="1427" y="586" key="FileChooserDialogImpl" timestamp="1590349335803">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1427" y="586" key="FileChooserDialogImpl/-1600.232.1600.860/2560.359.1366.728/0.0.2560.1400@0.0.2560.1400" timestamp="1590349335803" />
+    <state x="1148" y="490" key="SettingsEditor" timestamp="1590350785393">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="1148" y="490" key="SettingsEditor/-1600.232.1600.860/2560.359.1366.728/0.0.2560.1400@0.0.2560.1400" timestamp="1590350785393" />
     <state x="380" y="301" key="com.intellij.ide.util.TipDialog" timestamp="1588087740482">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
