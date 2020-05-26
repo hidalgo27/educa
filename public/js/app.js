@@ -3401,7 +3401,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.landing-banner__footer {\n    width: 0;\n    height: 0;\n    border-left: 1440px solid #fff;\n    border-bottom: 100px solid transparent;\n    transform: scale(-1, -1);\n    position: relative;\n    /*top: -100px;*/\n}\n.parallax-box-h{\n    height: 650px;\n}\n.v-parallax__content{\n    padding: 0 !important;\n}\n", ""]);
+exports.push([module.i, "\n.landing-banner__footer {\n    width: 100%;\n    height: 0;\n    border-left: 1440px solid #fff;\n    border-bottom: 100px solid transparent;\n    transform: scale(-1, -1);\n    position: relative;\n    /*top: -100px;*/\n}\n.parallax-box-h{\n    height: 650px;\n}\n.v-parallax__content{\n    padding: 0 !important;\n}\n", ""]);
 
 // exports
 
@@ -5007,7 +5007,7 @@ var render = function() {
                     "hidden-sm-and-down font-weight-medium text-capitalize",
                   attrs: { text: "" }
                 },
-                [_vm._v("\n                    Cursos\n                ")]
+                [_vm._v("\r\n                    Cursos\r\n                ")]
               ),
               _vm._v(" "),
               _c(
@@ -5019,7 +5019,7 @@ var render = function() {
                 },
                 [
                   _vm._v(
-                    "\n                    Universidades\n                "
+                    "\r\n                    Universidades\r\n                "
                   )
                 ]
               ),
@@ -5031,7 +5031,7 @@ var render = function() {
                     "hidden-sm-and-down font-weight-medium text-capitalize",
                   attrs: { text: "" }
                 },
-                [_vm._v("\n                    Planes\n                ")]
+                [_vm._v("\r\n                    Planes\r\n                ")]
               ),
               _vm._v(" "),
               _c(
@@ -5041,7 +5041,7 @@ var render = function() {
                     "hidden-sm-and-down font-weight-medium text-capitalize",
                   attrs: { text: "" }
                 },
-                [_vm._v("\n                    Nosotros\n                ")]
+                [_vm._v("\r\n                    Nosotros\r\n                ")]
               ),
               _vm._v(" "),
               _c("v-divider", { staticClass: "mx-5", attrs: { vertical: "" } }),
@@ -69238,8 +69238,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/hidalgoponce/web/sites/educa/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/hidalgoponce/web/sites/educa/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\Users\Hidalgo\Homestead\code\educa\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\Users\Hidalgo\Homestead\code\educa\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

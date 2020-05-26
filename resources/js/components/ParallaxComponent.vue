@@ -30,7 +30,7 @@
 
 <style>
     .landing-banner__footer {
-        width: 0;
+        width: 100%;
         height: 0;
         border-left: 1440px solid #fff;
         border-bottom: 100px solid transparent;

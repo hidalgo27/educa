@@ -2,33 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9b02f587-9773-49d8-9659-e9bdb5e6b0f5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/RoleUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/student/ProfileComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/student/SuscripcionComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/clasesVivo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/home.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/profile.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/suscripcion.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/student/temario.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/educa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/educa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/page/docente.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Page/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Page/HomepageController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/HomepageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mix-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/page/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/page/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/clasesVivo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/clasesVivo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/student/temario.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/temario.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -232,6 +217,8 @@
       <workItem from="1590168823809" duration="2285000" />
       <workItem from="1590267263667" duration="2187000" />
       <workItem from="1590336332235" duration="112000" />
+      <workItem from="1590356830414" duration="3671000" />
+      <workItem from="1590410995241" duration="17629000" />
     </task>
     <servers />
   </component>
@@ -255,11 +242,12 @@
       <screen x="0" y="23" width="1440" height="813" />
     </state>
     <state x="294" y="209" key="EditFileWatcherDialog/0.23.1440.813@0.23.1440.813" timestamp="1585261893107" />
-    <state x="538" y="388" key="NewPhpFileDialog" timestamp="1590268703276">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="956" y="583" key="NewPhpFileDialog" timestamp="1590423400580">
+      <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877/1440.23.1366.745@0.23.1440.877" timestamp="1590164333079" />
     <state x="538" y="388" key="NewPhpFileDialog/0.23.1440.877@0.23.1440.877" timestamp="1590268703276" />
+    <state x="956" y="583" key="NewPhpFileDialog/2560.359.1366.728/-1600.232.1600.860/0.0.2560.1400@0.0.2560.1400" timestamp="1590423400580" />
     <state x="-349" y="79" width="1024" height="723" key="SettingsEditor" timestamp="1588355301948">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

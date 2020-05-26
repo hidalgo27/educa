@@ -27,68 +27,14 @@
         <v-container>
 
             <v-row>
-                <v-col md="4">
-                    <v-hover>
-                        <template v-slot:default="{ hover }">
-                            <v-card
-                                class="mx-auto"
 
-                            >
-                                <v-img
-                                    class="white--text align-end"
-                                    src="https://cdn.vuetifyjs.com/images/cards/forest-art.jpg"
-                                >
-                                    <v-card-title>Efrain Barrientos</v-card-title>
-                                </v-img>
-
-                                <v-card-text>
-                                    <v-row>
-                                        <v-col md="2">
-                                            <v-avatar
-                                                size="36px"
-                                            >
-                                                <img
-                                                    alt="Avatar"
-                                                    src="{{asset('images/iconos/cursos/circle/algebra.png')}}"
-                                                >
-                                                <v-icon
-                                                    color=""
-
-                                                ></v-icon>
-                                            </v-avatar>
-                                        </v-col>
-                                        <v-col md="10" class="">
-                                            <span class="title primary--text">Algebra</span>
-                                        </v-col>
-                                    </v-row>
-
-                                </v-card-text>
-
-                                <v-card-title>
-                                    <span class="subtitle-2">110 sesiones</span>
-                                </v-card-title>
-
-                                <v-fade-transition>
-                                    <v-overlay
-                                        v-if="hover"
-                                        absolute
-                                        color="#036358"
-                                    >
-                                        <v-btn color="lime accent-4" dark>Sobre el docente</v-btn>
-                                        <v-btn>Temario</v-btn>
-                                    </v-overlay>
-                                </v-fade-transition>
-                            </v-card>
-                        </template>
-                    </v-hover>
-                </v-col>
                 <v-col md="4">
                     <v-card
                         class="mx-auto"
                     >
                         <v-img
                             src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                            height="200px"
+
                             class="white--text align-end"
                         >
                             <v-card-title>Efrain Barrientos</v-card-title>
@@ -123,14 +69,19 @@
                         <v-card-actions>
 
                             <v-btn
+                                color="blue"
+                                class="font-weight-bold"
                                 text
+                                href="/clases-vivo/docente"
                             >
                                 Sobre el docente
                             </v-btn>
 
                             <v-btn
-                                color="purple"
+                                color="orange"
+                                class="font-weight-bold"
                                 text
+                                href="/clases-vivo/temario/curso"
                             >
                                 Ver temas
                             </v-btn>
@@ -143,189 +94,151 @@
 
                     </v-card>
                 </v-col>
-                <v-col md="4">
-                    <v-card
-                        class="mx-auto"
-                    >
-                        <v-img
-                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                            height="200px"
-                            class="white--text align-end"
-                        >
-                            <v-card-title>Efrain Barrientos</v-card-title>
-                        </v-img>
 
-                        <v-card-title>
-                            <v-row>
-                                <v-col md="2">
-                                    <v-avatar
-                                        size="36px"
-                                    >
-                                        <img
-                                            alt="Avatar"
-                                            src="{{asset('images/iconos/cursos/circle/algebra.png')}}"
-                                        >
-                                        <v-icon
-                                            color=""
+{{--                <v-col md="4">--}}
+{{--                    <v-card>--}}
+{{--                        <v-list-item>--}}
+{{--                            <v-list-item-avatar color="grey">--}}
+{{--                                <v-img src="{{asset('images/iconos/cursos/circle/algebra.png')}}" aspect-ratio="1.7" contain></v-img>--}}
+{{--                            </v-list-item-avatar>--}}
+{{--                            <v-list-item-content>--}}
+{{--                                <v-list-item-title class="headline">Algebra</v-list-item-title>--}}
+{{--                                <v-list-item-subtitle>Docente: Efrain Barriento</v-list-item-subtitle>--}}
+{{--                            </v-list-item-content>--}}
+{{--                        </v-list-item>--}}
+{{--                        <v-card--}}
 
-                                        ></v-icon>
-                                    </v-avatar>
-                                </v-col>
-                                <v-col md="10" class="">
-                                    <span class="font-weight-bold">Algebra</span>
-                                </v-col>
-                            </v-row>
-                        </v-card-title>
+{{--                            flat--}}
+{{--                        >--}}
+{{--                            --}}{{--                            <v-img--}}
+{{--                            --}}{{--                                src="https://cdn.vuetifyjs.com/images/cards/forest.jpg"--}}
+{{--                            --}}{{--                                gradient="to top, rgba(0,0,0,.44), rgba(0,0,0,.44)"--}}
+{{--                            --}}{{--                            >--}}
+{{--                            --}}{{--                                <v-container class="fill-height">--}}
+{{--                            --}}{{--                                    <v-row align="center">--}}
+{{--                            --}}{{--                                        <strong class="display-4 font-weight-regular mr-6">8</strong>--}}
+{{--                            --}}{{--                                        <v-row justify="end">--}}
+{{--                            --}}{{--                                            <div class="headline font-weight-light">Monday</div>--}}
+{{--                            --}}{{--                                            <div class="text-uppercase font-weight-light">February 2015</div>--}}
+{{--                            --}}{{--                                        </v-row>--}}
+{{--                            --}}{{--                                    </v-row>--}}
+{{--                            --}}{{--                                </v-container>--}}
+{{--                            --}}{{--                            </v-img>--}}
 
-                        <v-card-subtitle>
-                            20 sesiones
-                        </v-card-subtitle>
-
-                        <v-card-actions>
-
-                            <v-btn
-                                text
-                            >
-                                Sobre el docente
-                            </v-btn>
-
-                            <v-btn
-                                color="purple"
-                                text
-                            >
-                                Ver temas
-                            </v-btn>
-
-                            <v-spacer></v-spacer>
+{{--                            <div class="video-doc position-relative">--}}
+{{--                                <iframe src="https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1"  width="640" height="360" frameborder="0" allow="autoplay; fullscreen"></iframe>--}}
+{{--                            </div>--}}
+{{--                        </v-card>--}}
 
 
-                        </v-card-actions>
+{{--                        <v-card-text class="py-0">--}}
+{{--                            <v-container--}}
+{{--                                id="scroll-target"--}}
+{{--                                style="max-height: 400px"--}}
+{{--                                class="overflow-y-auto py-0"--}}
+{{--                            >--}}
+{{--                                <v-row--}}
+{{--                                    v-scroll:#scroll-target="onScroll"--}}
+
+{{--                                >--}}
+{{--                                    <v-timeline--}}
+{{--                                        align-top--}}
+{{--                                        dense--}}
+
+{{--                                        v-scroll:#scroll-target="onScroll"--}}
+{{--                                    >--}}
+{{--                                        <v-timeline-item--}}
+
+{{--                                            large--}}
+{{--                                        >--}}
+{{--                                            <template v-slot:icon>--}}
+{{--                                                <v-avatar color="green">--}}
+{{--                                                    <v-icon dark>mdi-check</v-icon>--}}
+{{--                                                </v-avatar>--}}
+{{--                                            </template>--}}
+
+{{--                                            <v-row class="">--}}
+{{--                                                <v-col>--}}
+{{--                                                    <strong>Ecuaciones</strong>--}}
+{{--                                                    <small class="d-block">02 julio 2020</small>--}}
+{{--                                                </v-col>--}}
+
+{{--                                            </v-row>--}}
+{{--                                        </v-timeline-item>--}}
+{{--                                        <v-timeline-item--}}
+{{--                                            color="green accent-4"--}}
+{{--                                            icon="mdi-check"--}}
+{{--                                            small--}}
+{{--                                        >--}}
+
+{{--                                            <a href="../curso/algebra/video" class="font-weight-bold light-blue--text pt-1">Exponentes</a>--}}
+{{--                                            <small class="d-block">01 junio 2020</small>--}}
+{{--                                        </v-timeline-item>--}}
+{{--                                        <v-timeline-item--}}
+{{--                                            color="green accent-4"--}}
+{{--                                            icon="mdi-check"--}}
+{{--                                            small--}}
+{{--                                        >--}}
+
+{{--                                            <a href="../curso/algebra/video" class="font-weight-bold light-blue--text pt-1">Exponentes</a>--}}
+{{--                                            <small class="d-block">01 junio 2020</small>--}}
+{{--                                        </v-timeline-item>--}}
+{{--                                        <v-timeline-item--}}
+{{--                                            color="green accent-4"--}}
+{{--                                            icon="mdi-check"--}}
+{{--                                            small--}}
+{{--                                        >--}}
+
+{{--                                            <a href="../curso/algebra/video" class="font-weight-bold light-blue--text pt-1">Exponentes</a>--}}
+{{--                                            <small class="d-block">01 junio 2020</small>--}}
+{{--                                        </v-timeline-item>--}}
 
 
-                    </v-card>
-                </v-col>
-                <v-col md="4">
-                    <v-card
-                        class="mx-auto"
-                    >
-                        <v-img
-                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                            height="200px"
-                            class="white--text align-end"
-                        >
-                            <v-card-title>Efrain Barrientos</v-card-title>
-                        </v-img>
+{{--                                        <v-timeline-item--}}
 
-                        <v-card-title>
-                            <v-row>
-                                <v-col md="2">
-                                    <v-avatar
-                                        size="36px"
-                                    >
-                                        <img
-                                            alt="Avatar"
-                                            src="{{asset('images/iconos/cursos/circle/algebra.png')}}"
-                                        >
-                                        <v-icon
-                                            color=""
+{{--                                            large--}}
+{{--                                        >--}}
+{{--                                            <template v-slot:icon>--}}
+{{--                                                <v-avatar color="grey accent-4">--}}
+{{--                                                    <span class="font-weight-bold white--text">2</span>--}}
+{{--                                                </v-avatar>--}}
+{{--                                            </template>--}}
 
-                                        ></v-icon>
-                                    </v-avatar>
-                                </v-col>
-                                <v-col md="10" class="">
-                                    <span class="font-weight-bold">Algebra</span>
-                                </v-col>
-                            </v-row>
-                        </v-card-title>
+{{--                                            <v-row class="">--}}
+{{--                                                <v-col>--}}
+{{--                                                    <strong>Ecuaciones</strong>--}}
+{{--                                                </v-col>--}}
 
-                        <v-card-subtitle>
-                            20 sesiones
-                        </v-card-subtitle>
+{{--                                            </v-row>--}}
+{{--                                        </v-timeline-item>--}}
 
-                        <v-card-actions>
+{{--                                        <v-timeline-item--}}
+{{--                                            color="grey darken-4"--}}
+{{--                                            icon="mdi-lock"--}}
+{{--                                            small--}}
+{{--                                        >--}}
 
-                            <v-btn
-                                text
-                            >
-                                Sobre el docente
-                            </v-btn>
+{{--                                            <div class="font-weight-bold text--secondary pt-1">Ecuaciones</div>--}}
 
-                            <v-btn
-                                color="purple"
-                                text
-                            >
-                                Ver temas
-                            </v-btn>
+{{--                                        </v-timeline-item>--}}
+{{--                                        <v-timeline-item--}}
+{{--                                            color="grey darken-4"--}}
+{{--                                            icon="mdi-lock"--}}
+{{--                                            small--}}
+{{--                                        >--}}
 
-                            <v-spacer></v-spacer>
+{{--                                            <div class="font-weight-bold text--secondary pt-1">Teoria de exponentes</div>--}}
+
+{{--                                        </v-timeline-item>--}}
 
 
-                        </v-card-actions>
+{{--                                    </v-timeline>--}}
+{{--                                </v-row>--}}
 
-
-                    </v-card>
-                </v-col>
-                <v-col md="4">
-                    <v-card
-                        class="mx-auto"
-                    >
-                        <v-img
-                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                            height="200px"
-                            class="white--text align-end"
-                        >
-                            <v-card-title>Efrain Barrientos</v-card-title>
-                        </v-img>
-
-                        <v-card-title>
-                            <v-row>
-                                <v-col md="2">
-                                    <v-avatar
-                                        size="36px"
-                                    >
-                                        <img
-                                            alt="Avatar"
-                                            src="{{asset('images/iconos/cursos/circle/algebra.png')}}"
-                                        >
-                                        <v-icon
-                                            color=""
-
-                                        ></v-icon>
-                                    </v-avatar>
-                                </v-col>
-                                <v-col md="10" class="">
-                                    <span class="font-weight-bold">Algebra</span>
-                                </v-col>
-                            </v-row>
-                        </v-card-title>
-
-                        <v-card-subtitle>
-                            20 sesiones
-                        </v-card-subtitle>
-
-                        <v-card-actions>
-
-                            <v-btn
-                                text
-                            >
-                                Sobre el docente
-                            </v-btn>
-
-                            <v-btn
-                                color="purple"
-                                text
-                            >
-                                Ver temas
-                            </v-btn>
-
-                            <v-spacer></v-spacer>
-
-
-                        </v-card-actions>
-
-
-                    </v-card>
-                </v-col>
+{{--                            </v-container>--}}
+{{--                        </v-card-text>--}}
+{{--                    </v-card>--}}
+{{--                </v-col>--}}
             </v-row>
         </v-container>
     </v-content>
