@@ -36,7 +36,10 @@ Route::get('/curso/algebra/video', [
     'as' => 'video_path',
 ]);
 
-
+Route::get('/clases-vivo/docente', [
+    'uses' => 'Page\HomepageController@docente',
+    'as' => 'docente_student_path',
+]);
 
 //Auth
 Auth::routes();
@@ -77,3 +80,5 @@ Route::get('/clases-vivo/temario/curso', [
     'uses' => 'Student\HomepageController@temario_curso',
     'as' => 'temario_curso_student_path',
 ]);
+
+

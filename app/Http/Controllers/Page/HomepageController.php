@@ -22,4 +22,8 @@ class HomepageController extends Controller
     public function video_list(){
         return view('page.videoList');
     }
+
+    public function docente(){
+        return view('page.docente');
+    }
 }
