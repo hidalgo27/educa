@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Green Academy</title>
 
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
