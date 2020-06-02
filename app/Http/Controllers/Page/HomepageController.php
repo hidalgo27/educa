@@ -2,13 +2,22 @@
 
 namespace App\Http\Controllers\Page;
 
+use App\Asignatura;
 use App\Http\Controllers\Controller;
+use App\Universidad;
 use Illuminate\Http\Request;
 
 class HomepageController extends Controller
 {
     public function index(){
-        return(view('page.home'));
+
+        $universidad = Universidad::all();
+        $cursos = Asignatura::all()->sortBy('nombre');
+        return(
+            view('page.home',
+            compact([
+                'universidad', 'cursos'
+            ])));
     }
     public function cursos(){
         return(view('page.cursos'));
@@ -25,5 +34,9 @@ class HomepageController extends Controller
 
     public function docente(){
         return view('page.docente');
+    }
+
+    public function inscripcion(){
+        return view('page.inscripcion');
     }
 }

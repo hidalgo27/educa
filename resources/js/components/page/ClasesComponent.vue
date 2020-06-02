@@ -2,43 +2,55 @@
     <section>
         <section class="grey lighten-4">
             <v-container>
-            <v-row
+                <v-row
+                    align="center"
+                >
+                    <v-col md="2">
+                        <v-img :src="'../../images/iconos/cursos/circle/algebra.png'" aspect-ratio="1.7" contain></v-img>
+                    </v-col>
+                    <v-col md="10">
+                        <h1 class="display-1 font-weight-bold mb-4">Algebra</h1>
+                        Docente: <a href="">Efrain Barrientos <v-icon>mdi-link</v-icon></a>
+                    </v-col>
+                </v-row>
+
+<!--            <v-row-->
 
 
-            >
-                <v-col md="1" class="text-center">
-                    <v-avatar
-                        width="100%"
-                        height="74px"
-                    >
-                        <img
-                            :src="'../../images/iconos/cursos/circle/algebra.png'"
-                            alt="John"
-                        >
-                    </v-avatar>
-                </v-col>
-                <v-col md="11" class="grey--text text--darken-2">
-                    <h1 class="display-1 font-weight-medium mb-2">Algebra</h1>
-                    <v-row align="end">
-                        <v-col md="auto">
-                            <v-rating
-                                v-model="rating"
-                                color="yellow darken-3"
-                                background-color="grey darken-1"
-                                empty-icon="$ratingFull"
-                                readonly
-                                dense
-                            ></v-rating>
-                        </v-col>
-                        <v-col>
-                            <a href="">Leer más opiniones (2768)</a>
-                        </v-col>
-                    </v-row>
-<!--                    <h4 class="subheading">12 cursos</h4>-->
-                    <p class="mt-4 subtitle-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus dolor fugiat suscipit! Adipisci amet atque, consequatur enim illo iusto magni minus nulla, odio pariatur quia quis temporibus, vitae? Commodi!</p>
-                </v-col>
+<!--            >-->
+<!--                <v-col md="1" class="text-center">-->
+<!--                    <v-avatar-->
+<!--                        width="100%"-->
+<!--                        height="74px"-->
+<!--                    >-->
+<!--                        <img-->
+<!--                            :src="'../../images/iconos/cursos/circle/algebra.png'"-->
+<!--                            alt="John"-->
+<!--                        >-->
+<!--                    </v-avatar>-->
+<!--                </v-col>-->
+<!--                <v-col md="11" class="grey&#45;&#45;text text&#45;&#45;darken-2">-->
+<!--                    <h1 class="display-1 font-weight-medium mb-2">Algebra</h1>-->
+<!--                    <v-row align="end">-->
+<!--                        <v-col md="auto">-->
+<!--                            <v-rating-->
+<!--                                v-model="rating"-->
+<!--                                color="yellow darken-3"-->
+<!--                                background-color="grey darken-1"-->
+<!--                                empty-icon="$ratingFull"-->
+<!--                                readonly-->
+<!--                                dense-->
+<!--                            ></v-rating>-->
+<!--                        </v-col>-->
+<!--                        <v-col>-->
+<!--                            <a href="">Leer más opiniones (2768)</a>-->
+<!--                        </v-col>-->
+<!--                    </v-row>-->
+<!--&lt;!&ndash;                    <h4 class="subheading">12 cursos</h4>&ndash;&gt;-->
+<!--                    <p class="mt-4 subtitle-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque delectus dolor fugiat suscipit! Adipisci amet atque, consequatur enim illo iusto magni minus nulla, odio pariatur quia quis temporibus, vitae? Commodi!</p>-->
+<!--                </v-col>-->
 
-            </v-row>
+<!--            </v-row>-->
             </v-container>
         </section>
 

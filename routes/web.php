@@ -41,6 +41,11 @@ Route::get('/clases-vivo/docente', [
     'as' => 'docente_student_path',
 ]);
 
+Route::get('/inscripcion', [
+    'uses' => 'Page\HomepageController@inscripcion',
+    'as' => 'inscripcion_path',
+]);
+
 //Auth
 Auth::routes();
 Route::get('/student/home', 'Student\HomepageController@index')->name('home');

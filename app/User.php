@@ -15,10 +15,8 @@ class User extends Authenticatable
      *
      * @var array
      */
-
-
     protected $fillable = [
-        'name', 'email', 'password', 'password2', 'provider_id', 'avatar', 'avatar_original'
+        'name', 'email', 'password',
     ];
 
     /**
@@ -39,9 +37,15 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+
     public function roles()
     {
         return $this->belongsToMany(Role::class)->withTimestamps();
+    }
+
+    public function docente()
+    {
+        return $this->hasOne(Docente::class, 'user_id');
     }
 
     public function authorizeRoles($roles)

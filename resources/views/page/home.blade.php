@@ -35,9 +35,11 @@
 
 
             <v-row class="my-5">
+                @foreach($universidad as $universidades)
                 <v-col
                     cols="12"
                     sm="6"
+                    class="d-flex"
                 >
                     <v-hover
                         v-slot:default="{ hover }"
@@ -45,21 +47,23 @@
                     >
                         <v-card
                             :elevation="hover ? 6 : 1"
-                            class=""
+                            class="w-100"
                         >
-                            <v-img src="{{asset('images/unsaac.jpg')}}" aspect-ratio="1.7"
+                            <v-img src="{{$universidades->imagen}}" aspect-ratio="1.7"
                                    gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
                             >
                                 <v-card-title>
                                     <v-img
-                                        src="{{asset('images/logos/logo-unsaac.png')}}"
+                                        src="{{$universidades->logo}}"
                                         aspect-ratio="1.7"
                                         height="100px"
 
                                         contain
                                     >
+                                    </v-img>
                                 </v-card-title>
                             </v-img>
+
 {{--                            <div class="row justify-center">--}}
 {{--                                <div class="col-6">--}}
 {{--                                    <v-img src="{{asset('images/unsaac.jpg')}}" aspect-ratio="1.7" contain></v-img>--}}
@@ -69,174 +73,99 @@
                             <v-row no-gutters>
                                 <v-col>
                                     <v-tabs
-                                        v-model="tabs"
+                                        v-model="universidad_{{$universidades->id}}"
                                         centered
-                                        background-color="red darken-4"
+                                        background-color="{{$universidades->color}}"
                                         dark
                                     >
+
+                                        @foreach($universidades->modalidades->where('estado',1) as $modalidad)
                                         <v-tab href="#ordinario" >
-                                            Ordinario
+                                            {{$modalidad->titulo}} {{$universidades->abreviatura}}
                                         </v-tab>
-                                        <v-tab href="#dirimencia" >
-                                            Dirimencia
-                                        </v-tab>
-                                        <v-tab href="#primera" >
-                                            Primera Oportunidad
-                                        </v-tab>
+                                        @endforeach
+{{--                                        <v-tab href="#dirimencia" >--}}
+{{--                                            Dirimencia--}}
+{{--                                        </v-tab>--}}
+{{--                                        <v-tab href="#primera" >--}}
+{{--                                            Primera Oportunidad--}}
+{{--                                        </v-tab>--}}
                                     </v-tabs>
                                 </v-col>
                             </v-row>
                             <v-row>
                                 <v-col>
-                                    <v-tabs-items v-model="tabs">
+                                    <v-tabs-items v-model="universidad_{{$universidades->id}}">
+                                        @foreach($universidades->modalidades->where('estado',1) as $modalidad)
                                         <v-tab-item
                                             value="ordinario"
                                         >
                                             <div class="px-4">
 
                                                     <div class="row">
-                                                        <div class="col-6">
-                                                            <v-hover v-slot:default="{ hover }">
 
-                                                                <div class="position-relative grey lighten-4 hover-box-content">
 
-                                                                    <v-expand-x-transition>
-                                                                        <div
-                                                                            v-if="hover"
-                                                                            class="d-flex hover-box-content transition-fast-out-linear-in orange darken-2 v-card--reveal display-3 white--text"
-                                                                            style="height: 100%;"
-                                                                        >
-                                                                            {{--                                                    $14.99--}}
-                                                                        </div>
-                                                                    </v-expand-x-transition>
-                                                                    <a href="{{route('cursos_path')}}">
-                                                                        <div class="position-relative hover-box">
-                                                                            <div class="row no-gutters align-center">
-                                                                                <div class="col-3 orange hover-box-content-left darken-2 pa-4 border-left">
-                                                                                    {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                                    <v-img src="{{asset('images/iconos/web/circle/grupoa.png')}}" contain aspect-ratio="1.7"></v-img>
+                                                            @foreach($modalidad->modalidad_grupos as $modalidad_grupos)
+{{--                                                                @foreach($modalidad_grupos->grupos as $grupos)--}}
+
+                                                                <div class="col-6">
+                                                                    <v-hover v-slot:default="{ hover }">
+
+                                                                        <div class="position-relative grey lighten-4 hover-box-content">
+
+                                                                            <v-expand-x-transition>
+                                                                                <div
+                                                                                    v-if="hover"
+                                                                                    class="d-flex hover-box-content transition-fast-out-linear-in {{$modalidad_grupos->grupo->color}} v-card--reveal display-3 white--text"
+                                                                                    style="height: 100%;"
+                                                                                >
+                                                                                    {{--                                                                                                                                $14.99--}}
                                                                                 </div>
-                                                                                <div class="col px-6">
-                                                                                    <h4 class="font-weight-bold">Grupo A</h4>
-                                                                                    <p class="ma-0">22 cursos</p>
+                                                                            </v-expand-x-transition>
+                                                                            <a href="{{route('cursos_path')}}">
+                                                                                <div class="position-relative hover-box">
+                                                                                    <div class="row no-gutters align-center">
+                                                                                        <div class="col-3 {{$modalidad_grupos->grupo->color}} hover-box-content-left pa-4 border-left">
+                                                                                            {{--                                                                                                                                        <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                            <v-img src="{{$modalidad_grupos->grupo->logo}}" contain aspect-ratio="1.7"></v-img>
+                                                                                        </div>
+                                                                                        <div class="col px-6">
+                                                                                            <h4 class="font-weight-bold">
+                                                                                                {{$modalidad_grupos->grupo->descripcion}}</h4>
+                                                                                            <p class="ma-0">22 cursos</p>
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
+                                                                            </a>
                                                                         </div>
-                                                                    </a>
+                                                                    </v-hover>
+
                                                                 </div>
-                                                            </v-hover>
+{{--                                                                @endforeach--}}
+                                                            @endforeach
 
-                                                        </div>
 
-                                                        <div class="col-6">
-                                                            <v-hover v-slot:default="{ hover }">
-                                                                <div class="position-relative grey lighten-4 hover-box-content">
-                                                                    <v-expand-x-transition>
-                                                                        <div
-                                                                            v-if="hover"
-                                                                            class="d-flex hover-box-content transition-fast-out-linear-in purple v-card--reveal display-3 white--text"
-                                                                            style="height: 100%;"
-                                                                        >
-                                                                            {{--                                                    $14.99--}}
-                                                                        </div>
-                                                                    </v-expand-x-transition>
-                                                                    <div class="position-relative hover-box">
-
-                                                                        <div class="row no-gutters align-center">
-                                                                            <div class="col-3 purple hover-box-content-left pa-4 border-left">
-                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                                <v-img src="{{asset('images/iconos/web/circle/grupob.png')}}" contain aspect-ratio="1.7"></v-img>
-                                                                            </div>
-                                                                            <div class="col px-6">
-                                                                                <h4 class="font-weight-bold">Grupo B</h4>
-                                                                                <p class="ma-0">12 cursos</p>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </v-hover>
-                                                        </div>
-
-                                                        <div class="col-6">
-                                                            <v-hover v-slot:default="{ hover }">
-                                                                <div class="position-relative grey lighten-4 hover-box-content">
-                                                                    <v-expand-x-transition>
-                                                                        <div
-                                                                            v-if="hover"
-                                                                            class="d-flex hover-box-content transition-fast-out-linear-in light-blue accent-2 v-card--reveal display-3 white--text"
-                                                                            style="height: 100%;"
-                                                                        >
-                                                                            {{--                                                    $14.99--}}
-                                                                        </div>
-                                                                    </v-expand-x-transition>
-                                                                    <div class="position-relative hover-box">
-
-                                                                        <div class="row no-gutters align-center">
-                                                                            <div class="col-3 light-blue accent-2 hover-box-content-left pa-4 border-left">
-                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                                <v-img src="{{asset('images/iconos/web/circle/grupoc.png')}}" contain aspect-ratio="1.7"></v-img>
-                                                                            </div>
-                                                                            <div class="col px-6">
-                                                                                <h4 class="font-weight-bold">Grupo C</h4>
-                                                                                <p class="ma-0">10 cursos</p>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </v-hover>
-                                                        </div>
-
-                                                        <div class="col-6">
-                                                            <v-hover v-slot:default="{ hover }">
-                                                                <div class="position-relative grey lighten-4 hover-box-content">
-                                                                    <v-expand-x-transition>
-                                                                        <div
-                                                                            v-if="hover"
-                                                                            class="d-flex hover-box-content transition-fast-out-linear-in pink v-card--reveal display-3 white--text"
-                                                                            style="height: 100%;"
-                                                                        >
-                                                                            {{--                                                    $14.99--}}
-                                                                        </div>
-                                                                    </v-expand-x-transition>
-                                                                    <div class="position-relative hover-box">
-
-                                                                        <div class="row no-gutters align-center">
-                                                                            <div class="col-3 pink hover-box-content-left pa-4 border-left">
-                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                                <v-img src="{{asset('images/iconos/web/circle/grupod.png')}}" contain aspect-ratio="1.7"></v-img>
-                                                                            </div>
-                                                                            <div class="col px-6">
-                                                                                <h4 class="font-weight-bold">Grupo D</h4>
-                                                                                <p class="ma-0">15 cursos</p>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-                                                                </div>
-                                                            </v-hover>
-                                                        </div>
                                                     </div>
 
                                             </div>
                                         </v-tab-item>
+                                        @endforeach
 
-                                        <v-tab-item
-                                            value="dirimencia"
-                                        >
-                                            <v-card flat>
-                                                <v-card-text>diri</v-card-text>
-                                            </v-card>
-                                        </v-tab-item>
+{{--                                        <v-tab-item--}}
+{{--                                            value="dirimencia"--}}
+{{--                                        >--}}
+{{--                                            <v-card flat>--}}
+{{--                                                <v-card-text>diri</v-card-text>--}}
+{{--                                            </v-card>--}}
+{{--                                        </v-tab-item>--}}
 
-                                        <v-tab-item
-                                            value="primera"
-                                        >
-                                            <v-card flat>
-                                                <v-card-text>pri</v-card-text>
-                                            </v-card>
-                                        </v-tab-item>
+{{--                                        <v-tab-item--}}
+{{--                                            value="primera"--}}
+{{--                                        >--}}
+{{--                                            <v-card flat>--}}
+{{--                                                <v-card-text>pri</v-card-text>--}}
+{{--                                            </v-card>--}}
+{{--                                        </v-tab-item>--}}
                                     </v-tabs-items>
                                 </v-col>
                             </v-row>
@@ -244,220 +173,7 @@
                         </v-card>
                     </v-hover>
                 </v-col>
-
-                <v-col
-                    cols="12"
-                    sm="6"
-                >
-                    <v-hover
-                        v-slot:default="{ hover }"
-                        open-delay="60"
-                    >
-                        <v-card
-                            :elevation="hover ? 6 : 1"
-                            class=""
-                        >
-                            <v-img
-                                src="{{asset('images/andina.jpg')}}"
-                                aspect-ratio="1.7"
-                                gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                                class="white--text"
-                            >
-                                <v-card-title>
-                                    <v-img
-                                        src="{{asset('images/logos/logo-andina.png')}}"
-                                        aspect-ratio="1.7"
-                                        height="100px"
-
-                                        contain
-                                    >
-                                </v-card-title>
-                            </v-img>
-{{--                            <div class="row justify-center">--}}
-{{--                                <div class="col-6">--}}
-{{--                                    <v-img src="{{asset('images/andina.jpg')}}" aspect-ratio="1.7" contain></v-img>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
-
-                            <v-row no-gutters>
-                                <v-col>
-                                    <v-tabs
-                                        v-model="tabs"
-                                        centered
-                                        background-color="blue"
-
-                                        dark
-                                    >
-                                        <v-tab href="#ordinario" >
-                                            Ordinario
-                                        </v-tab>
-                                        <v-tab href="#dirimencia" >
-                                            Dirimencia
-                                        </v-tab>
-                                        <v-tab href="#primera" >
-                                            Primera Oportunidad
-                                        </v-tab>
-                                    </v-tabs>
-                                </v-col>
-                            </v-row>
-                            <v-row >
-                                <v-col>
-                                    <v-tabs-items v-model="tabs">
-                                        <v-tab-item
-                                            value="ordinario"
-                                        >
-                                            <div class="px-4">
-
-                                                <div class="row">
-                                                    <div class="col-6">
-                                                        <v-hover v-slot:default="{ hover }">
-
-                                                            <div class="position-relative grey lighten-4 hover-box-content">
-
-                                                                <v-expand-x-transition>
-                                                                    <div
-                                                                        v-if="hover"
-                                                                        class="d-flex hover-box-content transition-fast-out-linear-in orange darken-2 v-card--reveal display-3 white--text"
-                                                                        style="height: 100%;"
-                                                                    >
-                                                                        {{--                                                    $14.99--}}
-                                                                    </div>
-                                                                </v-expand-x-transition>
-                                                                <a href="{{route('cursos_path')}}">
-                                                                    <div class="position-relative hover-box">
-                                                                        <div class="row no-gutters align-center">
-                                                                            <div class="col-3 orange hover-box-content-left darken-2 pa-4 border-left">
-                                                                                {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                                <v-img src="{{asset('images/iconos/web/circle/grupoa.png')}}" contain aspect-ratio="1.7"></v-img>
-                                                                            </div>
-                                                                            <div class="col px-6">
-                                                                                <h4 class="font-weight-bold">Grupo A</h4>
-                                                                                <p class="ma-0">22 cursos</p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </a>
-                                                            </div>
-                                                        </v-hover>
-
-                                                    </div>
-
-                                                    <div class="col-6">
-                                                        <v-hover v-slot:default="{ hover }">
-                                                            <div class="position-relative grey lighten-4 hover-box-content">
-                                                                <v-expand-x-transition>
-                                                                    <div
-                                                                        v-if="hover"
-                                                                        class="d-flex hover-box-content transition-fast-out-linear-in purple v-card--reveal display-3 white--text"
-                                                                        style="height: 100%;"
-                                                                    >
-                                                                        {{--                                                    $14.99--}}
-                                                                    </div>
-                                                                </v-expand-x-transition>
-                                                                <div class="position-relative hover-box">
-
-                                                                    <div class="row no-gutters align-center">
-                                                                        <div class="col-3 purple hover-box-content-left pa-4 border-left">
-                                                                            {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                            <v-img src="{{asset('images/iconos/web/circle/grupob.png')}}" contain aspect-ratio="1.7"></v-img>
-                                                                        </div>
-                                                                        <div class="col px-6">
-                                                                            <h4 class="font-weight-bold">Grupo B</h4>
-                                                                            <p class="ma-0">12 cursos</p>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </v-hover>
-                                                    </div>
-
-                                                    <div class="col-6">
-                                                        <v-hover v-slot:default="{ hover }">
-                                                            <div class="position-relative grey lighten-4 hover-box-content">
-                                                                <v-expand-x-transition>
-                                                                    <div
-                                                                        v-if="hover"
-                                                                        class="d-flex hover-box-content transition-fast-out-linear-in light-blue accent-2 v-card--reveal display-3 white--text"
-                                                                        style="height: 100%;"
-                                                                    >
-                                                                        {{--                                                    $14.99--}}
-                                                                    </div>
-                                                                </v-expand-x-transition>
-                                                                <div class="position-relative hover-box">
-
-                                                                    <div class="row no-gutters align-center">
-                                                                        <div class="col-3 light-blue accent-2 hover-box-content-left pa-4 border-left">
-                                                                            {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                            <v-img src="{{asset('images/iconos/web/circle/grupoc.png')}}" contain aspect-ratio="1.7"></v-img>
-                                                                        </div>
-                                                                        <div class="col px-6">
-                                                                            <h4 class="font-weight-bold">Grupo C</h4>
-                                                                            <p class="ma-0">10 cursos</p>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </v-hover>
-                                                    </div>
-
-                                                    <div class="col-6">
-                                                        <v-hover v-slot:default="{ hover }">
-                                                            <div class="position-relative grey lighten-4 hover-box-content">
-                                                                <v-expand-x-transition>
-                                                                    <div
-                                                                        v-if="hover"
-                                                                        class="d-flex hover-box-content transition-fast-out-linear-in pink v-card--reveal display-3 white--text"
-                                                                        style="height: 100%;"
-                                                                    >
-                                                                        {{--                                                    $14.99--}}
-                                                                    </div>
-                                                                </v-expand-x-transition>
-                                                                <div class="position-relative hover-box">
-
-                                                                    <div class="row no-gutters align-center">
-                                                                        <div class="col-3 pink hover-box-content-left pa-4 border-left">
-                                                                            {{--                                                    <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                            <v-img src="{{asset('images/iconos/web/circle/grupod.png')}}" contain aspect-ratio="1.7"></v-img>
-                                                                        </div>
-                                                                        <div class="col px-6">
-                                                                            <h4 class="font-weight-bold">Grupo D</h4>
-                                                                            <p class="ma-0">15 cursos</p>
-                                                                        </div>
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </v-hover>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                        </v-tab-item>
-
-                                        <v-tab-item
-                                            value="dirimencia"
-                                        >
-                                            <v-card flat>
-                                                <v-card-text>diri</v-card-text>
-                                            </v-card>
-                                        </v-tab-item>
-
-                                        <v-tab-item
-                                            value="primera"
-                                        >
-                                            <v-card flat>
-                                                <v-card-text>pri</v-card-text>
-                                            </v-card>
-                                        </v-tab-item>
-                                    </v-tabs-items>
-                                </v-col>
-                            </v-row>
-
-                        </v-card>
-                    </v-hover>
-                </v-col>
+                @endforeach
             </v-row>
 
 
@@ -468,107 +184,94 @@
             <v-container>
                 <v-row>
                     <v-col class="text-center">
-                        <h3 class="headline font-weight-bold mt-5 mb-2">Nuevos cursos lanzados</h3>
+                        <h3 class="headline font-weight-bold mt-5 mb-2">Cursos en desarrollo desde el <span class="pink--text">01 junio 2020</span></h3>
                     </v-col>
                 </v-row>
 
                 <v-row>
-                    <v-col>
-                        <v-list subheader>
-                            {{--                                        <v-subheader>Recent chat</v-subheader>--}}
+                    @foreach($universidad as $universidades)
+                        <v-col md="12" class="mb-8">
+                            <v-row>
+                                <v-col>
+                                    <v-img
+                                        src="{{$universidades->logo}}"
+                                        aspect-ratio="1.7"
+                                        height="100px"
 
-                            <v-list-item href="#">
-                                <v-list-item-avatar>
-                                    <v-img src="{{asset('images/iconos/cursos/circle/algebra.png')}}"></v-img>
-                                </v-list-item-avatar>
+                                        contain
+                                    ></v-img>
+                                </v-col>
+                            </v-row>
+                            <h3 class="secondary--text font-weight-medium caption text-center">{{$universidades->nombre}}</h3>
 
-                                <v-list-item-content>
-                                    <v-list-item-title class="font-weight-medium">Algebra</v-list-item-title>
-                                </v-list-item-content>
+                                @foreach($universidades->modalidades->where('estado',1) as $modalidad)
+                                    <h4 class="font-weight-medium mt-4 text-capitalize"><v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon> <strong>Modalidad:</strong> {{$modalidad->titulo}}</h4>
+                                <v-row>
+                                    @foreach($modalidad->modalidad_grupos as $modalidad_grupos)
 
-                                <v-list-item-icon>
-                                    <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
-                                </v-list-item-icon>
-                            </v-list-item>
+                                        <v-col>
+                                            <v-card>
+                                                <v-alert
+                                                    dense
+                                                    text
+                                                    color="{{$modalidad_grupos->grupo->color}}"
+                                                    class="w-100"
+                                                >
+                                                    {{$modalidad_grupos->grupo->descripcion}}
+                                                </v-alert>
+                                            <v-row>
+                                                @foreach($cursos->where('modalidad_grupo_id', $modalidad_grupos->id) as $curso)
+                                                    <v-col md="6">
+                                                    <v-list-item href="#">
+                                                        <v-list-item-avatar>
+                                                            <v-img src="{{$curso->logo}}"></v-img>
+                                                        </v-list-item-avatar>
 
-                            <v-list-item href="#">
-                                <v-list-item-avatar>
-                                    <v-img src="{{asset('images/iconos/cursos/circle/rm.png')}}"></v-img>
-                                </v-list-item-avatar>
+                                                        <v-list-item-content>
+                                                            <v-list-item-title class="font-weight-medium">{{$curso->nombre}}</v-list-item-title>
+                                                        </v-list-item-content>
 
-                                <v-list-item-content>
-                                    <v-list-item-title class="font-weight-medium">Razonamiento matemático</v-list-item-title>
-                                </v-list-item-content>
+    {{--                                                    <v-list-item-icon>--}}
+    {{--                                                        <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>--}}
+    {{--                                                    </v-list-item-icon>--}}
+                                                    </v-list-item>
+                                                    </v-col>
+                                                @endforeach
+                                            </v-row>
+                                            </v-card>
+                                        </v-col>
+                                    @endforeach
+                                </v-row>
+                                @endforeach
 
-                                <v-list-item-icon>
-                                    <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
-                                </v-list-item-icon>
-                            </v-list-item>
 
-                            <v-list-item href="#">
-                                <v-list-item-avatar>
-                                    <v-img src="{{asset('images/iconos/cursos/circle/rv.png')}}"></v-img>
-                                </v-list-item-avatar>
+                        </v-col>
 
-                                <v-list-item-content>
-                                    <v-list-item-title class="font-weight-medium">Razonamiento Verbal</v-list-item-title>
-                                </v-list-item-content>
+                    @endforeach
 
-                                <v-list-item-icon>
-                                    <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
-                                </v-list-item-icon>
-                            </v-list-item>
+{{--                    <v-col>--}}
+{{--                        <v-list subheader>--}}
+{{--                            @php @endphp--}}
+{{--                            @foreach($cursos as $curso)--}}
+{{--                                {{$curso->count()}}--}}
+{{--                                @if ($curso->id%3 == 0)--}}
+{{--                                    <v-list-item href="#">--}}
+{{--                                        <v-list-item-avatar>--}}
+{{--                                            <v-img src="{{asset('images/iconos/cursos/circle/algebra.png')}}"></v-img>--}}
+{{--                                        </v-list-item-avatar>--}}
 
-                        </v-list>
-                    </v-col>
-                    <v-col>
-                        <v-list subheader>
-                            {{--                                        <v-subheader>Recent chat</v-subheader>--}}
+{{--                                        <v-list-item-content>--}}
+{{--                                            <v-list-item-title class="font-weight-medium">{{$curso->nombre}}</v-list-item-title>--}}
+{{--                                        </v-list-item-content>--}}
 
-                            <v-list-item href="#">
-                                <v-list-item-avatar>
-                                    <v-img src="{{asset('images/iconos/cursos/circle/historia.png')}}"></v-img>
-                                </v-list-item-avatar>
-
-                                <v-list-item-content>
-                                    <v-list-item-title class="font-weight-medium">Historia</v-list-item-title>
-                                </v-list-item-content>
-
-                                <v-list-item-icon>
-                                    <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
-                                </v-list-item-icon>
-                            </v-list-item>
-
-                            <v-list-item href="#">
-                                <v-list-item-avatar>
-                                    <v-img src="{{asset('images/iconos/cursos/circle/biologia.png')}}"></v-img>
-                                </v-list-item-avatar>
-
-                                <v-list-item-content>
-                                    <v-list-item-title class="font-weight-medium">Biología</v-list-item-title>
-                                </v-list-item-content>
-
-                                <v-list-item-icon>
-                                    <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
-                                </v-list-item-icon>
-                            </v-list-item>
-
-                            <v-list-item href="#">
-                                <v-list-item-avatar>
-                                    <v-img src="{{asset('images/iconos/cursos/circle/quimica.png')}}"></v-img>
-                                </v-list-item-avatar>
-
-                                <v-list-item-content>
-                                    <v-list-item-title class="font-weight-medium">Química</v-list-item-title>
-                                </v-list-item-content>
-
-                                <v-list-item-icon>
-                                    <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>
-                                </v-list-item-icon>
-                            </v-list-item>
-
-                        </v-list>
-                    </v-col>
+{{--                                        <v-list-item-icon>--}}
+{{--                                            <v-icon color="deep-purple accent-4">mdi-chevron-right</v-icon>--}}
+{{--                                        </v-list-item-icon>--}}
+{{--                                    </v-list-item>--}}
+{{--                                @endif--}}
+{{--                            @endforeach--}}
+{{--                        </v-list>--}}
+{{--                    </v-col>--}}
                 </v-row>
 
                 <v-row>
@@ -589,11 +292,11 @@
 
                                 <v-row no-gutters>
                                     <v-col md="3">
-                                        <v-img :src="'images/iconos/cursos/circle/fisica.png'" aspect-ratio="1.4" contain></v-img>
+                                        <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/iconos/cursos/circle/filosofia.png" aspect-ratio="1.4" contain></v-img>
                                     </v-col>
                                     <v-col>
-                                        <h5>Fisica</h5>
-                                        <p class="ma-0 text--secondary">Lanzamiento: 25 de junio de 2020</p>
+                                        <h5>Filosofia</h5>
+                                        <p class="ma-0 text--secondary">Lanzamiento: 8 de junio de 2020</p>
                                     </v-col>
                                 </v-row>
                             </v-alert>
@@ -614,7 +317,7 @@
                                     </v-col>
                                     <v-col>
                                         <h5>Economia</h5>
-                                        <p class="ma-0 text--secondary">Lanzamiento: 25 de junio de 2020</p>
+                                        <p class="ma-0 text--secondary">Lanzamiento: 8 de junio de 2020</p>
                                     </v-col>
                                 </v-row>
                             </v-alert>
@@ -631,11 +334,11 @@
 
                                 <v-row no-gutters>
                                     <v-col md="3">
-                                        <v-img :src="'images/iconos/cursos/circle/quimica.png'" aspect-ratio="1.4" contain></v-img>
+                                        <v-img :src="'images/iconos/cursos/circle/geografia.png'" aspect-ratio="1.4" contain></v-img>
                                     </v-col>
                                     <v-col>
-                                        <h5>Quimica</h5>
-                                        <p class="ma-0 text--secondary">Lanzamiento: 25 de junio de 2020</p>
+                                        <h5>Geografia</h5>
+                                        <p class="ma-0 text--secondary">Lanzamiento: 8 de junio de 2020</p>
                                     </v-col>
                                 </v-row>
                             </v-alert>
@@ -666,15 +369,16 @@
                                             tile
                                             max-width="400"
                                         >
-                                            <v-card-title class="cyan white--text font-weight-bold"><span class="mx-auto">Green Group Expert</span></v-card-title>
+                                            <v-card-title class="cyan white--text font-weight-bold"><span class="mx-auto">Green Academy Expert</span></v-card-title>
 
 
                                             {{--                                                        <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>--}}
 
                                             <v-card-text class="text--primary grey lighten-5 text-center pa-4">
-                                                <div class="display-1 font-weight-bold cyan--text">s/84</div>
+                                                <del>s/.250</del>
+                                                <div class="display-1 font-weight-bold cyan--text">s/90</div>
                                                 <span>soles al mes</span>
-                                                <span class="grey--text d-block">En un solo pago de s/999</span>
+                                                <span class="grey--text d-block">En un solo pago de s/.250 por los 3 meses</span>
                                             </v-card-text>
                                         </v-card>
                                     </th>
@@ -684,15 +388,15 @@
                                             tile
                                             max-width="400"
                                         >
-                                            <v-card-title class="grey darken-2 white--text font-weight-bold"><span class="mx-auto">Green Group Basic</span></v-card-title>
+                                            <v-card-title class="grey darken-2 white--text font-weight-bold"><span class="mx-auto">Green Academy Basic</span></v-card-title>
 
 
                                             {{--                                                        <v-card-subtitle class="pb-0">Number 10</v-card-subtitle>--}}
 
                                             <v-card-text class="text--primary grey lighten-5 text-center pa-4">
-                                                <div class="display-1 font-weight-bold">s/84</div>
+                                                <div class="display-1 font-weight-bold"><del>s/150</del></div>
                                                 <span>soles al mes</span>
-                                                <span class="grey--text d-block">En un solo pago de s/999</span>
+{{--                                                <span class="grey--text d-block">En un solo pago de s/999</span>--}}
                                             </v-card-text>
                                         </v-card>
                                     </th>
@@ -700,15 +404,55 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Accedes a más de 150 cursos y 24 carreras</td>
+                                    <td>Clases en vivo</td>
                                     <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
-                                    <td class="text-center"><v-icon class="font-weight-bold">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold">mdi-close-thick</v-icon></td>
                                 </tr>
                                 <tr>
-                                    <td>Accedes a más de 150 cursos y 24 carreras</td>
+                                    <td>Asesoría de docentes mientras dure el ciclo</td>
                                     <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
-                                    <td class="text-center"><v-icon class="font-weight-bold red--text">mdi-close-thick</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold">mdi-close-thick</v-icon></td>
                                 </tr>
+                                <tr>
+                                    <td>Materiales por cada curso (pdf, diapositivas, etc.)</td>
+                                    <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
+                                <tr>
+                                    <td>Acceso a nuestra plataforma</td>
+                                    <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
+                                </tr>
+                                <tr>
+                                    <td>Trivias por video</td>
+                                    <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
+                                </tr>
+                                <tr>
+                                    <td>Exámenes por curso</td>
+                                    <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
+                                </tr>
+                                <tr>
+                                    <td>Exámenes tipo admisión</td>
+                                    <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-close-thick</v-icon></td>
+                                </tr>
+                                <tr>
+                                    <td>Seguimiento de progreso</td>
+                                    <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
+                                </tr>
+                                <tr>
+                                    <td>Cursos exclusivos de Green Academy</td>
+                                    <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-close-thick</v-icon></td>
+                                </tr>
+                                <tr>
+                                    <td>Accesos a nuestra comunidad</td>
+                                    <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
+                                    <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
+                                </tr>
+
                                 <tr>
                                     <td></td>
                                     <td class="text-center pa-5">
@@ -745,7 +489,7 @@
             <v-container>
                 <v-row>
                     <v-col class="text-center">
-                        <h3 class="headline font-weight-bold mb-2">Cursos exclusivos de Green Group</h3>
+                        <h3 class="headline font-weight-bold mb-2">Cursos exclusivos de Green Academy</h3>
                     </v-col>
                 </v-row>
                 <v-row>
@@ -831,7 +575,7 @@
         </section>
         <v-parallax
             dark
-            src="{{asset('images/bottom_bg.jpg')}}"
+            src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/pizarra.jpg"
             height="700"
         >
             <v-container>
@@ -842,7 +586,7 @@
                     <v-col cols="8">
                         <v-row>
                             <v-col>
-                                <h3 class="headline text-center font-weight-bold mb-2">Green Group Funciona</h3>
+                                <h3 class="headline text-center font-weight-bold mb-2">Green Academy Funciona</h3>
                             </v-col>
                         </v-row>
                         <v-row align="center">
@@ -987,7 +731,7 @@
                 </v-row>
                 <div class="row justify-center my-5">
                     <div class="col-8 text--secondary title font-weight-medium text-center">
-                        Green Group es la estrategia de formación de miles de personas para conseguir ingresar a la universidad o reforzar tus conociemintos
+                        Green Academy es la estrategia de formación de miles de personas para conseguir ingresar a la universidad o reforzar tus conociemintos
                     </div>
                 </div>
             </v-container>

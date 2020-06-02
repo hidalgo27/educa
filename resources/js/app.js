@@ -35,8 +35,10 @@ Vue.component('clases-component', require('./components/page/ClasesComponent').d
 Vue.component('cursos-component', require('./components/page/CursosComponent').default);
 Vue.component('video-component', require('./components/page/VideoComponent').default);
 Vue.component('videolist-component', require('./components/page/VideolistComponent').default);
+Vue.component('inscripcion-component', require('./components/page/InscripcionComponent').default);
 
 //student
+Vue.component('home-component', require('./components/student/HomeComponent').default);
 Vue.component('student-video-component', require('./components/student/VideoComponent').default);
 Vue.component('video-list-component', require('./components/student/VideoListComponent').default);
 Vue.component('profile-component', require('./components/student/ProfileComponent').default);
@@ -73,7 +75,8 @@ const app = new Vue({
         items2: [
             { title: 'Travis Howard', avatar: 'https://cdn.vuetifyjs.com/images/lists/5.jpg' },
         ],
-        tabs: null,
+        universidad_1: null,
+        universidad_2: null,
         overlay: false,
 
     }),

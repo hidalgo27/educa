@@ -69,8 +69,21 @@ class LoginController extends Controller
         $facebookUser = Socialite::driver('facebook')->user();
         $user = User::where('provider_id', $facebookUser->getId())->first();
 
+        $user_e = User::where('email', $facebookUser->getEmail())->first();
 
-        if (!$user){
+        if (!$user AND $user_e){
+            $user_e->avatar = $facebookUser->getAvatar();
+            $user_e->avatar_original = $facebookUser->avatar_original;
+            $user_e->provider_id = $facebookUser->getId();
+            $user_e->save();
+
+            Auth::login($user_e, true);
+
+            return redirect(RouteServiceProvider::HOME);
+        }
+
+
+        if (!$user AND !$user_e){
             $user = User::create([
                 'email' => $facebookUser->getEmail(),
                 'name' => $facebookUser->getName(),
@@ -84,12 +97,18 @@ class LoginController extends Controller
                 $user_rol->user_id = $user->id;
                 $user_rol->save();
             }
+
+            Auth::login($user, true);
+            return redirect(RouteServiceProvider::HOME);
+        }
+        else{
+            Auth::login($user, true);
+            return redirect(RouteServiceProvider::HOME);
         }
 
-        Auth::login($user, true);
 
-//        return Redirect::to(Session::get('url'));
-        return redirect(RouteServiceProvider::HOME);
+
+
 
     }
 

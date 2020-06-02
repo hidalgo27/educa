@@ -59,6 +59,14 @@
                     class="hidden-sm-and-down font-weight-medium text-capitalize"
 
                     text
+                >
+                    Docentes
+                </v-btn>
+                <v-btn
+
+                    class="hidden-sm-and-down font-weight-medium text-capitalize"
+
+                    text
 
                 >
                     Universidades
@@ -89,6 +97,7 @@
                     <v-btn
                         color="lime accent-4"
                         class="mr-4 grey--text text--darken-3"
+                        href="/register"
                     >
                         <span class="text-capitalize">Prueba gratis</span>
                     </v-btn>

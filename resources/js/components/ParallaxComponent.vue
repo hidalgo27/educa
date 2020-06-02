@@ -2,7 +2,7 @@
     <div class="parallax-box-h position-relative">
         <v-parallax
             dark
-            src="https://fondosmil.com/fondo/27527.jpg"
+            src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/pizarra.jpg"
             height="650"
         >
             <v-row
@@ -11,9 +11,9 @@
             >
                 <v-col class="text-center" md="8">
                     <h1 class="display-2 font-weight-medium mb-4">La academia online de educación para tu ingreso a la universidad</h1>
-                    <p class="title grey--text text--lighten-1 my-10">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus assumenda corporis cumque, iusto odit quasi qui rem repellendus! Animi asperiores atque ducimus, eligendi enim fugiat non optio sed ut voluptas?</p>
-                    <v-btn color="lime accent-4" class="mb-5 font-weight-bold mr-5 grey--text text--darken-3" large dark>Comienza Ahora</v-btn>
-                    <v-btn color="lime accent-4" class="mb-5 font-weight-bold" large outlined dark>Toma tu primera clase</v-btn>
+                    <p class="title grey--text text--lighten-1 my-10">¡Aprovecha nuetros descuentos y arma tu plan a la medida!</p>
+                    <v-btn color="lime accent-4" class="mb-5 font-weight-bold mr-5 grey--text text--darken-3" large dark href="/register">Comienza Ahora</v-btn>
+                    <v-btn color="lime accent-4" class="mb-5 font-weight-bold" large outlined dark href="/register">Toma tu primera clase</v-btn>
 <!--                    <h4 class="subheading">Build your application today!</h4>-->
                 </v-col>
             </v-row>
