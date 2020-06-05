@@ -228,6 +228,7 @@
         data: () => ({
 
             drawer: false,
+            menu: false,
             alignments: [
                 'start',
                 'center',

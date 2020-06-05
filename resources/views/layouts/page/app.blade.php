@@ -18,7 +18,6 @@
         @endguest
 
 
-
         @yield('content')
 
         <v-footer

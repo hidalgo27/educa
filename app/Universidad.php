@@ -7,6 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Universidad extends Model
 {
     protected $table = "universidades";
+
+    protected $fillable = [
+        'nombre',
+    ];
+
     //
     public function puntajes(){
         //relacion de uno a muchos

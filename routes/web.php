@@ -22,11 +22,11 @@ Route::get('/', [
     'uses' => 'Page\HomepageController@index',
     'as' => 'home_path',
 ]);
-Route::get('/cursos', [
+Route::get('/asignaturas/{universidad}/{modalidad}/{grupo}', [
     'uses' => 'Page\HomepageController@cursos',
     'as' => 'cursos_path',
 ]);
-Route::get('/curso/algebra', [
+Route::get('/asignaturas/{universidad}/{modalidad}/{grupo}/{curso}', [
     'uses' => 'Page\HomepageController@clases',
     'as' => 'clases_path',
 ]);
@@ -84,6 +84,24 @@ Route::get('/clases-vivo/temario', [
 Route::get('/clases-vivo/temario/curso', [
     'uses' => 'Student\HomepageController@temario_curso',
     'as' => 'temario_curso_student_path',
+]);
+
+
+Route::get('getUniversidades', [
+    'uses' => 'Student\HomepageController@getUniversidades',
+    'as' => 'getUniversidades_path',
+]);
+Route::get('getModalidad/{id}', [
+    'uses' => 'Student\HomepageController@getModalidad',
+    'as' => 'getModalidad_path',
+]);
+Route::get('getGrupo/{id}', [
+    'uses' => 'Student\HomepageController@getGrupo',
+    'as' => 'getGrupo_path',
+]);
+Route::get('getCarreras/{id}', [
+    'uses' => 'Student\HomepageController@getCarreras',
+    'as' => 'getCarreras_path',
 ]);
 
 

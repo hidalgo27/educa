@@ -124,32 +124,56 @@
                         <p>El grupo educativo Green le da la bienvenida y agradece su preferencia.</p>
                         <p>Escoja su objetivo y justos los lograremos.</p>
 
+                        <form @submit.prevent="agregar">
                         <v-row>
                             <v-col class="d-flex" cols="12" sm="4">
                                 <v-select
-                                    :items="items"
+                                    v-model="universidades"
+                                    :items="universidad"
                                     label="Universidad"
+                                    item-text="text"
+                                    item-value="id"
                                     outlined
+                                    @input="getModalidad"
                                 ></v-select>
                             </v-col>
                             <v-col class="d-flex" cols="12" sm="3">
                                 <v-select
-                                    :items="items"
+                                    v-model="modalidades"
+                                    :items="modalidad"
                                     label="Modalidad"
+                                    item-text="text"
+                                    item-value="id"
                                     outlined
+                                    @input="getGrupo"
                                 ></v-select>
                             </v-col>
                             <v-col class="d-flex" cols="12" sm="3">
                                 <v-select
-                                    :items="items"
+                                    v-model="grupos"
+                                    :items="grupo"
+                                    item-text="text"
+                                    item-value="id"
                                     label="Grupo"
+                                    outlined
+                                    @input="getCarreras"
+                                ></v-select>
+                            </v-col>
+                            <v-col class="d-flex" cols="12" sm="3">
+                                <v-select
+                                    v-model="carreras"
+                                    :items="carrera"
+                                    item-text="text"
+                                    item-value="id"
+                                    label="Carrera Profesional"
                                     outlined
                                 ></v-select>
                             </v-col>
                             <v-col cols="12" sm="2">
-                                <v-btn x-large color="green accent-4" class="w-100" dark>Guardar</v-btn>
+                                <v-btn x-large color="green accent-4" class="w-100" dark type="submit">Guardar</v-btn>
                             </v-col>
                         </v-row>
+                        </form>
                     </v-alert>
 
 
@@ -242,9 +266,50 @@
 </template>
 
 <script>
+
     export default {
         props: ['auth'],
-        name: "HomeComponent"
+        data: () => ({
+            universidades: [],
+            modalidades: [],
+            grupos: [],
+            carreras: [],
+
+            universidad: [],
+            modalidad: [],
+            grupo: [],
+            carrera: [],
+        }),
+        created() {
+            axios.get('/getUniversidades').then(res=>{
+                this.universidad = res.data;
+                // console.log(this.universidades);
+            })
+        },
+        methods: {
+            getModalidad() {
+                axios.get('/getModalidad/'+this.universidades).then(res=>{
+                    this.modalidad = res.data;
+                    console.log(this.universidades);
+                })
+            },
+
+            getGrupo() {
+                // console.log(this.modalidades);
+                axios.get('/getGrupo/'+this.universidades).then(res=>{
+                    this.grupo = res.data;
+                    // console.log(this.grupo);
+                })
+            },
+
+            getCarreras() {
+                console.log(this.grupos);
+                axios.get('/getCarreras/'+this.grupos).then(res=>{
+                    this.carrera = res.data;
+                    // console.log(this.grupo);
+                })
+            }
+        }
     }
 </script>
 

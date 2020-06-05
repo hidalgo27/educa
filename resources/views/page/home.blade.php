@@ -122,7 +122,7 @@
                                                                                     {{--                                                                                                                                $14.99--}}
                                                                                 </div>
                                                                             </v-expand-x-transition>
-                                                                            <a href="{{route('cursos_path')}}">
+                                                                            <a href="{{route('cursos_path', [$universidades->id, $modalidad->id, $modalidad_grupos->grupo->id])}}">
                                                                                 <div class="position-relative hover-box">
                                                                                     <div class="row no-gutters align-center">
                                                                                         <div class="col-3 {{$modalidad_grupos->grupo->color}} hover-box-content-left pa-4 border-left">

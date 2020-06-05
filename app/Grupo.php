@@ -8,6 +8,10 @@ class Grupo extends Model
 {
     protected $table = "grupos";
 
+    protected $fillable = [
+        'descripcion', 'universidad_id',
+    ];
+
     public function universidad()
     {
         //relacion de muchos a muchos

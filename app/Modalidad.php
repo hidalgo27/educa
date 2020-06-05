@@ -8,6 +8,10 @@ class Modalidad extends Model
 {
     protected $table = "modalidades";
 
+    protected $fillable = [
+        'titulo', 'universidad_id',
+    ];
+
     public function universidad()
     {
         //relacion de uno a muchos

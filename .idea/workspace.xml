@@ -2,25 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ee3ff8d-4bdd-4b9f-906b-594a93674ce5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/js/components/page/InscripcionComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/js/components/student/HomeComponent.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/page/inscripcion.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/educa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/educa.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Asignatura.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Asignatura.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Carrera.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Carrera.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Grupo.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Grupo.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Page/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Page/HomepageController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Role.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Role.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/andina.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/unsaac.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Student/HomepageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Student/HomepageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Modalidad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Modalidad.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Universidad.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Universidad.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/page/ClasesComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/page/ClasesComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/student/ProfileComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/student/ProfileComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/student/HomeComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/student/HomeComponent.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/page/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/page/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/clases.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/clases.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/cursos.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/cursos.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/page/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/student/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/student/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -154,12 +153,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -175,7 +176,14 @@
       <workItem from="1590687761895" duration="5003000" />
       <workItem from="1590703159177" duration="9239000" />
       <workItem from="1590848913808" duration="16034000" />
-      <workItem from="1591045994653" duration="8444000" />
+      <workItem from="1591045994653" duration="9268000" />
+      <workItem from="1591114282972" duration="23426000" />
+      <workItem from="1591376239104" duration="65000" />
+      <workItem from="1591376325378" duration="1673000" />
+      <workItem from="1591381885870" duration="407000" />
+      <workItem from="1591382375565" duration="124000" />
+      <workItem from="1591382518058" duration="470000" />
+      <workItem from="1591383013879" duration="1060000" />
     </task>
     <servers />
   </component>
@@ -183,17 +191,29 @@
     <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="320" y="109" key="#Plugins" timestamp="1590687978333">
+    <state x="320" y="109" key="#Plugins" timestamp="1591382421669">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
-    <state x="320" y="109" key="#Plugins/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1590687978333" />
+    <state x="320" y="109" key="#Plugins/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1591382421669" />
+    <state x="297" y="23" key="CommitChangelistDialog2" timestamp="1591198664449">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="297" y="23" key="CommitChangelistDialog2/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1591198664449" />
     <state x="539" y="388" key="NewPhpFileDialog" timestamp="1590771027824">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="539" y="388" key="NewPhpFileDialog/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1590771027824" />
+    <state x="-1167" y="48" key="SettingsEditor" timestamp="1591383316166">
+      <screen x="-1600" y="23" width="1600" height="877" />
+    </state>
+    <state x="-1167" y="48" key="SettingsEditor/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1591383316166" />
     <state x="385" y="211" key="run.anything.popup" timestamp="1590693146140">
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="385" y="211" key="run.anything.popup/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1590693146140" />
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup" timestamp="1591368337113">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" width="670" height="676" key="search.everywhere.popup/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1591368337113" />
   </component>
 </project>
