@@ -209,7 +209,7 @@
                                 <v-row>
                                     @foreach($modalidad->modalidad_grupos as $modalidad_grupos)
 
-                                        <v-col>
+                                        <v-col md="6">
                                             <v-card>
                                                 <v-alert
                                                     dense
