@@ -4284,10 +4284,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['auth'],
   data: function data() {
     return {
+      show_1: [],
       universidades: [],
       modalidades: [],
       grupos: [],
@@ -4295,14 +4309,21 @@ __webpack_require__.r(__webpack_exports__);
       universidad: [],
       modalidad: [],
       grupo: [],
-      carrera: []
+      carrera: [],
+      cursos: []
     };
   },
   created: function created() {
     var _this = this;
 
     axios.get('/getUniversidades').then(function (res) {
-      _this.universidad = res.data; // console.log(this.universidades);
+      _this.universidad = res.data;
+    });
+    axios.get('/getmatricula').then(function (res) {
+      _this.show_1 = res.data;
+    });
+    axios.get('/getCursos').then(function (res) {
+      _this.cursos = res.data;
     });
   },
   methods: {
@@ -4328,6 +4349,27 @@ __webpack_require__.r(__webpack_exports__);
       console.log(this.grupos);
       axios.get('/getCarreras/' + this.grupos).then(function (res) {
         _this4.carrera = res.data; // console.log(this.grupo);
+      });
+    },
+    agregar: function agregar() {
+      var _this5 = this;
+
+      var obj = {
+        universidadSelected: this.universidades,
+        modalidadSelected: this.modalidades,
+        grupoSelected: this.grupos,
+        carreraSelected: this.carreras,
+        idAlumno: this.auth
+      };
+      var self = this; // const notaNueva = this.nota;
+      // console.log(obj);
+      // this.nota = {nombre: '', descripcion: ''};
+
+      axios.post('/students/matricular', obj).then(function (res) {
+        var notaServidor = res.data; // this.show_1.push(notaServidor);
+
+        _this5.show_1 = notaServidor;
+        _this5.cursos = notaServidor; // console.log(notaServidor);
       });
     }
   }
@@ -29059,497 +29101,327 @@ var render = function() {
           _c(
             "v-col",
             [
-              _c(
-                "v-alert",
-                {
-                  staticClass: "mb-6",
-                  attrs: {
-                    icon: "mdi-alert",
-                    prominent: "",
-                    text: "",
-                    type: "info"
-                  }
-                },
-                [
-                  _c(
-                    "v-row",
-                    { attrs: { align: "center" } },
-                    [
-                      _c("v-col", { staticClass: "grow" }, [
-                        _vm._v(
-                          "Inicie su camino de ingreso a la Univerdidad. "
-                        ),
-                        _c("strong", [_vm._v("s/.99 soles por mes")]),
-                        _vm._v(" o s./250 soles por los 3 meses.")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "v-col",
-                        { staticClass: "shrink" },
-                        [
-                          _c(
-                            "v-btn",
-                            { attrs: { color: "primary", dark: "" } },
-                            [_vm._v("Comenzar ahora")]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {},
-                [
-                  _c(
-                    "v-alert",
-                    {
-                      staticClass: "pt-8",
-                      attrs: {
-                        text: "",
-                        dense: "",
-                        color: "teal",
-                        border: "left"
-                      }
-                    },
-                    [
-                      _c(
-                        "h3",
-                        { staticClass: "headline mb-3 font-weight-bold" },
-                        [_vm._v("Bienvenido a nuestra gran familia")]
-                      ),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v(
-                          "El grupo educativo Green le da la bienvenida y agradece su preferencia."
+              _vm._l(_vm.show_1, function(mostrar) {
+                return [
+                  mostrar.view_a === "true"
+                    ? [
+                        _c(
+                          "v-alert",
+                          {
+                            staticClass: "mb-6",
+                            attrs: {
+                              icon: "mdi-alert",
+                              prominent: "",
+                              text: "",
+                              type: "info"
+                            }
+                          },
+                          [
+                            _c(
+                              "v-row",
+                              { attrs: { align: "center" } },
+                              [
+                                _c("v-col", { staticClass: "grow" }, [
+                                  _vm._v(
+                                    "Inicie su camino de ingreso a la Univerdidad. "
+                                  ),
+                                  _c("strong", [_vm._v("s/.99 soles por mes")]),
+                                  _vm._v(" o s./250 soles por los 3 meses.")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "v-col",
+                                  { staticClass: "shrink" },
+                                  [
+                                    _c(
+                                      "v-btn",
+                                      { attrs: { color: "primary", dark: "" } },
+                                      [_vm._v("Comenzar ahora")]
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ],
+                          1
                         )
-                      ]),
-                      _vm._v(" "),
-                      _c("p", [
-                        _vm._v("Escoja su objetivo y justos los lograremos.")
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "v-row",
-                        [
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "d-flex",
-                              attrs: { cols: "12", sm: "4" }
-                            },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  items: _vm.universidad,
-                                  label: "Universidad",
-                                  "item-text": "text",
-                                  "item-value": "id",
-                                  outlined: ""
-                                },
-                                on: { input: _vm.getModalidad },
-                                model: {
-                                  value: _vm.universidades,
-                                  callback: function($$v) {
-                                    _vm.universidades = $$v
-                                  },
-                                  expression: "universidades"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "d-flex",
-                              attrs: { cols: "12", sm: "3" }
-                            },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  items: _vm.modalidad,
-                                  label: "Modalidad",
-                                  "item-text": "text",
-                                  "item-value": "id",
-                                  outlined: ""
-                                },
-                                on: { input: _vm.getGrupo },
-                                model: {
-                                  value: _vm.modalidades,
-                                  callback: function($$v) {
-                                    _vm.modalidades = $$v
-                                  },
-                                  expression: "modalidades"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "d-flex",
-                              attrs: { cols: "12", sm: "3" }
-                            },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  items: _vm.grupo,
-                                  "item-text": "text",
-                                  "item-value": "id",
-                                  label: "Grupo",
-                                  outlined: ""
-                                },
-                                on: { input: _vm.getCarreras },
-                                model: {
-                                  value: _vm.grupos,
-                                  callback: function($$v) {
-                                    _vm.grupos = $$v
-                                  },
-                                  expression: "grupos"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "d-flex",
-                              attrs: { cols: "12", sm: "3" }
-                            },
-                            [
-                              _c("v-select", {
-                                attrs: {
-                                  items: _vm.carrera,
-                                  "item-text": "text",
-                                  "item-value": "id",
-                                  label: "Carrera Profesional",
-                                  outlined: ""
-                                },
-                                model: {
-                                  value: _vm.carreras,
-                                  callback: function($$v) {
-                                    _vm.carreras = $$v
-                                  },
-                                  expression: "carreras"
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "12", sm: "2" } },
-                            [
-                              _c(
-                                "v-btn",
-                                {
-                                  staticClass: "w-100",
-                                  attrs: {
-                                    "x-large": "",
-                                    color: "green accent-4",
-                                    dark: ""
-                                  }
-                                },
-                                [_vm._v("Guardar")]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              ),
+                      ]
+                    : _vm._e()
+                ]
+              }),
               _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "d-none" },
-                [
-                  _c("h3", { staticClass: "headline mb-3 font-weight-bold" }, [
-                    _vm._v("Tus cursos")
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "v-card",
-                    { staticClass: " mb-3", attrs: { tile: "", flat: "" } },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "", align: "center" } },
-                        [
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "position-relative",
-                              attrs: { md: "2" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src: "",
-                                  "aspect-ratio": "2",
-                                  contain: ""
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { staticClass: "px-3" },
-                            [
-                              _c(
-                                "h3",
-                                { staticClass: "small font-weight-bold mb-2" },
-                                [_vm._v("Algebra")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-progress-linear",
-                                {
-                                  attrs: {
-                                    value: "90",
-                                    height: "20",
-                                    color: "green accent-4",
-                                    dark: ""
-                                  }
-                                },
-                                [
-                                  _c("span", { staticClass: "caption" }, [
-                                    _vm._v("90%")
-                                  ])
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticClass:
-                                    "mt-2 font-weight-medium text--secondary caption"
-                                },
-                                [_vm._v("15/16Materiales")]
+              _vm._l(_vm.show_1, function(mostrar) {
+                return [
+                  mostrar.form === "true"
+                    ? [
+                        _c(
+                          "v-alert",
+                          {
+                            staticClass: "pt-8",
+                            attrs: {
+                              text: "",
+                              dense: "",
+                              color: "teal",
+                              border: "left"
+                            }
+                          },
+                          [
+                            _c(
+                              "h3",
+                              { staticClass: "headline mb-3 font-weight-bold" },
+                              [_vm._v("Bienvenido a nuestra gran familia")]
+                            ),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "El grupo educativo Green le da la bienvenida y agradece su preferencia."
                               )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { attrs: { md: "4" } },
-                            [
-                              _c(
-                                "v-btn",
-                                {
-                                  staticClass: "w-100 text-capitalize",
-                                  attrs: { color: "green accent-4", dark: "" }
-                                },
-                                [_vm._v("Continuar viendo curso")]
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                              _vm._v(
+                                "Escoja su objetivo y justos los lograremos."
                               )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-card",
-                    { staticClass: " mb-3", attrs: { tile: "", flat: "" } },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "", align: "center" } },
-                        [
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "position-relative",
-                              attrs: { md: "2" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src: "",
-                                  "aspect-ratio": "2",
-                                  contain: ""
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { staticClass: "px-3" },
-                            [
-                              _c(
-                                "h3",
-                                { staticClass: "small font-weight-bold mb-2" },
-                                [_vm._v("Fisica")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-progress-linear",
-                                {
-                                  attrs: {
-                                    value: "50",
-                                    height: "20",
-                                    color: "amber",
-                                    dark: ""
-                                  }
-                                },
-                                [
-                                  _c("span", { staticClass: "caption" }, [
-                                    _vm._v("50%")
-                                  ])
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticClass:
-                                    "mt-2 font-weight-medium text--secondary caption"
-                                },
-                                [_vm._v("15/16Materiales")]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { attrs: { md: "4" } },
-                            [
-                              _c(
-                                "v-btn",
-                                {
-                                  staticClass: "w-100 text-capitalize",
-                                  attrs: { color: "green accent-4", dark: "" }
-                                },
-                                [_vm._v("Continuar viendo curso")]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-card",
-                    { staticClass: " mb-3", attrs: { tile: "", flat: "" } },
-                    [
-                      _c(
-                        "v-row",
-                        { attrs: { "no-gutters": "", align: "center" } },
-                        [
-                          _c(
-                            "v-col",
-                            {
-                              staticClass: "position-relative",
-                              attrs: { md: "2" }
-                            },
-                            [
-                              _c("v-img", {
-                                attrs: {
-                                  src: "",
-                                  "aspect-ratio": "2",
-                                  contain: ""
-                                }
-                              })
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { staticClass: "px-3" },
-                            [
-                              _c(
-                                "h3",
-                                { staticClass: "small font-weight-bold mb-2" },
-                                [_vm._v("Geometria")]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-progress-linear",
-                                {
-                                  attrs: {
-                                    value: "15",
-                                    height: "20",
-                                    color: "red",
-                                    dark: ""
-                                  }
-                                },
-                                [
-                                  _c("span", { staticClass: "caption" }, [
-                                    _vm._v("15%")
-                                  ])
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticClass:
-                                    "mt-2 font-weight-medium text--secondary caption"
-                                },
-                                [_vm._v("15/16Materiales")]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { attrs: { md: "4" } },
-                            [
-                              _c(
-                                "v-btn",
-                                {
-                                  staticClass: "w-100 text-capitalize",
-                                  attrs: { color: "green accent-4", dark: "" }
-                                },
-                                [_vm._v("Continuar viendo curso")]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "form",
+                              [
+                                _c(
+                                  "v-row",
+                                  [
+                                    _c(
+                                      "v-col",
+                                      {
+                                        staticClass: "d-flex",
+                                        attrs: { cols: "12", sm: "4" }
+                                      },
+                                      [
+                                        _c("v-select", {
+                                          attrs: {
+                                            items: _vm.universidad,
+                                            label: "Universidad",
+                                            "item-text": "text",
+                                            "item-value": "id",
+                                            outlined: ""
+                                          },
+                                          on: { input: _vm.getModalidad },
+                                          model: {
+                                            value: _vm.universidades,
+                                            callback: function($$v) {
+                                              _vm.universidades = $$v
+                                            },
+                                            expression: "universidades"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-col",
+                                      {
+                                        staticClass: "d-flex",
+                                        attrs: { cols: "12", sm: "3" }
+                                      },
+                                      [
+                                        _c("v-select", {
+                                          attrs: {
+                                            items: _vm.modalidad,
+                                            label: "Modalidad",
+                                            "item-text": "text",
+                                            "item-value": "id",
+                                            outlined: ""
+                                          },
+                                          on: { input: _vm.getGrupo },
+                                          model: {
+                                            value: _vm.modalidades,
+                                            callback: function($$v) {
+                                              _vm.modalidades = $$v
+                                            },
+                                            expression: "modalidades"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-col",
+                                      {
+                                        staticClass: "d-flex",
+                                        attrs: { cols: "12", sm: "3" }
+                                      },
+                                      [
+                                        _c("v-select", {
+                                          attrs: {
+                                            items: _vm.grupo,
+                                            "item-text": "text",
+                                            "item-value": "id",
+                                            label: "Grupo",
+                                            outlined: ""
+                                          },
+                                          on: { input: _vm.getCarreras },
+                                          model: {
+                                            value: _vm.grupos,
+                                            callback: function($$v) {
+                                              _vm.grupos = $$v
+                                            },
+                                            expression: "grupos"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-col",
+                                      {
+                                        staticClass: "d-flex",
+                                        attrs: { cols: "12", sm: "3" }
+                                      },
+                                      [
+                                        _c("v-select", {
+                                          attrs: {
+                                            items: _vm.carrera,
+                                            "item-text": "text",
+                                            "item-value": "id",
+                                            label: "Carrera Profesional",
+                                            outlined: ""
+                                          },
+                                          model: {
+                                            value: _vm.carreras,
+                                            callback: function($$v) {
+                                              _vm.carreras = $$v
+                                            },
+                                            expression: "carreras"
+                                          }
+                                        })
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "v-col",
+                                      { attrs: { cols: "12", sm: "2" } },
+                                      [
+                                        _c(
+                                          "v-btn",
+                                          {
+                                            staticClass: "w-100",
+                                            attrs: {
+                                              "x-large": "",
+                                              color: "green accent-4",
+                                              dark: ""
+                                            },
+                                            on: { click: _vm.agregar }
+                                          },
+                                          [_vm._v("Guardar")]
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ],
+                              1
+                            )
+                          ]
+                        )
+                      ]
+                    : [
+                        _c(
+                          "h3",
+                          { staticClass: "headline mb-3 font-weight-bold" },
+                          [_vm._v("Tus cursos")]
+                        ),
+                        _vm._v(" "),
+                        _vm._l(_vm.cursos, function(curso) {
+                          return [
+                            _vm._l(curso.asignatura, function(cursoss) {
+                              return [
+                                _c(
+                                  "v-card",
+                                  {
+                                    staticClass: " mb-3",
+                                    attrs: { tile: "", flat: "" }
+                                  },
+                                  [
+                                    _c(
+                                      "v-row",
+                                      {
+                                        attrs: {
+                                          "no-gutters": "",
+                                          align: "center"
+                                        }
+                                      },
+                                      [
+                                        _c(
+                                          "v-col",
+                                          {
+                                            staticClass: "position-relative",
+                                            attrs: { md: "2" }
+                                          },
+                                          [
+                                            _c("v-img", {
+                                              attrs: {
+                                                src: cursoss.logo,
+                                                "aspect-ratio": "2",
+                                                contain: ""
+                                              }
+                                            })
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c("v-col", { staticClass: "px-3" }, [
+                                          _c(
+                                            "h3",
+                                            {
+                                              staticClass:
+                                                "small font-weight-bold mb-2"
+                                            },
+                                            [_vm._v(_vm._s(cursoss.nombre))]
+                                          )
+                                        ]),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-col",
+                                          { attrs: { md: "4" } },
+                                          [
+                                            _c(
+                                              "v-btn",
+                                              {
+                                                staticClass:
+                                                  "w-100 text-capitalize",
+                                                attrs: {
+                                                  color: "green accent-4",
+                                                  dark: ""
+                                                }
+                                              },
+                                              [_vm._v("Continuar viendo curso")]
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    )
+                                  ],
+                                  1
+                                )
+                              ]
+                            })
+                          ]
+                        })
+                      ]
+                ]
+              })
             ],
-            1
+            2
           )
         ],
         1

@@ -222,7 +222,7 @@
                                             <v-row>
                                                 @foreach($cursos->where('modalidad_grupo_id', $modalidad_grupos->id) as $curso)
                                                     <v-col md="6">
-                                                    <v-list-item href="#">
+                                                    <v-list-item href="{{route('clases_path', [$universidades->id,$curso->modalidad_grupo_id,$modalidad_grupos->grupo->id,$curso->id])}}">
                                                         <v-list-item-avatar>
                                                             <v-img src="{{$curso->logo}}"></v-img>
                                                         </v-list-item-avatar>

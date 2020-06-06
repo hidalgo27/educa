@@ -97,22 +97,29 @@
             </v-col>
             <v-col>
 
-                <v-alert
-                    icon="mdi-alert"
-                    prominent
-                    text
-                    type="info"
-                    class="mb-6"
-                >
-                    <v-row align="center">
-                        <v-col class="grow">Inicie su camino de ingreso a la Univerdidad. <strong>s/.99 soles por mes</strong> o s./250 soles por los 3 meses.</v-col>
-                        <v-col class="shrink">
-                            <v-btn color="primary" dark>Comenzar ahora</v-btn>
-                        </v-col>
-                    </v-row>
-                </v-alert>
+                <template v-for="mostrar in show_1">
+                    <template v-if="mostrar.view_a === 'true'">
+                    <v-alert
+                        icon="mdi-alert"
+                        prominent
+                        text
+                        type="info"
+                        class="mb-6"
+                    >
+                        <v-row align="center">
+                            <v-col class="grow">Inicie su camino de ingreso a la Univerdidad. <strong>s/.99 soles por mes</strong> o s./250 soles por los 3 meses.</v-col>
+                            <v-col class="shrink">
+                                <v-btn color="primary" dark>Comenzar ahora</v-btn>
+                            </v-col>
+                        </v-row>
+                    </v-alert>
+                    </template>
+                </template>
 
-                <div class="">
+                <template v-for="mostrar in show_1">
+
+                    <template v-if="mostrar.form === 'true'">
+
                     <v-alert
                         text
                         dense
@@ -124,7 +131,7 @@
                         <p>El grupo educativo Green le da la bienvenida y agradece su preferencia.</p>
                         <p>Escoja su objetivo y justos los lograremos.</p>
 
-                        <form @submit.prevent="agregar">
+                        <form>
                         <v-row>
                             <v-col class="d-flex" cols="12" sm="4">
                                 <v-select
@@ -170,95 +177,99 @@
                                 ></v-select>
                             </v-col>
                             <v-col cols="12" sm="2">
-                                <v-btn x-large color="green accent-4" class="w-100" dark type="submit">Guardar</v-btn>
+                                <v-btn x-large color="green accent-4" class="w-100" dark  @click="agregar">Guardar</v-btn>
                             </v-col>
                         </v-row>
                         </form>
                     </v-alert>
 
 
-                </div>
+                    </template>
+                    <template v-else>
+                        <h3 class="headline mb-3 font-weight-bold">Tus cursos</h3>
+                        <!--                <p class="">Sus</p>-->
 
-                <div class="d-none">
-                <h3 class="headline mb-3 font-weight-bold">Tus cursos</h3>
-<!--                <p class="">Sus</p>-->
+                        <template v-for="curso in cursos">
+                            <template v-for="cursoss in curso.asignatura">
+                        <v-card tile flat class=" mb-3">
 
-                <v-card tile flat class=" mb-3">
+                            <v-row no-gutters align="center">
+                                <v-col md="2" class="position-relative">
+                                    <v-img :src="cursoss.logo" aspect-ratio="2" contain></v-img>
+                                </v-col>
+                                <v-col class="px-3">
+                                    <h3 class="small font-weight-bold mb-2">{{cursoss.nombre}}</h3>
+<!--                                    <v-progress-linear-->
+<!--                                        value="90"-->
+<!--                                        height="20"-->
+<!--                                        color="green accent-4"-->
+<!--                                        dark-->
+<!--                                    >-->
+<!--                                        <span class="caption">90%</span>-->
+<!--                                    </v-progress-linear>-->
+<!--                                    <p class="mt-2 font-weight-medium text&#45;&#45;secondary caption">15/16Materiales</p>-->
+                                </v-col>
+                                <v-col md="4">
+                                    <v-btn class="w-100 text-capitalize" color="green accent-4" dark>Continuar viendo curso</v-btn>
+                                </v-col>
+                            </v-row>
 
-                    <v-row no-gutters align="center">
-                        <v-col md="2" class="position-relative">
-                            <v-img src="" aspect-ratio="2" contain></v-img>
-                        </v-col>
-                        <v-col class="px-3">
-                            <h3 class="small font-weight-bold mb-2">Algebra</h3>
-                            <v-progress-linear
-                                value="90"
-                                height="20"
-                                color="green accent-4"
-                                dark
-                            >
-                                <span class="caption">90%</span>
-                            </v-progress-linear>
-                            <p class="mt-2 font-weight-medium text--secondary caption">15/16Materiales</p>
-                        </v-col>
-                        <v-col md="4">
-                            <v-btn class="w-100 text-capitalize" color="green accent-4" dark>Continuar viendo curso</v-btn>
-                        </v-col>
-                    </v-row>
+                        </v-card>
+                            </template>
+                        </template>
 
-                </v-card>
+<!--                        <v-card tile flat class=" mb-3">-->
 
-                <v-card tile flat class=" mb-3">
+<!--                            <v-row no-gutters align="center">-->
+<!--                                <v-col md="2" class="position-relative">-->
+<!--                                    <v-img src="" aspect-ratio="2" contain></v-img>-->
+<!--                                </v-col>-->
+<!--                                <v-col class="px-3">-->
+<!--                                    <h3 class="small font-weight-bold mb-2">Fisica</h3>-->
+<!--                                    <v-progress-linear-->
+<!--                                        value="50"-->
+<!--                                        height="20"-->
+<!--                                        color="amber"-->
+<!--                                        dark-->
+<!--                                    >-->
+<!--                                        <span class="caption">50%</span>-->
+<!--                                    </v-progress-linear>-->
+<!--                                    <p class="mt-2 font-weight-medium text&#45;&#45;secondary caption">15/16Materiales</p>-->
+<!--                                </v-col>-->
+<!--                                <v-col md="4">-->
+<!--                                    <v-btn class="w-100 text-capitalize" color="green accent-4" dark>Continuar viendo curso</v-btn>-->
+<!--                                </v-col>-->
+<!--                            </v-row>-->
 
-                    <v-row no-gutters align="center">
-                        <v-col md="2" class="position-relative">
-                            <v-img src="" aspect-ratio="2" contain></v-img>
-                        </v-col>
-                        <v-col class="px-3">
-                            <h3 class="small font-weight-bold mb-2">Fisica</h3>
-                            <v-progress-linear
-                                value="50"
-                                height="20"
-                                color="amber"
-                                dark
-                            >
-                                <span class="caption">50%</span>
-                            </v-progress-linear>
-                            <p class="mt-2 font-weight-medium text--secondary caption">15/16Materiales</p>
-                        </v-col>
-                        <v-col md="4">
-                            <v-btn class="w-100 text-capitalize" color="green accent-4" dark>Continuar viendo curso</v-btn>
-                        </v-col>
-                    </v-row>
+<!--                        </v-card>-->
 
-                </v-card>
+<!--                        <v-card tile flat class=" mb-3">-->
 
-                <v-card tile flat class=" mb-3">
+<!--                            <v-row no-gutters align="center">-->
+<!--                                <v-col md="2" class="position-relative">-->
+<!--                                    <v-img src="" aspect-ratio="2" contain></v-img>-->
+<!--                                </v-col>-->
+<!--                                <v-col class="px-3">-->
+<!--                                    <h3 class="small font-weight-bold mb-2">Geometria</h3>-->
+<!--                                    <v-progress-linear-->
+<!--                                        value="15"-->
+<!--                                        height="20"-->
+<!--                                        color="red"-->
+<!--                                        dark-->
+<!--                                    >-->
+<!--                                        <span class="caption">15%</span>-->
+<!--                                    </v-progress-linear>-->
+<!--                                    <p class="mt-2 font-weight-medium text&#45;&#45;secondary caption">15/16Materiales</p>-->
+<!--                                </v-col>-->
+<!--                                <v-col md="4">-->
+<!--                                    <v-btn class="w-100 text-capitalize" color="green accent-4" dark>Continuar viendo curso</v-btn>-->
+<!--                                </v-col>-->
+<!--                            </v-row>-->
 
-                    <v-row no-gutters align="center">
-                        <v-col md="2" class="position-relative">
-                            <v-img src="" aspect-ratio="2" contain></v-img>
-                        </v-col>
-                        <v-col class="px-3">
-                            <h3 class="small font-weight-bold mb-2">Geometria</h3>
-                            <v-progress-linear
-                                value="15"
-                                height="20"
-                                color="red"
-                                dark
-                            >
-                                <span class="caption">15%</span>
-                            </v-progress-linear>
-                            <p class="mt-2 font-weight-medium text--secondary caption">15/16Materiales</p>
-                        </v-col>
-                        <v-col md="4">
-                            <v-btn class="w-100 text-capitalize" color="green accent-4" dark>Continuar viendo curso</v-btn>
-                        </v-col>
-                    </v-row>
+<!--                        </v-card>-->
+                    </template>
+                </template>
 
-                </v-card>
-
-                </div>
             </v-col>
         </v-row>
 
@@ -270,6 +281,7 @@
     export default {
         props: ['auth'],
         data: () => ({
+            show_1: [],
             universidades: [],
             modalidades: [],
             grupos: [],
@@ -279,12 +291,22 @@
             modalidad: [],
             grupo: [],
             carrera: [],
+
+            cursos: [],
         }),
         created() {
             axios.get('/getUniversidades').then(res=>{
                 this.universidad = res.data;
-                // console.log(this.universidades);
-            })
+            });
+
+            axios.get('/getmatricula').then(res=>{
+                this.show_1 = res.data;
+            });
+
+            axios.get('/getCursos').then(res=>{
+                this.cursos = res.data;
+            });
+
         },
         methods: {
             getModalidad() {
@@ -308,7 +330,31 @@
                     this.carrera = res.data;
                     // console.log(this.grupo);
                 })
-            }
+            },
+
+            agregar(){
+
+                let obj = {
+                    universidadSelected: this.universidades,
+                    modalidadSelected: this.modalidades,
+                    grupoSelected: this.grupos,
+                    carreraSelected: this.carreras,
+                    idAlumno: this.auth,
+                };
+                const self = this;
+                // const notaNueva = this.nota;
+                // console.log(obj);
+                // this.nota = {nombre: '', descripcion: ''};
+                axios.post('/students/matricular', obj)
+                    .then((res) =>{
+                        const notaServidor = res.data;
+                        // this.show_1.push(notaServidor);
+                        this.show_1 = notaServidor;
+                        this.cursos = notaServidor;
+                        // console.log(notaServidor);
+                    })
+            },
+
         }
     }
 </script>

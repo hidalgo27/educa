@@ -87,6 +87,16 @@ Route::get('/clases-vivo/temario/curso', [
 ]);
 
 
+Route::get('getmatricula', [
+    'uses' => 'Student\HomepageController@getmatricula',
+    'as' => 'getmatricula_path',
+]);
+
+Route::get('getCursos', [
+    'uses' => 'Student\HomepageController@getCursos',
+    'as' => 'getCursos_path',
+]);
+
 Route::get('getUniversidades', [
     'uses' => 'Student\HomepageController@getUniversidades',
     'as' => 'getUniversidades_path',
@@ -102,6 +112,11 @@ Route::get('getGrupo/{id}', [
 Route::get('getCarreras/{id}', [
     'uses' => 'Student\HomepageController@getCarreras',
     'as' => 'getCarreras_path',
+]);
+
+Route::post('students/matricular', [
+    'uses' => 'Student\HomepageController@matricular',
+    'as' => 'matricular_path',
 ]);
 
 

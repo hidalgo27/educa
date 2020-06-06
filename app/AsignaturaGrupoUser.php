@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class AsignaturaGrupoUser extends Model
 {
-    //
+    protected $table = "asignatura_grupo_user";
 
     public function asignatura_grupo(){
         //relacion de uno a muchos
