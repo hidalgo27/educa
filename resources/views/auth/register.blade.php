@@ -11,8 +11,8 @@
                     <div class="row">
                         <div class="col text-center">
                             <p class="font-weight-medium small">Crea tu cuenta para empezar a estudiar</p>
-                            <v-btn class="w-100" color="primary" large>
-                                <v-icon left>mdi-facebook</v-icon><span class="text-capitalize">Iniciar</span><span class="text-lowercase">sesión con facebook</span>
+                            <v-btn class="w-100" color="primary" large href="/login/facebook">
+                                <v-icon left>mdi-facebook</v-icon><span class="text-capitalize">Iniciar</span><span class="text-lowercase">Registrarse con facebook</span>
                             </v-btn>
                         </div>
                     </div>
@@ -51,6 +51,19 @@
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+
+                            <div class="col">
+                                <input id="celular" type="tel" placeholder="Numero de Celular" class="form-control @error('celular') is-invalid @enderror" name="celular" value="{{ old('celular') }}" required autocomplete="celular">
+
+                                @error('celular')
+                                <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror

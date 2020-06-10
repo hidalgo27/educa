@@ -52,7 +52,7 @@ class HomepageController extends Controller
                 'text' => $value->nombre,
             ];
         }
-        return response()->json();
+        return response()->json($data);
     }
     public function getModalidad($id){
         $modalidad =Modalidad::where('universidad_id', $id)->get();
@@ -233,58 +233,68 @@ class HomepageController extends Controller
         $a_user_f = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 1)->where('modalidad_grupo_id', $modalidad_g->id)->get();
         $a_user_p = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 2)->where('modalidad_grupo_id', $modalidad_g->id)->get();
 
+
         $a_user_p_c = $a_user_p->count();
         $a_user_f_c =$a_user_f->count();
 
-
         if ($a_user_f_c > 0){
-            foreach ($a_user_f as $a_user_fs) {
+            foreach ($a_user_f as $a_user_fs){
                 $modalidad_gf = ModalidadGrupo::where('id', $a_user_fs->modalidad_grupo_id)->first();
                 $modalidad_f = Modalidad::where('id', $modalidad_gf->modalidad_id)->where('mostrar_web', 1)->first();
-                if ($modalidad_f) {
-                    $view_a = 'true';
+                if($modalidad_f){
                     $form = 'false';
-                    $asignatura =Asignatura::where('modalidad_grupo_id', $modalidad_gf->id)->get();
-                }else{
                     $view_a = 'true';
+                    $asignatura =Asignatura::where('modalidad_grupo_id', $modalidad_gf->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gf->id)->first();
+                }else{
                     $form = 'true';
-                    $asignatura ='false';
+                    $view_a = 'true';
+                    $asignatura = 'false';
+                    $modalidad_grupo_view = 'false';
                 }
-
             }
         }
+
         if ($a_user_p_c > 0){
             foreach ($a_user_p as $a_user_ps) {
                 $modalidad_gp = ModalidadGrupo::where('id', $a_user_ps->modalidad_grupo_id)->first();
                 $modalidad_p = Modalidad::where('id', $modalidad_gp->modalidad_id)->where('mostrar_web', 1)->first();
 
-                if ($modalidad_p) {
-                    $view_a = 'false';
+                $modalidad_count = $modalidad_p->count();
+
+                if ($modalidad_count > 0) {
                     $form = 'false';
+                    $view_a = 'false';
                     $asignatura =Asignatura::where('modalidad_grupo_id', $modalidad_gp->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gp->id)->first();
                 }else{
-                    $view_a = 'true';
                     $form = 'true';
-                    $asignatura ='false';
+                    $view_a = 'true';
+                    $asignatura = 'false';
+                    $modalidad_grupo_view = 'false';
                 }
             }
         }
 
 
+
         if($a_user_p_c == 0 AND $a_user_f_c == 0) {
             $view_a = 'true';
             $form = 'true';
-            $asignatura ='false';
+            $asignatura = 'false';
+            $modalidad_grupo_view ='false';
         }
 
         return response()->json(
             [
                 'estado_vista' => [
-                    'view_a' => $view_a,
                     'form' => $form,
-                    'asignatura' => $asignatura
+                    'view_a' => $view_a,
+                    'asignatura' => $asignatura,
+                    'modalidad_view' => $modalidad_grupo_view
                 ]
             ]);
+
     }
 
     public function video(Request $request, $idcurso, $idvideo){
