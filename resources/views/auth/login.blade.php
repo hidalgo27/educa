@@ -37,7 +37,7 @@
 {{--    </v-container>--}}
 <div class="container">
     <div class="row justify-center">
-        <div class="col-4">
+        <div class="col-12 col-md-4">
             <div class="card">
 {{--                <div class="card-header">{{ __('Login') }}</div>--}}
 
