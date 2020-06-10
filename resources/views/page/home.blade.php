@@ -7,7 +7,7 @@
 
 
             <div class="row justify-center">
-                <div class="col-6 text--secondary font-weight-regular title text-center">
+                <div class="col-12 col-md-6 text--secondary font-weight-regular text-center">
                     Prepárate con nuestros cursos en linea, con todo los temas estructurados de su universidad.
                 </div>
             </div>
@@ -38,6 +38,7 @@
                 @foreach($universidad as $universidades)
                 <v-col
                     cols="12"
+                    xs="12"
                     sm="6"
                     class="d-flex"
                 >
@@ -108,7 +109,7 @@
                                                             @foreach($modalidad->modalidad_grupos as $modalidad_grupos)
 {{--                                                                @foreach($modalidad_grupos->grupos as $grupos)--}}
 
-                                                                <div class="col-6">
+                                                                <div class="col-12 col-md-6">
                                                                     <v-hover v-slot:default="{ hover }">
 
                                                                         <div class="position-relative grey lighten-4 hover-box-content">
@@ -132,7 +133,7 @@
                                                                                         <div class="col px-6">
                                                                                             <h4 class="font-weight-bold">
                                                                                                 {{$modalidad_grupos->grupo->descripcion}}</h4>
-                                                                                            <p class="ma-0">22 cursos</p>
+{{--                                                                                            <p class="ma-0">22 cursos</p>--}}
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
@@ -209,7 +210,7 @@
                                 <v-row>
                                     @foreach($modalidad->modalidad_grupos as $modalidad_grupos)
 
-                                        <v-col md="6">
+                                        <v-col cols="12" md="6">
                                             <v-card>
                                                 <v-alert
                                                     dense
@@ -221,7 +222,7 @@
                                                 </v-alert>
                                             <v-row>
                                                 @foreach($cursos->where('modalidad_grupo_id', $modalidad_grupos->id) as $curso)
-                                                    <v-col md="6">
+                                                    <v-col cols="12" md="6">
                                                     <v-list-item href="{{route('clases_path', [$universidades->id,$curso->modalidad_grupo_id,$modalidad_grupos->grupo->id,$curso->id])}}">
                                                         <v-list-item-avatar>
                                                             <v-img src="{{$curso->logo}}"></v-img>
@@ -281,7 +282,7 @@
                 </v-row>
 
                 <v-row>
-                    <v-col>
+                    <v-col cols="12" md="4">
                         <a href="">
                             <v-alert
                                 color="pink"
@@ -302,7 +303,7 @@
                             </v-alert>
                         </a>
                     </v-col>
-                    <v-col>
+                    <v-col cols="12" md="4">
                         <a href="">
                             <v-alert
                                 color="green accent-4"
@@ -323,7 +324,7 @@
                             </v-alert>
                         </a>
                     </v-col>
-                    <v-col>
+                    <v-col cols="12" md="4">
                         <a href="">
                             <v-alert
                                 color="purple"
@@ -576,14 +577,14 @@
         <v-parallax
             dark
             src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/pizarra.jpg"
-            height="700"
+            height="auto"
         >
             <v-container>
                 <v-row
                     justify="center"
                     align="center"
                 >
-                    <v-col cols="8">
+                    <v-col cols="12" md="8">
                         <v-row>
                             <v-col>
                                 <h3 class="headline text-center font-weight-bold mb-2">Green Academy Funciona</h3>
@@ -623,112 +624,112 @@
 
         <section>
             <v-container>
-                <v-row>
-                    <v-col class="text-center">
-                        <h3 class="headline font-weight-bold mt-5 mb-2">Historias y testimonios</h3>
-                    </v-col>
-                </v-row>
-                <v-row justify="center">
-                    <v-col md="9">
-                        <v-row>
-                            <v-col md="4">
-                                <v-row>
-                                    <v-col>
-                                        <v-card>
-                                            <v-card-text>
-                                                <div class="font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam at cum cumque deserunt, dolores et fugiat illo laborum modi natus necessitatibus.</div>
-                                            </v-card-text>
-                                        </v-card>
-                                    </v-col>
-                                </v-row>
-                                <v-row align="center">
-                                    <v-col md="2">
-                                        <v-avatar
-                                            size="36px"
-                                        >
-                                            <img
-                                                alt="Avatar"
-                                                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                                            >
-                                            <v-icon
-                                                color=""
+{{--                <v-row>--}}
+{{--                    <v-col class="text-center">--}}
+{{--                        <h3 class="headline font-weight-bold mt-5 mb-2">Historias y testimonios</h3>--}}
+{{--                    </v-col>--}}
+{{--                </v-row>--}}
+{{--                <v-row justify="center">--}}
+{{--                    <v-col md="9">--}}
+{{--                        <v-row>--}}
+{{--                            <v-col md="4">--}}
+{{--                                <v-row>--}}
+{{--                                    <v-col>--}}
+{{--                                        <v-card>--}}
+{{--                                            <v-card-text>--}}
+{{--                                                <div class="font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam at cum cumque deserunt, dolores et fugiat illo laborum modi natus necessitatibus.</div>--}}
+{{--                                            </v-card-text>--}}
+{{--                                        </v-card>--}}
+{{--                                    </v-col>--}}
+{{--                                </v-row>--}}
+{{--                                <v-row align="center">--}}
+{{--                                    <v-col md="2">--}}
+{{--                                        <v-avatar--}}
+{{--                                            size="36px"--}}
+{{--                                        >--}}
+{{--                                            <img--}}
+{{--                                                alt="Avatar"--}}
+{{--                                                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"--}}
+{{--                                            >--}}
+{{--                                            <v-icon--}}
+{{--                                                color=""--}}
 
-                                            ></v-icon>
-                                        </v-avatar>
-                                    </v-col>
-                                    <v-col md="10" class="">
-                                        <span class="font-weight-bold">Fernando Langschwager</span>
-                                        <a href="" class="">@josuechandiasto</a>
-                                    </v-col>
-                                </v-row>
-                            </v-col>
-                            <v-col md="4">
-                                <v-row>
-                                    <v-col>
-                                        <v-card>
-                                            <v-card-text>
-                                                <div class="font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam at cum cumque deserunt, dolores et fugiat illo laborum modi natus necessitatibus.</div>
-                                            </v-card-text>
-                                        </v-card>
-                                    </v-col>
-                                </v-row>
-                                <v-row align="center">
-                                    <v-col md="2">
-                                        <v-avatar
-                                            size="36px"
-                                        >
-                                            <img
-                                                alt="Avatar"
-                                                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                                            >
-                                            <v-icon
+{{--                                            ></v-icon>--}}
+{{--                                        </v-avatar>--}}
+{{--                                    </v-col>--}}
+{{--                                    <v-col md="10" class="">--}}
+{{--                                        <span class="font-weight-bold">Fernando Langschwager</span>--}}
+{{--                                        <a href="" class="">@josuechandiasto</a>--}}
+{{--                                    </v-col>--}}
+{{--                                </v-row>--}}
+{{--                            </v-col>--}}
+{{--                            <v-col md="4">--}}
+{{--                                <v-row>--}}
+{{--                                    <v-col>--}}
+{{--                                        <v-card>--}}
+{{--                                            <v-card-text>--}}
+{{--                                                <div class="font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam at cum cumque deserunt, dolores et fugiat illo laborum modi natus necessitatibus.</div>--}}
+{{--                                            </v-card-text>--}}
+{{--                                        </v-card>--}}
+{{--                                    </v-col>--}}
+{{--                                </v-row>--}}
+{{--                                <v-row align="center">--}}
+{{--                                    <v-col md="2">--}}
+{{--                                        <v-avatar--}}
+{{--                                            size="36px"--}}
+{{--                                        >--}}
+{{--                                            <img--}}
+{{--                                                alt="Avatar"--}}
+{{--                                                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"--}}
+{{--                                            >--}}
+{{--                                            <v-icon--}}
 
-                                                color=""
+{{--                                                color=""--}}
 
-                                            ></v-icon>
-                                        </v-avatar>
-                                    </v-col>
-                                    <v-col md="10" class="">
-                                        <span class="font-weight-bold">Fernando Langschwager</span>
-                                        <a href="" class="">@josuechandiasto</a>
-                                    </v-col>
-                                </v-row>
-                            </v-col>
-                            <v-col md="4">
-                                <v-row>
-                                    <v-col>
-                                        <v-card>
-                                            <v-card-text>
-                                                <div class="font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam at cum cumque deserunt, dolores et fugiat illo laborum modi natus necessitatibus.</div>
-                                            </v-card-text>
-                                        </v-card>
-                                    </v-col>
-                                </v-row>
-                                <v-row align="center">
-                                    <v-col md="2">
-                                        <v-avatar
-                                            size="36px"
-                                        >
-                                            <img
-                                                alt="Avatar"
-                                                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                                            >
-                                            <v-icon
+{{--                                            ></v-icon>--}}
+{{--                                        </v-avatar>--}}
+{{--                                    </v-col>--}}
+{{--                                    <v-col md="10" class="">--}}
+{{--                                        <span class="font-weight-bold">Fernando Langschwager</span>--}}
+{{--                                        <a href="" class="">@josuechandiasto</a>--}}
+{{--                                    </v-col>--}}
+{{--                                </v-row>--}}
+{{--                            </v-col>--}}
+{{--                            <v-col md="4">--}}
+{{--                                <v-row>--}}
+{{--                                    <v-col>--}}
+{{--                                        <v-card>--}}
+{{--                                            <v-card-text>--}}
+{{--                                                <div class="font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab aliquid aperiam at cum cumque deserunt, dolores et fugiat illo laborum modi natus necessitatibus.</div>--}}
+{{--                                            </v-card-text>--}}
+{{--                                        </v-card>--}}
+{{--                                    </v-col>--}}
+{{--                                </v-row>--}}
+{{--                                <v-row align="center">--}}
+{{--                                    <v-col md="2">--}}
+{{--                                        <v-avatar--}}
+{{--                                            size="36px"--}}
+{{--                                        >--}}
+{{--                                            <img--}}
+{{--                                                alt="Avatar"--}}
+{{--                                                src="https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"--}}
+{{--                                            >--}}
+{{--                                            <v-icon--}}
 
-                                                color=""
+{{--                                                color=""--}}
 
-                                            ></v-icon>
-                                        </v-avatar>
-                                    </v-col>
-                                    <v-col md="10" class="">
-                                        <span class="font-weight-bold">Fernando Langschwager</span>
-                                        <a href="" class="">@josuechandiasto</a>
-                                    </v-col>
-                                </v-row>
-                            </v-col>
-                        </v-row>
-                    </v-col>
-                </v-row>
+{{--                                            ></v-icon>--}}
+{{--                                        </v-avatar>--}}
+{{--                                    </v-col>--}}
+{{--                                    <v-col md="10" class="">--}}
+{{--                                        <span class="font-weight-bold">Fernando Langschwager</span>--}}
+{{--                                        <a href="" class="">@josuechandiasto</a>--}}
+{{--                                    </v-col>--}}
+{{--                                </v-row>--}}
+{{--                            </v-col>--}}
+{{--                        </v-row>--}}
+{{--                    </v-col>--}}
+{{--                </v-row>--}}
                 <div class="row justify-center my-5">
                     <div class="col-8 text--secondary title font-weight-medium text-center">
                         Green Academy es la estrategia de formación de miles de personas para conseguir ingresar a la universidad o reforzar tus conociemintos

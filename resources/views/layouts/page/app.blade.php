@@ -25,7 +25,7 @@
             color="#292929"
             height="100"
         >
-            <div class="title font-weight-light grey--text text--lighten-1 text-center">
+            <div class="caption font-weight-light grey--text text--lighten-1 text-center">
                 &copy; 2020 — Edulab, LLC — Made with 💜 by Lobo
             </div>
         </v-footer>

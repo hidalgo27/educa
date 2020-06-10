@@ -66,9 +66,9 @@
                     </v-col>
                 </v-row>
                 <v-row>
-                    <v-col>
+                    <v-col cols="12" md="4">
                         <v-row align="center">
-                            <v-col md="3">
+                            <v-col cols="2" md="3">
                                 <v-img src="https://static.platzi.com/media/achievements/Presencia_online.png" aspect-ratio="1." contain></v-img>
                             </v-col>
                             <v-col>
@@ -76,9 +76,9 @@
                             </v-col>
                         </v-row>
                     </v-col>
-                    <v-col>
+                    <v-col cols="12" md="4">
                         <v-row align="center">
-                            <v-col md="3">
+                            <v-col cols="2" md="3">
                                 <v-img src="https://static.platzi.com/media/achievements/Presencia_online.png" aspect-ratio="1." contain></v-img>
                             </v-col>
                             <v-col>
@@ -86,9 +86,9 @@
                             </v-col>
                         </v-row>
                     </v-col>
-                    <v-col>
+                    <v-col cols="12" md="4">
                         <v-row align="center">
-                            <v-col md="3">
+                            <v-col cols="2" md="3">
                                 <v-img src="https://static.platzi.com/media/achievements/Presencia_online.png" aspect-ratio="1." contain></v-img>
                             </v-col>
                             <v-col>
@@ -243,7 +243,7 @@
                                 class="mr-4"
                                 dark
                                 large
-                                href="../student/algebra/video/list"
+                                href="/login"
                             >
                                 <span class="text-capitalize">Ver curso ahora</span>
                             </v-btn>

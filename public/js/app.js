@@ -2239,6 +2239,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "ParallaxComponent"
 });
@@ -25448,7 +25449,23 @@ var render = function() {
                 [
                   _c(
                     "h1",
-                    { staticClass: "display-2 font-weight-medium mb-4" },
+                    {
+                      staticClass:
+                        "display-2 font-weight-medium mb-4 d-none d-sm-flex"
+                    },
+                    [
+                      _vm._v(
+                        "La academia online de educación para tu ingreso a la universidad"
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "h1",
+                    {
+                      staticClass:
+                        "display-1 font-weight-medium mb-4 d-flex d-sm-none"
+                    },
                     [
                       _vm._v(
                         "La academia online de educación para tu ingreso a la universidad"
@@ -29477,7 +29494,7 @@ var render = function() {
         [
           _c(
             "v-col",
-            { attrs: { md: "4" } },
+            { attrs: { cols: "12", md: "4" } },
             [
               _c(
                 "v-card",
@@ -29619,6 +29636,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "v-col",
+            { attrs: { cols: "12", md: "8" } },
             [
               _vm._l(_vm.show_1, function(mostrar) {
                 return [
@@ -29632,17 +29650,26 @@ var render = function() {
                               "v-row",
                               { attrs: { align: "center" } },
                               [
-                                _c("v-col", { staticClass: "grow" }, [
-                                  _vm._v(
-                                    "Inicie su camino de ingreso a la Univerdidad. "
-                                  ),
-                                  _c("strong", [_vm._v("s/.99 soles por mes")]),
-                                  _vm._v(" o s./250 soles por los 3 meses.")
-                                ]),
+                                _c(
+                                  "v-col",
+                                  {
+                                    staticClass: "grow",
+                                    attrs: { cols: "12", md: "7" }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "Inicie su camino de ingreso a la Univerdidad. "
+                                    ),
+                                    _c("strong", [
+                                      _vm._v("s/.99 soles por mes")
+                                    ]),
+                                    _vm._v(" o s./250 soles por los 3 meses.")
+                                  ]
+                                ),
                                 _vm._v(" "),
                                 _c(
                                   "v-col",
-                                  { staticClass: "shrink" },
+                                  { staticClass: "shrink", attrs: { md: "5" } },
                                   [_c("v-btn", [_vm._v("Comenzar ahora")])],
                                   1
                                 )
@@ -29961,7 +29988,10 @@ var render = function() {
                                                   {
                                                     staticClass:
                                                       "position-relative",
-                                                    attrs: { md: "2" }
+                                                    attrs: {
+                                                      cols: "3",
+                                                      md: "2"
+                                                    }
                                                   },
                                                   [
                                                     _c("v-img", {
@@ -29980,10 +30010,15 @@ var render = function() {
                                                   { staticClass: "px-3" },
                                                   [
                                                     _c(
-                                                      "h3",
+                                                      "a",
                                                       {
                                                         staticClass:
-                                                          "small font-weight-bold mb-2"
+                                                          "small font-weight-bold mb-2",
+                                                        attrs: {
+                                                          href:
+                                                            "/student/curso/video-list/" +
+                                                            cursoss.id
+                                                        }
                                                       },
                                                       [
                                                         _vm._v(
@@ -29996,7 +30031,14 @@ var render = function() {
                                                 _vm._v(" "),
                                                 _c(
                                                   "v-col",
-                                                  { attrs: { md: "4" } },
+                                                  {
+                                                    staticClass:
+                                                      "d-none d-md-flex",
+                                                    attrs: {
+                                                      cols: "12",
+                                                      md: "4"
+                                                    }
+                                                  },
                                                   [
                                                     _c(
                                                       "v-btn",

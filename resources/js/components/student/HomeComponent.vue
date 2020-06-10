@@ -2,7 +2,7 @@
     <v-container>
 
         <v-row>
-            <v-col md="4">
+            <v-col cols="12" md="4">
                 <v-card
                 >
                     <v-img
@@ -95,7 +95,7 @@
                     </v-list>
                 </v-card>
             </v-col>
-            <v-col>
+            <v-col cols="12" md="8">
 
                 <template v-for="mostrar in show_1">
                     <template v-if="mostrar.view_a === 'true'">
@@ -104,8 +104,8 @@
                             type="error"
                         >
                             <v-row align="center">
-                                <v-col class="grow">Inicie su camino de ingreso a la Univerdidad. <strong>s/.99 soles por mes</strong> o s./250 soles por los 3 meses.</v-col>
-                                <v-col class="shrink">
+                                <v-col cols="12" md="7" class="grow">Inicie su camino de ingreso a la Univerdidad. <strong>s/.99 soles por mes</strong> o s./250 soles por los 3 meses.</v-col>
+                                <v-col md="5" class="shrink">
                                     <v-btn>Comenzar ahora</v-btn>
                                 </v-col>
                             </v-row>
@@ -219,11 +219,11 @@
                                 <v-card tile flat class=" mb-3">
 
                                     <v-row no-gutters align="center">
-                                        <v-col md="2" class="position-relative">
+                                        <v-col cols="3" md="2" class="position-relative">
                                             <v-img :src="cursoss.logo" aspect-ratio="2" contain></v-img>
                                         </v-col>
                                         <v-col class="px-3">
-                                            <h3 class="small font-weight-bold mb-2">{{cursoss.nombre}}</h3>
+                                            <a :href="'/student/curso/video-list/'+cursoss.id" class="small font-weight-bold mb-2">{{cursoss.nombre}}</a>
                                             <!--                                    <v-progress-linear-->
                                             <!--                                        value="90"-->
                                             <!--                                        height="20"-->
@@ -234,7 +234,7 @@
                                             <!--                                    </v-progress-linear>-->
                                             <!--                                    <p class="mt-2 font-weight-medium text&#45;&#45;secondary caption">15/16Materiales</p>-->
                                         </v-col>
-                                        <v-col md="4">
+                                        <v-col cols="12" md="4" class="d-none d-md-flex">
                                             <v-btn class="w-100 text-capitalize" color="green accent-4" :href="'/student/curso/video-list/'+cursoss.id" dark>Continuar viendo curso</v-btn>
                                         </v-col>
                                     </v-row>

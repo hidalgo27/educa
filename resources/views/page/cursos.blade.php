@@ -53,7 +53,7 @@
                     <v-row>
 
                         @foreach($cursos as $curso)
-                        <v-col md="4">
+                        <v-col cols="12" md="4">
                             <v-hover
                                 v-slot:default="{ hover }"
                                 open-delay="50"
