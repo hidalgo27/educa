@@ -54,12 +54,16 @@ Route::get('login/facebook', 'Auth\LoginController@redirectToProvider');
 Route::get('login/facebook/callback', 'Auth\LoginController@handleProviderCallback');
 
 
-Route::get('/student/algebra/video', [
+Route::get('/student/{idcurso}/video/{idvideo}', [
     'uses' => 'Student\HomepageController@video',
     'as' => 'video_student_path',
 ]);
+Route::get('students/getCursosAlumnoVideo/{idcurso}/{idvideo}', [
+    'uses' => 'Student\HomepageController@getCursosAlumnoVideo',
+    'as' => 'getCursosAlumnoVideo_path',
+]);
 
-Route::get('/student/algebra/video/list', [
+Route::get('/student/curso/video-list/{idcurso}', [
     'uses' => 'Student\HomepageController@videolist',
     'as' => 'video_list_student_path',
 ]);
@@ -117,6 +121,11 @@ Route::get('getCarreras/{id}', [
 Route::post('students/matricular', [
     'uses' => 'Student\HomepageController@matricular',
     'as' => 'matricular_path',
+]);
+
+Route::get('students/getCursosAlumno/{id}', [
+    'uses' => 'Student\HomepageController@getCursosAlumno',
+    'as' => 'getCursosAlumno_path',
 ]);
 
 

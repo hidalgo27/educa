@@ -4297,6 +4297,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['auth'],
   data: function data() {
@@ -4319,11 +4339,12 @@ __webpack_require__.r(__webpack_exports__);
     axios.get('/getUniversidades').then(function (res) {
       _this.universidad = res.data;
     });
-    axios.get('/getmatricula').then(function (res) {
-      _this.show_1 = res.data;
+    axios.get('/getmatricula').then(function (res) {// this.show_1 = res.data;
     });
     axios.get('/getCursos').then(function (res) {
-      _this.cursos = res.data;
+      var notaServidor = res.data;
+      _this.cursos = notaServidor;
+      _this.show_1 = notaServidor; // console.log(this.cursos);
     });
   },
   methods: {
@@ -5182,12 +5203,73 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['idcurso', 'idvideo'],
   data: function data() {
     return {
       descripcion: null,
-      tabs: null
+      tabs: null,
+      response_data: []
     };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/students/getCursosAlumnoVideo/' + this.idcurso + '/' + this.idvideo).then(function (res) {
+      _this.response_data = res.data; // console.log(res.data);
+    });
   }
 });
 
@@ -5742,19 +5824,526 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['idcurso'],
   data: function data() {
     return {
       descripcion: null,
       tabs: null,
       content: null,
-      offsetTop: 0
+      offsetTop: 0,
+      valueDeterminate: '',
+      response_data: []
     };
   },
   methods: {
     onScroll: function onScroll(e) {
       this.offsetTop = e.target.scrollTop;
     }
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/students/getCursosAlumno/' + this.idcurso).then(function (res) {
+      _this.response_data = res.data; // console.log(res.data);
+    });
   }
 });
 
@@ -28960,37 +29549,10 @@ var render = function() {
                             "v-list-item-content",
                             [
                               _c("v-list-item-title", [
-                                _vm._v("(650) 555-1234")
+                                _vm._v(_vm._s(_vm.auth.celular))
                               ]),
                               _vm._v(" "),
                               _c("v-list-item-subtitle", [_vm._v("Mobile")])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item-icon",
-                            [_c("v-icon", [_vm._v("mdi-message-text")])],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-list-item",
-                        { on: { click: function($event) {} } },
-                        [
-                          _c("v-list-item-action"),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item-content",
-                            [
-                              _c("v-list-item-title", [
-                                _vm._v("(323) 555-6789")
-                              ]),
-                              _vm._v(" "),
-                              _c("v-list-item-subtitle", [_vm._v("Work")])
                             ],
                             1
                           ),
@@ -29024,64 +29586,10 @@ var render = function() {
                             "v-list-item-content",
                             [
                               _c("v-list-item-title", [
-                                _vm._v("aliconnors@example.com")
+                                _vm._v(_vm._s(_vm.auth.email))
                               ]),
                               _vm._v(" "),
                               _c("v-list-item-subtitle", [_vm._v("Personal")])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-list-item",
-                        { on: { click: function($event) {} } },
-                        [
-                          _c("v-list-item-action"),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item-content",
-                            [
-                              _c("v-list-item-title", [
-                                _vm._v("ali_connors@example.com")
-                              ]),
-                              _vm._v(" "),
-                              _c("v-list-item-subtitle", [_vm._v("Work")])
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c("v-divider", { attrs: { inset: "" } }),
-                      _vm._v(" "),
-                      _c(
-                        "v-list-item",
-                        { on: { click: function($event) {} } },
-                        [
-                          _c(
-                            "v-list-item-icon",
-                            [
-                              _c("v-icon", { attrs: { color: "indigo" } }, [
-                                _vm._v("mdi-map-marker")
-                              ])
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-list-item-content",
-                            [
-                              _c("v-list-item-title", [
-                                _vm._v("1400 Main Street")
-                              ]),
-                              _vm._v(" "),
-                              _c("v-list-item-subtitle", [
-                                _vm._v("Orlando, FL 79938")
-                              ])
                             ],
                             1
                           )
@@ -29334,89 +29842,162 @@ var render = function() {
                       ]
                     : [
                         _c(
-                          "h3",
-                          { staticClass: "headline mb-3 font-weight-bold" },
-                          [_vm._v("Tus cursos")]
-                        ),
-                        _vm._v(" "),
-                        _vm._l(_vm.cursos, function(curso) {
-                          return [
-                            _vm._l(curso.asignatura, function(cursoss) {
+                          "v-card",
+                          [
+                            _vm._l(_vm.cursos, function(curso) {
                               return [
                                 _c(
-                                  "v-card",
+                                  "v-alert",
                                   {
-                                    staticClass: " mb-3",
-                                    attrs: { tile: "", flat: "" }
+                                    staticClass: "mb-0",
+                                    attrs: { text: "", color: "green" }
                                   },
                                   [
                                     _c(
-                                      "v-row",
+                                      "h2",
                                       {
-                                        attrs: {
-                                          "no-gutters": "",
-                                          align: "center"
-                                        }
+                                        staticClass:
+                                          "text-center grey--text text--darken-3"
                                       },
                                       [
+                                        _vm._v(
+                                          _vm._s(
+                                            curso.modalidad_view.grupo
+                                              .universidad.nombre
+                                          )
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "h5",
+                                      {
+                                        staticClass:
+                                          "text-center grey--text text--darken-1"
+                                      },
+                                      [
+                                        _vm._v(
+                                          _vm._s(
+                                            curso.modalidad_view.modalidad
+                                              .titulo
+                                          ) +
+                                            " - " +
+                                            _vm._s(
+                                              curso.modalidad_view.grupo
+                                                .descripcion
+                                            )
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("v-card-title", [
+                                  _c("h4", [_vm._v("Tus Cursos:")])
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "v-card-text",
+                                  [
+                                    _vm._l(curso.asignatura, function(cursoss) {
+                                      return [
                                         _c(
-                                          "v-col",
+                                          "v-card",
                                           {
-                                            staticClass: "position-relative",
-                                            attrs: { md: "2" }
+                                            staticClass: " mb-3",
+                                            attrs: { tile: "", flat: "" }
                                           },
                                           [
-                                            _c("v-img", {
-                                              attrs: {
-                                                src: cursoss.logo,
-                                                "aspect-ratio": "2",
-                                                contain: ""
-                                              }
-                                            })
-                                          ],
-                                          1
-                                        ),
-                                        _vm._v(" "),
-                                        _c("v-col", { staticClass: "px-3" }, [
-                                          _c(
-                                            "h3",
-                                            {
-                                              staticClass:
-                                                "small font-weight-bold mb-2"
-                                            },
-                                            [_vm._v(_vm._s(cursoss.nombre))]
-                                          )
-                                        ]),
-                                        _vm._v(" "),
-                                        _c(
-                                          "v-col",
-                                          { attrs: { md: "4" } },
-                                          [
                                             _c(
-                                              "v-btn",
+                                              "v-row",
                                               {
-                                                staticClass:
-                                                  "w-100 text-capitalize",
                                                 attrs: {
-                                                  color: "green accent-4",
-                                                  dark: ""
+                                                  "no-gutters": "",
+                                                  align: "center"
                                                 }
                                               },
-                                              [_vm._v("Continuar viendo curso")]
+                                              [
+                                                _c(
+                                                  "v-col",
+                                                  {
+                                                    staticClass:
+                                                      "position-relative",
+                                                    attrs: { md: "2" }
+                                                  },
+                                                  [
+                                                    _c("v-img", {
+                                                      attrs: {
+                                                        src: cursoss.logo,
+                                                        "aspect-ratio": "2",
+                                                        contain: ""
+                                                      }
+                                                    })
+                                                  ],
+                                                  1
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "v-col",
+                                                  { staticClass: "px-3" },
+                                                  [
+                                                    _c(
+                                                      "h3",
+                                                      {
+                                                        staticClass:
+                                                          "small font-weight-bold mb-2"
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          _vm._s(cursoss.nombre)
+                                                        )
+                                                      ]
+                                                    )
+                                                  ]
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "v-col",
+                                                  { attrs: { md: "4" } },
+                                                  [
+                                                    _c(
+                                                      "v-btn",
+                                                      {
+                                                        staticClass:
+                                                          "w-100 text-capitalize",
+                                                        attrs: {
+                                                          color:
+                                                            "green accent-4",
+                                                          href:
+                                                            "/student/curso/video-list/" +
+                                                            cursoss.id,
+                                                          dark: ""
+                                                        }
+                                                      },
+                                                      [
+                                                        _vm._v(
+                                                          "Continuar viendo curso"
+                                                        )
+                                                      ]
+                                                    )
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
                                             )
                                           ],
                                           1
                                         )
-                                      ],
-                                      1
-                                    )
+                                      ]
+                                    })
                                   ],
-                                  1
+                                  2
                                 )
                               ]
                             })
-                          ]
-                        })
+                          ],
+                          2
+                        )
                       ]
                 ]
               })
@@ -30059,320 +30640,838 @@ var render = function() {
   return _c(
     "section",
     [
-      _c(
-        "v-navigation-drawer",
-        {
-          attrs: {
-            permanent: "",
-            "expand-on-hover": "",
-            absolute: "",
-            dense: ""
-          }
-        },
-        [
-          _c(
-            "v-list",
-            [
-              _c(
-                "v-list-item",
-                { staticClass: "px-2" },
-                [
-                  _c(
-                    "v-list-item-avatar",
-                    [
-                      _c("v-img", {
-                        attrs: {
-                          src:
-                            "../../../images/iconos/cursos/circle/algebra.png"
-                        }
-                      })
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-list-item-title", [_vm._v("Algebra")])
-                ],
-                1
-              )
-            ],
-            1
-          ),
+      _vm._l(_vm.response_data.asignatura_all, function(asignaturass) {
+        return [
+          _vm.response_data.view_a === "true"
+            ? [
+                _c(
+                  "v-navigation-drawer",
+                  {
+                    attrs: {
+                      permanent: "",
+                      "expand-on-hover": "",
+                      absolute: "",
+                      dense: ""
+                    }
+                  },
+                  [
+                    _c(
+                      "v-list",
+                      [
+                        _c(
+                          "v-list-item",
+                          { staticClass: "px-2" },
+                          [
+                            _c(
+                              "v-list-item-avatar",
+                              [
+                                _c("v-img", {
+                                  attrs: { src: asignaturass.logo }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("v-list-item-title", [
+                              _vm._v(_vm._s(asignaturass.nombre))
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("v-divider"),
+                    _vm._v(" "),
+                    _c(
+                      "v-list",
+                      { attrs: { nav: "", dense: "" } },
+                      [
+                        _vm._l(asignaturass.temas, function(tema) {
+                          return [
+                            _vm._l(tema.sub_temas, function(sub_temas) {
+                              return [
+                                sub_temas.free === 1
+                                  ? _c(
+                                      "v-list-item",
+                                      { attrs: { href: "#", link: "" } },
+                                      [
+                                        _c(
+                                          "v-list-item-icon",
+                                          [
+                                            _c(
+                                              "v-avatar",
+                                              {
+                                                attrs: {
+                                                  color: "green accent-4",
+                                                  size: "25"
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "v-icon",
+                                                  {
+                                                    staticClass:
+                                                      "caption font-weight-bold white--text "
+                                                  },
+                                                  [_vm._v("mdi-check")]
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c("v-list-item-title", [
+                                          _vm._v(_vm._s(sub_temas.titulo))
+                                        ])
+                                      ],
+                                      1
+                                    )
+                                  : _c(
+                                      "v-list-item",
+                                      { attrs: { link: "" } },
+                                      [
+                                        _c(
+                                          "v-list-item-icon",
+                                          [
+                                            _c(
+                                              "v-avatar",
+                                              {
+                                                attrs: {
+                                                  color: "green accent-4",
+                                                  size: "25"
+                                                }
+                                              },
+                                              [
+                                                _c(
+                                                  "v-icon",
+                                                  {
+                                                    staticClass:
+                                                      "caption font-weight-bold white--text "
+                                                  },
+                                                  [_vm._v("mdi-check")]
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c("v-list-item-title", [
+                                          _vm._v(_vm._s(sub_temas.titulo))
+                                        ])
+                                      ],
+                                      1
+                                    )
+                              ]
+                            })
+                          ]
+                        })
+                      ],
+                      2
+                    )
+                  ],
+                  1
+                )
+              ]
+            : _vm._e(),
           _vm._v(" "),
-          _c("v-divider"),
-          _vm._v(" "),
-          _c(
-            "v-list",
-            { attrs: { nav: "", dense: "" } },
-            [
-              _c(
-                "v-list-item",
-                { attrs: { link: "" } },
-                [
-                  _c(
-                    "v-list-item-icon",
-                    [
-                      _c(
-                        "v-avatar",
-                        { attrs: { color: "green accent-4", size: "25" } },
-                        [
-                          _c(
-                            "v-icon",
-                            {
-                              staticClass:
-                                "caption font-weight-bold white--text "
-                            },
-                            [_vm._v("mdi-check")]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-list-item-title", [_vm._v("Exponentes")])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-list-item",
-                { attrs: { link: "" } },
-                [
-                  _c(
-                    "v-list-item-icon",
-                    [
-                      _c(
-                        "v-avatar",
-                        { attrs: { color: "grey accent-4", size: "25" } },
-                        [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "caption font-weight-bold white--text "
-                            },
-                            [_vm._v("2")]
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-list-item-title", [_vm._v("Ecuaciones")])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-list-item",
-                { attrs: { link: "" } },
-                [
-                  _c(
-                    "v-list-item-icon",
-                    [
-                      _c(
-                        "v-avatar",
-                        { attrs: { color: "grey accent-4", size: "25" } },
-                        [
-                          _c(
-                            "span",
-                            {
-                              staticClass:
-                                "caption font-weight-bold white--text "
-                            },
-                            [_vm._v("3")]
-                          )
-                        ]
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c("v-list-item-title", [_vm._v("Inecuaciones")])
-                ],
-                1
-              )
-            ],
-            1
-          )
-        ],
-        1
-      ),
+          _vm.response_data.view_p === "true"
+            ? [
+                _c(
+                  "v-navigation-drawer",
+                  {
+                    attrs: {
+                      permanent: "",
+                      "expand-on-hover": "",
+                      absolute: "",
+                      dense: ""
+                    }
+                  },
+                  [
+                    _c(
+                      "v-list",
+                      [
+                        _c(
+                          "v-list-item",
+                          { staticClass: "px-2" },
+                          [
+                            _c(
+                              "v-list-item-avatar",
+                              [
+                                _c("v-img", {
+                                  attrs: { src: asignaturass.logo }
+                                })
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c("v-list-item-title", [
+                              _vm._v(_vm._s(asignaturass.nombre))
+                            ])
+                          ],
+                          1
+                        )
+                      ],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c("v-divider"),
+                    _vm._v(" "),
+                    _c(
+                      "v-list",
+                      { attrs: { nav: "", dense: "" } },
+                      [
+                        _vm._l(asignaturass.temas, function(tema) {
+                          return [
+                            _vm._l(tema.sub_temas, function(sub_temas) {
+                              return [
+                                _c(
+                                  "v-list-item",
+                                  { attrs: { href: "#", link: "" } },
+                                  [
+                                    _c(
+                                      "v-list-item-icon",
+                                      [
+                                        _c(
+                                          "v-avatar",
+                                          {
+                                            attrs: {
+                                              color: "green accent-4",
+                                              size: "25"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                staticClass:
+                                                  "caption font-weight-bold white--text "
+                                              },
+                                              [_vm._v("mdi-check")]
+                                            )
+                                          ],
+                                          1
+                                        )
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c("v-list-item-title", [
+                                      _vm._v(_vm._s(sub_temas.titulo))
+                                    ])
+                                  ],
+                                  1
+                                )
+                              ]
+                            })
+                          ]
+                        })
+                      ],
+                      2
+                    )
+                  ],
+                  1
+                )
+              ]
+            : _vm._e()
+        ]
+      }),
       _vm._v(" "),
       _c(
         "section",
         { staticClass: "pl-12" },
         [
-          _c(
-            "v-container",
-            { staticClass: "pa-0", attrs: { fluid: "" } },
-            [
-              _c(
-                "v-row",
-                { attrs: { "no-gutters": "" } },
-                [
-                  _c("v-col", { attrs: { md: "7" } }, [
-                    _c(
-                      "div",
-                      { staticClass: "pl-2" },
-                      [
-                        _c("div", { staticClass: "video position-relative" }, [
-                          _c("iframe", {
-                            attrs: {
-                              src:
-                                "https://player.vimeo.com/video/361847703?background=1&autoplay=1&loop=1&title=0&byline=0&portrait=0&muted=1",
-                              frameborder: "0",
-                              allow: "autoplay; fullscreen"
-                            }
-                          })
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "v-row",
-                          [
+          _vm._l(_vm.response_data.asignatura, function(asignaturassc) {
+            return [
+              _vm.response_data.view_a === "true"
+                ? [
+                    _vm._l(asignaturassc.temas, function(temass) {
+                      return [
+                        _vm._l(temass.sub_temas, function(sub_temass) {
+                          return [
                             _c(
-                              "v-col",
+                              "v-container",
+                              { staticClass: "pa-0", attrs: { fluid: "" } },
                               [
                                 _c(
-                                  "v-tabs",
-                                  {
-                                    attrs: { color: "pink" },
-                                    model: {
-                                      value: _vm.descripcion,
-                                      callback: function($$v) {
-                                        _vm.descripcion = $$v
-                                      },
-                                      expression: "descripcion"
-                                    }
-                                  },
+                                  "v-row",
+                                  { attrs: { "no-gutters": "" } },
                                   [
+                                    _c("v-col", { attrs: { md: "7" } }, [
+                                      _c(
+                                        "div",
+                                        { staticClass: "pl-2" },
+                                        [
+                                          _c("div", {
+                                            staticClass:
+                                              "video position-relative",
+                                            domProps: {
+                                              innerHTML: _vm._s(
+                                                sub_temass.video_url
+                                              )
+                                            }
+                                          }),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-row",
+                                            [
+                                              _c(
+                                                "v-col",
+                                                [
+                                                  _c(
+                                                    "v-tabs",
+                                                    {
+                                                      attrs: { color: "pink" },
+                                                      model: {
+                                                        value: _vm.descripcion,
+                                                        callback: function(
+                                                          $$v
+                                                        ) {
+                                                          _vm.descripcion = $$v
+                                                        },
+                                                        expression:
+                                                          "descripcion"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-tab",
+                                                        {
+                                                          attrs: {
+                                                            href: "#details"
+                                                          }
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "\n                                                                " +
+                                                              _vm._s(
+                                                                temass.nombre
+                                                              ) +
+                                                              "\n                                                            "
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-row",
+                                            [
+                                              _c(
+                                                "v-col",
+                                                [
+                                                  _c(
+                                                    "v-tabs-items",
+                                                    {
+                                                      model: {
+                                                        value: _vm.descripcion,
+                                                        callback: function(
+                                                          $$v
+                                                        ) {
+                                                          _vm.descripcion = $$v
+                                                        },
+                                                        expression:
+                                                          "descripcion"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-tab-item",
+                                                        {
+                                                          attrs: {
+                                                            value: "details"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "div",
+                                                            {
+                                                              staticClass:
+                                                                "px-4"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "h3",
+                                                                {
+                                                                  staticClass:
+                                                                    "grey--text text--darken-2"
+                                                                },
+                                                                [
+                                                                  _vm._v(
+                                                                    _vm._s(
+                                                                      sub_temass.titulo
+                                                                    )
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c("v-divider", {
+                                                                staticClass:
+                                                                  "mt-2 mb-4"
+                                                              }),
+                                                              _vm._v(
+                                                                "\n\n                                                                    " +
+                                                                  _vm._s(
+                                                                    sub_temass.descripcion
+                                                                  ) +
+                                                                  "\n\n                                                                    "
+                                                              ),
+                                                              _c(
+                                                                "v-row",
+                                                                {
+                                                                  attrs: {
+                                                                    align:
+                                                                      "center"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "v-col",
+                                                                    {
+                                                                      attrs: {
+                                                                        md: "6"
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "v-row",
+                                                                        [
+                                                                          _c(
+                                                                            "v-col",
+                                                                            {
+                                                                              attrs: {
+                                                                                md:
+                                                                                  "2"
+                                                                              }
+                                                                            },
+                                                                            [
+                                                                              _c(
+                                                                                "v-avatar",
+                                                                                {
+                                                                                  attrs: {
+                                                                                    size:
+                                                                                      "36px"
+                                                                                  }
+                                                                                },
+                                                                                [
+                                                                                  _c(
+                                                                                    "img",
+                                                                                    {
+                                                                                      attrs: {
+                                                                                        alt:
+                                                                                          "Avatar",
+                                                                                        src:
+                                                                                          "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
+                                                                                      }
+                                                                                    }
+                                                                                  ),
+                                                                                  _vm._v(
+                                                                                    " "
+                                                                                  ),
+                                                                                  _c(
+                                                                                    "v-icon",
+                                                                                    {
+                                                                                      attrs: {
+                                                                                        color:
+                                                                                          ""
+                                                                                      }
+                                                                                    }
+                                                                                  )
+                                                                                ],
+                                                                                1
+                                                                              )
+                                                                            ],
+                                                                            1
+                                                                          ),
+                                                                          _vm._v(
+                                                                            " "
+                                                                          ),
+                                                                          _c(
+                                                                            "v-col",
+                                                                            {
+                                                                              attrs: {
+                                                                                md:
+                                                                                  "10"
+                                                                              }
+                                                                            },
+                                                                            [
+                                                                              _c(
+                                                                                "span",
+                                                                                {
+                                                                                  staticClass:
+                                                                                    "font-weight-bold"
+                                                                                },
+                                                                                [
+                                                                                  _vm._v(
+                                                                                    _vm._s(
+                                                                                      asignaturassc
+                                                                                        .docente
+                                                                                        .name
+                                                                                    )
+                                                                                  )
+                                                                                ]
+                                                                              ),
+                                                                              _vm._v(
+                                                                                " "
+                                                                              ),
+                                                                              _c(
+                                                                                "a",
+                                                                                {
+                                                                                  attrs: {
+                                                                                    href:
+                                                                                      ""
+                                                                                  }
+                                                                                },
+                                                                                [
+                                                                                  _vm._v(
+                                                                                    _vm._s(
+                                                                                      asignaturassc
+                                                                                        .docente
+                                                                                        .email
+                                                                                    )
+                                                                                  )
+                                                                                ]
+                                                                              )
+                                                                            ]
+                                                                          )
+                                                                        ],
+                                                                        1
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ],
+                                                                1
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ]
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ]),
+                                    _vm._v(" "),
                                     _c(
-                                      "v-tab",
-                                      { attrs: { href: "#details" } },
-                                      [
-                                        _vm._v(
-                                          "\n                                        Ordinario\n                                    "
-                                        )
-                                      ]
-                                    )
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            ),
-                            _vm._v(" "),
-                            _c(
-                              "v-col",
-                              { staticClass: "text-right" },
-                              [
-                                _c(
-                                  "v-btn",
-                                  {
-                                    staticClass: "text-right mr-4",
-                                    attrs: { color: "light-blue", dark: "" }
-                                  },
-                                  [
-                                    _vm._v(
-                                      "\n                                    Ecuaciones\n                                    "
-                                    ),
-                                    _c("v-icon", [_vm._v("mdi-skip-next")])
-                                  ],
-                                  1
-                                )
-                              ],
-                              1
-                            )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "v-row",
-                          [
-                            _c(
-                              "v-col",
-                              [
-                                _c(
-                                  "v-tabs-items",
-                                  {
-                                    model: {
-                                      value: _vm.descripcion,
-                                      callback: function($$v) {
-                                        _vm.descripcion = $$v
+                                      "v-col",
+                                      {
+                                        staticClass:
+                                          "grey lighten-4 position-relative",
+                                        attrs: { md: "5" }
                                       },
-                                      expression: "descripcion"
-                                    }
-                                  },
-                                  [
-                                    _c(
-                                      "v-tab-item",
-                                      { attrs: { value: "details" } },
                                       [
                                         _c(
-                                          "div",
-                                          { staticClass: "px-4" },
+                                          "v-row",
+                                          {
+                                            staticClass: "my-3",
+                                            attrs: {
+                                              "no-gutters": "",
+                                              align: "center"
+                                            }
+                                          },
                                           [
                                             _c(
-                                              "h3",
-                                              {
-                                                staticClass:
-                                                  "grey--text text--darken-2"
-                                              },
-                                              [_vm._v("Teoria de exponentes")]
-                                            ),
-                                            _vm._v(" "),
-                                            _c("v-divider", {
-                                              staticClass: "mt-2 mb-4"
-                                            }),
-                                            _vm._v(" "),
-                                            _c("p", [
-                                              _vm._v(
-                                                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, aspernatur debitis ex expedita, hic illum inventore labore mollitia pariatur, quisquam quo quos rem sapiente sequi sint tenetur unde voluptates voluptatum?"
-                                              )
-                                            ]),
-                                            _vm._v(" "),
-                                            _c(
-                                              "v-row",
-                                              { attrs: { align: "center" } },
+                                              "v-col",
+                                              { attrs: { md: "12" } },
                                               [
                                                 _c(
-                                                  "v-col",
-                                                  { attrs: { md: "6" } },
+                                                  "v-avatar",
+                                                  {
+                                                    staticClass: "ml-2 px-5",
+                                                    attrs: { size: "36px" }
+                                                  },
+                                                  [
+                                                    _c("img", {
+                                                      attrs: {
+                                                        alt: "Avatar",
+                                                        src: asignaturassc.logo
+                                                      }
+                                                    }),
+                                                    _vm._v(" "),
+                                                    _c("v-icon", {
+                                                      attrs: { color: "" }
+                                                    })
+                                                  ],
+                                                  1
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "a",
+                                                  {
+                                                    staticClass:
+                                                      "font-weight-bold light-blue--text",
+                                                    attrs: {
+                                                      href:
+                                                        "../../../student/algebra/video/list"
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      _vm._s(
+                                                        asignaturassc.nombre
+                                                      )
+                                                    )
+                                                  ]
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-tabs",
+                                          {
+                                            attrs: {
+                                              grow: "",
+                                              color: "light-blue"
+                                            },
+                                            model: {
+                                              value: _vm.tabs,
+                                              callback: function($$v) {
+                                                _vm.tabs = $$v
+                                              },
+                                              expression: "tabs"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "v-tab",
+                                              {
+                                                staticClass:
+                                                  "text-capitalize font-weight-medium",
+                                                attrs: { href: "#aportes" }
+                                              },
+                                              [
+                                                _c(
+                                                  "v-badge",
+                                                  {
+                                                    attrs: {
+                                                      color: "grey",
+                                                      content: "6",
+                                                      "offset-y": "8"
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                                        Aportessd\n                                                    "
+                                                    )
+                                                  ]
+                                                )
+                                              ],
+                                              1
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-tab",
+                                              {
+                                                staticClass:
+                                                  "text-capitalize font-weight-medium",
+                                                attrs: { href: "#preguntas" }
+                                              },
+                                              [
+                                                _c(
+                                                  "v-badge",
+                                                  {
+                                                    attrs: {
+                                                      color: "grey",
+                                                      content: "6",
+                                                      "offset-y": "8"
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                                        Preguntas\n                                                    "
+                                                    )
+                                                  ]
+                                                )
+                                              ],
+                                              1
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-tab",
+                                              {
+                                                staticClass:
+                                                  "text-capitalize font-weight-medium",
+                                                attrs: { href: "#archivos" }
+                                              },
+                                              [
+                                                _c(
+                                                  "v-badge",
+                                                  {
+                                                    attrs: {
+                                                      color: "grey",
+                                                      content: "6",
+                                                      "offset-y": "10",
+                                                      "offset-x": "1"
+                                                    }
+                                                  },
+                                                  [
+                                                    _vm._v(
+                                                      "\n                                                        Archivos y enlaces\n                                                    "
+                                                    )
+                                                  ]
+                                                )
+                                              ],
+                                              1
+                                            )
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "v-tabs-items",
+                                          {
+                                            staticClass: "py-4 grey lighten-4",
+                                            model: {
+                                              value: _vm.tabs,
+                                              callback: function($$v) {
+                                                _vm.tabs = $$v
+                                              },
+                                              expression: "tabs"
+                                            }
+                                          },
+                                          [
+                                            _c(
+                                              "v-tab-item",
+                                              { attrs: { value: "aportes" } },
+                                              [
+                                                _c(
+                                                  "v-card",
+                                                  {
+                                                    staticClass: "mx-3 mb-3",
+                                                    attrs: { flat: "" }
+                                                  },
                                                   [
                                                     _c(
-                                                      "v-row",
+                                                      "v-card-title",
+                                                      { staticClass: "py-0" },
                                                       [
                                                         _c(
-                                                          "v-col",
+                                                          "v-list-item",
                                                           {
-                                                            attrs: { md: "2" }
+                                                            staticClass:
+                                                              "grow pa-0"
                                                           },
                                                           [
                                                             _c(
-                                                              "v-avatar",
+                                                              "v-list-item-avatar",
                                                               {
                                                                 attrs: {
-                                                                  size: "36px"
+                                                                  color:
+                                                                    "grey darken-3"
                                                                 }
                                                               },
                                                               [
-                                                                _c("img", {
+                                                                _c("v-img", {
+                                                                  staticClass:
+                                                                    "elevation-6",
                                                                   attrs: {
-                                                                    alt:
-                                                                      "Avatar",
                                                                     src:
-                                                                      "https://avatars0.githubusercontent.com/u/9064066?v=4&s=460"
-                                                                  }
-                                                                }),
-                                                                _vm._v(" "),
-                                                                _c("v-icon", {
-                                                                  attrs: {
-                                                                    color: ""
+                                                                      "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
                                                                   }
                                                                 })
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "v-list-item-content",
+                                                              [
+                                                                _c(
+                                                                  "v-list-item-title",
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Evan You"
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        )
+                                                      ],
+                                                      1
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c("v-card-text", {}, [
+                                                      _vm._v(
+                                                        '\n                                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                        '
+                                                      )
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "v-card-actions",
+                                                      [
+                                                        _c(
+                                                          "v-btn",
+                                                          {
+                                                            attrs: {
+                                                              icon: "",
+                                                              color:
+                                                                "light-blue"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("v-icon", [
+                                                              _vm._v(
+                                                                "mdi-reply"
+                                                              )
+                                                            ])
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-badge",
+                                                          {
+                                                            attrs: {
+                                                              color: "grey",
+                                                              content: "6",
+                                                              "offset-x": "10",
+                                                              "offset-y": "15"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-btn",
+                                                              {
+                                                                attrs: {
+                                                                  icon: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-heart"
+                                                                  )
+                                                                ])
                                                               ],
                                                               1
                                                             )
@@ -30381,38 +31480,651 @@ var render = function() {
                                                         ),
                                                         _vm._v(" "),
                                                         _c(
-                                                          "v-col",
+                                                          "v-badge",
                                                           {
-                                                            attrs: { md: "10" }
+                                                            attrs: {
+                                                              color: "grey",
+                                                              content: "6",
+                                                              "offset-x": "10",
+                                                              "offset-y": "15"
+                                                            }
                                                           },
                                                           [
                                                             _c(
-                                                              "span",
-                                                              {
-                                                                staticClass:
-                                                                  "font-weight-bold"
-                                                              },
-                                                              [
-                                                                _vm._v(
-                                                                  "Fernando Langschwager"
-                                                                )
-                                                              ]
-                                                            ),
-                                                            _vm._v(" "),
-                                                            _c(
-                                                              "a",
+                                                              "v-btn",
                                                               {
                                                                 attrs: {
-                                                                  href: ""
+                                                                  icon: ""
                                                                 }
                                                               },
                                                               [
-                                                                _vm._v(
-                                                                  "@josuechandiasto"
-                                                                )
-                                                              ]
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-share-variant"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
                                                             )
-                                                          ]
+                                                          ],
+                                                          1
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "v-card",
+                                                  {
+                                                    staticClass: "mx-3 mb-3",
+                                                    attrs: { flat: "" }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "v-card-title",
+                                                      { staticClass: "py-0" },
+                                                      [
+                                                        _c(
+                                                          "v-list-item",
+                                                          {
+                                                            staticClass:
+                                                              "grow pa-0"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-list-item-avatar",
+                                                              {
+                                                                attrs: {
+                                                                  color:
+                                                                    "grey darken-3"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-img", {
+                                                                  staticClass:
+                                                                    "elevation-6",
+                                                                  attrs: {
+                                                                    src:
+                                                                      "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                                  }
+                                                                })
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "v-list-item-content",
+                                                              [
+                                                                _c(
+                                                                  "v-list-item-title",
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Evan You"
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        )
+                                                      ],
+                                                      1
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c("v-card-text", {}, [
+                                                      _vm._v(
+                                                        '\n                                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                        '
+                                                      )
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "v-card-actions",
+                                                      [
+                                                        _c(
+                                                          "v-btn",
+                                                          {
+                                                            attrs: {
+                                                              icon: "",
+                                                              color:
+                                                                "light-blue"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("v-icon", [
+                                                              _vm._v(
+                                                                "mdi-reply"
+                                                              )
+                                                            ])
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-badge",
+                                                          {
+                                                            attrs: {
+                                                              color: "grey",
+                                                              content: "6",
+                                                              "offset-x": "10",
+                                                              "offset-y": "15"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-btn",
+                                                              {
+                                                                attrs: {
+                                                                  icon: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-heart"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-badge",
+                                                          {
+                                                            attrs: {
+                                                              color: "grey",
+                                                              content: "6",
+                                                              "offset-x": "10",
+                                                              "offset-y": "15"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-btn",
+                                                              {
+                                                                attrs: {
+                                                                  icon: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-share-variant"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-tab-item",
+                                              { attrs: { value: "preguntas" } },
+                                              [
+                                                _c(
+                                                  "v-card",
+                                                  {
+                                                    staticClass: "mx-3 mb-3",
+                                                    attrs: { flat: "" }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "v-card-title",
+                                                      { staticClass: "py-0" },
+                                                      [
+                                                        _c(
+                                                          "v-list-item",
+                                                          {
+                                                            staticClass:
+                                                              "grow pa-0"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-list-item-avatar",
+                                                              {
+                                                                attrs: {
+                                                                  color:
+                                                                    "grey darken-3"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-img", {
+                                                                  staticClass:
+                                                                    "elevation-6",
+                                                                  attrs: {
+                                                                    src:
+                                                                      "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                                  }
+                                                                })
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "v-list-item-content",
+                                                              [
+                                                                _c(
+                                                                  "v-list-item-title",
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Evan You"
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        )
+                                                      ],
+                                                      1
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c("v-card-text", {}, [
+                                                      _vm._v(
+                                                        '\n                                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                        '
+                                                      )
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "v-card-actions",
+                                                      [
+                                                        _c(
+                                                          "v-btn",
+                                                          {
+                                                            attrs: {
+                                                              icon: "",
+                                                              color:
+                                                                "light-blue"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("v-icon", [
+                                                              _vm._v(
+                                                                "mdi-reply"
+                                                              )
+                                                            ])
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-badge",
+                                                          {
+                                                            attrs: {
+                                                              color: "grey",
+                                                              content: "6",
+                                                              "offset-x": "10",
+                                                              "offset-y": "15"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-btn",
+                                                              {
+                                                                attrs: {
+                                                                  icon: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-heart"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-badge",
+                                                          {
+                                                            attrs: {
+                                                              color: "grey",
+                                                              content: "6",
+                                                              "offset-x": "10",
+                                                              "offset-y": "15"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-btn",
+                                                              {
+                                                                attrs: {
+                                                                  icon: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-share-variant"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
+                                                ),
+                                                _vm._v(" "),
+                                                _c(
+                                                  "v-card",
+                                                  {
+                                                    staticClass: "mx-3 mb-3",
+                                                    attrs: { flat: "" }
+                                                  },
+                                                  [
+                                                    _c(
+                                                      "v-card-title",
+                                                      { staticClass: "py-0" },
+                                                      [
+                                                        _c(
+                                                          "v-list-item",
+                                                          {
+                                                            staticClass:
+                                                              "grow pa-0"
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-list-item-avatar",
+                                                              {
+                                                                attrs: {
+                                                                  color:
+                                                                    "grey darken-3"
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-img", {
+                                                                  staticClass:
+                                                                    "elevation-6",
+                                                                  attrs: {
+                                                                    src:
+                                                                      "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                                  }
+                                                                })
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "v-list-item-content",
+                                                              [
+                                                                _c(
+                                                                  "v-list-item-title",
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Evan You"
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        )
+                                                      ],
+                                                      1
+                                                    ),
+                                                    _vm._v(" "),
+                                                    _c("v-card-text", {}, [
+                                                      _vm._v(
+                                                        '\n                                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                        '
+                                                      )
+                                                    ]),
+                                                    _vm._v(" "),
+                                                    _c(
+                                                      "v-card-actions",
+                                                      [
+                                                        _c(
+                                                          "v-btn",
+                                                          {
+                                                            attrs: {
+                                                              icon: "",
+                                                              color:
+                                                                "light-blue"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c("v-icon", [
+                                                              _vm._v(
+                                                                "mdi-reply"
+                                                              )
+                                                            ])
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-badge",
+                                                          {
+                                                            attrs: {
+                                                              color: "grey",
+                                                              content: "6",
+                                                              "offset-x": "10",
+                                                              "offset-y": "15"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-btn",
+                                                              {
+                                                                attrs: {
+                                                                  icon: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-heart"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-badge",
+                                                          {
+                                                            attrs: {
+                                                              color: "grey",
+                                                              content: "6",
+                                                              "offset-x": "10",
+                                                              "offset-y": "15"
+                                                            }
+                                                          },
+                                                          [
+                                                            _c(
+                                                              "v-btn",
+                                                              {
+                                                                attrs: {
+                                                                  icon: ""
+                                                                }
+                                                              },
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-share-variant"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        )
+                                                      ],
+                                                      1
+                                                    )
+                                                  ],
+                                                  1
+                                                )
+                                              ],
+                                              1
+                                            ),
+                                            _vm._v(" "),
+                                            _c(
+                                              "v-tab-item",
+                                              { attrs: { value: "archivos" } },
+                                              [
+                                                _c(
+                                                  "v-list",
+                                                  [
+                                                    _c(
+                                                      "v-list-item-group",
+                                                      {
+                                                        attrs: {
+                                                          color: "primary"
+                                                        }
+                                                      },
+                                                      [
+                                                        _c(
+                                                          "v-list-item",
+                                                          [
+                                                            _c(
+                                                              "v-list-item-icon",
+                                                              [
+                                                                _c(
+                                                                  "v-badge",
+                                                                  {
+                                                                    attrs: {
+                                                                      bottom:
+                                                                        "",
+                                                                      icon:
+                                                                        "mdi-download",
+                                                                      "offset-y":
+                                                                        "15"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _c(
+                                                                      "v-icon",
+                                                                      [
+                                                                        _vm._v(
+                                                                          "mdi-file-document-outline"
+                                                                        )
+                                                                      ]
+                                                                    )
+                                                                  ],
+                                                                  1
+                                                                )
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "v-list-item-content",
+                                                              [
+                                                                _c(
+                                                                  "v-list-item-title",
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Material del cusco"
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "v-list-item-icon",
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-download"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
+                                                        ),
+                                                        _vm._v(" "),
+                                                        _c(
+                                                          "v-list-item",
+                                                          [
+                                                            _c(
+                                                              "v-list-item-icon",
+                                                              [
+                                                                _c(
+                                                                  "v-icon",
+                                                                  {
+                                                                    attrs: {
+                                                                      color:
+                                                                        "blue"
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "mdi-link"
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "v-list-item-content",
+                                                              [
+                                                                _c(
+                                                                  "v-list-item-title",
+                                                                  [
+                                                                    _vm._v(
+                                                                      "Material del cusco"
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _c(
+                                                              "v-list-item-icon",
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-link"
+                                                                  )
+                                                                ])
+                                                              ],
+                                                              1
+                                                            )
+                                                          ],
+                                                          1
                                                         )
                                                       ],
                                                       1
@@ -30426,7 +32138,8 @@ var render = function() {
                                           ],
                                           1
                                         )
-                                      ]
+                                      ],
+                                      1
                                     )
                                   ],
                                   1
@@ -30434,815 +32147,19 @@ var render = function() {
                               ],
                               1
                             )
-                          ],
-                          1
-                        )
-                      ],
-                      1
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    {
-                      staticClass: "grey lighten-4 position-relative",
-                      attrs: { md: "5" }
-                    },
-                    [
-                      _c(
-                        "v-row",
-                        {
-                          staticClass: "my-3",
-                          attrs: { "no-gutters": "", align: "center" }
-                        },
-                        [
-                          _c(
-                            "v-col",
-                            { attrs: { md: "12" } },
-                            [
-                              _c(
-                                "v-avatar",
-                                {
-                                  staticClass: "ml-2 px-5",
-                                  attrs: { size: "36px" }
-                                },
-                                [
-                                  _c("img", {
-                                    attrs: {
-                                      alt: "Avatar",
-                                      src:
-                                        "../../../images/iconos/cursos/circle/algebra.png"
-                                    }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("v-icon", { attrs: { color: "" } })
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "a",
-                                {
-                                  staticClass:
-                                    "font-weight-bold light-blue--text",
-                                  attrs: {
-                                    href: "../../../student/algebra/video/list"
-                                  }
-                                },
-                                [_vm._v("Algebra")]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-tabs",
-                        {
-                          attrs: { grow: "", color: "light-blue" },
-                          model: {
-                            value: _vm.tabs,
-                            callback: function($$v) {
-                              _vm.tabs = $$v
-                            },
-                            expression: "tabs"
-                          }
-                        },
-                        [
-                          _c(
-                            "v-tab",
-                            {
-                              staticClass: "text-capitalize font-weight-medium",
-                              attrs: { href: "#aportes" }
-                            },
-                            [
-                              _c(
-                                "v-badge",
-                                {
-                                  attrs: {
-                                    color: "grey",
-                                    content: "6",
-                                    "offset-y": "8"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                Aportessd\n                            "
-                                  )
-                                ]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-tab",
-                            {
-                              staticClass: "text-capitalize font-weight-medium",
-                              attrs: { href: "#preguntas" }
-                            },
-                            [
-                              _c(
-                                "v-badge",
-                                {
-                                  attrs: {
-                                    color: "grey",
-                                    content: "6",
-                                    "offset-y": "8"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                Preguntas\n                            "
-                                  )
-                                ]
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-tab",
-                            {
-                              staticClass: "text-capitalize font-weight-medium",
-                              attrs: { href: "#archivos" }
-                            },
-                            [
-                              _c(
-                                "v-badge",
-                                {
-                                  attrs: {
-                                    color: "grey",
-                                    content: "6",
-                                    "offset-y": "10",
-                                    "offset-x": "1"
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                Archivos y enlaces\n                            "
-                                  )
-                                ]
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-tabs-items",
-                        {
-                          staticClass: "py-4 grey lighten-4",
-                          model: {
-                            value: _vm.tabs,
-                            callback: function($$v) {
-                              _vm.tabs = $$v
-                            },
-                            expression: "tabs"
-                          }
-                        },
-                        [
-                          _c(
-                            "v-tab-item",
-                            { attrs: { value: "aportes" } },
-                            [
-                              _c(
-                                "v-card",
-                                {
-                                  staticClass: "mx-3 mb-3",
-                                  attrs: { flat: "" }
-                                },
-                                [
-                                  _c(
-                                    "v-card-title",
-                                    { staticClass: "py-0" },
-                                    [
-                                      _c(
-                                        "v-list-item",
-                                        { staticClass: "grow pa-0" },
-                                        [
-                                          _c(
-                                            "v-list-item-avatar",
-                                            {
-                                              attrs: { color: "grey darken-3" }
-                                            },
-                                            [
-                                              _c("v-img", {
-                                                staticClass: "elevation-6",
-                                                attrs: {
-                                                  src:
-                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                                }
-                                              })
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-item-content",
-                                            [
-                                              _c("v-list-item-title", [
-                                                _vm._v("Evan You")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-card-text", {}, [
-                                    _vm._v(
-                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-card-actions",
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        {
-                                          attrs: {
-                                            icon: "",
-                                            color: "light-blue"
-                                          }
-                                        },
-                                        [_c("v-icon", [_vm._v("mdi-reply")])],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-badge",
-                                        {
-                                          attrs: {
-                                            color: "grey",
-                                            content: "6",
-                                            "offset-x": "10",
-                                            "offset-y": "15"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            { attrs: { icon: "" } },
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-heart")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-badge",
-                                        {
-                                          attrs: {
-                                            color: "grey",
-                                            content: "6",
-                                            "offset-x": "10",
-                                            "offset-y": "15"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            { attrs: { icon: "" } },
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-share-variant")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-card",
-                                {
-                                  staticClass: "mx-3 mb-3",
-                                  attrs: { flat: "" }
-                                },
-                                [
-                                  _c(
-                                    "v-card-title",
-                                    { staticClass: "py-0" },
-                                    [
-                                      _c(
-                                        "v-list-item",
-                                        { staticClass: "grow pa-0" },
-                                        [
-                                          _c(
-                                            "v-list-item-avatar",
-                                            {
-                                              attrs: { color: "grey darken-3" }
-                                            },
-                                            [
-                                              _c("v-img", {
-                                                staticClass: "elevation-6",
-                                                attrs: {
-                                                  src:
-                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                                }
-                                              })
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-item-content",
-                                            [
-                                              _c("v-list-item-title", [
-                                                _vm._v("Evan You")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-card-text", {}, [
-                                    _vm._v(
-                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-card-actions",
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        {
-                                          attrs: {
-                                            icon: "",
-                                            color: "light-blue"
-                                          }
-                                        },
-                                        [_c("v-icon", [_vm._v("mdi-reply")])],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-badge",
-                                        {
-                                          attrs: {
-                                            color: "grey",
-                                            content: "6",
-                                            "offset-x": "10",
-                                            "offset-y": "15"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            { attrs: { icon: "" } },
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-heart")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-badge",
-                                        {
-                                          attrs: {
-                                            color: "grey",
-                                            content: "6",
-                                            "offset-x": "10",
-                                            "offset-y": "15"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            { attrs: { icon: "" } },
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-share-variant")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-tab-item",
-                            { attrs: { value: "preguntas" } },
-                            [
-                              _c(
-                                "v-card",
-                                {
-                                  staticClass: "mx-3 mb-3",
-                                  attrs: { flat: "" }
-                                },
-                                [
-                                  _c(
-                                    "v-card-title",
-                                    { staticClass: "py-0" },
-                                    [
-                                      _c(
-                                        "v-list-item",
-                                        { staticClass: "grow pa-0" },
-                                        [
-                                          _c(
-                                            "v-list-item-avatar",
-                                            {
-                                              attrs: { color: "grey darken-3" }
-                                            },
-                                            [
-                                              _c("v-img", {
-                                                staticClass: "elevation-6",
-                                                attrs: {
-                                                  src:
-                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                                }
-                                              })
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-item-content",
-                                            [
-                                              _c("v-list-item-title", [
-                                                _vm._v("Evan You")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-card-text", {}, [
-                                    _vm._v(
-                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-card-actions",
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        {
-                                          attrs: {
-                                            icon: "",
-                                            color: "light-blue"
-                                          }
-                                        },
-                                        [_c("v-icon", [_vm._v("mdi-reply")])],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-badge",
-                                        {
-                                          attrs: {
-                                            color: "grey",
-                                            content: "6",
-                                            "offset-x": "10",
-                                            "offset-y": "15"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            { attrs: { icon: "" } },
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-heart")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-badge",
-                                        {
-                                          attrs: {
-                                            color: "grey",
-                                            content: "6",
-                                            "offset-x": "10",
-                                            "offset-y": "15"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            { attrs: { icon: "" } },
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-share-variant")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "v-card",
-                                {
-                                  staticClass: "mx-3 mb-3",
-                                  attrs: { flat: "" }
-                                },
-                                [
-                                  _c(
-                                    "v-card-title",
-                                    { staticClass: "py-0" },
-                                    [
-                                      _c(
-                                        "v-list-item",
-                                        { staticClass: "grow pa-0" },
-                                        [
-                                          _c(
-                                            "v-list-item-avatar",
-                                            {
-                                              attrs: { color: "grey darken-3" }
-                                            },
-                                            [
-                                              _c("v-img", {
-                                                staticClass: "elevation-6",
-                                                attrs: {
-                                                  src:
-                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                                }
-                                              })
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-item-content",
-                                            [
-                                              _c("v-list-item-title", [
-                                                _vm._v("Evan You")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c("v-card-text", {}, [
-                                    _vm._v(
-                                      '\n                                    "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                '
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-card-actions",
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        {
-                                          attrs: {
-                                            icon: "",
-                                            color: "light-blue"
-                                          }
-                                        },
-                                        [_c("v-icon", [_vm._v("mdi-reply")])],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-badge",
-                                        {
-                                          attrs: {
-                                            color: "grey",
-                                            content: "6",
-                                            "offset-x": "10",
-                                            "offset-y": "15"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            { attrs: { icon: "" } },
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-heart")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-badge",
-                                        {
-                                          attrs: {
-                                            color: "grey",
-                                            content: "6",
-                                            "offset-x": "10",
-                                            "offset-y": "15"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-btn",
-                                            { attrs: { icon: "" } },
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-share-variant")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-tab-item",
-                            { attrs: { value: "archivos" } },
-                            [
-                              _c(
-                                "v-list",
-                                [
-                                  _c(
-                                    "v-list-item-group",
-                                    { attrs: { color: "primary" } },
-                                    [
-                                      _c(
-                                        "v-list-item",
-                                        [
-                                          _c(
-                                            "v-list-item-icon",
-                                            [
-                                              _c(
-                                                "v-badge",
-                                                {
-                                                  attrs: {
-                                                    bottom: "",
-                                                    icon: "mdi-download",
-                                                    "offset-y": "15"
-                                                  }
-                                                },
-                                                [
-                                                  _c("v-icon", [
-                                                    _vm._v(
-                                                      "mdi-file-document-outline"
-                                                    )
-                                                  ])
-                                                ],
-                                                1
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-item-content",
-                                            [
-                                              _c("v-list-item-title", [
-                                                _vm._v("Material del cusco")
-                                              ])
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-item-icon",
-                                            [
-                                              _c("v-icon", [
-                                                _vm._v("mdi-download")
-                                              ])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-list-item",
-                                        [
-                                          _c(
-                                            "v-list-item-icon",
-                                            [
-                                              _c(
-                                                "v-icon",
-                                                { attrs: { color: "blue" } },
-                                                [_vm._v("mdi-link")]
-                                              )
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-item-content",
-                                            [
-                                              _c("v-list-item-title", [
-                                                _vm._v("Material del cusco")
-                                              ])
-                                            ],
-                                            1
-                                          ),
-                                          _vm._v(" "),
-                                          _c(
-                                            "v-list-item-icon",
-                                            [
-                                              _c("v-icon", [_vm._v("mdi-link")])
-                                            ],
-                                            1
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ],
-                1
-              )
-            ],
-            1
-          )
+                          ]
+                        })
+                      ]
+                    })
+                  ]
+                : _vm._e()
+            ]
+          })
         ],
-        1
+        2
       )
     ],
-    1
+    2
   )
 }
 var staticRenderFns = []
@@ -31271,123 +32188,153 @@ var render = function() {
     "section",
     { staticClass: "grey lighten-4" },
     [
-      _c(
-        "v-container",
-        [
-          _c(
-            "v-row",
-            [
-              _c(
-                "v-col",
-                { staticClass: "overflow-y-auto", attrs: { md: "7" } },
+      _vm._l(_vm.response_data.asignatura, function(asignaturass) {
+        return [
+          _vm.response_data.view_a === "true"
+            ? _c(
+                "v-container",
                 [
                   _c(
-                    "div",
-                    { staticClass: "h-100" },
+                    "v-row",
                     [
                       _c(
-                        "v-card",
-                        { attrs: { flat: "", tile: "" } },
+                        "v-col",
+                        { staticClass: "overflow-y-auto", attrs: { md: "7" } },
                         [
                           _c(
-                            "v-card-text",
+                            "div",
+                            { staticClass: "h-100" },
                             [
                               _c(
-                                "v-row",
+                                "v-card",
+                                { attrs: { flat: "", tile: "" } },
                                 [
                                   _c(
-                                    "v-col",
-                                    { attrs: { md: "auto" } },
+                                    "v-card-text",
                                     [
-                                      _c("v-avatar", [
-                                        _c("img", {
-                                          attrs: {
-                                            src:
-                                              "../../../images/iconos/cursos/circle/algebra.png",
-                                            alt: "John"
-                                          }
-                                        })
-                                      ])
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-col",
-                                    [
-                                      _c(
-                                        "h1",
-                                        {
-                                          staticClass: "small font-weight-bold"
-                                        },
-                                        [_vm._v("Algebra")]
-                                      ),
-                                      _vm._v(" "),
-                                      _c("v-divider", { staticClass: "my-3" }),
-                                      _vm._v(" "),
                                       _c(
                                         "v-row",
-                                        {
-                                          attrs: {
-                                            align: "center",
-                                            "no-gutters": ""
-                                          }
-                                        },
                                         [
                                           _c(
                                             "v-col",
                                             { attrs: { md: "auto" } },
                                             [
-                                              _c(
-                                                "span",
-                                                {
-                                                  staticClass:
-                                                    "text--secondary caption font-weight-bold mr-5"
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "\n                                                Docente:\n                                            "
-                                                  )
-                                                ]
-                                              )
-                                            ]
+                                              _c("v-avatar", [
+                                                _c("img", {
+                                                  attrs: {
+                                                    src: asignaturass.logo,
+                                                    alt: "John"
+                                                  }
+                                                })
+                                              ])
+                                            ],
+                                            1
                                           ),
                                           _vm._v(" "),
                                           _c(
                                             "v-col",
                                             [
                                               _c(
-                                                "v-list-item",
-                                                { staticClass: "grow pa-0" },
+                                                "h1",
+                                                {
+                                                  staticClass:
+                                                    "small font-weight-bold"
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    _vm._s(asignaturass.nombre)
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-divider", {
+                                                staticClass: "my-3"
+                                              }),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-row",
+                                                {
+                                                  attrs: {
+                                                    align: "center",
+                                                    "no-gutters": ""
+                                                  }
+                                                },
                                                 [
                                                   _c(
-                                                    "v-list-item-avatar",
-                                                    {
-                                                      attrs: {
-                                                        color:
-                                                          "grey darken-3 my-0"
-                                                      }
-                                                    },
+                                                    "v-col",
+                                                    { attrs: { md: "auto" } },
                                                     [
-                                                      _c("v-img", {
-                                                        staticClass:
-                                                          "elevation-6",
-                                                        attrs: {
-                                                          src:
-                                                            "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                                        }
-                                                      })
-                                                    ],
-                                                    1
+                                                      _c(
+                                                        "span",
+                                                        {
+                                                          staticClass:
+                                                            "text--secondary caption font-weight-bold mr-5"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "\n                                                    Docente:\n                                                "
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
                                                   ),
                                                   _vm._v(" "),
                                                   _c(
-                                                    "v-list-item-content",
-                                                    { staticClass: "pa-0" },
+                                                    "v-col",
                                                     [
-                                                      _c("v-list-item-title", [
-                                                        _vm._v("Evan You")
-                                                      ])
+                                                      _c(
+                                                        "v-list-item",
+                                                        {
+                                                          staticClass:
+                                                            "grow pa-0"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-list-item-avatar",
+                                                            {
+                                                              attrs: {
+                                                                color:
+                                                                  "grey darken-3 my-0"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("v-img", {
+                                                                staticClass:
+                                                                  "elevation-6",
+                                                                attrs: {
+                                                                  src:
+                                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                                }
+                                                              })
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-list-item-content",
+                                                            {
+                                                              staticClass:
+                                                                "pa-0"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-list-item-title",
+                                                                [
+                                                                  _vm._v(
+                                                                    _vm._s(
+                                                                      asignaturass
+                                                                        .docente
+                                                                        .name
+                                                                    )
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
                                                     ],
                                                     1
                                                   )
@@ -31405,716 +32352,67 @@ var render = function() {
                                   )
                                 ],
                                 1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-row",
-                        [
-                          _c(
-                            "v-col",
-                            [
+                              ),
+                              _vm._v(" "),
                               _c(
-                                "v-card",
-                                { attrs: { flat: "", tile: "" } },
+                                "v-row",
                                 [
                                   _c(
-                                    "v-tabs",
-                                    {
-                                      attrs: { color: "light-blue" },
-                                      model: {
-                                        value: _vm.content,
-                                        callback: function($$v) {
-                                          _vm.content = $$v
-                                        },
-                                        expression: "content"
-                                      }
-                                    },
+                                    "v-col",
                                     [
                                       _c(
-                                        "v-tab",
-                                        {
-                                          staticClass:
-                                            "text-capitalize font-weight-medium",
-                                          attrs: { href: "#contenido" }
-                                        },
-                                        [
-                                          _vm._v(
-                                            "\n                                            Contenido del curso\n                                        "
-                                          )
-                                        ]
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-tab",
-                                        {
-                                          staticClass:
-                                            "text-capitalize font-weight-medium",
-                                          attrs: { href: "#vivo" }
-                                        },
+                                        "v-card",
+                                        { attrs: { flat: "", tile: "" } },
                                         [
                                           _c(
-                                            "v-badge",
+                                            "v-tabs",
                                             {
-                                              attrs: {
-                                                color: "red",
-                                                content: "live",
-                                                "offset-y": "8"
+                                              attrs: { color: "light-blue" },
+                                              model: {
+                                                value: _vm.content,
+                                                callback: function($$v) {
+                                                  _vm.content = $$v
+                                                },
+                                                expression: "content"
                                               }
                                             },
                                             [
-                                              _vm._v(
-                                                "\n                                                Videos de clases en vivo\n                                            "
-                                              )
-                                            ]
-                                          )
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-card-text",
-                                    [
-                                      _c(
-                                        "v-tabs-items",
-                                        {
-                                          model: {
-                                            value: _vm.content,
-                                            callback: function($$v) {
-                                              _vm.content = $$v
-                                            },
-                                            expression: "content"
-                                          }
-                                        },
-                                        [
-                                          _c(
-                                            "v-tab-item",
-                                            { attrs: { value: "contenido" } },
-                                            [
                                               _c(
-                                                "v-row",
-                                                {
-                                                  staticClass: "py-4",
-                                                  attrs: { align: "center" }
-                                                },
-                                                [
-                                                  _c(
-                                                    "v-col",
-                                                    [
-                                                      _c("h4", [
-                                                        _vm._v(
-                                                          "Progreso del curso: 0/23 contenidos(0%)"
-                                                        )
-                                                      ]),
-                                                      _vm._v(" "),
-                                                      _c("v-progress-linear", {
-                                                        attrs: {
-                                                          color:
-                                                            "deep-purple accent-4"
-                                                        },
-                                                        model: {
-                                                          value:
-                                                            _vm.valueDeterminate,
-                                                          callback: function(
-                                                            $$v
-                                                          ) {
-                                                            _vm.valueDeterminate = $$v
-                                                          },
-                                                          expression:
-                                                            "valueDeterminate"
-                                                        }
-                                                      })
-                                                    ],
-                                                    1
-                                                  ),
-                                                  _vm._v(" "),
-                                                  _c(
-                                                    "v-col",
-                                                    [
-                                                      _c(
-                                                        "v-btn",
-                                                        {
-                                                          staticClass: "ma-2",
-                                                          attrs: {
-                                                            tile: "",
-                                                            outlined: "",
-                                                            color: "light-blue"
-                                                          }
-                                                        },
-                                                        [
-                                                          _c(
-                                                            "v-icon",
-                                                            {
-                                                              attrs: {
-                                                                left: ""
-                                                              }
-                                                            },
-                                                            [_vm._v("mdi-lock")]
-                                                          ),
-                                                          _vm._v(
-                                                            " Iniciar plan\n                                                        "
-                                                          )
-                                                        ],
-                                                        1
-                                                      )
-                                                    ],
-                                                    1
-                                                  )
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "h3",
+                                                "v-tab",
                                                 {
                                                   staticClass:
-                                                    "title grey--text text--darken-3 mt-5 mb-3 font-weight-bold"
+                                                    "text-capitalize font-weight-medium",
+                                                  attrs: { href: "#contenido" }
                                                 },
                                                 [
                                                   _vm._v(
-                                                    "Teoria de exponenetes"
+                                                    "\n                                                    Contenido del curso\n                                                "
                                                   )
                                                 ]
                                               ),
                                               _vm._v(" "),
                                               _c(
-                                                "v-card",
-                                                {
-                                                  staticClass: "mb-3",
-                                                  attrs: {
-                                                    tile: "",
-                                                    outlined: "",
-                                                    href:
-                                                      "/student/algebra/video/"
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "v-row",
-                                                    {
-                                                      attrs: {
-                                                        "no-gutters": "",
-                                                        align: "center"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "v-col",
-                                                        {
-                                                          staticClass:
-                                                            "position-relative",
-                                                          attrs: { md: "3" }
-                                                        },
-                                                        [
-                                                          _c("v-img", {
-                                                            attrs: {
-                                                              src:
-                                                                "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
-                                                              "aspect-ratio":
-                                                                "1.8"
-                                                            }
-                                                          })
-                                                        ],
-                                                        1
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "v-col",
-                                                        { staticClass: "px-3" },
-                                                        [
-                                                          _c(
-                                                            "h3",
-                                                            {
-                                                              staticClass:
-                                                                "small font-weight-bold mb-2"
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Potencia de potencia"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    small: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-clock"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                " 07:00 min"
-                                                              )
-                                                            ],
-                                                            1
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            {
-                                                              staticClass:
-                                                                "d-block green--text"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    color:
-                                                                      "green",
-                                                                    small: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-lock"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                " Contenido no disponible"
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ],
-                                                    1
-                                                  )
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-card",
-                                                {
-                                                  staticClass: "mb-3",
-                                                  attrs: {
-                                                    tile: "",
-                                                    outlined: ""
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "v-row",
-                                                    {
-                                                      attrs: {
-                                                        "no-gutters": "",
-                                                        align: "center"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "v-col",
-                                                        {
-                                                          staticClass:
-                                                            "position-relative",
-                                                          attrs: { md: "3" }
-                                                        },
-                                                        [
-                                                          _c("v-img", {
-                                                            attrs: {
-                                                              src:
-                                                                "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
-                                                              "aspect-ratio":
-                                                                "1.8"
-                                                            }
-                                                          }),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "v-avatar",
-                                                            {
-                                                              staticClass:
-                                                                "video-lock-box",
-                                                              attrs: {
-                                                                color:
-                                                                  "grey darken-3"
-                                                              }
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    dark: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-lock"
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ],
-                                                        1
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "v-col",
-                                                        { staticClass: "px-3" },
-                                                        [
-                                                          _c(
-                                                            "h3",
-                                                            {
-                                                              staticClass:
-                                                                "small font-weight-bold mb-2"
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Potencia de potencia"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    small: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-clock"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                " 07:00 min"
-                                                              )
-                                                            ],
-                                                            1
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            {
-                                                              staticClass:
-                                                                "d-block green--text"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    color:
-                                                                      "green",
-                                                                    small: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-lock"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                " Contenido no disponible"
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ],
-                                                    1
-                                                  )
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "h3",
+                                                "v-tab",
                                                 {
                                                   staticClass:
-                                                    "title grey--text text--darken-3 mt-5 mb-3 font-weight-bold"
-                                                },
-                                                [
-                                                  _vm._v(
-                                                    "Teoria de exponenetes"
-                                                  )
-                                                ]
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-card",
-                                                {
-                                                  staticClass: "mb-3",
-                                                  attrs: {
-                                                    tile: "",
-                                                    outlined: ""
-                                                  }
+                                                    "text-capitalize font-weight-medium",
+                                                  attrs: { href: "#vivo" }
                                                 },
                                                 [
                                                   _c(
-                                                    "v-row",
+                                                    "v-badge",
                                                     {
                                                       attrs: {
-                                                        "no-gutters": "",
-                                                        align: "center"
+                                                        color: "red",
+                                                        content: "live",
+                                                        "offset-y": "8"
                                                       }
                                                     },
                                                     [
-                                                      _c(
-                                                        "v-col",
-                                                        {
-                                                          staticClass:
-                                                            "position-relative",
-                                                          attrs: { md: "3" }
-                                                        },
-                                                        [
-                                                          _c("v-img", {
-                                                            attrs: {
-                                                              src:
-                                                                "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
-                                                              "aspect-ratio":
-                                                                "1.8"
-                                                            }
-                                                          })
-                                                        ],
-                                                        1
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "v-col",
-                                                        { staticClass: "px-3" },
-                                                        [
-                                                          _c(
-                                                            "h3",
-                                                            {
-                                                              staticClass:
-                                                                "small font-weight-bold mb-2"
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Potencia de potencia"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    small: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-clock"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                " 07:00 min"
-                                                              )
-                                                            ],
-                                                            1
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            {
-                                                              staticClass:
-                                                                "d-block green--text"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    color:
-                                                                      "green",
-                                                                    small: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-lock"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                " Contenido no disponible"
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
+                                                      _vm._v(
+                                                        "\n                                                        Videos de clases en vivo\n                                                    "
                                                       )
-                                                    ],
-                                                    1
-                                                  )
-                                                ],
-                                                1
-                                              ),
-                                              _vm._v(" "),
-                                              _c(
-                                                "v-card",
-                                                {
-                                                  staticClass: "mb-3",
-                                                  attrs: {
-                                                    tile: "",
-                                                    outlined: ""
-                                                  }
-                                                },
-                                                [
-                                                  _c(
-                                                    "v-row",
-                                                    {
-                                                      attrs: {
-                                                        "no-gutters": "",
-                                                        align: "center"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c(
-                                                        "v-col",
-                                                        {
-                                                          staticClass:
-                                                            "position-relative",
-                                                          attrs: { md: "3" }
-                                                        },
-                                                        [
-                                                          _c("v-img", {
-                                                            attrs: {
-                                                              src:
-                                                                "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
-                                                              "aspect-ratio":
-                                                                "1.8"
-                                                            }
-                                                          }),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "v-avatar",
-                                                            {
-                                                              staticClass:
-                                                                "video-lock-box",
-                                                              attrs: {
-                                                                color:
-                                                                  "grey darken-3"
-                                                              }
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    dark: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-lock"
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ],
-                                                        1
-                                                      ),
-                                                      _vm._v(" "),
-                                                      _c(
-                                                        "v-col",
-                                                        { staticClass: "px-3" },
-                                                        [
-                                                          _c(
-                                                            "h3",
-                                                            {
-                                                              staticClass:
-                                                                "small font-weight-bold mb-2"
-                                                            },
-                                                            [
-                                                              _vm._v(
-                                                                "Potencia de potencia"
-                                                              )
-                                                            ]
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    small: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-clock"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                " 07:00 min"
-                                                              )
-                                                            ],
-                                                            1
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "span",
-                                                            {
-                                                              staticClass:
-                                                                "d-block green--text"
-                                                            },
-                                                            [
-                                                              _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    color:
-                                                                      "green",
-                                                                    small: ""
-                                                                  }
-                                                                },
-                                                                [
-                                                                  _vm._v(
-                                                                    "mdi-lock"
-                                                                  )
-                                                                ]
-                                                              ),
-                                                              _vm._v(
-                                                                " Contenido no disponible"
-                                                              )
-                                                            ],
-                                                            1
-                                                          )
-                                                        ]
-                                                      )
-                                                    ],
-                                                    1
+                                                    ]
                                                   )
                                                 ],
                                                 1
@@ -32123,46 +32421,69 @@ var render = function() {
                                             1
                                           ),
                                           _vm._v(" "),
-                                          _c("v-tab-item", {
-                                            attrs: { value: "vivo" }
-                                          }),
-                                          _vm._v(" "),
                                           _c(
-                                            "v-tab-item",
-                                            { attrs: { value: "archivos" } },
+                                            "v-card-text",
                                             [
                                               _c(
-                                                "v-list",
+                                                "v-tabs-items",
+                                                {
+                                                  model: {
+                                                    value: _vm.content,
+                                                    callback: function($$v) {
+                                                      _vm.content = $$v
+                                                    },
+                                                    expression: "content"
+                                                  }
+                                                },
                                                 [
                                                   _c(
-                                                    "v-list-item-group",
+                                                    "v-tab-item",
                                                     {
                                                       attrs: {
-                                                        color: "primary"
+                                                        value: "contenido"
                                                       }
                                                     },
                                                     [
                                                       _c(
-                                                        "v-list-item",
+                                                        "v-alert",
+                                                        {
+                                                          attrs: {
+                                                            prominent: "",
+                                                            type: "error"
+                                                          }
+                                                        },
                                                         [
                                                           _c(
-                                                            "v-list-item-icon",
+                                                            "v-row",
+                                                            {
+                                                              attrs: {
+                                                                align: "center"
+                                                              }
+                                                            },
                                                             [
                                                               _c(
-                                                                "v-badge",
+                                                                "v-col",
                                                                 {
-                                                                  attrs: {
-                                                                    bottom: "",
-                                                                    icon:
-                                                                      "mdi-download",
-                                                                    "offset-y":
-                                                                      "15"
-                                                                  }
+                                                                  staticClass:
+                                                                    "grow"
                                                                 },
                                                                 [
-                                                                  _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "Cuenta gratis inicie plan para una mejor experiencia."
+                                                                  )
+                                                                ]
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "shrink"
+                                                                },
+                                                                [
+                                                                  _c("v-btn", [
                                                                     _vm._v(
-                                                                      "mdi-file-document-outline"
+                                                                      "Iniciar plan"
                                                                     )
                                                                   ])
                                                                 ],
@@ -32170,85 +32491,451 @@ var render = function() {
                                                               )
                                                             ],
                                                             1
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "v-list-item-content",
-                                                            [
-                                                              _c(
-                                                                "v-list-item-title",
-                                                                [
-                                                                  _vm._v(
-                                                                    "Material del cusco"
-                                                                  )
-                                                                ]
-                                                              )
-                                                            ],
-                                                            1
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "v-list-item-icon",
-                                                            [
-                                                              _c("v-icon", [
-                                                                _vm._v(
-                                                                  "mdi-download"
-                                                                )
-                                                              ])
-                                                            ],
-                                                            1
                                                           )
                                                         ],
                                                         1
                                                       ),
                                                       _vm._v(" "),
+                                                      _vm._l(
+                                                        asignaturass.temas,
+                                                        function(tema) {
+                                                          return [
+                                                            _c(
+                                                              "h3",
+                                                              {
+                                                                staticClass:
+                                                                  "title grey--text text--darken-3 mt-5 mb-3 font-weight-bold"
+                                                              },
+                                                              [
+                                                                _c("v-icon", [
+                                                                  _vm._v(
+                                                                    "mdi-chevron-right"
+                                                                  )
+                                                                ]),
+                                                                _vm._v(
+                                                                  _vm._s(
+                                                                    tema.nombre
+                                                                  )
+                                                                )
+                                                              ],
+                                                              1
+                                                            ),
+                                                            _vm._v(" "),
+                                                            _vm._l(
+                                                              tema.sub_temas,
+                                                              function(
+                                                                sub_temas
+                                                              ) {
+                                                                return [
+                                                                  sub_temas.free ===
+                                                                  1
+                                                                    ? _c(
+                                                                        "v-card",
+                                                                        {
+                                                                          staticClass:
+                                                                            "mb-3",
+                                                                          attrs: {
+                                                                            tile:
+                                                                              "",
+                                                                            outlined:
+                                                                              "",
+                                                                            href:
+                                                                              "/student/" +
+                                                                              asignaturass.id +
+                                                                              "/video/" +
+                                                                              sub_temas.id
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _c(
+                                                                            "v-row",
+                                                                            {
+                                                                              attrs: {
+                                                                                "no-gutters":
+                                                                                  "",
+                                                                                align:
+                                                                                  "center"
+                                                                              }
+                                                                            },
+                                                                            [
+                                                                              _c(
+                                                                                "v-col",
+                                                                                {
+                                                                                  staticClass:
+                                                                                    "position-relative",
+                                                                                  attrs: {
+                                                                                    md:
+                                                                                      "3"
+                                                                                  }
+                                                                                },
+                                                                                [
+                                                                                  _c(
+                                                                                    "v-img",
+                                                                                    {
+                                                                                      attrs: {
+                                                                                        src:
+                                                                                          "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                                                        "aspect-ratio":
+                                                                                          "1.8"
+                                                                                      }
+                                                                                    }
+                                                                                  )
+                                                                                ],
+                                                                                1
+                                                                              ),
+                                                                              _vm._v(
+                                                                                " "
+                                                                              ),
+                                                                              _c(
+                                                                                "v-col",
+                                                                                {
+                                                                                  staticClass:
+                                                                                    "px-3"
+                                                                                },
+                                                                                [
+                                                                                  _c(
+                                                                                    "h3",
+                                                                                    {
+                                                                                      staticClass:
+                                                                                        "small font-weight-bold mb-2"
+                                                                                    },
+                                                                                    [
+                                                                                      _vm._v(
+                                                                                        _vm._s(
+                                                                                          sub_temas.titulo
+                                                                                        )
+                                                                                      )
+                                                                                    ]
+                                                                                  ),
+                                                                                  _vm._v(
+                                                                                    " "
+                                                                                  ),
+                                                                                  _c(
+                                                                                    "span",
+                                                                                    [
+                                                                                      _c(
+                                                                                        "v-icon",
+                                                                                        {
+                                                                                          attrs: {
+                                                                                            small:
+                                                                                              ""
+                                                                                          }
+                                                                                        },
+                                                                                        [
+                                                                                          _vm._v(
+                                                                                            "mdi-clock"
+                                                                                          )
+                                                                                        ]
+                                                                                      ),
+                                                                                      _vm._v(
+                                                                                        " 07:00 min"
+                                                                                      )
+                                                                                    ],
+                                                                                    1
+                                                                                  )
+                                                                                ]
+                                                                              )
+                                                                            ],
+                                                                            1
+                                                                          )
+                                                                        ],
+                                                                        1
+                                                                      )
+                                                                    : _c(
+                                                                        "v-card",
+                                                                        {
+                                                                          staticClass:
+                                                                            "mb-3",
+                                                                          attrs: {
+                                                                            tile:
+                                                                              "",
+                                                                            outlined:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _c(
+                                                                            "v-row",
+                                                                            {
+                                                                              attrs: {
+                                                                                "no-gutters":
+                                                                                  "",
+                                                                                align:
+                                                                                  "center"
+                                                                              }
+                                                                            },
+                                                                            [
+                                                                              _c(
+                                                                                "v-col",
+                                                                                {
+                                                                                  staticClass:
+                                                                                    "position-relative",
+                                                                                  attrs: {
+                                                                                    md:
+                                                                                      "3"
+                                                                                  }
+                                                                                },
+                                                                                [
+                                                                                  _c(
+                                                                                    "v-img",
+                                                                                    {
+                                                                                      attrs: {
+                                                                                        src:
+                                                                                          "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                                                        "aspect-ratio":
+                                                                                          "1.8"
+                                                                                      }
+                                                                                    }
+                                                                                  )
+                                                                                ],
+                                                                                1
+                                                                              ),
+                                                                              _vm._v(
+                                                                                " "
+                                                                              ),
+                                                                              _c(
+                                                                                "v-col",
+                                                                                {
+                                                                                  staticClass:
+                                                                                    "px-3"
+                                                                                },
+                                                                                [
+                                                                                  _c(
+                                                                                    "h3",
+                                                                                    {
+                                                                                      staticClass:
+                                                                                        "small font-weight-bold mb-2"
+                                                                                    },
+                                                                                    [
+                                                                                      _vm._v(
+                                                                                        _vm._s(
+                                                                                          sub_temas.titulo
+                                                                                        )
+                                                                                      )
+                                                                                    ]
+                                                                                  ),
+                                                                                  _vm._v(
+                                                                                    " "
+                                                                                  ),
+                                                                                  _c(
+                                                                                    "span",
+                                                                                    [
+                                                                                      _c(
+                                                                                        "v-icon",
+                                                                                        {
+                                                                                          attrs: {
+                                                                                            small:
+                                                                                              ""
+                                                                                          }
+                                                                                        },
+                                                                                        [
+                                                                                          _vm._v(
+                                                                                            "mdi-clock"
+                                                                                          )
+                                                                                        ]
+                                                                                      ),
+                                                                                      _vm._v(
+                                                                                        " 07:00 min"
+                                                                                      )
+                                                                                    ],
+                                                                                    1
+                                                                                  ),
+                                                                                  _vm._v(
+                                                                                    " "
+                                                                                  ),
+                                                                                  _c(
+                                                                                    "span",
+                                                                                    {
+                                                                                      staticClass:
+                                                                                        "d-block green--text"
+                                                                                    },
+                                                                                    [
+                                                                                      _c(
+                                                                                        "v-icon",
+                                                                                        {
+                                                                                          attrs: {
+                                                                                            color:
+                                                                                              "green",
+                                                                                            small:
+                                                                                              ""
+                                                                                          }
+                                                                                        },
+                                                                                        [
+                                                                                          _vm._v(
+                                                                                            "mdi-lock"
+                                                                                          )
+                                                                                        ]
+                                                                                      ),
+                                                                                      _vm._v(
+                                                                                        " Contenido disponible en version expert"
+                                                                                      )
+                                                                                    ],
+                                                                                    1
+                                                                                  )
+                                                                                ]
+                                                                              )
+                                                                            ],
+                                                                            1
+                                                                          )
+                                                                        ],
+                                                                        1
+                                                                      )
+                                                                ]
+                                                              }
+                                                            )
+                                                          ]
+                                                        }
+                                                      )
+                                                    ],
+                                                    2
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c("v-tab-item", {
+                                                    attrs: { value: "vivo" }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-tab-item",
+                                                    {
+                                                      attrs: {
+                                                        value: "archivos"
+                                                      }
+                                                    },
+                                                    [
                                                       _c(
-                                                        "v-list-item",
+                                                        "v-list",
                                                         [
                                                           _c(
-                                                            "v-list-item-icon",
+                                                            "v-list-item-group",
+                                                            {
+                                                              attrs: {
+                                                                color: "primary"
+                                                              }
+                                                            },
                                                             [
                                                               _c(
-                                                                "v-icon",
-                                                                {
-                                                                  attrs: {
-                                                                    color:
-                                                                      "blue"
-                                                                  }
-                                                                },
+                                                                "v-list-item",
                                                                 [
-                                                                  _vm._v(
-                                                                    "mdi-link"
+                                                                  _c(
+                                                                    "v-list-item-icon",
+                                                                    [
+                                                                      _c(
+                                                                        "v-badge",
+                                                                        {
+                                                                          attrs: {
+                                                                            bottom:
+                                                                              "",
+                                                                            icon:
+                                                                              "mdi-download",
+                                                                            "offset-y":
+                                                                              "15"
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _c(
+                                                                            "v-icon",
+                                                                            [
+                                                                              _vm._v(
+                                                                                "mdi-file-document-outline"
+                                                                              )
+                                                                            ]
+                                                                          )
+                                                                        ],
+                                                                        1
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-list-item-content",
+                                                                    [
+                                                                      _c(
+                                                                        "v-list-item-title",
+                                                                        [
+                                                                          _vm._v(
+                                                                            "Material del cusco"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-list-item-icon",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-download"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
                                                                   )
-                                                                ]
-                                                              )
-                                                            ],
-                                                            1
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "v-list-item-content",
-                                                            [
+                                                                ],
+                                                                1
+                                                              ),
+                                                              _vm._v(" "),
                                                               _c(
-                                                                "v-list-item-title",
+                                                                "v-list-item",
                                                                 [
-                                                                  _vm._v(
-                                                                    "Material del cusco"
+                                                                  _c(
+                                                                    "v-list-item-icon",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            color:
+                                                                              "blue"
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-link"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-list-item-content",
+                                                                    [
+                                                                      _c(
+                                                                        "v-list-item-title",
+                                                                        [
+                                                                          _vm._v(
+                                                                            "Material del cusco"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-list-item-icon",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-link"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
                                                                   )
-                                                                ]
+                                                                ],
+                                                                1
                                                               )
-                                                            ],
-                                                            1
-                                                          ),
-                                                          _vm._v(" "),
-                                                          _c(
-                                                            "v-list-item-icon",
-                                                            [
-                                                              _c("v-icon", [
-                                                                _vm._v(
-                                                                  "mdi-link"
-                                                                )
-                                                              ])
                                                             ],
                                                             1
                                                           )
@@ -32276,236 +32963,103 @@ var render = function() {
                             ],
                             1
                           )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "v-col",
-                { attrs: { md: "5" } },
-                [
-                  _c(
-                    "v-tabs",
-                    {
-                      attrs: { grow: "", color: "light-blue" },
-                      model: {
-                        value: _vm.tabs,
-                        callback: function($$v) {
-                          _vm.tabs = $$v
-                        },
-                        expression: "tabs"
-                      }
-                    },
-                    [
-                      _c(
-                        "v-tab",
-                        {
-                          staticClass: "text-capitalize font-weight-medium",
-                          attrs: { href: "#aportes" }
-                        },
-                        [
-                          _c(
-                            "v-badge",
-                            {
-                              attrs: {
-                                color: "grey",
-                                content: "6",
-                                "offset-y": "8"
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                        Aportessd\n                                    "
-                              )
-                            ]
-                          )
-                        ],
-                        1
+                        ]
                       ),
                       _vm._v(" "),
                       _c(
-                        "v-tab",
-                        {
-                          staticClass: "text-capitalize font-weight-medium",
-                          attrs: { href: "#preguntas" }
-                        },
+                        "v-col",
+                        { attrs: { md: "5" } },
                         [
                           _c(
-                            "v-badge",
+                            "v-tabs",
                             {
-                              attrs: {
-                                color: "grey",
-                                content: "6",
-                                "offset-y": "8"
+                              attrs: { grow: "", color: "light-blue" },
+                              model: {
+                                value: _vm.tabs,
+                                callback: function($$v) {
+                                  _vm.tabs = $$v
+                                },
+                                expression: "tabs"
                               }
                             },
-                            [
-                              _vm._v(
-                                "\n                                        Preguntas\n                                    "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-tab",
-                        {
-                          staticClass: "text-capitalize font-weight-medium",
-                          attrs: { href: "#archivos" }
-                        },
-                        [
-                          _c(
-                            "v-badge",
-                            {
-                              attrs: {
-                                color: "grey",
-                                content: "6",
-                                "offset-y": "10",
-                                "offset-x": "1"
-                              }
-                            },
-                            [
-                              _vm._v(
-                                "\n                                        Archivos y enlaces\n                                    "
-                              )
-                            ]
-                          )
-                        ],
-                        1
-                      )
-                    ],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-tabs-items",
-                    {
-                      staticClass: "py-4 grey lighten-4",
-                      model: {
-                        value: _vm.tabs,
-                        callback: function($$v) {
-                          _vm.tabs = $$v
-                        },
-                        expression: "tabs"
-                      }
-                    },
-                    [
-                      _c(
-                        "v-tab-item",
-                        { attrs: { value: "aportes" } },
-                        [
-                          _c(
-                            "v-card",
-                            { staticClass: "mb-3", attrs: { flat: "" } },
                             [
                               _c(
-                                "v-card-title",
-                                { staticClass: "py-0" },
+                                "v-tab",
+                                {
+                                  staticClass:
+                                    "text-capitalize font-weight-medium",
+                                  attrs: { href: "#aportes" }
+                                },
                                 [
                                   _c(
-                                    "v-list-item",
-                                    { staticClass: "grow pa-0" },
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-y": "8"
+                                      }
+                                    },
                                     [
-                                      _c(
-                                        "v-list-item-avatar",
-                                        { attrs: { color: "grey darken-3" } },
-                                        [
-                                          _c("v-img", {
-                                            staticClass: "elevation-6",
-                                            attrs: {
-                                              src:
-                                                "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-list-item-content",
-                                        [
-                                          _c("v-list-item-title", [
-                                            _vm._v("Evan You")
-                                          ])
-                                        ],
-                                        1
+                                      _vm._v(
+                                        "\n                                        Aportessd\n                                    "
                                       )
-                                    ],
-                                    1
+                                    ]
                                   )
                                 ],
                                 1
                               ),
                               _vm._v(" "),
-                              _c("v-card-text", {}, [
-                                _vm._v(
-                                  '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
-                                )
-                              ]),
-                              _vm._v(" "),
                               _c(
-                                "v-card-actions",
+                                "v-tab",
+                                {
+                                  staticClass:
+                                    "text-capitalize font-weight-medium",
+                                  attrs: { href: "#preguntas" }
+                                },
                                 [
                                   _c(
-                                    "v-btn",
+                                    "v-badge",
                                     {
-                                      attrs: { icon: "", color: "light-blue" }
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-y": "8"
+                                      }
                                     },
-                                    [_c("v-icon", [_vm._v("mdi-reply")])],
-                                    1
-                                  ),
-                                  _vm._v(" "),
+                                    [
+                                      _vm._v(
+                                        "\n                                        Preguntas\n                                    "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tab",
+                                {
+                                  staticClass:
+                                    "text-capitalize font-weight-medium",
+                                  attrs: { href: "#archivos" }
+                                },
+                                [
                                   _c(
                                     "v-badge",
                                     {
                                       attrs: {
                                         color: "grey",
                                         content: "6",
-                                        "offset-x": "10",
-                                        "offset-y": "15"
+                                        "offset-y": "10",
+                                        "offset-x": "1"
                                       }
                                     },
                                     [
-                                      _c(
-                                        "v-btn",
-                                        { attrs: { icon: "" } },
-                                        [_c("v-icon", [_vm._v("mdi-heart")])],
-                                        1
+                                      _vm._v(
+                                        "\n                                        Archivos y enlaces\n                                    "
                                       )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-badge",
-                                    {
-                                      attrs: {
-                                        color: "grey",
-                                        content: "6",
-                                        "offset-x": "10",
-                                        "offset-y": "15"
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        { attrs: { icon: "" } },
-                                        [
-                                          _c("v-icon", [
-                                            _vm._v("mdi-share-variant")
-                                          ])
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
+                                    ]
                                   )
                                 ],
                                 1
@@ -32515,386 +33069,65 @@ var render = function() {
                           ),
                           _vm._v(" "),
                           _c(
-                            "v-card",
-                            { staticClass: "mb-3", attrs: { flat: "" } },
+                            "v-tabs-items",
+                            {
+                              staticClass: "py-4 grey lighten-4",
+                              model: {
+                                value: _vm.tabs,
+                                callback: function($$v) {
+                                  _vm.tabs = $$v
+                                },
+                                expression: "tabs"
+                              }
+                            },
                             [
                               _c(
-                                "v-card-title",
-                                { staticClass: "py-0" },
+                                "v-tab-item",
+                                { attrs: { value: "aportes" } },
                                 [
                                   _c(
-                                    "v-list-item",
-                                    { staticClass: "grow pa-0" },
-                                    [
-                                      _c(
-                                        "v-list-item-avatar",
-                                        { attrs: { color: "grey darken-3" } },
-                                        [
-                                          _c("v-img", {
-                                            staticClass: "elevation-6",
-                                            attrs: {
-                                              src:
-                                                "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-list-item-content",
-                                        [
-                                          _c("v-list-item-title", [
-                                            _vm._v("Evan You")
-                                          ])
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c("v-card-text", {}, [
-                                _vm._v(
-                                  '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c(
-                                    "v-btn",
+                                    "v-card",
                                     {
-                                      attrs: { icon: "", color: "light-blue" }
-                                    },
-                                    [_c("v-icon", [_vm._v("mdi-reply")])],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-badge",
-                                    {
-                                      attrs: {
-                                        color: "grey",
-                                        content: "6",
-                                        "offset-x": "10",
-                                        "offset-y": "15"
-                                      }
+                                      staticClass: "mb-3",
+                                      attrs: { flat: "" }
                                     },
                                     [
                                       _c(
-                                        "v-btn",
-                                        { attrs: { icon: "" } },
-                                        [_c("v-icon", [_vm._v("mdi-heart")])],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-badge",
-                                    {
-                                      attrs: {
-                                        color: "grey",
-                                        content: "6",
-                                        "offset-x": "10",
-                                        "offset-y": "15"
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        { attrs: { icon: "" } },
-                                        [
-                                          _c("v-icon", [
-                                            _vm._v("mdi-share-variant")
-                                          ])
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-tab-item",
-                        { attrs: { value: "preguntas" } },
-                        [
-                          _c(
-                            "v-card",
-                            { staticClass: "mx-3 mb-3", attrs: { flat: "" } },
-                            [
-                              _c(
-                                "v-card-title",
-                                { staticClass: "py-0" },
-                                [
-                                  _c(
-                                    "v-list-item",
-                                    { staticClass: "grow pa-0" },
-                                    [
-                                      _c(
-                                        "v-list-item-avatar",
-                                        { attrs: { color: "grey darken-3" } },
-                                        [
-                                          _c("v-img", {
-                                            staticClass: "elevation-6",
-                                            attrs: {
-                                              src:
-                                                "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-list-item-content",
-                                        [
-                                          _c("v-list-item-title", [
-                                            _vm._v("Evan You")
-                                          ])
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c("v-card-text", {}, [
-                                _vm._v(
-                                  '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { icon: "", color: "light-blue" }
-                                    },
-                                    [_c("v-icon", [_vm._v("mdi-reply")])],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-badge",
-                                    {
-                                      attrs: {
-                                        color: "grey",
-                                        content: "6",
-                                        "offset-x": "10",
-                                        "offset-y": "15"
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        { attrs: { icon: "" } },
-                                        [_c("v-icon", [_vm._v("mdi-heart")])],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-badge",
-                                    {
-                                      attrs: {
-                                        color: "grey",
-                                        content: "6",
-                                        "offset-x": "10",
-                                        "offset-y": "15"
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        { attrs: { icon: "" } },
-                                        [
-                                          _c("v-icon", [
-                                            _vm._v("mdi-share-variant")
-                                          ])
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-card",
-                            { staticClass: "mx-3 mb-3", attrs: { flat: "" } },
-                            [
-                              _c(
-                                "v-card-title",
-                                { staticClass: "py-0" },
-                                [
-                                  _c(
-                                    "v-list-item",
-                                    { staticClass: "grow pa-0" },
-                                    [
-                                      _c(
-                                        "v-list-item-avatar",
-                                        { attrs: { color: "grey darken-3" } },
-                                        [
-                                          _c("v-img", {
-                                            staticClass: "elevation-6",
-                                            attrs: {
-                                              src:
-                                                "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
-                                            }
-                                          })
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-list-item-content",
-                                        [
-                                          _c("v-list-item-title", [
-                                            _vm._v("Evan You")
-                                          ])
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c("v-card-text", {}, [
-                                _vm._v(
-                                  '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
-                                )
-                              ]),
-                              _vm._v(" "),
-                              _c(
-                                "v-card-actions",
-                                [
-                                  _c(
-                                    "v-btn",
-                                    {
-                                      attrs: { icon: "", color: "light-blue" }
-                                    },
-                                    [_c("v-icon", [_vm._v("mdi-reply")])],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-badge",
-                                    {
-                                      attrs: {
-                                        color: "grey",
-                                        content: "6",
-                                        "offset-x": "10",
-                                        "offset-y": "15"
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        { attrs: { icon: "" } },
-                                        [_c("v-icon", [_vm._v("mdi-heart")])],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-badge",
-                                    {
-                                      attrs: {
-                                        color: "grey",
-                                        content: "6",
-                                        "offset-x": "10",
-                                        "offset-y": "15"
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "v-btn",
-                                        { attrs: { icon: "" } },
-                                        [
-                                          _c("v-icon", [
-                                            _vm._v("mdi-share-variant")
-                                          ])
-                                        ],
-                                        1
-                                      )
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ],
-                            1
-                          )
-                        ],
-                        1
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "v-tab-item",
-                        { attrs: { value: "archivos" } },
-                        [
-                          _c(
-                            "v-list",
-                            [
-                              _c(
-                                "v-list-item-group",
-                                { attrs: { color: "primary" } },
-                                [
-                                  _c(
-                                    "v-list-item",
-                                    [
-                                      _c(
-                                        "v-list-item-icon",
+                                        "v-card-title",
+                                        { staticClass: "py-0" },
                                         [
                                           _c(
-                                            "v-badge",
-                                            {
-                                              attrs: {
-                                                bottom: "",
-                                                icon: "mdi-download",
-                                                "offset-y": "15"
-                                              }
-                                            },
+                                            "v-list-item",
+                                            { staticClass: "grow pa-0" },
                                             [
-                                              _c("v-icon", [
-                                                _vm._v(
-                                                  "mdi-file-document-outline"
-                                                )
-                                              ])
+                                              _c(
+                                                "v-list-item-avatar",
+                                                {
+                                                  attrs: {
+                                                    color: "grey darken-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass: "elevation-6",
+                                                    attrs: {
+                                                      src:
+                                                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Evan You")
+                                                  ])
+                                                ],
+                                                1
+                                              )
                                             ],
                                             1
                                           )
@@ -32902,20 +33135,80 @@ var render = function() {
                                         1
                                       ),
                                       _vm._v(" "),
-                                      _c(
-                                        "v-list-item-content",
-                                        [
-                                          _c("v-list-item-title", [
-                                            _vm._v("Material del cusco")
-                                          ])
-                                        ],
-                                        1
-                                      ),
+                                      _c("v-card-text", {}, [
+                                        _vm._v(
+                                          '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                        )
+                                      ]),
                                       _vm._v(" "),
                                       _c(
-                                        "v-list-item-icon",
+                                        "v-card-actions",
                                         [
-                                          _c("v-icon", [_vm._v("mdi-download")])
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                icon: "",
+                                                color: "light-blue"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-reply")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
                                         ],
                                         1
                                       )
@@ -32924,33 +33217,510 @@ var render = function() {
                                   ),
                                   _vm._v(" "),
                                   _c(
-                                    "v-list-item",
+                                    "v-card",
+                                    {
+                                      staticClass: "mb-3",
+                                      attrs: { flat: "" }
+                                    },
                                     [
                                       _c(
-                                        "v-list-item-icon",
+                                        "v-card-title",
+                                        { staticClass: "py-0" },
                                         [
                                           _c(
-                                            "v-icon",
-                                            { attrs: { color: "blue" } },
-                                            [_vm._v("mdi-link")]
+                                            "v-list-item",
+                                            { staticClass: "grow pa-0" },
+                                            [
+                                              _c(
+                                                "v-list-item-avatar",
+                                                {
+                                                  attrs: {
+                                                    color: "grey darken-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass: "elevation-6",
+                                                    attrs: {
+                                                      src:
+                                                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Evan You")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
                                           )
                                         ],
                                         1
                                       ),
                                       _vm._v(" "),
+                                      _c("v-card-text", {}, [
+                                        _vm._v(
+                                          '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                        )
+                                      ]),
+                                      _vm._v(" "),
                                       _c(
-                                        "v-list-item-content",
+                                        "v-card-actions",
                                         [
-                                          _c("v-list-item-title", [
-                                            _vm._v("Material del cusco")
-                                          ])
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                icon: "",
+                                                color: "light-blue"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-reply")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tab-item",
+                                { attrs: { value: "preguntas" } },
+                                [
+                                  _c(
+                                    "v-card",
+                                    {
+                                      staticClass: "mx-3 mb-3",
+                                      attrs: { flat: "" }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card-title",
+                                        { staticClass: "py-0" },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            { staticClass: "grow pa-0" },
+                                            [
+                                              _c(
+                                                "v-list-item-avatar",
+                                                {
+                                                  attrs: {
+                                                    color: "grey darken-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass: "elevation-6",
+                                                    attrs: {
+                                                      src:
+                                                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Evan You")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
                                         ],
                                         1
                                       ),
                                       _vm._v(" "),
+                                      _c("v-card-text", {}, [
+                                        _vm._v(
+                                          '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                        )
+                                      ]),
+                                      _vm._v(" "),
                                       _c(
-                                        "v-list-item-icon",
-                                        [_c("v-icon", [_vm._v("mdi-link")])],
+                                        "v-card-actions",
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                icon: "",
+                                                color: "light-blue"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-reply")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card",
+                                    {
+                                      staticClass: "mx-3 mb-3",
+                                      attrs: { flat: "" }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card-title",
+                                        { staticClass: "py-0" },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            { staticClass: "grow pa-0" },
+                                            [
+                                              _c(
+                                                "v-list-item-avatar",
+                                                {
+                                                  attrs: {
+                                                    color: "grey darken-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass: "elevation-6",
+                                                    attrs: {
+                                                      src:
+                                                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Evan You")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-card-text", {}, [
+                                        _vm._v(
+                                          '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-actions",
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                icon: "",
+                                                color: "light-blue"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-reply")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tab-item",
+                                { attrs: { value: "archivos" } },
+                                [
+                                  _c(
+                                    "v-list",
+                                    [
+                                      _c(
+                                        "v-list-item-group",
+                                        { attrs: { color: "primary" } },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            [
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c(
+                                                    "v-badge",
+                                                    {
+                                                      attrs: {
+                                                        bottom: "",
+                                                        icon: "mdi-download",
+                                                        "offset-y": "15"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-icon", [
+                                                        _vm._v(
+                                                          "mdi-file-document-outline"
+                                                        )
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Material del cusco")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-download")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item",
+                                            [
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c(
+                                                    "v-icon",
+                                                    {
+                                                      attrs: { color: "blue" }
+                                                    },
+                                                    [_vm._v("mdi-link")]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Material del cusco")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-link")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
                                         1
                                       )
                                     ],
@@ -32971,14 +33741,1881 @@ var render = function() {
                 ],
                 1
               )
-            ],
-            1
-          )
-        ],
-        1
-      )
+            : _vm._e(),
+          _vm._v(" "),
+          _vm.response_data.view_p === "true"
+            ? _c(
+                "v-container",
+                [
+                  _c(
+                    "v-row",
+                    [
+                      _c(
+                        "v-col",
+                        { staticClass: "overflow-y-auto", attrs: { md: "7" } },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "h-100" },
+                            [
+                              _c(
+                                "v-card",
+                                { attrs: { flat: "", tile: "" } },
+                                [
+                                  _c(
+                                    "v-card-text",
+                                    [
+                                      _c(
+                                        "v-row",
+                                        [
+                                          _c(
+                                            "v-col",
+                                            { attrs: { md: "auto" } },
+                                            [
+                                              _c("v-avatar", [
+                                                _c("img", {
+                                                  attrs: {
+                                                    src:
+                                                      "../../../images/iconos/cursos/circle/algebra.png",
+                                                    alt: "John"
+                                                  }
+                                                })
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-col",
+                                            [
+                                              _c(
+                                                "h1",
+                                                {
+                                                  staticClass:
+                                                    "small font-weight-bold"
+                                                },
+                                                [_vm._v("Algebra")]
+                                              ),
+                                              _vm._v(" "),
+                                              _c("v-divider", {
+                                                staticClass: "my-3"
+                                              }),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-row",
+                                                {
+                                                  attrs: {
+                                                    align: "center",
+                                                    "no-gutters": ""
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-col",
+                                                    { attrs: { md: "auto" } },
+                                                    [
+                                                      _c(
+                                                        "span",
+                                                        {
+                                                          staticClass:
+                                                            "text--secondary caption font-weight-bold mr-5"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "\n                                                    Docente:\n                                                "
+                                                          )
+                                                        ]
+                                                      )
+                                                    ]
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-col",
+                                                    [
+                                                      _c(
+                                                        "v-list-item",
+                                                        {
+                                                          staticClass:
+                                                            "grow pa-0"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-list-item-avatar",
+                                                            {
+                                                              attrs: {
+                                                                color:
+                                                                  "grey darken-3 my-0"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("v-img", {
+                                                                staticClass:
+                                                                  "elevation-6",
+                                                                attrs: {
+                                                                  src:
+                                                                    "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                                }
+                                                              })
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-list-item-content",
+                                                            {
+                                                              staticClass:
+                                                                "pa-0"
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-list-item-title",
+                                                                [
+                                                                  _vm._v(
+                                                                    "Evan You"
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    [
+                                      _c(
+                                        "v-card",
+                                        { attrs: { flat: "", tile: "" } },
+                                        [
+                                          _c(
+                                            "v-tabs",
+                                            {
+                                              attrs: { color: "light-blue" },
+                                              model: {
+                                                value: _vm.content,
+                                                callback: function($$v) {
+                                                  _vm.content = $$v
+                                                },
+                                                expression: "content"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-tab",
+                                                {
+                                                  staticClass:
+                                                    "text-capitalize font-weight-medium",
+                                                  attrs: { href: "#contenido" }
+                                                },
+                                                [
+                                                  _vm._v(
+                                                    "\n                                                    Contenido del curso\n                                                "
+                                                  )
+                                                ]
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-tab",
+                                                {
+                                                  staticClass:
+                                                    "text-capitalize font-weight-medium",
+                                                  attrs: { href: "#vivo" }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-badge",
+                                                    {
+                                                      attrs: {
+                                                        color: "red",
+                                                        content: "live",
+                                                        "offset-y": "8"
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                                        Videos de clases en vivo\n                                                    "
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-card-text",
+                                            [
+                                              _c(
+                                                "v-tabs-items",
+                                                {
+                                                  model: {
+                                                    value: _vm.content,
+                                                    callback: function($$v) {
+                                                      _vm.content = $$v
+                                                    },
+                                                    expression: "content"
+                                                  }
+                                                },
+                                                [
+                                                  _c(
+                                                    "v-tab-item",
+                                                    {
+                                                      attrs: {
+                                                        value: "contenido"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-row",
+                                                        {
+                                                          staticClass: "py-4",
+                                                          attrs: {
+                                                            align: "center"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-col",
+                                                            [
+                                                              _c("h4", [
+                                                                _vm._v(
+                                                                  "Progreso del curso: 0/23 contenidos(0%)"
+                                                                )
+                                                              ]),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "v-progress-linear",
+                                                                {
+                                                                  attrs: {
+                                                                    color:
+                                                                      "deep-purple accent-4"
+                                                                  },
+                                                                  model: {
+                                                                    value:
+                                                                      _vm.valueDeterminate,
+                                                                    callback: function(
+                                                                      $$v
+                                                                    ) {
+                                                                      _vm.valueDeterminate = $$v
+                                                                    },
+                                                                    expression:
+                                                                      "valueDeterminate"
+                                                                  }
+                                                                }
+                                                              )
+                                                            ],
+                                                            1
+                                                          ),
+                                                          _vm._v(" "),
+                                                          _c(
+                                                            "v-col",
+                                                            [
+                                                              _c(
+                                                                "v-btn",
+                                                                {
+                                                                  staticClass:
+                                                                    "ma-2",
+                                                                  attrs: {
+                                                                    tile: "",
+                                                                    outlined:
+                                                                      "",
+                                                                    color:
+                                                                      "light-blue"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "v-icon",
+                                                                    {
+                                                                      attrs: {
+                                                                        left: ""
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _vm._v(
+                                                                        "mdi-lock"
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(
+                                                                    " Iniciar plan\n                                                                "
+                                                                  )
+                                                                ],
+                                                                1
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "h3",
+                                                        {
+                                                          staticClass:
+                                                            "title grey--text text--darken-3 mt-5 mb-3 font-weight-bold"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Teoria de exponenetes"
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-card",
+                                                        {
+                                                          staticClass: "mb-3",
+                                                          attrs: {
+                                                            tile: "",
+                                                            outlined: "",
+                                                            href:
+                                                              "/student/algebra/video/"
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-row",
+                                                            {
+                                                              attrs: {
+                                                                "no-gutters":
+                                                                  "",
+                                                                align: "center"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "position-relative",
+                                                                  attrs: {
+                                                                    md: "3"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c("v-img", {
+                                                                    attrs: {
+                                                                      src:
+                                                                        "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                                      "aspect-ratio":
+                                                                        "1.8"
+                                                                    }
+                                                                  })
+                                                                ],
+                                                                1
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "px-3"
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "h3",
+                                                                    {
+                                                                      staticClass:
+                                                                        "small font-weight-bold mb-2"
+                                                                    },
+                                                                    [
+                                                                      _vm._v(
+                                                                        "Potencia de potencia"
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "span",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            small:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-clock"
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " 07:00 min"
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "span",
+                                                                    {
+                                                                      staticClass:
+                                                                        "d-block green--text"
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            color:
+                                                                              "green",
+                                                                            small:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-lock"
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " Contenido no disponible"
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-card",
+                                                        {
+                                                          staticClass: "mb-3",
+                                                          attrs: {
+                                                            tile: "",
+                                                            outlined: ""
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-row",
+                                                            {
+                                                              attrs: {
+                                                                "no-gutters":
+                                                                  "",
+                                                                align: "center"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "position-relative",
+                                                                  attrs: {
+                                                                    md: "3"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c("v-img", {
+                                                                    attrs: {
+                                                                      src:
+                                                                        "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                                      "aspect-ratio":
+                                                                        "1.8"
+                                                                    }
+                                                                  }),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-avatar",
+                                                                    {
+                                                                      staticClass:
+                                                                        "video-lock-box",
+                                                                      attrs: {
+                                                                        color:
+                                                                          "grey darken-3"
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            dark:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-lock"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ],
+                                                                1
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "px-3"
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "h3",
+                                                                    {
+                                                                      staticClass:
+                                                                        "small font-weight-bold mb-2"
+                                                                    },
+                                                                    [
+                                                                      _vm._v(
+                                                                        "Potencia de potencia"
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "span",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            small:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-clock"
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " 07:00 min"
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "span",
+                                                                    {
+                                                                      staticClass:
+                                                                        "d-block green--text"
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            color:
+                                                                              "green",
+                                                                            small:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-lock"
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " Contenido no disponible"
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "h3",
+                                                        {
+                                                          staticClass:
+                                                            "title grey--text text--darken-3 mt-5 mb-3 font-weight-bold"
+                                                        },
+                                                        [
+                                                          _vm._v(
+                                                            "Teoria de exponenetes"
+                                                          )
+                                                        ]
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-card",
+                                                        {
+                                                          staticClass: "mb-3",
+                                                          attrs: {
+                                                            tile: "",
+                                                            outlined: ""
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-row",
+                                                            {
+                                                              attrs: {
+                                                                "no-gutters":
+                                                                  "",
+                                                                align: "center"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "position-relative",
+                                                                  attrs: {
+                                                                    md: "3"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c("v-img", {
+                                                                    attrs: {
+                                                                      src:
+                                                                        "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                                      "aspect-ratio":
+                                                                        "1.8"
+                                                                    }
+                                                                  })
+                                                                ],
+                                                                1
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "px-3"
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "h3",
+                                                                    {
+                                                                      staticClass:
+                                                                        "small font-weight-bold mb-2"
+                                                                    },
+                                                                    [
+                                                                      _vm._v(
+                                                                        "Potencia de potencia"
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "span",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            small:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-clock"
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " 07:00 min"
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "span",
+                                                                    {
+                                                                      staticClass:
+                                                                        "d-block green--text"
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            color:
+                                                                              "green",
+                                                                            small:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-lock"
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " Contenido no disponible"
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      ),
+                                                      _vm._v(" "),
+                                                      _c(
+                                                        "v-card",
+                                                        {
+                                                          staticClass: "mb-3",
+                                                          attrs: {
+                                                            tile: "",
+                                                            outlined: ""
+                                                          }
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "v-row",
+                                                            {
+                                                              attrs: {
+                                                                "no-gutters":
+                                                                  "",
+                                                                align: "center"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "position-relative",
+                                                                  attrs: {
+                                                                    md: "3"
+                                                                  }
+                                                                },
+                                                                [
+                                                                  _c("v-img", {
+                                                                    attrs: {
+                                                                      src:
+                                                                        "https://thumbs.cdn.mdstrm.com/thumbs/512e13acaca1ebcd2f000279/thumb_5db771220331cd0724cdf821_5db771220331cd0724cdf825_42s.jpg",
+                                                                      "aspect-ratio":
+                                                                        "1.8"
+                                                                    }
+                                                                  }),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-avatar",
+                                                                    {
+                                                                      staticClass:
+                                                                        "video-lock-box",
+                                                                      attrs: {
+                                                                        color:
+                                                                          "grey darken-3"
+                                                                      }
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            dark:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-lock"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ],
+                                                                1
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "v-col",
+                                                                {
+                                                                  staticClass:
+                                                                    "px-3"
+                                                                },
+                                                                [
+                                                                  _c(
+                                                                    "h3",
+                                                                    {
+                                                                      staticClass:
+                                                                        "small font-weight-bold mb-2"
+                                                                    },
+                                                                    [
+                                                                      _vm._v(
+                                                                        "Potencia de potencia"
+                                                                      )
+                                                                    ]
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "span",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            small:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-clock"
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " 07:00 min"
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "span",
+                                                                    {
+                                                                      staticClass:
+                                                                        "d-block green--text"
+                                                                    },
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            color:
+                                                                              "green",
+                                                                            small:
+                                                                              ""
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-lock"
+                                                                          )
+                                                                        ]
+                                                                      ),
+                                                                      _vm._v(
+                                                                        " Contenido no disponible"
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ]
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  ),
+                                                  _vm._v(" "),
+                                                  _c("v-tab-item", {
+                                                    attrs: { value: "vivo" }
+                                                  }),
+                                                  _vm._v(" "),
+                                                  _c(
+                                                    "v-tab-item",
+                                                    {
+                                                      attrs: {
+                                                        value: "archivos"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c(
+                                                        "v-list",
+                                                        [
+                                                          _c(
+                                                            "v-list-item-group",
+                                                            {
+                                                              attrs: {
+                                                                color: "primary"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c(
+                                                                "v-list-item",
+                                                                [
+                                                                  _c(
+                                                                    "v-list-item-icon",
+                                                                    [
+                                                                      _c(
+                                                                        "v-badge",
+                                                                        {
+                                                                          attrs: {
+                                                                            bottom:
+                                                                              "",
+                                                                            icon:
+                                                                              "mdi-download",
+                                                                            "offset-y":
+                                                                              "15"
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _c(
+                                                                            "v-icon",
+                                                                            [
+                                                                              _vm._v(
+                                                                                "mdi-file-document-outline"
+                                                                              )
+                                                                            ]
+                                                                          )
+                                                                        ],
+                                                                        1
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-list-item-content",
+                                                                    [
+                                                                      _c(
+                                                                        "v-list-item-title",
+                                                                        [
+                                                                          _vm._v(
+                                                                            "Material del cusco"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-list-item-icon",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-download"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ],
+                                                                1
+                                                              ),
+                                                              _vm._v(" "),
+                                                              _c(
+                                                                "v-list-item",
+                                                                [
+                                                                  _c(
+                                                                    "v-list-item-icon",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        {
+                                                                          attrs: {
+                                                                            color:
+                                                                              "blue"
+                                                                          }
+                                                                        },
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-link"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-list-item-content",
+                                                                    [
+                                                                      _c(
+                                                                        "v-list-item-title",
+                                                                        [
+                                                                          _vm._v(
+                                                                            "Material del cusco"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  ),
+                                                                  _vm._v(" "),
+                                                                  _c(
+                                                                    "v-list-item-icon",
+                                                                    [
+                                                                      _c(
+                                                                        "v-icon",
+                                                                        [
+                                                                          _vm._v(
+                                                                            "mdi-link"
+                                                                          )
+                                                                        ]
+                                                                      )
+                                                                    ],
+                                                                    1
+                                                                  )
+                                                                ],
+                                                                1
+                                                              )
+                                                            ],
+                                                            1
+                                                          )
+                                                        ],
+                                                        1
+                                                      )
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-col",
+                        { attrs: { md: "5" } },
+                        [
+                          _c(
+                            "v-tabs",
+                            {
+                              attrs: { grow: "", color: "light-blue" },
+                              model: {
+                                value: _vm.tabs,
+                                callback: function($$v) {
+                                  _vm.tabs = $$v
+                                },
+                                expression: "tabs"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-tab",
+                                {
+                                  staticClass:
+                                    "text-capitalize font-weight-medium",
+                                  attrs: { href: "#aportes" }
+                                },
+                                [
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-y": "8"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        Aportessd\n                                    "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tab",
+                                {
+                                  staticClass:
+                                    "text-capitalize font-weight-medium",
+                                  attrs: { href: "#preguntas" }
+                                },
+                                [
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-y": "8"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        Preguntas\n                                    "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tab",
+                                {
+                                  staticClass:
+                                    "text-capitalize font-weight-medium",
+                                  attrs: { href: "#archivos" }
+                                },
+                                [
+                                  _c(
+                                    "v-badge",
+                                    {
+                                      attrs: {
+                                        color: "grey",
+                                        content: "6",
+                                        "offset-y": "10",
+                                        "offset-x": "1"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                        Archivos y enlaces\n                                    "
+                                      )
+                                    ]
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-tabs-items",
+                            {
+                              staticClass: "py-4 grey lighten-4",
+                              model: {
+                                value: _vm.tabs,
+                                callback: function($$v) {
+                                  _vm.tabs = $$v
+                                },
+                                expression: "tabs"
+                              }
+                            },
+                            [
+                              _c(
+                                "v-tab-item",
+                                { attrs: { value: "aportes" } },
+                                [
+                                  _c(
+                                    "v-card",
+                                    {
+                                      staticClass: "mb-3",
+                                      attrs: { flat: "" }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card-title",
+                                        { staticClass: "py-0" },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            { staticClass: "grow pa-0" },
+                                            [
+                                              _c(
+                                                "v-list-item-avatar",
+                                                {
+                                                  attrs: {
+                                                    color: "grey darken-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass: "elevation-6",
+                                                    attrs: {
+                                                      src:
+                                                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Evan You")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-card-text", {}, [
+                                        _vm._v(
+                                          '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-actions",
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                icon: "",
+                                                color: "light-blue"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-reply")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card",
+                                    {
+                                      staticClass: "mb-3",
+                                      attrs: { flat: "" }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card-title",
+                                        { staticClass: "py-0" },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            { staticClass: "grow pa-0" },
+                                            [
+                                              _c(
+                                                "v-list-item-avatar",
+                                                {
+                                                  attrs: {
+                                                    color: "grey darken-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass: "elevation-6",
+                                                    attrs: {
+                                                      src:
+                                                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Evan You")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-card-text", {}, [
+                                        _vm._v(
+                                          '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-actions",
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                icon: "",
+                                                color: "light-blue"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-reply")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tab-item",
+                                { attrs: { value: "preguntas" } },
+                                [
+                                  _c(
+                                    "v-card",
+                                    {
+                                      staticClass: "mx-3 mb-3",
+                                      attrs: { flat: "" }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card-title",
+                                        { staticClass: "py-0" },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            { staticClass: "grow pa-0" },
+                                            [
+                                              _c(
+                                                "v-list-item-avatar",
+                                                {
+                                                  attrs: {
+                                                    color: "grey darken-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass: "elevation-6",
+                                                    attrs: {
+                                                      src:
+                                                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Evan You")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-card-text", {}, [
+                                        _vm._v(
+                                          '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-actions",
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                icon: "",
+                                                color: "light-blue"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-reply")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card",
+                                    {
+                                      staticClass: "mx-3 mb-3",
+                                      attrs: { flat: "" }
+                                    },
+                                    [
+                                      _c(
+                                        "v-card-title",
+                                        { staticClass: "py-0" },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            { staticClass: "grow pa-0" },
+                                            [
+                                              _c(
+                                                "v-list-item-avatar",
+                                                {
+                                                  attrs: {
+                                                    color: "grey darken-3"
+                                                  }
+                                                },
+                                                [
+                                                  _c("v-img", {
+                                                    staticClass: "elevation-6",
+                                                    attrs: {
+                                                      src:
+                                                        "https://avataaars.io/?avatarStyle=Transparent&topType=ShortHairShortCurly&accessoriesType=Prescription02&hairColor=Black&facialHairType=Blank&clotheType=Hoodie&clotheColor=White&eyeType=Default&eyebrowType=DefaultNatural&mouthType=Default&skinColor=Light"
+                                                    }
+                                                  })
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Evan You")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("v-card-text", {}, [
+                                        _vm._v(
+                                          '\n                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                        '
+                                        )
+                                      ]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-card-actions",
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                icon: "",
+                                                color: "light-blue"
+                                              }
+                                            },
+                                            [
+                                              _c("v-icon", [
+                                                _vm._v("mdi-reply")
+                                              ])
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-heart")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-badge",
+                                            {
+                                              attrs: {
+                                                color: "grey",
+                                                content: "6",
+                                                "offset-x": "10",
+                                                "offset-y": "15"
+                                              }
+                                            },
+                                            [
+                                              _c(
+                                                "v-btn",
+                                                { attrs: { icon: "" } },
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-share-variant")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "v-tab-item",
+                                { attrs: { value: "archivos" } },
+                                [
+                                  _c(
+                                    "v-list",
+                                    [
+                                      _c(
+                                        "v-list-item-group",
+                                        { attrs: { color: "primary" } },
+                                        [
+                                          _c(
+                                            "v-list-item",
+                                            [
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c(
+                                                    "v-badge",
+                                                    {
+                                                      attrs: {
+                                                        bottom: "",
+                                                        icon: "mdi-download",
+                                                        "offset-y": "15"
+                                                      }
+                                                    },
+                                                    [
+                                                      _c("v-icon", [
+                                                        _vm._v(
+                                                          "mdi-file-document-outline"
+                                                        )
+                                                      ])
+                                                    ],
+                                                    1
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Material del cusco")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-download")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-list-item",
+                                            [
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c(
+                                                    "v-icon",
+                                                    {
+                                                      attrs: { color: "blue" }
+                                                    },
+                                                    [_vm._v("mdi-link")]
+                                                  )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-content",
+                                                [
+                                                  _c("v-list-item-title", [
+                                                    _vm._v("Material del cusco")
+                                                  ])
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-list-item-icon",
+                                                [
+                                                  _c("v-icon", [
+                                                    _vm._v("mdi-link")
+                                                  ])
+                                                ],
+                                                1
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ],
+                                        1
+                                      )
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              )
+            : _vm._e()
+        ]
+      })
     ],
-    1
+    2
   )
 }
 var staticRenderFns = []

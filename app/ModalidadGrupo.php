@@ -20,7 +20,7 @@ class ModalidadGrupo extends Model
     public function asignaturas()
     {
         //relacion de uno a muchos
-        return $this->hasMany(Asignatura::class);
+        return $this->hasMany(Asignatura::class, 'modalidad_grupo_id');
     }
     public function asig_grupo_user()
     {

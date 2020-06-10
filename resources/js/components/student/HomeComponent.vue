@@ -36,7 +36,7 @@
                             </v-list-item-icon>
 
                             <v-list-item-content>
-                                <v-list-item-title>(650) 555-1234</v-list-item-title>
+                                <v-list-item-title>{{auth.celular}}</v-list-item-title>
                                 <v-list-item-subtitle>Mobile</v-list-item-subtitle>
                             </v-list-item-content>
 
@@ -45,18 +45,18 @@
                             </v-list-item-icon>
                         </v-list-item>
 
-                        <v-list-item @click="">
-                            <v-list-item-action></v-list-item-action>
+<!--                        <v-list-item @click="">-->
+<!--                            <v-list-item-action></v-list-item-action>-->
 
-                            <v-list-item-content>
-                                <v-list-item-title>(323) 555-6789</v-list-item-title>
-                                <v-list-item-subtitle>Work</v-list-item-subtitle>
-                            </v-list-item-content>
+<!--                            <v-list-item-content>-->
+<!--                                <v-list-item-title>(323) 555-6789</v-list-item-title>-->
+<!--                                <v-list-item-subtitle>Work</v-list-item-subtitle>-->
+<!--                            </v-list-item-content>-->
 
-                            <v-list-item-icon>
-                                <v-icon>mdi-message-text</v-icon>
-                            </v-list-item-icon>
-                        </v-list-item>
+<!--                            <v-list-item-icon>-->
+<!--                                <v-icon>mdi-message-text</v-icon>-->
+<!--                            </v-list-item-icon>-->
+<!--                        </v-list-item>-->
 
                         <v-divider inset></v-divider>
 
@@ -66,32 +66,32 @@
                             </v-list-item-icon>
 
                             <v-list-item-content>
-                                <v-list-item-title>aliconnors@example.com</v-list-item-title>
+                                <v-list-item-title>{{auth.email}}</v-list-item-title>
                                 <v-list-item-subtitle>Personal</v-list-item-subtitle>
                             </v-list-item-content>
                         </v-list-item>
 
-                        <v-list-item @click="">
-                            <v-list-item-action></v-list-item-action>
+<!--                        <v-list-item @click="">-->
+<!--                            <v-list-item-action></v-list-item-action>-->
 
-                            <v-list-item-content>
-                                <v-list-item-title>ali_connors@example.com</v-list-item-title>
-                                <v-list-item-subtitle>Work</v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
+<!--                            <v-list-item-content>-->
+<!--                                <v-list-item-title>ali_connors@example.com</v-list-item-title>-->
+<!--                                <v-list-item-subtitle>Work</v-list-item-subtitle>-->
+<!--                            </v-list-item-content>-->
+<!--                        </v-list-item>-->
 
-                        <v-divider inset></v-divider>
+<!--                        <v-divider inset></v-divider>-->
 
-                        <v-list-item @click="">
-                            <v-list-item-icon>
-                                <v-icon color="indigo">mdi-map-marker</v-icon>
-                            </v-list-item-icon>
+<!--                        <v-list-item @click="">-->
+<!--                            <v-list-item-icon>-->
+<!--                                <v-icon color="indigo">mdi-map-marker</v-icon>-->
+<!--                            </v-list-item-icon>-->
 
-                            <v-list-item-content>
-                                <v-list-item-title>1400 Main Street</v-list-item-title>
-                                <v-list-item-subtitle>Orlando, FL 79938</v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
+<!--                            <v-list-item-content>-->
+<!--                                <v-list-item-title>1400 Main Street</v-list-item-title>-->
+<!--                                <v-list-item-subtitle>Orlando, FL 79938</v-list-item-subtitle>-->
+<!--                            </v-list-item-content>-->
+<!--                        </v-list-item>-->
                     </v-list>
                 </v-card>
             </v-col>
@@ -185,38 +185,58 @@
 
 
                     </template>
+
                     <template v-else>
-                        <h3 class="headline mb-3 font-weight-bold">Tus cursos</h3>
+<!--                        <template v-for="cursot in cursos">-->
+<!--                            <template v-for="curso_m in cursos.modalidad_view">-->
+<!--                                <template v-for="cursoc_m in cursot.modalidad">-->
+<!--                                    <h2>{{cursoc_m}}</h2>-->
+<!--                                </template>-->
+<!--                            </template>-->
+<!--                            <h3 class="headline mb-3 font-weight-bold">Tus cursos</h3>-->
+<!--                        </template>-->
                         <!--                <p class="">Sus</p>-->
 
+                        <v-card>
                         <template v-for="curso in cursos">
+                            <v-alert text color="green" class="mb-0">
+                            <h2 class="text-center grey--text text--darken-3">{{curso.modalidad_view.grupo.universidad.nombre}}</h2>
+                            <h5 class="text-center grey--text text--darken-1">{{curso.modalidad_view.modalidad.titulo}} - {{curso.modalidad_view.grupo.descripcion}}</h5>
+                            </v-alert>
+
+                            <v-card-title>
+                                <h4>Tus Cursos:</h4>
+                            </v-card-title>
+                            <v-card-text>
                             <template v-for="cursoss in curso.asignatura">
-                        <v-card tile flat class=" mb-3">
+                                <v-card tile flat class=" mb-3">
 
-                            <v-row no-gutters align="center">
-                                <v-col md="2" class="position-relative">
-                                    <v-img :src="cursoss.logo" aspect-ratio="2" contain></v-img>
-                                </v-col>
-                                <v-col class="px-3">
-                                    <h3 class="small font-weight-bold mb-2">{{cursoss.nombre}}</h3>
-<!--                                    <v-progress-linear-->
-<!--                                        value="90"-->
-<!--                                        height="20"-->
-<!--                                        color="green accent-4"-->
-<!--                                        dark-->
-<!--                                    >-->
-<!--                                        <span class="caption">90%</span>-->
-<!--                                    </v-progress-linear>-->
-<!--                                    <p class="mt-2 font-weight-medium text&#45;&#45;secondary caption">15/16Materiales</p>-->
-                                </v-col>
-                                <v-col md="4">
-                                    <v-btn class="w-100 text-capitalize" color="green accent-4" dark>Continuar viendo curso</v-btn>
-                                </v-col>
-                            </v-row>
+                                    <v-row no-gutters align="center">
+                                        <v-col md="2" class="position-relative">
+                                            <v-img :src="cursoss.logo" aspect-ratio="2" contain></v-img>
+                                        </v-col>
+                                        <v-col class="px-3">
+                                            <h3 class="small font-weight-bold mb-2">{{cursoss.nombre}}</h3>
+                                            <!--                                    <v-progress-linear-->
+                                            <!--                                        value="90"-->
+                                            <!--                                        height="20"-->
+                                            <!--                                        color="green accent-4"-->
+                                            <!--                                        dark-->
+                                            <!--                                    >-->
+                                            <!--                                        <span class="caption">90%</span>-->
+                                            <!--                                    </v-progress-linear>-->
+                                            <!--                                    <p class="mt-2 font-weight-medium text&#45;&#45;secondary caption">15/16Materiales</p>-->
+                                        </v-col>
+                                        <v-col md="4">
+                                            <v-btn class="w-100 text-capitalize" color="green accent-4" :href="'/student/curso/video-list/'+cursoss.id" dark>Continuar viendo curso</v-btn>
+                                        </v-col>
+                                    </v-row>
 
-                        </v-card>
+                                </v-card>
                             </template>
+                            </v-card-text>
                         </template>
+                        </v-card>
 
 <!--                        <v-card tile flat class=" mb-3">-->
 
@@ -297,14 +317,19 @@
         created() {
             axios.get('/getUniversidades').then(res=>{
                 this.universidad = res.data;
+
             });
 
             axios.get('/getmatricula').then(res=>{
-                this.show_1 = res.data;
+                // this.show_1 = res.data;
             });
 
             axios.get('/getCursos').then(res=>{
-                this.cursos = res.data;
+                const notaServidor = res.data;
+                this.cursos = notaServidor;
+                this.show_1 = notaServidor;
+                // console.log(this.cursos);
+
             });
 
         },

@@ -48,6 +48,12 @@ class User extends Authenticatable
         return $this->hasOne(Docente::class, 'user_id');
     }
 
+
+    public function asignaturas()
+    {
+        return $this->hasMany(Asignatura::class, 'f_docente_id');
+    }
+
     public function authorizeRoles($roles)
     {
         abort_unless($this->hasAnyRole($roles), 401);
