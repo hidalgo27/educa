@@ -99,20 +99,17 @@
 
                 <template v-for="mostrar in show_1">
                     <template v-if="mostrar.view_a === 'true'">
-                    <v-alert
-                        icon="mdi-alert"
-                        prominent
-                        text
-                        type="info"
-                        class="mb-6"
-                    >
-                        <v-row align="center">
-                            <v-col class="grow">Inicie su camino de ingreso a la Univerdidad. <strong>s/.99 soles por mes</strong> o s./250 soles por los 3 meses.</v-col>
-                            <v-col class="shrink">
-                                <v-btn color="primary" dark>Comenzar ahora</v-btn>
-                            </v-col>
-                        </v-row>
-                    </v-alert>
+                        <v-alert
+                            prominent
+                            type="error"
+                        >
+                            <v-row align="center">
+                                <v-col class="grow">Inicie su camino de ingreso a la Univerdidad. <strong>s/.99 soles por mes</strong> o s./250 soles por los 3 meses.</v-col>
+                                <v-col class="shrink">
+                                    <v-btn>Comenzar ahora</v-btn>
+                                </v-col>
+                            </v-row>
+                        </v-alert>
                     </template>
                 </template>
 
@@ -141,7 +138,7 @@
                                     item-text="text"
                                     item-value="id"
                                     outlined
-                                    
+
                                     @input="getModalidad"
                                 ></v-select>
                             </v-col>

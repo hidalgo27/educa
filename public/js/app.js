@@ -4324,9 +4324,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['auth'],
   data: function data() {
@@ -29629,15 +29626,7 @@ var render = function() {
                     ? [
                         _c(
                           "v-alert",
-                          {
-                            staticClass: "mb-6",
-                            attrs: {
-                              icon: "mdi-alert",
-                              prominent: "",
-                              text: "",
-                              type: "info"
-                            }
-                          },
+                          { attrs: { prominent: "", type: "error" } },
                           [
                             _c(
                               "v-row",
@@ -29654,13 +29643,7 @@ var render = function() {
                                 _c(
                                   "v-col",
                                   { staticClass: "shrink" },
-                                  [
-                                    _c(
-                                      "v-btn",
-                                      { attrs: { color: "primary", dark: "" } },
-                                      [_vm._v("Comenzar ahora")]
-                                    )
-                                  ],
+                                  [_c("v-btn", [_vm._v("Comenzar ahora")])],
                                   1
                                 )
                               ],
