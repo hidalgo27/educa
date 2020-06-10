@@ -129,11 +129,11 @@
                     >
                         <h3 class="headline mb-3 font-weight-bold">Bienvenido a nuestra gran familia</h3>
                         <p>El grupo educativo Green le da la bienvenida y agradece su preferencia.</p>
-                        <p>Escoja su objetivo y justos los lograremos.</p>
+                        <p>Escoja su objetivo y juntos los lograremos.</p>
 
                         <form>
                         <v-row>
-                            <v-col class="d-flex" cols="12" sm="4">
+                            <v-col class="d-flex" cols="12" sm="6">
                                 <v-select
                                     v-model="universidades"
                                     :items="universidad"
@@ -141,10 +141,11 @@
                                     item-text="text"
                                     item-value="id"
                                     outlined
+                                    
                                     @input="getModalidad"
                                 ></v-select>
                             </v-col>
-                            <v-col class="d-flex" cols="12" sm="3">
+                            <v-col class="d-flex" cols="12" sm="6">
                                 <v-select
                                     v-model="modalidades"
                                     :items="modalidad"
@@ -155,7 +156,7 @@
                                     @input="getGrupo"
                                 ></v-select>
                             </v-col>
-                            <v-col class="d-flex" cols="12" sm="3">
+                            <v-col class="d-flex" cols="12" sm="6">
                                 <v-select
                                     v-model="grupos"
                                     :items="grupo"
@@ -166,7 +167,7 @@
                                     @input="getCarreras"
                                 ></v-select>
                             </v-col>
-                            <v-col class="d-flex" cols="12" sm="3">
+                            <v-col class="d-flex" cols="12" sm="6">
                                 <v-select
                                     v-model="carreras"
                                     :items="carrera"
@@ -176,10 +177,19 @@
                                     outlined
                                 ></v-select>
                             </v-col>
-                            <v-col cols="12" sm="2">
-                                <v-btn x-large color="green accent-4" class="w-100" dark  @click="agregar">Guardar</v-btn>
-                            </v-col>
                         </v-row>
+                            <v-row justify="center" class="mb-5">
+                                <v-col cols="12" sm="5">
+                                    <v-btn x-large color="green accent-4" class="w-100" dark  @click="agregar">
+                                        <span class="mx-2" v-show="load_text">Guardar</span>
+                                        <v-progress-circular
+                                            indeterminate
+                                            color="white"
+                                            v-show="load_circ"
+                                        ></v-progress-circular>
+                                    </v-btn>
+                                </v-col>
+                            </v-row>
                         </form>
                     </v-alert>
 
@@ -306,6 +316,8 @@
             modalidades: [],
             grupos: [],
             carreras: [],
+            load_text: true,
+            load_circ: false,
 
             universidad: [],
             modalidad: [],
@@ -370,6 +382,8 @@
                 // const notaNueva = this.nota;
                 // console.log(obj);
                 // this.nota = {nombre: '', descripcion: ''};
+                this.load_text= false;
+                this.load_circ= true;
                 axios.post('/students/matricular', obj)
                     .then((res) =>{
                         const notaServidor = res.data;

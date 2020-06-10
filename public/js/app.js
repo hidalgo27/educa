@@ -4317,6 +4317,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['auth'],
   data: function data() {
@@ -4326,6 +4336,8 @@ __webpack_require__.r(__webpack_exports__);
       modalidades: [],
       grupos: [],
       carreras: [],
+      load_text: true,
+      load_circ: false,
       universidad: [],
       modalidad: [],
       grupo: [],
@@ -4386,6 +4398,8 @@ __webpack_require__.r(__webpack_exports__);
       // console.log(obj);
       // this.nota = {nombre: '', descripcion: ''};
 
+      this.load_text = false;
+      this.load_circ = true;
       axios.post('/students/matricular', obj).then(function (res) {
         var notaServidor = res.data; // this.show_1.push(notaServidor);
 
@@ -29690,7 +29704,7 @@ var render = function() {
                             _vm._v(" "),
                             _c("p", [
                               _vm._v(
-                                "Escoja su objetivo y justos los lograremos."
+                                "Escoja su objetivo y juntos los lograremos."
                               )
                             ]),
                             _vm._v(" "),
@@ -29704,7 +29718,7 @@ var render = function() {
                                       "v-col",
                                       {
                                         staticClass: "d-flex",
-                                        attrs: { cols: "12", sm: "4" }
+                                        attrs: { cols: "12", sm: "6" }
                                       },
                                       [
                                         _c("v-select", {
@@ -29732,7 +29746,7 @@ var render = function() {
                                       "v-col",
                                       {
                                         staticClass: "d-flex",
-                                        attrs: { cols: "12", sm: "3" }
+                                        attrs: { cols: "12", sm: "6" }
                                       },
                                       [
                                         _c("v-select", {
@@ -29760,7 +29774,7 @@ var render = function() {
                                       "v-col",
                                       {
                                         staticClass: "d-flex",
-                                        attrs: { cols: "12", sm: "3" }
+                                        attrs: { cols: "12", sm: "6" }
                                       },
                                       [
                                         _c("v-select", {
@@ -29788,7 +29802,7 @@ var render = function() {
                                       "v-col",
                                       {
                                         staticClass: "d-flex",
-                                        attrs: { cols: "12", sm: "3" }
+                                        attrs: { cols: "12", sm: "6" }
                                       },
                                       [
                                         _c("v-select", {
@@ -29809,11 +29823,21 @@ var render = function() {
                                         })
                                       ],
                                       1
-                                    ),
-                                    _vm._v(" "),
+                                    )
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "v-row",
+                                  {
+                                    staticClass: "mb-5",
+                                    attrs: { justify: "center" }
+                                  },
+                                  [
                                     _c(
                                       "v-col",
-                                      { attrs: { cols: "12", sm: "2" } },
+                                      { attrs: { cols: "12", sm: "5" } },
                                       [
                                         _c(
                                           "v-btn",
@@ -29826,7 +29850,39 @@ var render = function() {
                                             },
                                             on: { click: _vm.agregar }
                                           },
-                                          [_vm._v("Guardar")]
+                                          [
+                                            _c(
+                                              "span",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value: _vm.load_text,
+                                                    expression: "load_text"
+                                                  }
+                                                ],
+                                                staticClass: "mx-2"
+                                              },
+                                              [_vm._v("Guardar")]
+                                            ),
+                                            _vm._v(" "),
+                                            _c("v-progress-circular", {
+                                              directives: [
+                                                {
+                                                  name: "show",
+                                                  rawName: "v-show",
+                                                  value: _vm.load_circ,
+                                                  expression: "load_circ"
+                                                }
+                                              ],
+                                              attrs: {
+                                                indeterminate: "",
+                                                color: "white"
+                                              }
+                                            })
+                                          ],
+                                          1
                                         )
                                       ],
                                       1
