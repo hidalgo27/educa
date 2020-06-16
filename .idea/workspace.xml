@@ -2,7 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ee3ff8d-4bdd-4b9f-906b-594a93674ce5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/educa.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/educa.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/page/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,6 +129,11 @@
       <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
     </include_path>
   </component>
   <component name="ProjectId" id="1cXZWbSkb5f34AdCXZpcUldbO37" />
@@ -143,7 +156,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Color Scheme Font" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -169,7 +182,9 @@
       <workItem from="1591383013879" duration="21525000" />
       <workItem from="1591459125003" duration="30497000" />
       <workItem from="1591722674829" duration="9401000" />
-      <workItem from="1591801845702" duration="17022000" />
+      <workItem from="1591801845702" duration="17424000" />
+      <workItem from="1591976907007" duration="4401000" />
+      <workItem from="1592229149762" duration="2024000" />
     </task>
     <servers />
   </component>
@@ -193,10 +208,11 @@
       <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="539" y="388" key="NewPhpFileDialog/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1590771027824" />
-    <state x="-1167" y="48" key="SettingsEditor" timestamp="1591383316166">
-      <screen x="-1600" y="23" width="1600" height="877" />
+    <state x="308" y="91" key="SettingsEditor" timestamp="1592323806441">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
     <state x="-1167" y="48" key="SettingsEditor/-1600.23.1600.877/0.23.1440.877@0.23.1440.877" timestamp="1591383316166" />
+    <state x="308" y="91" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1592323806441" />
     <state x="100" y="123" width="1240" height="677" key="dock-window-1" timestamp="1591637399200">
       <screen x="0" y="23" width="1440" height="877" />
     </state>

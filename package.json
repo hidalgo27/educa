@@ -29,7 +29,7 @@
     },
     "dependencies": {
         "vuelidate": "^0.7.5",
-        "vuetify": "^2.2.25",
+        "vuetify": "^2.3.0",
         "vuetify-loader": "^1.4.3"
     }
 }

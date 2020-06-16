@@ -353,6 +353,21 @@
         <section>
             <v-container>
                 <v-row>
+                    <v-col md="6">
+                        <h3>Clases en vivo</h3>
+                        <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg"></v-img>
+                    </v-col>
+                    <v-col md="6">
+                        <h3>Clases en vivo</h3>
+                        <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg"></v-img>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </section>
+
+        <section>
+            <v-container>
+                <v-row>
                     <v-col class="text-center">
                         <h3 class="headline font-weight-bold mt-5 mb-2">Elige un plan y empieza a estudiar</h3>
                     </v-col>
@@ -481,6 +496,68 @@
                                 greengroup.com/privado
                             </v-btn>
                         </v-alert>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </section>
+
+        <section>
+            <v-container>
+                <v-row align="center">
+                    <v-col md="6">
+                        <v-row align="center">
+                            <v-col md="3">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Plataforma responsive:</p>
+                                <p class="text--disabled mb-0 text-body-2">Laptop, Celular, Tableta, Desktop, incluso Smart TV.</p>
+
+                            </v-col>
+                        </v-row>
+                        <v-row align="center">
+                            <v-col md="3">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Evaluaciones</p>
+                                <p class="text--disabled mb-0 text-body-2">Simulacros de Exámenes de Admisión</p>
+
+                            </v-col>
+                        </v-row>
+                        <v-row align="center">
+                            <v-col md="3">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Clases 100% Dinámicas</p>
+                                <p class="text--disabled mb-0 text-body-2">Teoría y Ejercicios de forma entretenida</p>
+
+                            </v-col>
+                        </v-row>
+                        <v-row align="center">
+                            <v-col md="3">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Modulo completo x Curso</p>
+                                <p class="text--disabled mb-0 text-body-2">Desarrollo de todo el temario</p>
+
+                            </v-col>
+                        </v-row>
+                        <v-row align="center">
+                            <v-col md="3">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Asesoría Personalizada</p>
+                                <p class="text--disabled mb-0 text-body-2">Contacto directo con profesores, incluyendo Asesorías.</p>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                    <v-col md="6">
+
+                        <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg"></v-img>
                     </v-col>
                 </v-row>
             </v-container>
