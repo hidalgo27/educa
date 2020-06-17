@@ -2191,8 +2191,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ['logo', 'auth', 'csrf'],
   data: function data() {
@@ -25095,16 +25093,6 @@ var render = function() {
                     "hidden-sm-and-down font-weight-medium text-capitalize",
                   attrs: { text: "" }
                 },
-                [_vm._v("\n                    Cursos\n                ")]
-              ),
-              _vm._v(" "),
-              _c(
-                "v-btn",
-                {
-                  staticClass:
-                    "hidden-sm-and-down font-weight-medium text-capitalize",
-                  attrs: { text: "" }
-                },
                 [_vm._v("\n                    Docentes\n                ")]
               ),
               _vm._v(" "),
@@ -25113,7 +25101,7 @@ var render = function() {
                 {
                   staticClass:
                     "hidden-sm-and-down font-weight-medium text-capitalize",
-                  attrs: { text: "" }
+                  attrs: { text: "", href: "#universidades" }
                 },
                 [
                   _vm._v(
@@ -25127,9 +25115,9 @@ var render = function() {
                 {
                   staticClass:
                     "hidden-sm-and-down font-weight-medium text-capitalize",
-                  attrs: { text: "" }
+                  attrs: { text: "", href: "#precios" }
                 },
-                [_vm._v("\n                    Planes\n                ")]
+                [_vm._v("\n                    Precios\n                ")]
               ),
               _vm._v(" "),
               _c(
@@ -25447,39 +25435,18 @@ var render = function() {
                 "v-col",
                 { staticClass: "text-center", attrs: { md: "8" } },
                 [
-                  _c(
-                    "h1",
-                    {
-                      staticClass:
-                        "display-2 font-weight-medium mb-4 d-none d-sm-flex"
-                    },
-                    [
-                      _vm._v(
-                        "La academia online de educación para tu ingreso a la universidad"
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "h1",
-                    {
-                      staticClass:
-                        "display-1 font-weight-medium mb-4 d-flex d-sm-none"
-                    },
-                    [
-                      _vm._v(
-                        "La academia online de educación para tu ingreso a la universidad"
-                      )
-                    ]
-                  ),
+                  _c("p", { staticClass: "text-sm-h5 text-md-h3" }, [
+                    _vm._v("PRE UNSAAC - PRE ANDINA")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "p",
                     { staticClass: "title grey--text text--lighten-1 my-10" },
                     [
-                      _vm._v(
-                        "¡Aprovecha nuetros descuentos y arma tu plan a la medida!"
-                      )
+                      _vm._v("Ingrese a la carrera profesional que desees. "),
+                      _c("span", { staticClass: "lime--text text--accent-4" }, [
+                        _vm._v("Luz verde para la Universidad.")
+                      ])
                     ]
                   ),
                   _vm._v(" "),
@@ -25487,7 +25454,7 @@ var render = function() {
                     "v-btn",
                     {
                       staticClass:
-                        "mb-5 font-weight-bold mr-5 grey--text text--darken-3",
+                        "mt-5 font-weight-bold mr-5 grey--text text--darken-3",
                       attrs: {
                         color: "lime accent-4",
                         large: "",
@@ -25496,21 +25463,6 @@ var render = function() {
                       }
                     },
                     [_vm._v("Comienza Ahora")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      staticClass: "mb-5 font-weight-bold",
-                      attrs: {
-                        color: "lime accent-4",
-                        large: "",
-                        outlined: "",
-                        dark: "",
-                        href: "/register"
-                      }
-                    },
-                    [_vm._v("Toma tu primera clase")]
                   )
                 ],
                 1

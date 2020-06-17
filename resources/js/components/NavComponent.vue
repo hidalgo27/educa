@@ -45,15 +45,15 @@
             </v-toolbar-title>
             <v-layout class="align-center">
                 <v-spacer />
-                <v-btn
+<!--                <v-btn-->
 
-                    class="hidden-sm-and-down font-weight-medium text-capitalize"
+<!--                    class="hidden-sm-and-down font-weight-medium text-capitalize"-->
 
-                    text
+<!--                    text-->
 
-                >
-                    Cursos
-                </v-btn>
+<!--                >-->
+<!--                    Cursos-->
+<!--                </v-btn>-->
                 <v-btn
 
                     class="hidden-sm-and-down font-weight-medium text-capitalize"
@@ -63,22 +63,20 @@
                     Docentes
                 </v-btn>
                 <v-btn
-
                     class="hidden-sm-and-down font-weight-medium text-capitalize"
-
                     text
-
+                    href="#universidades"
                 >
                     Universidades
                 </v-btn>
                 <v-btn
 
                     class="hidden-sm-and-down font-weight-medium text-capitalize"
-
                     text
+                    href="#precios"
 
                 >
-                    Planes
+                    Precios
                 </v-btn>
                 <v-btn
 

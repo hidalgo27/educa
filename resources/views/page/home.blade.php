@@ -1,14 +1,16 @@
 @extends('layouts.page.app')
 @section('content')
     <v-content>
+
         <parallax-component></parallax-component>
 
         <div class="container">
 
 
             <div class="row justify-center">
-                <div class="col-12 col-md-6 text--secondary font-weight-regular text-center">
-                    Prepárate con nuestros cursos en linea, con todo los temas estructurados de su universidad.
+                <div class="col-12 col-md-8 text-h6 text--secondary font-weight-regular text-center">
+{{--                    Prepárate con nuestros cursos en linea, con todo los temas estructurados de su universidad.--}}
+                    Clases en vivo y pre-grabadas + Asesoría personalizada a cada estudiante para lograr obtener óptimos resultados en su examen de admisión.
                 </div>
             </div>
             <div class="row">
@@ -32,164 +34,228 @@
                 </div>
             </div>
 
+        </div>
+        <section>
+            <v-container>
+                <v-row align="center">
+                    <v-col md="5">
+                        <v-row align="center">
+                            <v-col md="2">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/step/plataforma.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Plataforma responsive:</p>
+                                <p class="text--disabled mb-0 text-body-2">Laptop, Celular, Tableta, Desktop, incluso Smart TV.</p>
 
+                            </v-col>
+                        </v-row>
+                        <v-row align="center">
+                            <v-col md="2">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/step/evaluaciones.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Evaluaciones</p>
+                                <p class="text--disabled mb-0 text-body-2">Simulacros de Exámenes de Admisión</p>
 
-            <v-row class="my-5">
-                @foreach($universidad as $universidades)
-                <v-col
-                    cols="12"
-                    xs="12"
-                    sm="6"
-                    class="d-flex"
-                >
-                    <v-hover
-                        v-slot:default="{ hover }"
-                        open-delay="60"
-                    >
-                        <v-card
-                            :elevation="hover ? 6 : 1"
-                            class="w-100"
+                            </v-col>
+                        </v-row>
+                        <v-row align="center">
+                            <v-col md="2">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/step/clases.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Clases 100% Dinámicas</p>
+                                <p class="text--disabled mb-0 text-body-2">Teoría y Ejercicios de forma entretenida</p>
+
+                            </v-col>
+                        </v-row>
+                        <v-row align="center">
+                            <v-col md="2">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/step/modulo.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Modulo completo x Curso</p>
+                                <p class="text--disabled mb-0 text-body-2">Desarrollo de todo el temario</p>
+
+                            </v-col>
+                        </v-row>
+                        <v-row align="center">
+                            <v-col md="2">
+                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/step/asesoria.jpg" class="rounded"></v-img>
+                            </v-col>
+                            <v-col>
+                                <p class="text--primary mb-0">Asesoría Personalizada</p>
+                                <p class="text--disabled mb-0 text-body-2">Contacto directo con profesores, incluyendo Asesorías.</p>
+                            </v-col>
+                        </v-row>
+                    </v-col>
+                    <v-col md="7" class="pl-12">
+                        <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg"></v-img>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </section>
+
+        <section>
+            <v-container>
+
+            </v-container>
+        </section>
+
+        <section class="grey pb-5 lighten-4" id="universidades">
+            <v-container>
+                <v-row class="my-4">
+                    <v-col cols="12">
+                        <h3 class="headline text-center font-weight-bold mt-5 mb-2">Temarios de su universidad</h3>
+                    </v-col>
+                    @foreach($universidad as $universidades)
+                        <v-col
+                            cols="12"
+                            xs="12"
+                            sm="6"
+                            class="d-flex"
                         >
-                            <v-img src="{{$universidades->imagen}}" aspect-ratio="1.7"
-                                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                            <v-hover
+                                v-slot:default="{ hover }"
+                                open-delay="60"
                             >
-                                <v-card-title>
-                                    <v-img
-                                        src="{{$universidades->logo}}"
-                                        aspect-ratio="1.7"
-                                        height="100px"
-
-                                        contain
+                                <v-card
+                                    :elevation="hover ? 6 : 1"
+                                    class="w-100"
+                                >
+                                    <v-img src="{{$universidades->imagen}}" aspect-ratio="1.7"
+                                           gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
                                     >
+                                        <v-card-title>
+                                            <v-img
+                                                src="{{$universidades->logo}}"
+                                                aspect-ratio="1.7"
+                                                height="100px"
+
+                                                contain
+                                            >
+                                            </v-img>
+                                        </v-card-title>
                                     </v-img>
-                                </v-card-title>
-                            </v-img>
 
-{{--                            <div class="row justify-center">--}}
-{{--                                <div class="col-6">--}}
-{{--                                    <v-img src="{{asset('images/unsaac.jpg')}}" aspect-ratio="1.7" contain></v-img>--}}
-{{--                                </div>--}}
-{{--                            </div>--}}
+                                    {{--                            <div class="row justify-center">--}}
+                                    {{--                                <div class="col-6">--}}
+                                    {{--                                    <v-img src="{{asset('images/unsaac.jpg')}}" aspect-ratio="1.7" contain></v-img>--}}
+                                    {{--                                </div>--}}
+                                    {{--                            </div>--}}
 
-                            <v-row no-gutters>
-                                <v-col>
-                                    <v-tabs
-                                        v-model="universidad_{{$universidades->id}}"
-                                        centered
-                                        background-color="{{$universidades->color}}"
-                                        dark
-                                    >
+                                    <v-row no-gutters>
+                                        <v-col>
+                                            <v-tabs
+                                                v-model="universidad_{{$universidades->id}}"
+                                                centered
+                                                background-color="{{$universidades->color}}"
+                                                dark
+                                            >
 
-                                        @foreach($universidades->modalidades->where('estado',1) as $modalidad)
-                                        <v-tab href="#ordinario" >
-                                            {{$modalidad->titulo}} {{$universidades->abreviatura}}
-                                        </v-tab>
-                                        @endforeach
-{{--                                        <v-tab href="#dirimencia" >--}}
-{{--                                            Dirimencia--}}
-{{--                                        </v-tab>--}}
-{{--                                        <v-tab href="#primera" >--}}
-{{--                                            Primera Oportunidad--}}
-{{--                                        </v-tab>--}}
-                                    </v-tabs>
-                                </v-col>
-                            </v-row>
-                            <v-row>
-                                <v-col>
-                                    <v-tabs-items v-model="universidad_{{$universidades->id}}">
-                                        @foreach($universidades->modalidades->where('estado',1) as $modalidad)
-                                        <v-tab-item
-                                            value="ordinario"
-                                        >
-                                            <div class="px-4">
+                                                @foreach($universidades->modalidades->where('estado',1) as $modalidad)
+                                                    <v-tab href="#ordinario" >
+                                                        {{$modalidad->titulo}} {{$universidades->abreviatura}}
+                                                    </v-tab>
+                                                @endforeach
+                                                {{--                                        <v-tab href="#dirimencia" >--}}
+                                                {{--                                            Dirimencia--}}
+                                                {{--                                        </v-tab>--}}
+                                                {{--                                        <v-tab href="#primera" >--}}
+                                                {{--                                            Primera Oportunidad--}}
+                                                {{--                                        </v-tab>--}}
+                                            </v-tabs>
+                                        </v-col>
+                                    </v-row>
+                                    <v-row>
+                                        <v-col>
+                                            <v-tabs-items v-model="universidad_{{$universidades->id}}">
+                                                @foreach($universidades->modalidades->where('estado',1) as $modalidad)
+                                                    <v-tab-item
+                                                        value="ordinario"
+                                                    >
+                                                        <div class="px-4">
 
-                                                    <div class="row">
+                                                            <div class="row">
 
 
-                                                            @foreach($modalidad->modalidad_grupos as $modalidad_grupos)
-{{--                                                                @foreach($modalidad_grupos->grupos as $grupos)--}}
+                                                                @foreach($modalidad->modalidad_grupos as $modalidad_grupos)
+                                                                    {{--                                                                @foreach($modalidad_grupos->grupos as $grupos)--}}
 
-                                                                <div class="col-12 col-md-6">
-                                                                    <v-hover v-slot:default="{ hover }">
+                                                                    <div class="col-12 col-md-6">
+                                                                        <v-hover v-slot:default="{ hover }">
 
-                                                                        <div class="position-relative grey lighten-4 hover-box-content">
+                                                                            <div class="position-relative grey lighten-4 hover-box-content">
 
-                                                                            <v-expand-x-transition>
-                                                                                <div
-                                                                                    v-if="hover"
-                                                                                    class="d-flex hover-box-content transition-fast-out-linear-in {{$modalidad_grupos->grupo->color}} v-card--reveal display-3 white--text"
-                                                                                    style="height: 100%;"
-                                                                                >
-                                                                                    {{--                                                                                                                                $14.99--}}
-                                                                                </div>
-                                                                            </v-expand-x-transition>
-                                                                            <a href="{{route('cursos_path', [$universidades->id, $modalidad->id, $modalidad_grupos->grupo->id])}}">
-                                                                                <div class="position-relative hover-box">
-                                                                                    <div class="row no-gutters align-center">
-                                                                                        <div class="col-3 {{$modalidad_grupos->grupo->color}} hover-box-content-left pa-4 border-left">
-                                                                                            {{--                                                                                                                                        <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
-                                                                                            <v-img src="{{$modalidad_grupos->grupo->logo}}" contain aspect-ratio="1.7"></v-img>
-                                                                                        </div>
-                                                                                        <div class="col px-6">
-                                                                                            <h4 class="font-weight-bold">
-                                                                                                {{$modalidad_grupos->grupo->descripcion}}</h4>
-{{--                                                                                            <p class="ma-0">22 cursos</p>--}}
+                                                                                <v-expand-x-transition>
+                                                                                    <div
+                                                                                        v-if="hover"
+                                                                                        class="d-flex hover-box-content transition-fast-out-linear-in {{$modalidad_grupos->grupo->color}} v-card--reveal display-3 white--text"
+                                                                                        style="height: 100%;"
+                                                                                    >
+                                                                                        {{--                                                                                                                                $14.99--}}
+                                                                                    </div>
+                                                                                </v-expand-x-transition>
+                                                                                <a href="{{route('cursos_path', [$universidades->id, $modalidad->id, $modalidad_grupos->grupo->id])}}">
+                                                                                    <div class="position-relative hover-box">
+                                                                                        <div class="row no-gutters align-center">
+                                                                                            <div class="col-3 {{$modalidad_grupos->grupo->color}} hover-box-content-left pa-4 border-left">
+                                                                                                {{--                                                                                                                                        <img src="https://static.platzi.com/mf-landings/image/ico-marketing-e06e714b6435502c9c1d2ddc573ba258.png" alt="" class="pa-3">--}}
+                                                                                                <v-img src="{{$modalidad_grupos->grupo->logo}}" contain aspect-ratio="1.7"></v-img>
+                                                                                            </div>
+                                                                                            <div class="col px-6">
+                                                                                                <h4 class="font-weight-bold">
+                                                                                                    {{$modalidad_grupos->grupo->descripcion}}</h4>
+                                                                                                {{--                                                                                            <p class="ma-0">22 cursos</p>--}}
+                                                                                            </div>
                                                                                         </div>
                                                                                     </div>
-                                                                                </div>
-                                                                            </a>
-                                                                        </div>
-                                                                    </v-hover>
+                                                                                </a>
+                                                                            </div>
+                                                                        </v-hover>
 
-                                                                </div>
-{{--                                                                @endforeach--}}
-                                                            @endforeach
-
-
-                                                    </div>
-
-                                            </div>
-                                        </v-tab-item>
-                                        @endforeach
-
-{{--                                        <v-tab-item--}}
-{{--                                            value="dirimencia"--}}
-{{--                                        >--}}
-{{--                                            <v-card flat>--}}
-{{--                                                <v-card-text>diri</v-card-text>--}}
-{{--                                            </v-card>--}}
-{{--                                        </v-tab-item>--}}
-
-{{--                                        <v-tab-item--}}
-{{--                                            value="primera"--}}
-{{--                                        >--}}
-{{--                                            <v-card flat>--}}
-{{--                                                <v-card-text>pri</v-card-text>--}}
-{{--                                            </v-card>--}}
-{{--                                        </v-tab-item>--}}
-                                    </v-tabs-items>
-                                </v-col>
-                            </v-row>
-
-                        </v-card>
-                    </v-hover>
-                </v-col>
-                @endforeach
-            </v-row>
+                                                                    </div>
+                                                                    {{--                                                                @endforeach--}}
+                                                                @endforeach
 
 
+                                                            </div>
 
+                                                        </div>
+                                                    </v-tab-item>
+                                                @endforeach
 
-        </div>
-        <section class="grey pb-5 lighten-4">
-            <v-container>
-                <v-row>
+                                                {{--                                        <v-tab-item--}}
+                                                {{--                                            value="dirimencia"--}}
+                                                {{--                                        >--}}
+                                                {{--                                            <v-card flat>--}}
+                                                {{--                                                <v-card-text>diri</v-card-text>--}}
+                                                {{--                                            </v-card>--}}
+                                                {{--                                        </v-tab-item>--}}
+
+                                                {{--                                        <v-tab-item--}}
+                                                {{--                                            value="primera"--}}
+                                                {{--                                        >--}}
+                                                {{--                                            <v-card flat>--}}
+                                                {{--                                                <v-card-text>pri</v-card-text>--}}
+                                                {{--                                            </v-card>--}}
+                                                {{--                                        </v-tab-item>--}}
+                                            </v-tabs-items>
+                                        </v-col>
+                                    </v-row>
+
+                                </v-card>
+                            </v-hover>
+                        </v-col>
+                    @endforeach
+                </v-row>
+                <v-row class="d-none">
                     <v-col class="text-center">
                         <h3 class="headline font-weight-bold mt-5 mb-2">Cursos en desarrollo desde el <span class="pink--text">01 junio 2020</span></h3>
                     </v-col>
                 </v-row>
 
-                <v-row>
+                <v-row class="d-none">
                     @foreach($universidad as $universidades)
                         <v-col md="12" class="mb-8">
                             <v-row>
@@ -365,7 +431,7 @@
             </v-container>
         </section>
 
-        <section>
+        <section id="precios">
             <v-container>
                 <v-row>
                     <v-col class="text-center">
@@ -434,12 +500,12 @@
                                     <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
                                     <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
                                 <tr>
-                                    <td>Acceso a nuestra plataforma</td>
+                                    <td>Acceso a nuestra plataforma educativa de lecciones + archivos de clases live</td>
                                     <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
                                     <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
                                 </tr>
                                 <tr>
-                                    <td>Trivias por video</td>
+                                    <td>Lecciones animadas y trivias</td>
                                     <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
                                     <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
                                 </tr>
@@ -449,7 +515,7 @@
                                     <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-check-bold</v-icon></td>
                                 </tr>
                                 <tr>
-                                    <td>Exámenes tipo admisión</td>
+                                    <td>Simulacro de exámenes de admisión</td>
                                     <td class="text-center"><v-icon class="font-weight-bold cyan--text">mdi-check-bold</v-icon></td>
                                     <td class="text-center"><v-icon class="font-weight-bold grey lighten-5">mdi-close-thick</v-icon></td>
                                 </tr>
@@ -501,67 +567,7 @@
             </v-container>
         </section>
 
-        <section>
-            <v-container>
-                <v-row align="center">
-                    <v-col md="6">
-                        <v-row align="center">
-                            <v-col md="3">
-                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
-                            </v-col>
-                            <v-col>
-                                <p class="text--primary mb-0">Plataforma responsive:</p>
-                                <p class="text--disabled mb-0 text-body-2">Laptop, Celular, Tableta, Desktop, incluso Smart TV.</p>
 
-                            </v-col>
-                        </v-row>
-                        <v-row align="center">
-                            <v-col md="3">
-                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
-                            </v-col>
-                            <v-col>
-                                <p class="text--primary mb-0">Evaluaciones</p>
-                                <p class="text--disabled mb-0 text-body-2">Simulacros de Exámenes de Admisión</p>
-
-                            </v-col>
-                        </v-row>
-                        <v-row align="center">
-                            <v-col md="3">
-                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
-                            </v-col>
-                            <v-col>
-                                <p class="text--primary mb-0">Clases 100% Dinámicas</p>
-                                <p class="text--disabled mb-0 text-body-2">Teoría y Ejercicios de forma entretenida</p>
-
-                            </v-col>
-                        </v-row>
-                        <v-row align="center">
-                            <v-col md="3">
-                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
-                            </v-col>
-                            <v-col>
-                                <p class="text--primary mb-0">Modulo completo x Curso</p>
-                                <p class="text--disabled mb-0 text-body-2">Desarrollo de todo el temario</p>
-
-                            </v-col>
-                        </v-row>
-                        <v-row align="center">
-                            <v-col md="3">
-                                <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg" class="rounded"></v-img>
-                            </v-col>
-                            <v-col>
-                                <p class="text--primary mb-0">Asesoría Personalizada</p>
-                                <p class="text--disabled mb-0 text-body-2">Contacto directo con profesores, incluyendo Asesorías.</p>
-                            </v-col>
-                        </v-row>
-                    </v-col>
-                    <v-col md="6">
-
-                        <v-img src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/banner-home.jpg"></v-img>
-                    </v-col>
-                </v-row>
-            </v-container>
-        </section>
 
         <section>
             <v-container>

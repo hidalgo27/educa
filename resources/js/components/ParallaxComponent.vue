@@ -10,11 +10,11 @@
                 justify="center"
             >
                 <v-col class="text-center" md="8">
-                    <h1 class="display-2 font-weight-medium mb-4 d-none d-sm-flex">La academia online de educación para tu ingreso a la universidad</h1>
-                    <h1 class="display-1 font-weight-medium mb-4 d-flex d-sm-none">La academia online de educación para tu ingreso a la universidad</h1>
-                    <p class="title grey--text text--lighten-1 my-10">¡Aprovecha nuetros descuentos y arma tu plan a la medida!</p>
-                    <v-btn color="lime accent-4" class="mb-5 font-weight-bold mr-5 grey--text text--darken-3" large dark href="/register">Comienza Ahora</v-btn>
-                    <v-btn color="lime accent-4" class="mb-5 font-weight-bold" large outlined dark href="/register">Toma tu primera clase</v-btn>
+                    <p class="text-sm-h5 text-md-h3">PRE UNSAAC - PRE ANDINA</p>
+<!--                    <h1 class="text-sm-body-1 text-md-h5 font-weight-medium mb-4">La academia online de educación para tu ingreso a la universidad</h1>-->
+                    <p class="title grey--text text--lighten-1 my-10">Ingrese a la carrera profesional que desees. <span class="lime--text text--accent-4">Luz verde para la Universidad.</span></p>
+                    <v-btn color="lime accent-4" class="mt-5 font-weight-bold mr-5 grey--text text--darken-3" large dark href="/register">Comienza Ahora</v-btn>
+<!--                    <v-btn color="lime accent-4" class="mb-5 font-weight-bold" large outlined dark href="/register">Toma tu primera clase</v-btn>-->
 <!--                    <h4 class="subheading">Build your application today!</h4>-->
                 </v-col>
             </v-row>

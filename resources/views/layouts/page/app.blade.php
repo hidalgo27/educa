@@ -16,8 +16,20 @@
         @else
             <nav-component :auth="{{Auth::user()}}" :csrf="'{{ @csrf_token() }}'" :logo="'{{asset('images/logos/logo-green-edu.png')}}'"></nav-component>
         @endguest
+            <v-fab-transition>
 
-
+                <v-btn
+                    color="green"
+                    dark
+                    fixed
+                    right
+                    fab
+                    bottom
+                    large
+                >
+                    <v-icon>mdi-whatsapp</v-icon>
+                </v-btn>
+            </v-fab-transition>
         @yield('content')
 
         <v-footer
