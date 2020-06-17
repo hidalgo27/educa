@@ -94,7 +94,7 @@
                 <template v-if="auth === 0">
                     <v-btn
                         color="lime accent-4"
-                        class="mr-4 grey--text text--darken-3"
+                        class="mr-4 grey--text text--darken-3 d-none d-sm-flex"
                         href="/register"
                     >
                         <span class="text-capitalize">Prueba gratis</span>

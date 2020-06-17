@@ -25137,7 +25137,8 @@ var render = function() {
                     _c(
                       "v-btn",
                       {
-                        staticClass: "mr-4 grey--text text--darken-3",
+                        staticClass:
+                          "mr-4 grey--text text--darken-3 d-none d-sm-flex",
                         attrs: { color: "lime accent-4", href: "/register" }
                       },
                       [
