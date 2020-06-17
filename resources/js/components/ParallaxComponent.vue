@@ -1,5 +1,9 @@
 <template>
     <div class="parallax-box-h position-relative">
+        <v-skeleton-loader
+            type="image"
+
+        >
         <v-parallax
             dark
             src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/pizarra.jpg"
@@ -20,14 +24,20 @@
             </v-row>
             <div class="landing-banner__footer"></div>
         </v-parallax>
+        </v-skeleton-loader>
     </div>
 </template>
 
 <script>
     export default {
-        name: "ParallaxComponent"
+        name: "ParallaxComponent",
+        data: () => ({
+            "image": "image",
+        })
     }
 </script>
+
+
 
 <style>
     .landing-banner__footer {

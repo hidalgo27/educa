@@ -2238,8 +2238,18 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "ParallaxComponent"
+  name: "ParallaxComponent",
+  data: function data() {
+    return {
+      "image": "image"
+    };
+  }
 });
 
 /***/ }),
@@ -25418,61 +25428,74 @@ var render = function() {
     { staticClass: "parallax-box-h position-relative" },
     [
       _c(
-        "v-parallax",
-        {
-          attrs: {
-            dark: "",
-            src:
-              "https://s3-us-west-1.amazonaws.com/green.com.pe/web/pizarra.jpg",
-            height: "650"
-          }
-        },
+        "v-skeleton-loader",
+        { attrs: { type: "image" } },
         [
           _c(
-            "v-row",
-            { attrs: { align: "center", justify: "center" } },
+            "v-parallax",
+            {
+              attrs: {
+                dark: "",
+                src:
+                  "https://s3-us-west-1.amazonaws.com/green.com.pe/web/pizarra.jpg",
+                height: "650"
+              }
+            },
             [
               _c(
-                "v-col",
-                { staticClass: "text-center", attrs: { md: "8" } },
+                "v-row",
+                { attrs: { align: "center", justify: "center" } },
                 [
-                  _c("p", { staticClass: "text-sm-h5 text-md-h3" }, [
-                    _vm._v("PRE UNSAAC - PRE ANDINA")
-                  ]),
-                  _vm._v(" "),
                   _c(
-                    "p",
-                    { staticClass: "title grey--text text--lighten-1 my-10" },
+                    "v-col",
+                    { staticClass: "text-center", attrs: { md: "8" } },
                     [
-                      _vm._v("Ingrese a la carrera profesional que desees. "),
-                      _c("span", { staticClass: "lime--text text--accent-4" }, [
-                        _vm._v("Luz verde para la Universidad.")
-                      ])
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-btn",
-                    {
-                      staticClass:
-                        "mt-5 font-weight-bold mr-5 grey--text text--darken-3",
-                      attrs: {
-                        color: "lime accent-4",
-                        large: "",
-                        dark: "",
-                        href: "/register"
-                      }
-                    },
-                    [_vm._v("Comienza Ahora")]
+                      _c("p", { staticClass: "text-sm-h5 text-md-h3" }, [
+                        _vm._v("PRE UNSAAC - PRE ANDINA")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        {
+                          staticClass: "title grey--text text--lighten-1 my-10"
+                        },
+                        [
+                          _vm._v(
+                            "Ingrese a la carrera profesional que desees. "
+                          ),
+                          _c(
+                            "span",
+                            { staticClass: "lime--text text--accent-4" },
+                            [_vm._v("Luz verde para la Universidad.")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          staticClass:
+                            "mt-5 font-weight-bold mr-5 grey--text text--darken-3",
+                          attrs: {
+                            color: "lime accent-4",
+                            large: "",
+                            dark: "",
+                            href: "/register"
+                          }
+                        },
+                        [_vm._v("Comienza Ahora")]
+                      )
+                    ],
+                    1
                   )
                 ],
                 1
-              )
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "landing-banner__footer" })
             ],
             1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "landing-banner__footer" })
+          )
         ],
         1
       )
