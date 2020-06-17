@@ -35,7 +35,7 @@
             </div>
 
         </div>
-        <section>
+        <section class="d-none d-md-flex">
             <v-container>
                 <v-row align="center">
                     <v-col md="5">

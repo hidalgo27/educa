@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8ee3ff8d-4bdd-4b9f-906b-594a93674ce5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/NavComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/ParallaxComponent.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/page/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/page/app.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/page/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/page/home.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -182,7 +176,7 @@
       <workItem from="1591722674829" duration="9401000" />
       <workItem from="1591801845702" duration="17424000" />
       <workItem from="1591976907007" duration="4401000" />
-      <workItem from="1592229149762" duration="7934000" />
+      <workItem from="1592229149762" duration="8272000" />
     </task>
     <servers />
   </component>
