@@ -44,6 +44,8 @@ Vue.component('video-list-component', require('./components/student/VideoListCom
 Vue.component('profile-component', require('./components/student/ProfileComponent').default);
 Vue.component('suscripcion-component', require('./components/student/SuscripcionComponent').default);
 
+Vue.component('trivia-component', require('./components/student/trivias/TriviaComponent').default);
+
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application

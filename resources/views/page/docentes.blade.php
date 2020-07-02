@@ -3,7 +3,7 @@
     <v-content>
         <v-parallax
             dark
-            src="https://static.platzi.com/static/organizations/v2/images/profile/cover.7540b13e6f4c.jpg"
+            src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/pizarra.jpg"
             height="250"
         >
             <!--            <v-breadcrumbs :items="items">-->
@@ -19,8 +19,8 @@
                     <v-img :src="'../images/iconos/web/circle/avanzado.png'" aspect-ratio="1.7" contain></v-img>
                 </v-col>
                 <v-col md="10">
-                    <h1 class="display-1 font-weight-bold mb-4">Temario ciclo virtual</h1>
-                    <h4 class="subheading">Team Green Group</h4>
+                    <h1 class="display-1 font-weight-bold mb-4">Docentes</h1>
+                    <h4 class="subheading">Team Green Academy</h4>
                 </v-col>
             </v-row>
         </v-parallax>
@@ -28,72 +28,69 @@
 
             <v-row>
 
-                <v-col md="4">
-                    <v-card
-                        class="mx-auto"
-                    >
-                        <v-img
-                            src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-
-                            class="white--text align-end"
+                @foreach($docentes as $docente)
+                    <v-col md="4">
+                        <v-card
+                            class="mx-auto"
                         >
-                            <v-card-title>Efrain Barrientos</v-card-title>
-                        </v-img>
+                            <v-img
+                                src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
 
-                        <v-card-title>
-                            <v-row>
-                                <v-col md="2">
-                                    <v-avatar
-                                        size="36px"
-                                    >
-                                        <img
-                                            alt="Avatar"
-                                            src="{{asset('images/iconos/cursos/circle/algebra.png')}}"
-                                        >
-                                        <v-icon
-                                            color=""
-
-                                        ></v-icon>
-                                    </v-avatar>
-                                </v-col>
-                                <v-col md="10" class="">
-                                    <span class="font-weight-bold">Algebra</span>
-                                </v-col>
-                            </v-row>
-                        </v-card-title>
-
-                        <v-card-subtitle>
-                            20 sesiones
-                        </v-card-subtitle>
-
-                        <v-card-actions>
-
-                            <v-btn
-                                color="blue"
-                                class="font-weight-bold"
-                                text
-                                href="/clases-vivo/docente"
+                                class="white--text align-end"
                             >
-                                Sobre el docente
-                            </v-btn>
+                                <v-card-title>{{$docente->docente->name}}</v-card-title>
+                            </v-img>
+{{--                            <v-card-subtitle>Cursqos:</v-card-subtitle>--}}
+                            <v-card-text class="font-weight-bold mt-4">
+                                Cursos:
+                                @foreach($docente->docente->asignaturas as $asignaturas)
+                                    <v-tooltip top>
+                                        <template v-slot:activator="{ on, attrs }">
+                                            <v-avatar v-bind="attrs" v-on="on">
+                                                <img
+                                                    src="{{$asignaturas->logo}}"
+                                                    alt="John"
+                                                >
+                                            </v-avatar>
+                                        </template>
+                                        <span>{{$asignaturas->nombre}}</span>
+                                    </v-tooltip>
+                                @endforeach
+                            </v-card-text>
 
-                            <v-btn
-                                color="orange"
-                                class="font-weight-bold"
-                                text
-                                href="/clases-vivo/temario/curso"
-                            >
-                                Ver temas
-                            </v-btn>
+{{--                            <v-card-subtitle>--}}
+{{--                                20 sesiones--}}
+{{--                            </v-card-subtitle>--}}
 
-                            <v-spacer></v-spacer>
+                            <v-card-actions>
+
+                                <v-btn
+                                    color="blue"
+                                    class="font-weight-bold"
+                                    text
+                                    href="{{route('docente_path')}}"
+                                >
+                                    Sobre el docente
+                                </v-btn>
+
+                                <v-btn
+                                    color="orange"
+                                    class="font-weight-bold"
+                                    text
+                                    href="{{route('docente_curso_path')}}"
+                                >
+                                    Ver temas
+                                </v-btn>
+
+                                <v-spacer></v-spacer>
 
 
-                        </v-card-actions>
+                            </v-card-actions>
 
 
-                    </v-card>
-                </v-col>
+                        </v-card>
+                    </v-col>
+                @endforeach
 
 {{--                <v-col md="4">--}}
 {{--                    <v-card>--}}

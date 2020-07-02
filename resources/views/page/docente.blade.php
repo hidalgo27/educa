@@ -3,7 +3,7 @@
     <v-content>
         <v-parallax
             dark
-            src="https://static.platzi.com/static/organizations/v2/images/profile/cover.7540b13e6f4c.jpg"
+            src="https://s3-us-west-1.amazonaws.com/green.com.pe/web/pizarra.jpg"
             height="250"
         >
             <!--            <v-breadcrumbs :items="items">-->

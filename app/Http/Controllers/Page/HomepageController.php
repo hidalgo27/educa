@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Page;
 
 use App\Asignatura;
+use App\Docente;
 use App\Grupo;
 use App\Http\Controllers\Controller;
 use App\ModalidadGrupo;
@@ -59,11 +60,23 @@ class HomepageController extends Controller
         return view('page.videoList');
     }
 
+    public function docentes(){
+        $docentes = Docente::with('docente.asignaturas')->get();
+        return view('page.docentes', compact(
+            'docentes'
+        ));
+    }
+
     public function docente(){
         return view('page.docente');
+    }
+
+    public function docente_curso(){
+        return view('page.docente_curso');
     }
 
     public function inscripcion(){
         return view('page.inscripcion');
     }
+
 }

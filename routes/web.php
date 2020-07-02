@@ -36,15 +36,27 @@ Route::get('/curso/algebra/video', [
     'as' => 'video_path',
 ]);
 
-Route::get('/clases-vivo/docente', [
+
+Route::get('/docentes', [
+    'uses' => 'Page\HomepageController@docentes',
+    'as' => 'docentes_path',
+]);
+
+Route::get('/docente-curso', [
+    'uses' => 'Page\HomepageController@docente_curso',
+    'as' => 'docente_curso_path',
+]);
+
+Route::get('docente', [
     'uses' => 'Page\HomepageController@docente',
-    'as' => 'docente_student_path',
+    'as' => 'docente_path',
 ]);
 
 Route::get('/inscripcion', [
     'uses' => 'Page\HomepageController@inscripcion',
     'as' => 'inscripcion_path',
 ]);
+
 
 //Auth
 Auth::routes();
@@ -80,15 +92,7 @@ Route::get('/student/suscripcion', [
     'as' => 'suscripcion_student_path',
 ]);
 
-Route::get('/clases-vivo/temario', [
-    'uses' => 'Student\HomepageController@temario',
-    'as' => 'temario_student_path',
-]);
 
-Route::get('/clases-vivo/temario/curso', [
-    'uses' => 'Student\HomepageController@temario_curso',
-    'as' => 'temario_curso_student_path',
-]);
 
 
 Route::get('getmatricula', [
@@ -128,4 +132,9 @@ Route::get('students/getCursosAlumno/{id}', [
     'as' => 'getCursosAlumno_path',
 ]);
 
+// trivias
 
+Route::get('students/trivias/test/{idsubtema}/{idalumno}', [
+    'uses' => 'Student\Trivia\TriviaController@trivia_f',
+    'as' => 'trivia_f_path',
+]);

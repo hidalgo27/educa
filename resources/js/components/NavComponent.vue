@@ -57,7 +57,7 @@
                 <v-btn
 
                     class="hidden-sm-and-down font-weight-medium text-capitalize"
-
+                    href="/docentes"
                     text
                 >
                     Docentes
@@ -153,7 +153,7 @@
                             <v-divider></v-divider>
 
                             <v-list>
-                                <v-list-item href="../student/home">
+                                <v-list-item href="/student/home">
                                     <v-list-item-icon>
                                         <v-icon>mdi-home</v-icon>
                                     </v-list-item-icon>
@@ -167,7 +167,7 @@
                                     <v-list-item-title>Ver todos mis cursos</v-list-item-title>
                                 </v-list-item>
 
-                                <v-list-item href="../student/suscripcion">
+                                <v-list-item href="/student/suscripcion">
                                     <v-list-item-icon>
                                         <v-icon>mdi-home</v-icon>
                                     </v-list-item-icon>

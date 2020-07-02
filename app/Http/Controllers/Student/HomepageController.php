@@ -451,13 +451,7 @@ class HomepageController extends Controller
         return view('student.suscripcion');
     }
 
-    public function temario(){
-        return view('student.clasesVivo');
-    }
 
-    public function temario_curso(){
-        return view('student.temario');
-    }
 
 
 

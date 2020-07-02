@@ -5270,13 +5270,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ['idcurso', 'idvideo'],
+  props: ['idcurso', 'idvideo', 'auth'],
   data: function data() {
     return {
       descripcion: null,
@@ -6362,6 +6357,289 @@ __webpack_require__.r(__webpack_exports__);
     var _this = this;
 
     axios.get('/students/getCursosAlumno/' + this.idcurso).then(function (res) {
+      _this.response_data = res.data; // console.log(res.data);
+    });
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['idsubtema', 'auth'],
+  data: function data() {
+    return {
+      response_data: [],
+      dialog: false,
+      dialog2: false,
+      dialog3: false,
+      notifications: false,
+      sound: true,
+      widgets: false,
+      items: [{
+        title: 'Click Me'
+      }, {
+        title: 'Click Me'
+      }, {
+        title: 'Click Me'
+      }, {
+        title: 'Click Me 2'
+      }],
+      select: [{
+        text: 'State 1'
+      }, {
+        text: 'State 2'
+      }, {
+        text: 'State 3'
+      }, {
+        text: 'State 4'
+      }, {
+        text: 'State 5'
+      }, {
+        text: 'State 6'
+      }, {
+        text: 'State 7'
+      }]
+    };
+  },
+  created: function created() {
+    var _this = this;
+
+    axios.get('/students/trivias/test/' + this.idsubtema + '/' + this.auth).then(function (res) {
       _this.response_data = res.data; // console.log(res.data);
     });
   }
@@ -25101,7 +25379,7 @@ var render = function() {
                 {
                   staticClass:
                     "hidden-sm-and-down font-weight-medium text-capitalize",
-                  attrs: { text: "" }
+                  attrs: { href: "/docentes", text: "" }
                 },
                 [_vm._v("\n                    Docentes\n                ")]
               ),
@@ -25281,7 +25559,7 @@ var render = function() {
                               [
                                 _c(
                                   "v-list-item",
-                                  { attrs: { href: "../student/home" } },
+                                  { attrs: { href: "/student/home" } },
                                   [
                                     _c(
                                       "v-list-item-icon",
@@ -25315,7 +25593,7 @@ var render = function() {
                                 _vm._v(" "),
                                 _c(
                                   "v-list-item",
-                                  { attrs: { href: "../student/suscripcion" } },
+                                  { attrs: { href: "/student/suscripcion" } },
                                   [
                                     _c(
                                       "v-list-item-icon",
@@ -30976,6 +31254,7 @@ var render = function() {
                                           _vm._v(" "),
                                           _c(
                                             "v-row",
+                                            { attrs: { align: "end" } },
                                             [
                                               _c(
                                                 "v-col",
@@ -31005,17 +31284,31 @@ var render = function() {
                                                         },
                                                         [
                                                           _vm._v(
-                                                            "\n                                                                " +
+                                                            "\n                                                            " +
                                                               _vm._s(
                                                                 temass.nombre
                                                               ) +
-                                                              "\n                                                            "
+                                                              "\n                                                        "
                                                           )
                                                         ]
                                                       )
                                                     ],
                                                     1
                                                   )
+                                                ],
+                                                1
+                                              ),
+                                              _vm._v(" "),
+                                              _c(
+                                                "v-col",
+                                                { staticClass: "text-right" },
+                                                [
+                                                  _c("trivia-component", {
+                                                    attrs: {
+                                                      idsubtema: sub_temass.id,
+                                                      auth: _vm.auth
+                                                    }
+                                                  })
                                                 ],
                                                 1
                                               )
@@ -31079,11 +31372,11 @@ var render = function() {
                                                                   "mt-2 mb-4"
                                                               }),
                                                               _vm._v(
-                                                                "\n\n                                                                    " +
+                                                                "\n\n                                                                " +
                                                                   _vm._s(
                                                                     sub_temass.descripcion
                                                                   ) +
-                                                                  "\n\n                                                                    "
+                                                                  "\n\n                                                                "
                                                               ),
                                                               _c(
                                                                 "v-row",
@@ -31334,7 +31627,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                                        Aportessd\n                                                    "
+                                                      "\n                                                    Aportes\n                                                "
                                                     )
                                                   ]
                                                 )
@@ -31361,7 +31654,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                                        Preguntas\n                                                    "
+                                                      "\n                                                    Preguntas\n                                                "
                                                     )
                                                   ]
                                                 )
@@ -31389,7 +31682,7 @@ var render = function() {
                                                   },
                                                   [
                                                     _vm._v(
-                                                      "\n                                                        Archivos y enlaces\n                                                    "
+                                                      "\n                                                    Archivos y enlaces\n                                                "
                                                     )
                                                   ]
                                                 )
@@ -31479,7 +31772,7 @@ var render = function() {
                                                     _vm._v(" "),
                                                     _c("v-card-text", {}, [
                                                       _vm._v(
-                                                        '\n                                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                        '
+                                                        '\n                                                        "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                    '
                                                       )
                                                     ]),
                                                     _vm._v(" "),
@@ -31635,7 +31928,7 @@ var render = function() {
                                                     _vm._v(" "),
                                                     _c("v-card-text", {}, [
                                                       _vm._v(
-                                                        '\n                                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                        '
+                                                        '\n                                                        "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                    '
                                                       )
                                                     ]),
                                                     _vm._v(" "),
@@ -31798,7 +32091,7 @@ var render = function() {
                                                     _vm._v(" "),
                                                     _c("v-card-text", {}, [
                                                       _vm._v(
-                                                        '\n                                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                        '
+                                                        '\n                                                        "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                    '
                                                       )
                                                     ]),
                                                     _vm._v(" "),
@@ -31954,7 +32247,7 @@ var render = function() {
                                                     _vm._v(" "),
                                                     _c("v-card-text", {}, [
                                                       _vm._v(
-                                                        '\n                                                            "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                        '
+                                                        '\n                                                        "Turns out semicolon-less style is easier and safer in TS because most gotcha edge cases are type invalid as well."\n                                                    '
                                                       )
                                                     ]),
                                                     _vm._v(" "),
@@ -35673,6 +35966,589 @@ var render = function() {
       })
     ],
     2
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=template&id=77312b0c&scoped=true&":
+/*!**********************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=template&id=77312b0c&scoped=true& ***!
+  \**********************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "section",
+    [
+      _c(
+        "v-btn",
+        {
+          staticClass: "text-right mr-4",
+          attrs: { color: "lime accent-4" },
+          on: {
+            click: function($event) {
+              _vm.dialog = true
+            }
+          }
+        },
+        [
+          _c("v-icon", [_vm._v("mdi-dock-window")]),
+          _vm._v("\n        Trivias\n    ")
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          attrs: {
+            fullscreen: "",
+            "hide-overlay": "",
+            transition: "dialog-bottom-transition",
+            scrollable: ""
+          },
+          model: {
+            value: _vm.dialog,
+            callback: function($$v) {
+              _vm.dialog = $$v
+            },
+            expression: "dialog"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            { attrs: { tile: "" } },
+            [
+              _c(
+                "v-toolbar",
+                { attrs: { flat: "", dark: "", color: "grey darken-3" } },
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { icon: "", dark: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.dialog = false
+                        }
+                      }
+                    },
+                    [_c("v-icon", [_vm._v("mdi-close")])],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-toolbar-title", [_vm._v("Settings")]),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-toolbar-items",
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { dark: "", text: "" },
+                          on: {
+                            click: function($event) {
+                              _vm.dialog = false
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                        Save\n                    "
+                          )
+                        ]
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-menu",
+                    {
+                      attrs: { bottom: "", right: "", "offset-y": "" },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "activator",
+                          fn: function(ref) {
+                            var on = ref.on
+                            var attrs = ref.attrs
+                            return [
+                              _c(
+                                "v-btn",
+                                _vm._g(
+                                  _vm._b(
+                                    { attrs: { dark: "", icon: "" } },
+                                    "v-btn",
+                                    attrs,
+                                    false
+                                  ),
+                                  on
+                                ),
+                                [_c("v-icon", [_vm._v("mdi-dots-vertical")])],
+                                1
+                              )
+                            ]
+                          }
+                        }
+                      ])
+                    },
+                    [
+                      _vm._v(" "),
+                      _c(
+                        "v-list",
+                        _vm._l(_vm.items, function(item, i) {
+                          return _c(
+                            "v-list-item",
+                            { key: i, on: { click: function() {} } },
+                            [
+                              _c("v-list-item-title", [
+                                _vm._v(_vm._s(item.title))
+                              ])
+                            ],
+                            1
+                          )
+                        }),
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      staticClass: "ma-2",
+                      attrs: { color: "primary", dark: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.dialog2 = !_vm.dialog2
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                    Open Dialog 2\n                "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-tooltip",
+                    {
+                      attrs: { right: "" },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "activator",
+                          fn: function(ref) {
+                            var on = ref.on
+                            var attrs = ref.attrs
+                            return [
+                              _c(
+                                "v-btn",
+                                _vm._g(
+                                  _vm._b(
+                                    { staticClass: "ma-2" },
+                                    "v-btn",
+                                    attrs,
+                                    false
+                                  ),
+                                  on
+                                ),
+                                [_vm._v("Tool Tip Activator")]
+                              )
+                            ]
+                          }
+                        }
+                      ])
+                    },
+                    [_vm._v("\n                    Tool Tip\n                ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-list",
+                    { attrs: { "three-line": "", subheader: "" } },
+                    [
+                      _c("v-subheader", [_vm._v("User Controls")]),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item",
+                        [
+                          _c(
+                            "v-list-item-content",
+                            [
+                              _c("v-list-item-title", [
+                                _vm._v("Content filtering")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-list-item-subtitle", [
+                                _vm._v(
+                                  "Set the content filtering level to restrict apps that can be downloaded"
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item",
+                        [
+                          _c(
+                            "v-list-item-content",
+                            [
+                              _c("v-list-item-title", [_vm._v("Password")]),
+                              _vm._v(" "),
+                              _c("v-list-item-subtitle", [
+                                _vm._v(
+                                  "Require password for purchase or use password to restrict purchase"
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c("v-divider"),
+                  _vm._v(" "),
+                  _c(
+                    "v-list",
+                    { attrs: { "three-line": "", subheader: "" } },
+                    [
+                      _c("v-subheader", [_vm._v("General")]),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item",
+                        [
+                          _c(
+                            "v-list-item-action",
+                            [
+                              _c("v-checkbox", {
+                                model: {
+                                  value: _vm.notifications,
+                                  callback: function($$v) {
+                                    _vm.notifications = $$v
+                                  },
+                                  expression: "notifications"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-list-item-content",
+                            [
+                              _c("v-list-item-title", [
+                                _vm._v("Notifications")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-list-item-subtitle", [
+                                _vm._v(
+                                  "Notify me about updates to apps or games that I downloaded"
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item",
+                        [
+                          _c(
+                            "v-list-item-action",
+                            [
+                              _c("v-checkbox", {
+                                model: {
+                                  value: _vm.sound,
+                                  callback: function($$v) {
+                                    _vm.sound = $$v
+                                  },
+                                  expression: "sound"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-list-item-content",
+                            [
+                              _c("v-list-item-title", [_vm._v("Sound")]),
+                              _vm._v(" "),
+                              _c("v-list-item-subtitle", [
+                                _vm._v(
+                                  "Auto-update apps at any time. Data charges may apply"
+                                )
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-list-item",
+                        [
+                          _c(
+                            "v-list-item-action",
+                            [
+                              _c("v-checkbox", {
+                                model: {
+                                  value: _vm.widgets,
+                                  callback: function($$v) {
+                                    _vm.widgets = $$v
+                                  },
+                                  expression: "widgets"
+                                }
+                              })
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-list-item-content",
+                            [
+                              _c("v-list-item-title", [
+                                _vm._v("Auto-add widgets")
+                              ]),
+                              _vm._v(" "),
+                              _c("v-list-item-subtitle", [
+                                _vm._v("Automatically add home screen widgets")
+                              ])
+                            ],
+                            1
+                          )
+                        ],
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticStyle: { flex: "1 1 auto" } })
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          attrs: { "max-width": "500px" },
+          model: {
+            value: _vm.dialog2,
+            callback: function($$v) {
+              _vm.dialog2 = $$v
+            },
+            expression: "dialog2"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c("v-card-title", [
+                _vm._v("\n                Dialog 2\n            ")
+              ]),
+              _vm._v(" "),
+              _c(
+                "v-card-text",
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "primary", dark: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.dialog3 = !_vm.dialog3
+                        }
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                    Open Dialog 3\n                "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("v-select", {
+                    attrs: {
+                      items: _vm.select,
+                      label: "A Select List",
+                      "item-value": "text"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-actions",
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "primary", text: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.dialog2 = false
+                        }
+                      }
+                    },
+                    [_vm._v("\n                    Close\n                ")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "v-dialog",
+        {
+          attrs: { "max-width": "500px" },
+          model: {
+            value: _vm.dialog3,
+            callback: function($$v) {
+              _vm.dialog3 = $$v
+            },
+            expression: "dialog3"
+          }
+        },
+        [
+          _c(
+            "v-card",
+            [
+              _c(
+                "v-card-title",
+                [
+                  _c("span", [_vm._v("Dialog 3")]),
+                  _vm._v(" "),
+                  _c("v-spacer"),
+                  _vm._v(" "),
+                  _c(
+                    "v-menu",
+                    {
+                      attrs: { bottom: "", left: "" },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "activator",
+                          fn: function(ref) {
+                            var on = ref.on
+                            var attrs = ref.attrs
+                            return [
+                              _c(
+                                "v-btn",
+                                _vm._g(
+                                  _vm._b(
+                                    { attrs: { icon: "" } },
+                                    "v-btn",
+                                    attrs,
+                                    false
+                                  ),
+                                  on
+                                ),
+                                [_c("v-icon", [_vm._v("mdi-dots-vertical")])],
+                                1
+                              )
+                            ]
+                          }
+                        }
+                      ])
+                    },
+                    [
+                      _vm._v(" "),
+                      _c(
+                        "v-list",
+                        _vm._l(_vm.items, function(item, i) {
+                          return _c(
+                            "v-list-item",
+                            { key: i, on: { click: function() {} } },
+                            [
+                              _c("v-list-item-title", [
+                                _vm._v(_vm._s(item.title))
+                              ])
+                            ],
+                            1
+                          )
+                        }),
+                        1
+                      )
+                    ],
+                    1
+                  )
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "v-card-actions",
+                [
+                  _c(
+                    "v-btn",
+                    {
+                      attrs: { color: "primary", text: "" },
+                      on: {
+                        click: function($event) {
+                          _vm.dialog3 = false
+                        }
+                      }
+                    },
+                    [_vm._v("\n                    Close\n                ")]
+                  )
+                ],
+                1
+              )
+            ],
+            1
+          )
+        ],
+        1
+      )
+    ],
+    1
   )
 }
 var staticRenderFns = []
@@ -93523,6 +94399,7 @@ Vue.component('student-video-component', __webpack_require__(/*! ./components/st
 Vue.component('video-list-component', __webpack_require__(/*! ./components/student/VideoListComponent */ "./resources/js/components/student/VideoListComponent.vue")["default"]);
 Vue.component('profile-component', __webpack_require__(/*! ./components/student/ProfileComponent */ "./resources/js/components/student/ProfileComponent.vue")["default"]);
 Vue.component('suscripcion-component', __webpack_require__(/*! ./components/student/SuscripcionComponent */ "./resources/js/components/student/SuscripcionComponent.vue")["default"]);
+Vue.component('trivia-component', __webpack_require__(/*! ./components/student/trivias/TriviaComponent */ "./resources/js/components/student/trivias/TriviaComponent.vue")["default"]);
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -94623,6 +95500,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_template_id_b431a77a___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_VideoListComponent_vue_vue_type_template_id_b431a77a___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/student/trivias/TriviaComponent.vue":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/student/trivias/TriviaComponent.vue ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TriviaComponent_vue_vue_type_template_id_77312b0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TriviaComponent.vue?vue&type=template&id=77312b0c&scoped=true& */ "./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=template&id=77312b0c&scoped=true&");
+/* harmony import */ var _TriviaComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TriviaComponent.vue?vue&type=script&lang=js& */ "./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _TriviaComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TriviaComponent_vue_vue_type_template_id_77312b0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TriviaComponent_vue_vue_type_template_id_77312b0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "77312b0c",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/student/trivias/TriviaComponent.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=script&lang=js&":
+/*!**********************************************************************************************!*\
+  !*** ./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TriviaComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/babel-loader/lib??ref--4-0!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TriviaComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TriviaComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=template&id=77312b0c&scoped=true&":
+/*!****************************************************************************************************************!*\
+  !*** ./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=template&id=77312b0c&scoped=true& ***!
+  \****************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TriviaComponent_vue_vue_type_template_id_77312b0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../node_modules/vue-loader/lib??vue-loader-options!./TriviaComponent.vue?vue&type=template&id=77312b0c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/student/trivias/TriviaComponent.vue?vue&type=template&id=77312b0c&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TriviaComponent_vue_vue_type_template_id_77312b0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TriviaComponent_vue_vue_type_template_id_77312b0c_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

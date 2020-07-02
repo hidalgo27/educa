@@ -108,7 +108,7 @@
                                             <div class="pl-2">
                                                 <div class="video position-relative" v-html="sub_temass.video_url">
                                                 </div>
-                                                <v-row>
+                                                <v-row align="end" >
                                                     <v-col>
                                                         <v-tabs
                                                             v-model="descripcion"
@@ -119,16 +119,11 @@
                                                             </v-tab>
                                                         </v-tabs>
                                                     </v-col>
-<!--                                                    <v-col class="text-right">-->
-<!--                                                        <v-btn-->
-<!--                                                            color="light-blue"-->
-<!--                                                            class="text-right mr-4"-->
-<!--                                                            dark-->
-<!--                                                        >-->
-<!--                                                            Ecuaciones-->
-<!--                                                            <v-icon>mdi-skip-next</v-icon>-->
-<!--                                                        </v-btn>-->
-<!--                                                    </v-col>-->
+                                                    <v-col class="text-right">
+
+                                                        <trivia-component :idsubtema="sub_temass.id" :auth="auth"></trivia-component>
+
+                                                    </v-col>
                                                 </v-row>
 
                                                 <v-row>
@@ -208,7 +203,7 @@
                                                         content="6"
                                                         offset-y="8"
                                                     >
-                                                        Aportessd
+                                                        Aportes
                                                     </v-badge>
                                                 </v-tab>
                                                 <v-tab href="#preguntas" class="text-capitalize font-weight-medium">
@@ -516,12 +511,13 @@
 
 <script>
     export default {
-        props: ['idcurso','idvideo'],
+        props: ['idcurso','idvideo','auth'],
         data () {
             return {
                 descripcion: null,
                 tabs: null,
                 response_data: [],
+
             }
         },
         created() {

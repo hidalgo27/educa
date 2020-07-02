@@ -45,7 +45,7 @@ class User extends Authenticatable
 
     public function docente()
     {
-        return $this->hasOne(Docente::class, 'user_id');
+        return $this->hasMany(Docente::class, 'user_id');
     }
 
 
