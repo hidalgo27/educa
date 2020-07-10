@@ -10,7 +10,7 @@ class SubTema extends Model
     public function tema()
     {
         //relacion de uno a muchos
-        return $this->hasMany(Tema::class);
+        return $this->belongsTo(Tema::class);
     }
     public function materiales_didacticos()
     {

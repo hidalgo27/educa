@@ -1,277 +1,232 @@
 <template>
-    <section>
-        <v-btn
-            color="lime accent-4"
-            class="text-right mr-4"
-            @click="dialog = true"
-        >
-            <v-icon>mdi-dock-window</v-icon>
-            Trivias
-        </v-btn>
+  <section>
+    <v-btn color="lime accent-4" class="text-right mr-4" @click="dialog = true">
+      <v-icon>mdi-dock-window</v-icon>Trivias
+    </v-btn>
 
+    <v-dialog
+      v-model="dialog"
+      fullscreen
+      hide-overlay
+      transition="dialog-bottom-transition"
+      scrollable
+    >
+      <v-card tile>
+        <v-toolbar flat dark color="grey darken-3">
+          <v-btn icon dark @click="dialog = false">
+            <v-icon>mdi-close</v-icon>
+          </v-btn>
+          <v-toolbar-title>Trivias para {{ idsubtema }}</v-toolbar-title>
+          <v-spacer></v-spacer>
+          <!-- <v-toolbar-items>
+            <v-btn dark text @click="dialog = false">Save</v-btn>
+          </v-toolbar-items>-->
+        </v-toolbar>
+        <v-card-text>
+          <v-stepper v-model="e1" :vertical="vertical" :alt-labels="altLabels">
+            <template>
+              <v-stepper-header>
+                <template v-for="(pregunta,n) in preguntas">
+                  <v-stepper-step
+                    :key="`${n+1}-step`"
+                    :complete="e1 > n+1"
+                    :step="n+1"
+                    :editable="editable"
+                  >Preg. #{{ n+1 }}</v-stepper-step>
 
-        <v-dialog
-            v-model="dialog"
-            fullscreen
-            hide-overlay
-            transition="dialog-bottom-transition"
-            scrollable
-        >
-            <v-card tile>
-                <v-toolbar
-                    flat
-                    dark
-                    color="grey darken-3"
+                  <v-divider v-if="n+1 !== steps.length" :key="n+1"></v-divider>
+                </template>
+              </v-stepper-header>
+
+              <v-stepper-items>
+                <v-stepper-content
+                  v-for="(pregunta,n) in preguntas"
+                  :key="`${n+1}-content`"
+                  :step="n+1"
                 >
-                    <v-btn
-                        icon
-                        dark
-                        @click="dialog = false"
-                    >
-                        <v-icon>mdi-close</v-icon>
-                    </v-btn>
-                    <v-toolbar-title>Settings</v-toolbar-title>
-                    <v-spacer></v-spacer>
-                    <v-toolbar-items>
-                        <v-btn
-                            dark
-                            text
-                            @click="dialog = false"
-                        >
-                            Save
-                        </v-btn>
-                    </v-toolbar-items>
-                    <v-menu
-                        bottom
-                        right
-                        offset-y
-                    >
-                        <template v-slot:activator="{ on, attrs }">
-                            <v-btn
-                                dark
-                                icon
-                                v-bind="attrs"
-                                v-on="on"
-                            >
-                                <v-icon>mdi-dots-vertical</v-icon>
-                            </v-btn>
-                        </template>
-                        <v-list>
-                            <v-list-item
-                                v-for="(item, i) in items"
-                                :key="i"
-                                @click="() => {}"
-                            >
-                                <v-list-item-title>{{ item.title }}</v-list-item-title>
-                            </v-list-item>
-                        </v-list>
-                    </v-menu>
-                </v-toolbar>
-                <v-card-text>
-                    <v-btn
-                        color="primary"
-                        dark
-                        class="ma-2"
-                        @click="dialog2 = !dialog2"
-                    >
-                        Open Dialog 2
-                    </v-btn>
-                    <v-tooltip right>
-                        <template v-slot:activator="{ on, attrs }">
-                            <v-btn
-                                class="ma-2"
-                                v-bind="attrs"
-                                v-on="on"
-                            >Tool Tip Activator</v-btn>
-                        </template>
-                        Tool Tip
-                    </v-tooltip>
-                    <v-list
-                        three-line
-                        subheader
-                    >
-                        <v-subheader>User Controls</v-subheader>
-                        <v-list-item>
-                            <v-list-item-content>
-                                <v-list-item-title>Content filtering</v-list-item-title>
-                                <v-list-item-subtitle>Set the content filtering level to restrict apps that can be downloaded</v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-list-item-content>
-                                <v-list-item-title>Password</v-list-item-title>
-                                <v-list-item-subtitle>Require password for purchase or use password to restrict purchase</v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
-                    </v-list>
+                  <v-card class="mb-12" color="grey lighten-2" height="auto">
+                    <v-row>
+                      <!-- <v-col cols="12">
+                        <v-img :src="pregunta.imagen" aspect-ratio="1" contain></v-img>
+                      </v-col>-->
+                      <v-col cols="12" class="text-center">{{ pregunta.titulo }}</v-col>
+                    </v-row>
                     <v-divider></v-divider>
-                    <v-list
-                        three-line
-                        subheader
-                    >
-                        <v-subheader>General</v-subheader>
-                        <v-list-item>
-                            <v-list-item-action>
-                                <v-checkbox v-model="notifications"></v-checkbox>
-                            </v-list-item-action>
-                            <v-list-item-content>
-                                <v-list-item-title>Notifications</v-list-item-title>
-                                <v-list-item-subtitle>Notify me about updates to apps or games that I downloaded</v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-list-item-action>
-                                <v-checkbox v-model="sound"></v-checkbox>
-                            </v-list-item-action>
-                            <v-list-item-content>
-                                <v-list-item-title>Sound</v-list-item-title>
-                                <v-list-item-subtitle>Auto-update apps at any time. Data charges may apply</v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
-                        <v-list-item>
-                            <v-list-item-action>
-                                <v-checkbox v-model="widgets"></v-checkbox>
-                            </v-list-item-action>
-                            <v-list-item-content>
-                                <v-list-item-title>Auto-add widgets</v-list-item-title>
-                                <v-list-item-subtitle>Automatically add home screen widgets</v-list-item-subtitle>
-                            </v-list-item-content>
-                        </v-list-item>
-                    </v-list>
-                </v-card-text>
+                    <v-row>
+                      <v-col cols="12 pl-5">
+                        <v-radio-group v-model="pregunta.rpt_alumnor">
+                          <v-radio
+                            v-for="(respuesta,i) in pregunta.respuestas"
+                            :key="i"
+                            :value="respuesta.rpt_pos"
+                          >
+                            <template v-slot:label>
+                              <span
+                                outlined
+                                type="warning"
+                                v-if="pregunta.rpt_alumno>=0"
+                                :class="{'error--text':respuesta.correcta==0&&pregunta.rpt_alumno==respuesta.rpt_pos,
+                                'green--text':respuesta.correcta==1&&pregunta.rpt_alumno==respuesta.rpt_pos,
+                                'grey--text':pregunta.correcta==1&&pregunta.rpt_alumno!=respuesta.rpt_pos,
+                                'grey--text':pregunta.rpt_alumno==0&&pregunta.rpt_alumno!=respuesta.rpt_pos}"
+                              >
+                                {{ respuesta.titulo }}
+                                <span
+                                  v-if="pregunta.rpt_alumno==pregunta.rpt_pos&&pregunta.rpt_alumno==respuesta.rpt_pos"
+                                  class="green--text"
+                                >
+                                  (Respuesta coreccta
+                                  <v-icon class="green--text">mdi-check</v-icon>)
+                                </span>
+                                <span
+                                  v-if="respuesta.correcta==0&&pregunta.rpt_alumno==respuesta.rpt_pos"
+                                  class="error--text"
+                                >
+                                  (Respuesta incoreccta
+                                  <v-icon class="error--text">mdi-close</v-icon>)
+                                </span>
+                              </span>
+                              <span v-else>{{ respuesta.titulo }}</span>
+                            </template>
+                          </v-radio>
+                        </v-radio-group>
+                      </v-col>
+                    </v-row>
+                    <v-divider></v-divider>
+                  </v-card>
 
-                <div style="flex: 1 1 auto;"></div>
-            </v-card>
-        </v-dialog>
+                  <v-btn color="lime accent-4" @click="responder(n+1,pregunta)">
+                    <v-icon>mdi-send</v-icon>Responder
+                  </v-btn>
 
-        <v-dialog
-            v-model="dialog2"
-            max-width="500px"
-        >
-            <v-card>
-                <v-card-title>
-                    Dialog 2
-                </v-card-title>
-                <v-card-text>
-                    <v-btn
-                        color="primary"
-                        dark
-                        @click="dialog3 = !dialog3"
-                    >
-                        Open Dialog 3
-                    </v-btn>
-                    <v-select
-                        :items="select"
-                        label="A Select List"
-                        item-value="text"
-                    ></v-select>
-                </v-card-text>
-                <v-card-actions>
-                    <v-btn
-                        color="primary"
-                        text
-                        @click="dialog2 = false"
-                    >
-                        Close
-                    </v-btn>
-                </v-card-actions>
-            </v-card>
-        </v-dialog>
-        <v-dialog
-            v-model="dialog3"
-            max-width="500px"
-        >
-            <v-card>
-                <v-card-title>
-                    <span>Dialog 3</span>
-                    <v-spacer></v-spacer>
-                    <v-menu
-                        bottom
-                        left
-                    >
-                        <template v-slot:activator="{ on, attrs }">
-                            <v-btn
-                                icon
-                                v-bind="attrs"
-                                v-on="on"
-                            >
-                                <v-icon>mdi-dots-vertical</v-icon>
-                            </v-btn>
-                        </template>
-                        <v-list>
-                            <v-list-item
-                                v-for="(item, i) in items"
-                                :key="i"
-                                @click="() => {}"
-                            >
-                                <v-list-item-title>{{ item.title }}</v-list-item-title>
-                            </v-list-item>
-                        </v-list>
-                    </v-menu>
-                </v-card-title>
-                <v-card-actions>
-                    <v-btn
-                        color="primary"
-                        text
-                        @click="dialog3 = false"
-                    >
-                        Close
-                    </v-btn>
-                </v-card-actions>
-            </v-card>
-        </v-dialog>
+                  <v-btn v-if="pregunta.habilitado" color="lime accent-4" @click="nextStep(n+1)">
+                    Siguiente
+                    <v-icon>mdi-chevron_right</v-icon>
+                  </v-btn>
 
-    </section>
+                  <!-- <v-btn text>Cancelar</v-btn> -->
+                </v-stepper-content>
+              </v-stepper-items>
+            </template>
+          </v-stepper>
+        </v-card-text>
+
+        <div style="flex: 1 1 auto;"></div>
+      </v-card>
+    </v-dialog>
+  </section>
 </template>
 
 <script>
-    export default {
-        props: ['idsubtema', 'auth'],
-        data () {
-            return {
-                response_data: [],
-                dialog: false,
-                dialog2: false,
-                dialog3: false,
-                notifications: false,
-                sound: true,
-                widgets: false,
-
-                items: [
-                    {
-                        title: 'Click Me',
-                    },
-                    {
-                        title: 'Click Me',
-                    },
-                    {
-                        title: 'Click Me',
-                    },
-                    {
-                        title: 'Click Me 2',
-                    },
-                ],
-
-                select: [
-                    { text: 'State 1' },
-                    { text: 'State 2' },
-                    { text: 'State 3' },
-                    { text: 'State 4' },
-                    { text: 'State 5' },
-                    { text: 'State 6' },
-                    { text: 'State 7' },
-                ],
-            }
-        },
-        created() {
-            axios.get('/students/trivias/test/'+this.idsubtema+'/'+this.auth).then(res=>{
-                this.response_data = res.data;
-                // console.log(res.data);
-            })
-        }
+export default {
+  props: ["idsubtema", "auth"],
+  data() {
+    return {
+      dialog: false,
+      e1: 1,
+      steps: [],
+      vertical: false,
+      altLabels: true,
+      editable: false,
+      preguntas: {
+        titulo: "",
+        imagen: "",
+        id: 0,
+        respuestas: { id: 0, titulo: "", imagen: "", rpt: 0 }
+      }
+    };
+  },
+  created() {
+    this.getData();
+  },
+  watch: {
+    steps(val) {
+      if (this.e1 > val) {
+        this.e1 = val;
+      }
     }
+  },
+  methods: {
+    async asignarRespuesta() {
+      //   console.log("estableciendo en inicial=1", "ok");
+
+      console.log("estableciendo correcta[i]=0", "ok");
+      for (let i in this.preguntas.respuestas) {
+        //   console.log("recorrido", );
+        if (this.inicialtItem.rpt == i) this.inicialtItem.respuestas[i].rpt = 1;
+        else this.inicialtItem.respuestas[i].rpt = 0;
+      }
+      console.log("estableciendo correcta[pos]=1", "ok");
+    },
+    async getData() {
+      let dato = await axios.get(
+        "/students/trivias/test/" + this.idsubtema + "/" + this.auth.id
+      );
+      console.log("getData", dato);
+      this.preguntas = await dato.data.map(datos => ({
+        id: datos.id,
+        rpt_pos: datos.rpt_pos,
+        rpt_alumno: datos.rpt_alumno,
+        rpt_alumnor: datos.rpt_alumno,
+        titulo: datos.titulo,
+        habilitado: datos.habilitado,
+        imagen: datos.imagen
+          ? `/students/trivias/test/imagen/${datos.imagen.imagen_url}`
+          : "",
+        respuestas: datos.respuestas.map(respuesta => ({
+          id: respuesta.id,
+          titulo: respuesta.titulo,
+          rpt_pos: respuesta.rpt_pos,
+          correcta: respuesta.correcta,
+          imagen: ""
+        }))
+      }));
+    },
+    onInput(val) {
+      this.steps = parseInt(val);
+    },
+    async responder(n, pregunta) {
+      let index_ = this.preguntas.indexOf(pregunta);
+      let item = Object.assign({}, pregunta);
+      console.log("pregunta", item);
+      let rpt = await axios.post(
+        `/students/trivias/test/${this.idsubtema}/${this.auth.id}`,
+        item
+      );
+      if (rpt.data) {
+        console.log("rpt", rpt);
+        let rpt1 = await rpt.data.map(datos => ({
+          id: datos.id,
+          rpt_pos: datos.rpt_pos,
+          rpt_alumno: datos.rpt_alumno,
+          rpt_alumnor: datos.rpt_alumno,
+          habilitado: 1,
+          titulo: datos.titulo,
+          imagen: datos.imagen
+            ? `/students/trivias/test/imagen/${datos.imagen.imagen_url}`
+            : "",
+          respuestas: datos.respuestas.map(respuesta => ({
+            id: respuesta.id,
+            titulo: respuesta.titulo,
+            rpt_pos: respuesta.rpt_pos,
+            correcta: respuesta.correcta,
+            imagen: ""
+          }))
+        }));
+        console.log("rpt1[0]", rpt1[0]);
+        Object.assign(this.preguntas[index_], rpt1[0]);
+      }
+    },
+    async nextStep(n) {
+      if (n === this.steps.length) {
+        this.e1 = 1;
+      } else {
+        this.e1 = n + 1;
+      }
+    }
+  }
+};
 </script>
 
 <style scoped>
-
 </style>

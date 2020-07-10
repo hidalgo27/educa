@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class RespuestaTrivia extends Model
 {
     //
-    protected $table = "f_respuesta_trivias";
+    protected $table = "respuesta_trivias";
     public function pregunta_trivia()
     {
         //relacion de uno a muchos

@@ -23,13 +23,13 @@ class HomepageController extends Controller
     public function index(Request $request)
     {
 
-//        $modalidad = Modalidad::where('mostrar_web',1)->get();
-//
-//        $asignatura_grupo_user = AsignaturaGrupoUser::where('user_id', $request->user()->id)->get();
-//
-////        foreach ($modalidad as $modalidades) {
-////            echo $modalidades->id;
-////        }
+        //        $modalidad = Modalidad::where('mostrar_web',1)->get();
+        //
+        //        $asignatura_grupo_user = AsignaturaGrupoUser::where('user_id', $request->user()->id)->get();
+        //
+        ////        foreach ($modalidad as $modalidades) {
+        ////            echo $modalidades->id;
+        ////        }
 
 
         $request->user()->authorizeRoles(['user', 'admin']);
@@ -37,14 +37,15 @@ class HomepageController extends Controller
         return view('student.home');
     }
 
-    public function getUniversidades(){
-        $universidad =Universidad::all();
-//        $data =Universidad::all()->pluck('id', 'nombre')->toArray();
+    public function getUniversidades()
+    {
+        $universidad = Universidad::all();
+        //        $data =Universidad::all()->pluck('id', 'nombre')->toArray();
         $data = [];
-//        $data[0] = [
-//            'id' => 0,
-//            'text' => 'Seleccione',
-//        ];
+        //        $data[0] = [
+        //            'id' => 0,
+        //            'text' => 'Seleccione',
+        //        ];
 
         foreach ($universidad as $key => $value) {
             $data[$key] = [
@@ -54,8 +55,9 @@ class HomepageController extends Controller
         }
         return response()->json($data);
     }
-    public function getModalidad($id){
-        $modalidad =Modalidad::where('universidad_id', $id)->get();
+    public function getModalidad($id)
+    {
+        $modalidad = Modalidad::where('universidad_id', $id)->get();
         $data = [];
 
         foreach ($modalidad as $key => $value) {
@@ -66,8 +68,9 @@ class HomepageController extends Controller
         }
         return response()->json($data);
     }
-    public function getGrupo($id){
-        $grupo =Grupo::where('universidad_id', $id)->get();
+    public function getGrupo($id)
+    {
+        $grupo = Grupo::where('universidad_id', $id)->get();
         $data = [];
 
         foreach ($grupo as $key => $value) {
@@ -78,8 +81,9 @@ class HomepageController extends Controller
         }
         return response()->json($data);
     }
-    public function getCarreras($id){
-        $carrera =Carrera::where('grupo_id', $id)->get();
+    public function getCarreras($id)
+    {
+        $carrera = Carrera::where('grupo_id', $id)->get();
         $data = [];
         foreach ($carrera as $key => $value) {
             $data[$key] = [
@@ -90,24 +94,25 @@ class HomepageController extends Controller
         return response()->json($data);
     }
 
-    public function getCursos(Request $request){
+    public function getCursos(Request $request)
+    {
         $request->user()->authorizeRoles(['user', 'admin']);
         $a_user_f = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 1)->get();
         $a_user_p = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 2)->get();
 
         $a_user_p_c = $a_user_p->count();
-        $a_user_f_c =$a_user_f->count();
+        $a_user_f_c = $a_user_f->count();
 
-        if ($a_user_f_c > 0){
-            foreach ($a_user_f as $a_user_fs){
+        if ($a_user_f_c > 0) {
+            foreach ($a_user_f as $a_user_fs) {
                 $modalidad_gf = ModalidadGrupo::where('id', $a_user_fs->modalidad_grupo_id)->first();
                 $modalidad_f = Modalidad::where('id', $modalidad_gf->modalidad_id)->where('mostrar_web', 1)->first();
-                if($modalidad_f){
+                if ($modalidad_f) {
                     $form = 'false';
                     $view_a = 'true';
-                    $asignatura =Asignatura::where('modalidad_grupo_id', $modalidad_gf->id)->get();
-                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gf->id)->first();
-                }else{
+                    $asignatura = Asignatura::where('modalidad_grupo_id', $modalidad_gf->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad', 'grupo.universidad')->where('id', $modalidad_gf->id)->first();
+                } else {
                     $form = 'true';
                     $view_a = 'true';
                     $asignatura = 'false';
@@ -116,7 +121,7 @@ class HomepageController extends Controller
             }
         }
 
-        if ($a_user_p_c > 0){
+        if ($a_user_p_c > 0) {
             foreach ($a_user_p as $a_user_ps) {
                 $modalidad_gp = ModalidadGrupo::where('id', $a_user_ps->modalidad_grupo_id)->first();
                 $modalidad_p = Modalidad::where('id', $modalidad_gp->modalidad_id)->where('mostrar_web', 1)->first();
@@ -126,9 +131,9 @@ class HomepageController extends Controller
                 if ($modalidad_count > 0) {
                     $form = 'false';
                     $view_a = 'false';
-                    $asignatura =Asignatura::where('modalidad_grupo_id', $modalidad_gp->id)->get();
-                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gp->id)->first();
-                }else{
+                    $asignatura = Asignatura::where('modalidad_grupo_id', $modalidad_gp->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad', 'grupo.universidad')->where('id', $modalidad_gp->id)->first();
+                } else {
                     $form = 'true';
                     $view_a = 'true';
                     $asignatura = 'false';
@@ -139,16 +144,16 @@ class HomepageController extends Controller
 
 
 
-        if($a_user_p_c == 0 AND $a_user_f_c == 0) {
+        if ($a_user_p_c == 0 and $a_user_f_c == 0) {
             $view_a = 'true';
             $form = 'true';
             $asignatura = 'false';
-            $modalidad_grupo_view ='false';
+            $modalidad_grupo_view = 'false';
         }
 
 
 
-//        return response()->json($asignatura);
+        //        return response()->json($asignatura);
         return response()->json(
             [
                 'estado_vista' => [
@@ -157,38 +162,40 @@ class HomepageController extends Controller
                     'asignatura' => $asignatura,
                     'modalidad_view' => $modalidad_grupo_view
                 ]
-            ]);
+            ]
+        );
     }
 
-    public function getmatricula(Request $request){
+    public function getmatricula(Request $request)
+    {
         $request->user()->authorizeRoles(['user', 'admin']);
         $a_user_f = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 1)->get();
         $a_user_p = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 2)->get();
 
         $a_user_p_c = $a_user_p->count();
-        $a_user_f_c =$a_user_f->count();
+        $a_user_f_c = $a_user_f->count();
 
-        if ($a_user_f_c > 0){
+        if ($a_user_f_c > 0) {
             foreach ($a_user_f as $a_user_fs) {
                 $modalidad_gf = ModalidadGrupo::where('id', $a_user_fs->modalidad_grupo_id)->first();
                 $modalidad_f = Modalidad::where('id', $modalidad_gf->modalidad_id)->where('mostrar_web', 1)->first();
                 if ($modalidad_f) {
                     $view_a = 'true';
-                }else{
+                } else {
                     $view_a = 'true';
                 }
             }
 
             $form = 'false';
         }
-        if ($a_user_p_c > 0){
+        if ($a_user_p_c > 0) {
             foreach ($a_user_p as $a_user_ps) {
                 $modalidad_gp = ModalidadGrupo::where('id', $a_user_ps->modalidad_grupo_id)->first();
                 $modalidad_p = Modalidad::where('id', $modalidad_gp->modalidad_id)->where('mostrar_web', 1)->first();
 
                 if ($modalidad_p) {
                     $view_a = 'false';
-                }else{
+                } else {
                     $view_a = 'true';
                 }
             }
@@ -198,17 +205,17 @@ class HomepageController extends Controller
 
 
 
-        if($a_user_p_c == 0 AND $a_user_f_c == 0) {
+        if ($a_user_p_c == 0 and $a_user_f_c == 0) {
             $view_a = 'true';
             $form = 'true';
         }
 
-//        if ($view_a == 'true'){
-//            $show_1 = 'true';
-//        }
+        //        if ($view_a == 'true'){
+        //            $show_1 = 'true';
+        //        }
 
 
-//        return response()->json($view_a);
+        //        return response()->json($view_a);
 
         return response()->json(
             [
@@ -216,10 +223,11 @@ class HomepageController extends Controller
                     'view_a' => $view_a,
                     'form' => $form,
                 ]
-            ]);
-
+            ]
+        );
     }
-    public function matricular(Request $request){
+    public function matricular(Request $request)
+    {
         $request->user()->authorizeRoles(['user', 'admin']);
         $modalidad_g = ModalidadGrupo::where('grupo_id', $request->grupoSelected)->where('modalidad_id', $request->modalidadSelected)->first();
         $matricula = new AsignaturaGrupoUser();
@@ -227,7 +235,7 @@ class HomepageController extends Controller
         $matricula->user_id = $request->user()->id;
         $matricula->estado = 1;
         $matricula->save();
-//        $request->user()->id;
+        //        $request->user()->id;
 
 
         $a_user_f = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 1)->where('modalidad_grupo_id', $modalidad_g->id)->get();
@@ -235,18 +243,18 @@ class HomepageController extends Controller
 
 
         $a_user_p_c = $a_user_p->count();
-        $a_user_f_c =$a_user_f->count();
+        $a_user_f_c = $a_user_f->count();
 
-        if ($a_user_f_c > 0){
-            foreach ($a_user_f as $a_user_fs){
+        if ($a_user_f_c > 0) {
+            foreach ($a_user_f as $a_user_fs) {
                 $modalidad_gf = ModalidadGrupo::where('id', $a_user_fs->modalidad_grupo_id)->first();
                 $modalidad_f = Modalidad::where('id', $modalidad_gf->modalidad_id)->where('mostrar_web', 1)->first();
-                if($modalidad_f){
+                if ($modalidad_f) {
                     $form = 'false';
                     $view_a = 'true';
-                    $asignatura =Asignatura::where('modalidad_grupo_id', $modalidad_gf->id)->get();
-                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gf->id)->first();
-                }else{
+                    $asignatura = Asignatura::where('modalidad_grupo_id', $modalidad_gf->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad', 'grupo.universidad')->where('id', $modalidad_gf->id)->first();
+                } else {
                     $form = 'true';
                     $view_a = 'true';
                     $asignatura = 'false';
@@ -255,7 +263,7 @@ class HomepageController extends Controller
             }
         }
 
-        if ($a_user_p_c > 0){
+        if ($a_user_p_c > 0) {
             foreach ($a_user_p as $a_user_ps) {
                 $modalidad_gp = ModalidadGrupo::where('id', $a_user_ps->modalidad_grupo_id)->first();
                 $modalidad_p = Modalidad::where('id', $modalidad_gp->modalidad_id)->where('mostrar_web', 1)->first();
@@ -265,9 +273,9 @@ class HomepageController extends Controller
                 if ($modalidad_count > 0) {
                     $form = 'false';
                     $view_a = 'false';
-                    $asignatura =Asignatura::where('modalidad_grupo_id', $modalidad_gp->id)->get();
-                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gp->id)->first();
-                }else{
+                    $asignatura = Asignatura::where('modalidad_grupo_id', $modalidad_gp->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad', 'grupo.universidad')->where('id', $modalidad_gp->id)->first();
+                } else {
                     $form = 'true';
                     $view_a = 'true';
                     $asignatura = 'false';
@@ -278,11 +286,11 @@ class HomepageController extends Controller
 
 
 
-        if($a_user_p_c == 0 AND $a_user_f_c == 0) {
+        if ($a_user_p_c == 0 and $a_user_f_c == 0) {
             $view_a = 'true';
             $form = 'true';
             $asignatura = 'false';
-            $modalidad_grupo_view ='false';
+            $modalidad_grupo_view = 'false';
         }
 
         return response()->json(
@@ -293,19 +301,22 @@ class HomepageController extends Controller
                     'asignatura' => $asignatura,
                     'modalidad_view' => $modalidad_grupo_view
                 ]
-            ]);
-
+            ]
+        );
     }
 
-    public function video(Request $request, $idcurso, $idvideo){
+    public function video(Request $request, $idcurso, $idvideo)
+    {
         return view('student.video', compact('idcurso', 'idvideo'));
     }
 
-    public function videolist(Request $request, $idcurso){
+    public function videolist(Request $request, $idcurso)
+    {
         return view('student.videoList', compact('idcurso'));
     }
 
-    public function getCursosAlumno(Request $request, $curso) {
+    public function getCursosAlumno(Request $request, $curso)
+    {
 
         $request->user()->authorizeRoles(['user', 'admin']);
         $a_user_f = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 1)->get();
@@ -314,22 +325,22 @@ class HomepageController extends Controller
         $a_user_f_c = $a_user_f->count();
         $a_user_p_c = $a_user_p->count();
 
-        if (($a_user_f_c == 0 AND $a_user_p_c == 0) OR $a_user_f_c == 0 OR $a_user_p_c == 0){
+        if (($a_user_f_c == 0 and $a_user_p_c == 0) or $a_user_f_c == 0 or $a_user_p_c == 0) {
             $view_a = 'false';
             $view_p = 'false';
             $asignatura = 'false';
             $modalidad_grupo_view = 'false';
         }
 
-        if ($a_user_f_c > 0){
-            foreach ($a_user_f as $a_user_fs){
+        if ($a_user_f_c > 0) {
+            foreach ($a_user_f as $a_user_fs) {
                 $modalidad_gf = ModalidadGrupo::where('id', $a_user_fs->modalidad_grupo_id)->first();
                 $modalidad_f = Modalidad::where('id', $modalidad_gf->modalidad_id)->where('mostrar_web', 1)->first();
-                if($modalidad_f){
+                if ($modalidad_f) {
                     $view_a = 'true';
-                    $asignatura =Asignatura::with('temas.sub_temas','docente')->where('id',$curso)->where('modalidad_grupo_id', $modalidad_gf->id)->get();
-                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gf->id)->first();
-                }else{
+                    $asignatura = Asignatura::with('temas.sub_temas', 'docente')->where('id', $curso)->where('modalidad_grupo_id', $modalidad_gf->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad', 'grupo.universidad')->where('id', $modalidad_gf->id)->first();
+                } else {
                     $view_a = 'false';
                     $asignatura = 'false';
                     $modalidad_grupo_view = 'false';
@@ -337,7 +348,7 @@ class HomepageController extends Controller
             }
         }
 
-        if ($a_user_p_c > 0){
+        if ($a_user_p_c > 0) {
             foreach ($a_user_p as $a_user_ps) {
                 $modalidad_gp = ModalidadGrupo::where('id', $a_user_ps->modalidad_grupo_id)->first();
                 $modalidad_p = Modalidad::where('id', $modalidad_gp->modalidad_id)->where('mostrar_web', 1)->first();
@@ -346,9 +357,9 @@ class HomepageController extends Controller
 
                 if ($modalidad_count > 0) {
                     $view_p = 'true';
-                    $asignatura =Asignatura::with('temas.sub_temas','docente')->where('id',$curso)->where('modalidad_grupo_id', $modalidad_gp->id)->get();
-                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gp->id)->first();
-                }else{
+                    $asignatura = Asignatura::with('temas.sub_temas', 'docente')->where('id', $curso)->where('modalidad_grupo_id', $modalidad_gp->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad', 'grupo.universidad')->where('id', $modalidad_gp->id)->first();
+                } else {
                     $view_p = 'false';
                     $asignatura = 'false';
                     $modalidad_grupo_view = 'false';
@@ -359,18 +370,18 @@ class HomepageController extends Controller
         return response()->json(
             [
 
-                    'view_a'=>$view_a,
-                    'view_p'=>$view_p,
+                'view_a' => $view_a,
+                'view_p' => $view_p,
 
-                'asignatura'=>$asignatura,
-                'modalidad_grupo'=>$modalidad_grupo_view,
+                'asignatura' => $asignatura,
+                'modalidad_grupo' => $modalidad_grupo_view,
 
             ]
         );
-
     }
 
-    public function getCursosAlumnoVideo(Request $request, $curso, $video) {
+    public function getCursosAlumnoVideo(Request $request, $curso, $video)
+    {
 
         $request->user()->authorizeRoles(['user', 'admin']);
         $a_user_f = AsignaturaGrupoUser::where('user_id', $request->user()->id)->where('estado', 1)->get();
@@ -379,26 +390,26 @@ class HomepageController extends Controller
         $a_user_f_c = $a_user_f->count();
         $a_user_p_c = $a_user_p->count();
 
-        if (($a_user_f_c == 0 AND $a_user_p_c == 0) OR $a_user_f_c == 0 OR $a_user_p_c == 0){
+        if (($a_user_f_c == 0 and $a_user_p_c == 0) or $a_user_f_c == 0 or $a_user_p_c == 0) {
             $view_a = 'false';
             $view_p = 'false';
             $asignatura = 'false';
             $modalidad_grupo_view = 'false';
         }
-
-        if ($a_user_f_c > 0){
-            foreach ($a_user_f as $a_user_fs){
+        $asignatura_all = false;
+        if ($a_user_f_c > 0) {
+            foreach ($a_user_f as $a_user_fs) {
                 $modalidad_gf = ModalidadGrupo::where('id', $a_user_fs->modalidad_grupo_id)->first();
                 $modalidad_f = Modalidad::where('id', $modalidad_gf->modalidad_id)->where('mostrar_web', 1)->first();
-                if($modalidad_f){
+                if ($modalidad_f) {
                     $view_a = 'true';
-                    $asignatura =Asignatura::with(['temas.sub_temas'=>function ($query) use ($video) {
+                    $asignatura = Asignatura::with(['temas.sub_temas' => function ($query) use ($video) {
                         $query->where('id', $video);
-                    }, 'docente'])->where('id',$curso)->where('modalidad_grupo_id', $modalidad_gf->id)->get();
-                    $asignatura_all =Asignatura::with('temas.sub_temas','docente')->where('id',$curso)->where('modalidad_grupo_id', $modalidad_gf->id)->get();
-                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gf->id)->first();
+                    }, 'docente'])->where('id', $curso)->where('modalidad_grupo_id', $modalidad_gf->id)->get();
+                    $asignatura_all = Asignatura::with('temas.sub_temas', 'docente')->where('id', $curso)->where('modalidad_grupo_id', $modalidad_gf->id)->get();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad', 'grupo.universidad')->where('id', $modalidad_gf->id)->first();
                     $subtema = SubTema::where('id', $video)->get();
-                }else{
+                } else {
                     $view_a = 'false';
                     $asignatura = 'false';
                     $modalidad_grupo_view = 'false';
@@ -408,7 +419,7 @@ class HomepageController extends Controller
             }
         }
 
-        if ($a_user_p_c > 0){
+        if ($a_user_p_c > 0) {
             foreach ($a_user_p as $a_user_ps) {
                 $modalidad_gp = ModalidadGrupo::where('id', $a_user_ps->modalidad_grupo_id)->first();
                 $modalidad_p = Modalidad::where('id', $modalidad_gp->modalidad_id)->where('mostrar_web', 1)->first();
@@ -417,9 +428,9 @@ class HomepageController extends Controller
 
                 if ($modalidad_count > 0) {
                     $view_p = 'true';
-                    $asignatura =Asignatura::with('temas.sub_temas','docente')->where('id',$curso)->where('modalidad_grupo_id', $modalidad_gp->id)->first();
-                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad','grupo.universidad')->where('id', $modalidad_gp->id)->first();
-                }else{
+                    $asignatura = Asignatura::with('temas.sub_temas', 'docente')->where('id', $curso)->where('modalidad_grupo_id', $modalidad_gp->id)->first();
+                    $modalidad_grupo_view = ModalidadGrupo::with('modalidad.universidad', 'grupo.universidad')->where('id', $modalidad_gp->id)->first();
+                } else {
                     $view_p = 'false';
                     $asignatura = 'false';
                     $modalidad_grupo_view = 'false';
@@ -430,29 +441,25 @@ class HomepageController extends Controller
         return response()->json(
             [
 
-                    'view_a'=>$view_a,
-                    'view_p'=>$view_p,
+                'view_a' => $view_a,
+                'view_p' => $view_p,
 
-                'asignatura'=>$asignatura,
-                'asignatura_all'=>$asignatura_all,
-//                'subtema'=>$subtema,
-                'modalidad_grupo'=>$modalidad_grupo_view,
+                'asignatura' => $asignatura,
+                'asignatura_all' => $asignatura_all,
+                //                'subtema'=>$subtema,
+                'modalidad_grupo' => $modalidad_grupo_view,
 
             ]
         );
-
     }
 
-    public function profile(){
+    public function profile()
+    {
         return view('student.profile');
     }
 
-    public function suscripcion(){
+    public function suscripcion()
+    {
         return view('student.suscripcion');
     }
-
-
-
-
-
 }

@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class PreguntaTrivia extends Model
 {
     //
-    protected $table = "f_pregunta_trivias";
+    protected $table = "pregunta_trivias";
     public function sub_tema()
     {
         //relacion de uno a muchos
@@ -16,7 +16,7 @@ class PreguntaTrivia extends Model
     public function respuesta_trivias()
     {
         //relacion de uno a muchos
-        return $this->hasMany(RespuestaTrivia::class, 'f_pregunta_trivia_id');
+        return $this->hasMany(RespuestaTrivia::class, 'pregunta_trivia_id');
     }
     public function asig_gru_user_pre_tri()
     {
