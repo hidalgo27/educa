@@ -65,7 +65,7 @@
                                                 </v-tab>
 
                                                 <v-tab href="#examen" class="text-capitalize font-weight-medium">
-                                                    Examenes
+                                                    Exámenes
                                                 </v-tab>
 
                                                 <v-tab href="#vivo" class="text-capitalize font-weight-medium">
