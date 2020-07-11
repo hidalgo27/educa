@@ -6512,6 +6512,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["idsubtema", "auth"],
   data: function data() {
@@ -6597,7 +6598,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     rpt_alumnor: datos.rpt_alumno,
                     titulo: datos.titulo,
                     habilitado: datos.habilitado,
-                    imagen: datos.imagen ? "/students/trivias/test/imagen/".concat(datos.imagen.imagen_url) : "",
+                    imagen: datos.imagen ? "/students/trivias/tests/imagen/".concat(datos.imagen.imagen_url) : "",
                     respuestas: datos.respuestas.map(function (respuesta) {
                       return {
                         id: respuesta.id,
@@ -6657,7 +6658,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                     rpt_alumnor: datos.rpt_alumno,
                     habilitado: 1,
                     titulo: datos.titulo,
-                    imagen: datos.imagen ? "/students/trivias/test/imagen/".concat(datos.imagen.imagen_url) : "",
+                    imagen: datos.imagen ? "/students/trivias/tests/imagen/".concat(datos.imagen.imagen_url) : "",
                     respuestas: datos.respuestas.map(function (respuesta) {
                       return {
                         id: respuesta.id,
@@ -36930,6 +36931,26 @@ var render = function() {
                                     _c(
                                       "v-row",
                                       [
+                                        _c(
+                                          "v-col",
+                                          { attrs: { cols: "12" } },
+                                          [
+                                            _vm._v(
+                                              "\n                      " +
+                                                _vm._s(pregunta.imagen) +
+                                                "\n                      "
+                                            ),
+                                            _c("v-img", {
+                                              attrs: {
+                                                src: pregunta.imagen,
+                                                "aspect-ratio": "1",
+                                                contain: ""
+                                              }
+                                            })
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
                                         _c(
                                           "v-col",
                                           {

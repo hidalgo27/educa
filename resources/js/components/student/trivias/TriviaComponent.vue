@@ -46,9 +46,10 @@
                 >
                   <v-card class="mb-12" color="grey lighten-2" height="auto">
                     <v-row>
-                      <!-- <v-col cols="12">
+                      <v-col cols="12">
+                        {{ pregunta.imagen }}
                         <v-img :src="pregunta.imagen" aspect-ratio="1" contain></v-img>
-                      </v-col>-->
+                      </v-col>
                       <v-col cols="12" class="text-center">{{ pregunta.titulo }}</v-col>
                     </v-row>
                     <v-divider></v-divider>
@@ -171,7 +172,7 @@ export default {
         titulo: datos.titulo,
         habilitado: datos.habilitado,
         imagen: datos.imagen
-          ? `/students/trivias/test/imagen/${datos.imagen.imagen_url}`
+          ? `/students/trivias/tests/imagen/${datos.imagen.imagen_url}`
           : "",
         respuestas: datos.respuestas.map(respuesta => ({
           id: respuesta.id,
@@ -203,7 +204,7 @@ export default {
           habilitado: 1,
           titulo: datos.titulo,
           imagen: datos.imagen
-            ? `/students/trivias/test/imagen/${datos.imagen.imagen_url}`
+            ? `/students/trivias/tests/imagen/${datos.imagen.imagen_url}`
             : "",
           respuestas: datos.respuestas.map(respuesta => ({
             id: respuesta.id,
