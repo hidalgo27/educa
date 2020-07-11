@@ -63,6 +63,11 @@
                                                 <v-tab href="#contenido" class="text-capitalize font-weight-medium">
                                                     Contenido del curso
                                                 </v-tab>
+
+                                                <v-tab href="#examen" class="text-capitalize font-weight-medium">
+                                                    Examenes
+                                                </v-tab>
+
                                                 <v-tab href="#vivo" class="text-capitalize font-weight-medium">
                                                     <v-badge
                                                         color="red"
@@ -72,6 +77,7 @@
                                                         Videos de clases en vivo
                                                     </v-badge>
                                                 </v-tab>
+
                                             </v-tabs>
 
                                             <v-card-text>
@@ -135,45 +141,10 @@
                                                     </v-tab-item>
 
                                                     <v-tab-item
-                                                        value="archivos"
+                                                        value="examen"
                                                     >
 
-                                                        <v-list>
-                                                            <v-list-item-group color="primary">
-                                                                <v-list-item>
-                                                                    <v-list-item-icon>
-                                                                        <v-badge
-                                                                            bottom
-                                                                            icon="mdi-download"
-                                                                            offset-y="15"
-                                                                        >
-                                                                            <v-icon>mdi-file-document-outline</v-icon>
-                                                                        </v-badge>
-                                                                    </v-list-item-icon>
-                                                                    <v-list-item-content>
-                                                                        <v-list-item-title>Material del cusco</v-list-item-title>
-                                                                    </v-list-item-content>
-                                                                    <v-list-item-icon>
-                                                                        <v-icon>mdi-download</v-icon>
-                                                                    </v-list-item-icon>
-                                                                </v-list-item>
-
-                                                                <v-list-item>
-                                                                    <v-list-item-icon>
-
-                                                                        <v-icon color="blue">mdi-link</v-icon>
-
-                                                                    </v-list-item-icon>
-                                                                    <v-list-item-content>
-                                                                        <v-list-item-title>Material del cusco</v-list-item-title>
-                                                                    </v-list-item-content>
-                                                                    <v-list-item-icon>
-                                                                        <v-icon>mdi-link</v-icon>
-                                                                    </v-list-item-icon>
-                                                                </v-list-item>
-
-                                                            </v-list-item-group>
-                                                        </v-list>
+                                                        <examen-asignatura-component></examen-asignatura-component>
 
                                                     </v-tab-item>
                                                 </v-tabs-items>

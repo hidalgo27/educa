@@ -45,6 +45,7 @@ Vue.component('profile-component', require('./components/student/ProfileComponen
 Vue.component('suscripcion-component', require('./components/student/SuscripcionComponent').default);
 
 Vue.component('trivia-component', require('./components/student/trivias/TriviaComponent').default);
+Vue.component('examen-asignatura-component', require('./components/student/examen-asignatura/ExamenAgisnaturaComponent').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
