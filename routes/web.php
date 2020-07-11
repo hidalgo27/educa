@@ -144,4 +144,4 @@ Route::post('students/trivias/test/{idsubtema}/{idalumno}', [
     'as' => 'trivia_f_path',
 ]);
 
-Route::get('students/trivias/test/imagen/{imagen}', 'Student\Trivia\TriviaController@get_imagen');
+Route::get('students/trivias/tests/imagen/{imagen}', 'Student\Trivia\TriviaController@get_imagen');
